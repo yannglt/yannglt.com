@@ -42,42 +42,38 @@
       ScrollMagic = require('scrollmagic')
 
       const showreelAlertCircle = new TimelineLite();
+      const showreelAlertArrow = new TimelineLite();
+
+      const controllerCircle = new ScrollMagic.Controller();
+      const controllerArrow = new ScrollMagic.Controller();
 
       showreelAlertCircle.to('.circle', 1, {
         rotation: 132,
         // ease: Power1.easeOut
       })
 
-      const controller1 = new ScrollMagic.Controller();
-
-      const scene1 = new ScrollMagic.Scene({
-        // triggerElement: 'showreel-alert__container',
-        offset: 50,
-        duration: 650
-      })
-      .addIndicators()
-      .setTween(showreelAlertCircle)
-      .addTo(controller1)
-
-
-      const showreelAlertArrow = new TimelineLite();
-
       showreelAlertArrow.to('.arrow', 1, {
         rotation: 45,
         // ease: Power1.easeOut
       })
 
-      const controller2 = new ScrollMagic.Controller();
-
-      const scene2 = new ScrollMagic.Scene({
+      const sceneArrow = new ScrollMagic.Scene({
         // triggerElement: 'showreel-alert__container',
         offset: 460,
         duration: 240
       })
-      .addIndicators()
+      // .addIndicators()
       .setTween(showreelAlertArrow)
-      .addTo(controller2)
+      .addTo(controllerArrow)
 
+      const sceneCircle = new ScrollMagic.Scene({
+        // triggerElement: 'showreel-alert__container',
+        offset: 50,
+        duration: 650
+      })
+      // .addIndicators()
+      .setTween(showreelAlertCircle)
+      .addTo(controllerCircle)
     }
   }
 
