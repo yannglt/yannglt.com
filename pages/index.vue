@@ -41,33 +41,48 @@
       let ScrollMagic
       ScrollMagic = require('scrollmagic')
 
-      const showreelAlert = new TimelineLite();
+      const showreelAlertCircle = new TimelineLite();
 
-      showreelAlert.to('.circle', 1, {
+      showreelAlertCircle.to('.circle', 1, {
         rotation: 132,
-        ease: Power1.easeOut
+        // ease: Power1.easeOut
       })
 
-      .to('.arrow', 1, {
+      const controller1 = new ScrollMagic.Controller();
+
+      const scene1 = new ScrollMagic.Scene({
+        // triggerElement: 'showreel-alert__container',
+        offset: 50,
+        duration: 650
+      })
+      .addIndicators()
+      .setTween(showreelAlertCircle)
+      .addTo(controller1)
+
+
+      const showreelAlertArrow = new TimelineLite();
+
+      showreelAlertArrow.to('.arrow', 1, {
         rotation: 45,
-        ease: Power1.easeOut
+        // ease: Power1.easeOut
       })
 
-      const controller = new ScrollMagic.Controller();
+      const controller2 = new ScrollMagic.Controller();
 
-      const scene = new ScrollMagic.Scene({
-        triggerElement: '.showreel-alert__container',
-        duration: 600
+      const scene2 = new ScrollMagic.Scene({
+        // triggerElement: 'showreel-alert__container',
+        offset: 460,
+        duration: 240
       })
-      .setTween(showreelAlert)
-      // .addIndicators()
-      .addTo(controller)
+      .addIndicators()
+      .setTween(showreelAlertArrow)
+      .addTo(controller2)
 
     }
   }
 
 </script>
-
+<!--  -->
 <style media="screen" lang="sass">
 
   body
