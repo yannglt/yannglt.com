@@ -13,5 +13,15 @@
   "dependencies": {
     "nuxt": "^2.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "gsap": "^2.1.2",
+    "imports-loader": "^0.8.0",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9",
+    "sass-loader": "^7.1.0",
+    "scrollmagic": "^2.0.6",
+    "vue-scrollmagic": "^1.1.0"
+  }
 }
