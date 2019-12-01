@@ -1,0 +1,17 @@
+{
+  "name": "portfolio-v7",
+  "version": "1.0.0",
+  "description": "My riveting Nuxt.js project",
+  "author": "yannglt",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {}
+}
