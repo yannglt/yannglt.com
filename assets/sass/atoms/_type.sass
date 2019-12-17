@@ -1,67 +1,180 @@
 h1
-  width: 816px
+  // width: 816px
 
   color: $type-primary
   font-family: Bluu Suuperstar
-  font-size: 61px
-  letter-spacing: -1.8px
-  line-height: 80px
+  font-size: 25px
+  letter-spacing: -0.81px
+  line-height: 36px
   text-decoration: underline
 
-  margin-bottom: 85px
+  margin-bottom: 47px
 
-p
-  font-family: GT America
+  +adapt(768px)
+    font-size: 48px
+    letter-spacing: -1.4px
+    line-height: 64px
 
-.tag
+    margin-bottom: 40px
+
+  +adapt(1024px)
+    font-size: 61px
+    letter-spacing: -1.8px
+    line-height: 80px
+
+    margin-bottom: 85px
+
+
+  // padding-bottom:
+  // background-image: linear-gradient(to bottom, rgba($cobalt, 0.6), rgba($cobalt, 0.6)), linear-gradient(to bottom, rgba($alizarin, 0.4), rgba($alizarin, 0.4))
+  // background-clip: content-box, padding-box
+
+
+h2
+  color: $type-primary
+  font-size: 1.5625rem
+  font-family: Bluu Suuperstar
+  letter-spacing: -0.4px
+  line-height: 1.28em
+
+  margin-bottom: 15px
+
+p, li
   color: $type-secondary
+  font-family: GT America
+  letter-spacing: -0.2px
+  line-height: 1.5em
+
+  margin-bottom: 1.5em
+
+.me
+  color: $electricity
   font-family: GT America Mono
-  font-size: 0.8rem
-  font-weight: 600
+  font-size: 16px
+  font-weight: 500
+  line-height: 31px
   letter-spacing: 1.5px
-  line-height: 24px
   text-transform: uppercase
 
-  margin-bottom: 6px
-
-  &.main
-    color: $electricity
-    font-size: 1.25rem
-    font-weight: 500
-    letter-spacing: 2px
-    line-height: 40px
-    margin-bottom: 16px
-
-.title
-  color: $type-primary
-  font-size: 1.25rem
-  font-family: Bluu Suuperstar
-  letter-spacing: -0.2px
-  line-height: 24px
-
-  margin-bottom: 5px
-
-.body
-  color: $type-tertiary
-  font-size: 1rem
-  font-family: GT America
-  font-weight: 300
-  letter-spacing: -0.3px
-  line-height: 24px
+  margin-bottom: 11px
 
 .emphasis
-  max-width: 710px
+  // max-width: 710px
 
   p
-    color: $type-secondary
-    font-size: 1.5625rem
     font-family: GT America
-    font-weight: 300
-    letter-spacing: -0.3px
-    line-height: 36px
-
-    margin-bottom: 0.8em
+    font-size: 20px
+    font-weight: 500
+    color: $type-secondary
+    letter-spacing: -0.4px
+    line-height: 32px
 
   a
     color: $cobalt
-    font-weight: 400
+    font-weight: 700
+
+.highlight
+  font-family: Bluu Suuperstar
+  font-size: 31px
+  color: #FFFFFF
+  letter-spacing: -1px
+  line-height: 44px
+  text-decoration: underline
+  // background-image: url("data:image/svg+xml;utf8,<svg preserveAspectRatio=\"none\" viewBox=\"0 0 1 1\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\" stroke=\"rgba(255, 0, 0, 1)\" /></svg>")
+  // background-size: 1px 1px
+  // background-position: 0px calc(31px + 1px)
+  // background-repeat: repeat-x
+
+  margin-bottom: 27px
+
+  +adapt(768px)
+    font-size: 61px
+    letter-spacing: -1.8px
+    line-height: 80px
+
+.workTogether__redirect a
+  display: inline-block
+  position: relative
+  color: $electricity
+  font-family: GT America
+  font-size: 16px
+  font-weight: 600
+  letter-spacing: -0.1px
+  line-height: 24px
+
+  margin-bottom: 24px
+
+  &::after
+    content: ''
+    position: absolute
+    left: 0
+    bottom: -4px
+    height: 1px
+    width: 100%
+    background-color: $electricity
+
+.footer__section
+  margin-bottom: 65px
+
+.footer
+
+  &__title
+    color: #F5F9FF
+    font-family: GT America Mono
+    font-size: 13px
+    font-weight: 700
+    letter-spacing: 1.5px
+    line-height: 24px
+    text-transform: uppercase
+
+    margin-bottom: 13px
+
+  &__body
+
+    p:last-of-type, li:last-of-type
+      margin-bottom: 0
+
+    p, li
+      color: rgba(#F5F9FF, 0.84)
+
+    li
+      margin-bottom: 16px
+      line-height: 20px
+
+      a
+        text-decoration: none
+
+        img
+          transform: translateY(4px)
+
+.about-me a, .get-in-touch li:nth-of-type(2) a, .get-in-touch li:nth-of-type(3) a
+  text-decoration: none
+  position: relative
+
+  &::after
+    content: ''
+    position: absolute
+    left: 0
+    bottom: -2px
+    height: 1px
+    width: 100%
+    background-color: rgba(#F5F9FF, 0.4)
+
+.copyright
+  display: flex
+  align-items: center
+  transform: translateX(-11px)
+
+  span
+    height: 4px
+    width: 4px
+    background-color: rgba(#F5F9FF, 0.16)
+    margin-right: 8px
+
+  p
+    color: rgba(#F5F9FF, 0.84)
+    font-size: 13px
+    line-height: 20px
+    letter-spacing: 0.1px
+
+    margin-bottom: 0

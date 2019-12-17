@@ -1,21 +1,28 @@
 @import "./reset.sass"
+@import "./mixins.sass"
 @import "./atoms/colors.sass"
 @import "./atoms/fonts.sass"
 @import "./atoms/type.sass"
+@import "./components/extract.sass"
+
+body
+  background-color: $foam
+  text-rendering: optimizeLegibility
 
 .container
-  max-width: 1240px
+  max-width: 334px
   margin: 0 auto
 
-  transition: background-color 200ms linear
+  // transition: background-color 200ms linear
 
+  +adapt(768px)
+    max-width: 640px
 
-// LIGHT MODE
-@media (prefers-color-scheme: light)
-  body
-    background-color: $foam
+  +adapt(1024px)
+    max-width: 768px
 
-// DARK MODE
-// @media (prefers-color-scheme: dark)
-//   body
-//     background-color: $oblivion-darker
+  +adapt(1440px)
+    max-width: 1240px
+
+#intro
+  margin-top: 94px

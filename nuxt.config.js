@@ -30,7 +30,7 @@ export default {
   ** Global CSS
   */
   css: [
-    '@/assets/sass/app.sass'
+    { src: '@/assets/sass/app.sass', lang: 'sass' }
   ],
 
   /*
@@ -61,5 +61,5 @@ export default {
     */
     extend(config, ctx) {
     }
-  }
+  },
 }
