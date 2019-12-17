@@ -1,9 +1,11 @@
 <template lang="html">
   <div id="app">
-    <div class="container">
-      <div id="intro">
-        <div class="me">Yann-Edern Gillet</div>
-        <h1>Product Designer of things made of strategy, empathy and work precision</h1>
+    <div id="intro">
+      <div class="container">
+        <div class="me__container">
+          <div class="me">Yann-Edern Gillet</div>
+          <h1>Product Designer of things made of strategy, empathy and work precision</h1>
+        </div>
         <div class="tldr__container">
           <div class="tldr tldr__who">
             <p class="extract__tag">Current position</p>
@@ -216,6 +218,15 @@
     +adapt(768px)
       margin-bottom: 122px
 
+    +adapt(1024px)
+      margin-bottom: 120px
+
+  .me__container
+
+    +adapt(1024px)
+      margin-left: 80px
+      margin-right: 80px
+
   .tldr__container
     margin-bottom: 42px
 
@@ -228,10 +239,15 @@
 
     +adapt(1024px)
       display: grid
-      grid-template-columns: repeat(12, 74px)
+      grid-template-columns: repeat(12, 48px)
       column-gap: 32px
 
       margin-bottom: 94px
+
+    +adapt(1440px)
+      display: grid
+      grid-template-columns: repeat(12, 74px)
+      column-gap: 32px
 
   .tldr
     margin-bottom: 33px
@@ -243,6 +259,12 @@
       grid-column: span 2
       margin-bottom: 0
 
+    +adapt(1024px)
+      grid-column: span 4
+
+      &:first-of-type
+        grid-column: 2 / span 4
+
   .who
 
     p:last-of-type
@@ -250,6 +272,10 @@
 
     +adapt(768px)
       margin-right: 168px
+
+    +adapt(1024px)
+      margin-left: 80px
+      margin-right: 80px
 
   .who-and-showreel-alert
     +adapt(1440px)
@@ -302,6 +328,9 @@
       margin-left: 0
       height: 356px
 
+    +adapt(1024px)
+      height: 516px
+
     +adapt(1440px)
       position: relative
       top: 0px
@@ -313,6 +342,9 @@
 
     +adapt(768px)
       max-width: 640px
+
+    +adapt(1024px)
+      max-width: 928px
 
     .projects__intro
       margin-left: 40px
@@ -329,6 +361,10 @@
         +adapt(768px)
           margin-left: 84px
           margin-right: 84px
+
+        +adapt(1024px)
+          margin-left: 160px
+          margin-right: 160px
 
     .projects
       display: flex
@@ -350,6 +386,11 @@
         column-gap: 32px
         padding-left: 0
 
+      +adapt(1024px)
+        display: grid
+        grid-template-columns: repeat(12, 48px)
+        column-gap: 32px
+
     .project
       flex-grow: 0
       flex-shrink: 0
@@ -365,6 +406,9 @@
         padding-right: 0
         grid-column: span 2
         margin-bottom: 53px
+
+      +adapt(1024px)
+        grid-column: span 4
 
     +adapt(1440px)
       display: grid
@@ -384,6 +428,9 @@
   #showreelContent
     margin-bottom: 80px
 
+    +adapt(768px)
+      margin-bottom: 138px
+
   #workTogether
     padding-top: 52px
     padding-bottom: 56px
@@ -393,17 +440,38 @@
       padding-top: 79px
       padding-bottom: 120px
 
-  .workTogether__redirect
+    +adapt(1024px)
+      padding-top: 115px
+      padding-bottom: 120px
 
-    p
-      color: rgba(#FFFFFF, 0.84)
+    .container
 
-      +adapt(768px)
-        margin-right: 240px
+      +adapt(1024px)
+        display: grid
+        grid-template-columns: repeat(12, 48px)
+        column-gap: 32px
 
-    img
-      transform: translate(4px, 6px)
+      .workTogether__question
 
+        +adapt(1024px)
+          grid-column: 2 / span 9
+
+      .workTogether__redirect
+
+        +adapt(1024px)
+          grid-column: 2 / span 5
+
+        p
+          color: rgba(#FFFFFF, 0.84)
+
+          +adapt(768px)
+            margin-right: 240px
+
+          +adapt(1024px)
+            margin-right: 0
+
+        img
+          transform: translate(4px, 6px)
 
   #footer
     padding: 39px 0 54px
@@ -411,6 +479,14 @@
 
     +adapt(768px)
       padding: 59px 0 48px
+
+    +adapt(1024px)
+      padding: 47px 0 54px
+
+    .container
+      display: grid
+      grid-template-columns: repeat(12, 48px)
+      column-gap: 32px
 
   .footer__section
     margin-bottom: 65px
@@ -421,6 +497,10 @@
   .about-me
     margin-right: 168px
 
+    +adapt(1024px)
+      margin-right: 0
+      grid-column: 1 / span 7
+
   .links
 
     +adapt(768px)
@@ -428,10 +508,22 @@
       grid-template-columns: repeat(4, 136px)
       column-gap: 32px
 
+    +adapt(1024px)
+      grid-column: 1 / span 12
+      grid-template-columns: repeat(12, 48px)
+      column-gap: 32px
+
   .follow-work, .get-in-touch
 
     +adapt(768px)
       grid-column: span 2
 
+    +adapt(1024px)
+      grid-column: span 4
+
+  .copyright
+
+    +adapt(1024px)
+      grid-column: 1 / span 12
 
 </style>
