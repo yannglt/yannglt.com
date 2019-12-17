@@ -1,0 +1,12 @@
+@mixin adapt($width)
+  @media screen and (min-width: $width)
+    @content
+
+@mixin hover()
+  @media (any-hover: none)
+    &:active
+      @content
+
+  @media (any-hover: hover)
+    &:hover
+      @content
