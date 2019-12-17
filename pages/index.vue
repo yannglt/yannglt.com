@@ -38,7 +38,7 @@
     <div id="showreelContent">
       <div class="projects__container container">
         <div class="projects__intro">
-          <h2>Projects mentionned<br> in this showreel</h2>
+          <h2>Projects mentionned in this showreel</h2>
           <p >These projects were made late 2018 and 2019, with other designers at Source and friends, credits available in case studies.</p>
         </div>
         <div class="projects">
@@ -275,6 +275,9 @@
     position: relative
     margin-bottom: 35px
 
+    +adapt(768px)
+      margin-bottom: 71px
+
   .showreelVideoReveal
       +adapt(1440px)
         position: absolute
@@ -319,6 +322,13 @@
       +adapt(768px)
         margin-left: 0
         margin-right: 0
+        margin-bottom: 74px
+        text-align: center
+
+      p
+        +adapt(768px)
+          margin-left: 84px
+          margin-right: 84px
 
     .projects
       display: flex
@@ -398,4 +408,30 @@
   #footer
     padding: 39px 0 54px
     background-color: #06080A
+
+    +adapt(768px)
+      padding: 59px 0 48px
+
+  .footer__section
+    margin-bottom: 65px
+
+    +adapt(768px)
+      margin-bottom: 68px
+
+  .about-me
+    margin-right: 168px
+
+  .links
+
+    +adapt(768px)
+      display: grid
+      grid-template-columns: repeat(4, 136px)
+      column-gap: 32px
+
+  .follow-work, .get-in-touch
+
+    +adapt(768px)
+      grid-column: span 2
+
+
 </style>
