@@ -77,7 +77,6 @@
         </div>
       </div>
     </div>
-
     <div id="workTogether">
       <div class="container">
         <p class="workTogether__question highlight">Enjoyed what you saw and now interested in working together?</p>
@@ -87,7 +86,6 @@
         </div>
       </div>
     </div>
-
     <div id="footer">
       <div class="container">
         <div class="footer__section about-me">
@@ -139,46 +137,57 @@
 
     mounted() {
 
-      let ScrollMagic
-      ScrollMagic = require('scrollmagic')
+      if(document.body.width >= 1440) {
 
-      const showreelAlertCircle = new TimelineLite();
-      const showreelAlertArrow = new TimelineLite();
-      const showreelVideoPin = new TimelineLite();
-      const showreelVideoContent = new TimelineLite();
+        let ScrollMagic
+        ScrollMagic = require('scrollmagic')
 
-      const controllerShowreelAlertCircle = new ScrollMagic.Controller();
-      const controllerShowreelAlertArrow = new ScrollMagic.Controller();
-      const controllerShowreelVideoPin = new ScrollMagic.Controller();
-      const controllerShowreelContent = new ScrollMagic.Controller();
+        const showreelAlertCircle = new TimelineLite();
+        const showreelAlertArrow = new TimelineLite();
+        const showreelVideoPin = new TimelineLite();
+        const showreelVideoContent = new TimelineLite();
 
-      showreelAlertCircle.to('.circle', 1, { rotation: 132, })
+        const controllerShowreelAlertCircle = new ScrollMagic.Controller();
+        const controllerShowreelAlertArrow = new ScrollMagic.Controller();
+        const controllerShowreelVideoPin = new ScrollMagic.Controller();
+        const controllerShowreelContent = new ScrollMagic.Controller();
 
-      showreelAlertArrow.to('.arrow', 1, { rotation: 45, })
+        showreelAlertCircle.to('.circle', 1, { rotation: 132, })
 
-      if(document.body.width >= 768) {
+        showreelAlertArrow.to('.arrow', 1, { rotation: 45, })
 
         const sceneShowreelAlertCircle = new ScrollMagic.Scene({
           offset: 50,
           duration: 650
         })
-        // .addIndicators()
-        .setTween(showreelAlertCircle)
-        .addTo(controllerShowreelAlertCircle)
 
         const sceneShowreelAlertArrow = new ScrollMagic.Scene({
           offset: 460,
           duration: 240
         })
-        // .addIndicators()
-        .setTween(showreelAlertArrow)
-        .addTo(controllerShowreelAlertArrow)
 
         const sceneShowreelVideoPin = new ScrollMagic.Scene({
           triggerHook: 'onLeave',
           triggerElement: '#showreelVideo',
           duration: 1200
         })
+
+        const sceneShowreelContent = new ScrollMagic.Scene({
+          triggerHook: 'onEnter',
+          triggerElement: '#showreelContent'
+        })
+
+        sceneShowreelAlertCircle
+        // .addIndicators()
+        .setTween(showreelAlertCircle)
+        .addTo(controllerShowreelAlertCircle)
+
+        sceneShowreelAlertArrow
+        // .addIndicators()
+        .setTween(showreelAlertArrow)
+        .addTo(controllerShowreelAlertArrow)
+
+        sceneShowreelVideoPin
         // .addIndicators()
         .setPin('.showreelVideo__player')
         .addTo(controllerShowreelVideoPin)
@@ -192,10 +201,7 @@
           { opacity: 1, transform: 'translateY(71px)', ease: Power1.EaseInOut },
         )
 
-        const sceneShowreelContent = new ScrollMagic.Scene({
-          triggerHook: 'onEnter',
-          triggerElement: '#showreelContent'
-        })
+        sceneShowreelContent
         // .addIndicators()
         .setTween(showreelVideoContent)
         .addTo(controllerShowreelContent)
@@ -221,11 +227,18 @@
     +adapt(1024px)
       margin-bottom: 120px
 
+    +adapt(1440px)
+      margin-bottom: 156px
+
   .me__container
 
     +adapt(1024px)
       margin-left: 80px
       margin-right: 80px
+
+    +adapt(1440px)
+      margin-left: 106px
+      margin-right: 318px
 
   .tldr__container
     margin-bottom: 42px
@@ -265,6 +278,13 @@
       &:first-of-type
         grid-column: 2 / span 4
 
+    +adapt(1440px)
+      grid-column: span 3
+
+      &:first-of-type
+        grid-column: 2 / span 3
+
+
   .who
 
     p:last-of-type
@@ -285,6 +305,7 @@
     display: none
 
     +adapt(1440px)
+      display: block
       position: relative
       height: 480px
       width: 480px
@@ -484,9 +505,11 @@
       padding: 47px 0 54px
 
     .container
-      display: grid
-      grid-template-columns: repeat(12, 48px)
-      column-gap: 32px
+
+      +adapt(1024px)
+        display: grid
+        grid-template-columns: repeat(12, 48px)
+        column-gap: 32px
 
   .footer__section
     margin-bottom: 65px
@@ -495,7 +518,9 @@
       margin-bottom: 68px
 
   .about-me
-    margin-right: 168px
+
+    +adapt(768px)
+      margin-right: 168px
 
     +adapt(1024px)
       margin-right: 0
