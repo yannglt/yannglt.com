@@ -297,6 +297,10 @@
       margin-left: 80px
       margin-right: 80px
 
+    +adapt(1440px)
+      margin-left: 106px
+      margin-right: 0
+
   .who-and-showreel-alert
     +adapt(1440px)
       display: flex
@@ -326,15 +330,16 @@
       margin-bottom: 71px
 
   .showreelVideoReveal
-      +adapt(1440px)
-        position: absolute
-        z-index: -50
-        bottom: 0
-        height: 1200px
-        width: 100%
-        background-color: #000
 
-        transform: translateY(157px)
+    // +adapt(1440px)
+    //   position: absolute
+    //   z-index: -50
+    //   bottom: 0
+    //   height: 1200px
+    //   width: 100%
+    //   background-color: #000
+    //
+    //   transform: translateY(157px)
 
   .showreelVideo__player
     background-color: #FFFFFF
@@ -367,90 +372,109 @@
     +adapt(1024px)
       max-width: 928px
 
-    .projects__intro
-      margin-left: 40px
-      margin-right: 40px
-      margin-bottom: 54px
-
-      +adapt(768px)
-        margin-left: 0
-        margin-right: 0
-        margin-bottom: 74px
-        text-align: center
-
-      p
-        +adapt(768px)
-          margin-left: 84px
-          margin-right: 84px
-
-        +adapt(1024px)
-          margin-left: 160px
-          margin-right: 160px
-
-    .projects
-      display: flex
-      overflow-x: auto
-      overflow-y: hidden
-      flex-direction: row
-      scroll-snap-type: x mandatory
-      scroll-padding-left: 40px
-      padding-left: 40px
-
-      scrollbar-width: none
-
-      &::-webkit-scrollbar
-        display: none
-
-      +adapt(768px)
-        display: grid
-        grid-template-columns: repeat(4, 136px)
-        column-gap: 32px
-        padding-left: 0
-
-      +adapt(1024px)
-        display: grid
-        grid-template-columns: repeat(12, 48px)
-        column-gap: 32px
-
-    .project
-      flex-grow: 0
-      flex-shrink: 0
-      width: 285px
-      scroll-snap-align: start
-      padding-right: 24px
-
-      &:last-of-type
-        padding-right: 89px
-
-      +adapt(768px)
-        width: 100%
-        padding-right: 0
-        grid-column: span 2
-        margin-bottom: 53px
-
-      +adapt(1024px)
-        grid-column: span 4
-
     +adapt(1440px)
+      max-width: 1240px
+
       display: grid
       grid-template-columns: repeat(12, 74px)
+      column-gap: 32px
+
+  .projects__intro
+    margin-left: 40px
+    margin-right: 40px
+    margin-bottom: 54px
+
+    +adapt(768px)
+      margin-left: 0
+      margin-right: 0
+      margin-bottom: 74px
+      text-align: center
+
+    +adapt(1440px)
+      text-align: left
+      grid-column: 2 / span 4
+      padding-right: 74px
+      margin-bottom: 0
+
+    p
+      +adapt(768px)
+        margin-left: 84px
+        margin-right: 84px
+
+      +adapt(1024px)
+        margin-left: 160px
+        margin-right: 160px
+
+      +adapt(1440px)
+        margin-left: 0
+        margin-right: 0
+
+  .projects
+    display: flex
+    overflow-x: auto
+    overflow-y: hidden
+    flex-direction: row
+    scroll-snap-type: x mandatory
+    scroll-padding-left: 40px
+    padding-left: 40px
+
+    scrollbar-width: none
+
+    &::-webkit-scrollbar
+      display: none
+
+    +adapt(768px)
+      scroll-snap-type: none
+      overflow-x: hidden
+      display: grid
+      grid-template-columns: repeat(4, 136px)
+      column-gap: 32px
+      padding-left: 0
+
+    +adapt(1024px)
+      display: grid
+      grid-template-columns: repeat(12, 48px)
+      column-gap: 32px
+
+    +adapt(1440px)
+      grid-column: span 6
+      display: grid
+      grid-template-columns: repeat(2, 286px)
       column-gap: 32px
       grid-template-rows: repeat(3, 131px)
       grid-row-gap: 53px
 
-      .projects__intro
-        grid-column: 2 / span 4
-        grid-row: span 3
-        padding-right: 74px
+  .project
+    flex-grow: 0
+    flex-shrink: 0
+    width: 285px
+    scroll-snap-align: start
+    padding-right: 24px
 
-      .project
-        grid-column: span 3
+    &:last-of-type
+      padding-right: 89px
+
+    +adapt(768px)
+      width: 100%
+      padding-right: 0
+      grid-column: span 2
+      margin-bottom: 53px
+
+    +adapt(1024px)
+      grid-column: span 4
+
+    +adapt(1440px)
+      grid-column: span 1
+      margin-bottom: 0
 
   #showreelContent
     margin-bottom: 80px
 
     +adapt(768px)
       margin-bottom: 138px
+
+    +adapt(1440px)
+      margin-bottom: 146px
 
   #workTogether
     padding-top: 52px
@@ -472,15 +496,27 @@
         grid-template-columns: repeat(12, 48px)
         column-gap: 32px
 
+      +adapt(1440px)
+        display: grid
+        grid-template-columns: repeat(12, 74px)
+        column-gap: 32px
+
       .workTogether__question
 
         +adapt(1024px)
           grid-column: 2 / span 9
 
+        +adapt(1440px)
+          grid-column: 1 / span 7
+
       .workTogether__redirect
 
         +adapt(1024px)
           grid-column: 2 / span 5
+
+        +adapt(1440px)
+          grid-column: 9 / span 4
+          transform: translateY(27px)
 
         p
           color: rgba(#FFFFFF, 0.84)
@@ -504,6 +540,9 @@
     +adapt(1024px)
       padding: 47px 0 54px
 
+    +adapt(1024px)
+      padding: 87px 0 84px
+
     .container
 
       +adapt(1024px)
@@ -511,11 +550,19 @@
         grid-template-columns: repeat(12, 48px)
         column-gap: 32px
 
+      +adapt(1440px)
+        display: grid
+        grid-template-columns: repeat(12, 74px)
+        column-gap: 32px
+
   .footer__section
     margin-bottom: 65px
 
     +adapt(768px)
       margin-bottom: 68px
+
+    +adapt(1440px)
+      margin-bottom: 86px
 
   .about-me
 
@@ -525,6 +572,9 @@
     +adapt(1024px)
       margin-right: 0
       grid-column: 1 / span 7
+
+    +adapt(1440px)
+      grid-column: 1 / span 5
 
   .links
 
@@ -537,6 +587,9 @@
       grid-column: 1 / span 12
       grid-template-columns: repeat(12, 48px)
       column-gap: 32px
+
+    +adapt(1440px)
+      grid-column: 7 / span 6
 
   .follow-work, .get-in-touch
 
