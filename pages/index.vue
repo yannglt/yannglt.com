@@ -25,8 +25,8 @@
             <p>Here you will find a <a href="#">selection of my latest works</a> and collaborations with startups and some friends, you can also <a href="#">read more about my story (soon)</a>, ask for freelance work, or just send me an invitation to <a href="#">grab a coffee together.</a></p>
           </div>
           <div class="showreel-alert__container">
-            <img class="circle" src="~/assets/images/circle.png" alt="" height="480px" width="480px">
-            <img class="arrow" src="~/assets/images/arrow.png" alt="" height="160px" width="160px">
+            <img class="circle" src="~/assets/images/circle.svg" alt="" height="480px" width="480px">
+            <img class="arrow" src="~/assets/images/arrow.svg" alt="" height="160px" width="160px">
           </div>
         </div>
       </div>
