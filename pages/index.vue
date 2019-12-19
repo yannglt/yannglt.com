@@ -31,12 +31,14 @@
         </div>
       </div>
     </div>
+
     <div id="showreelVideo">
       <div class="container">
         <div class="showreelVideo__player"></div>
       </div>
       <div class="showreelVideoReveal"></div>
     </div>
+
     <div id="showreelContent">
       <div class="projects__container container">
         <div class="projects__intro">
@@ -77,6 +79,7 @@
         </div>
       </div>
     </div>
+
     <div id="workTogether">
       <div class="container">
         <p class="workTogether__question highlight">Enjoyed what you saw and now interested in working together?</p>
@@ -86,126 +89,88 @@
         </div>
       </div>
     </div>
-    <div id="footer">
-      <div class="container">
-        <div class="footer__section about-me">
-          <p class="footer__title">About me</p>
-          <div class="footer__body">
-            <p>Product designer based in Paris,  currently working at <a href="#">Source</a>. Human who likes chocolate, dogs and design operations, but must of all someone with a passion for why and how things are designed.</p>
-            <p><a href="#">HETIC</a> graduate (P2019) • <a href="#">Synerg’hetic</a> alumnus</p>
-          </div>
-        </div>
-        <div class="links">
-          <div class="footer__section follow-work">
-            <p class="footer__title">Follow my work</p>
-            <div class="footer__body">
-              <ul>
-                <li><a href="#">Stories on Medium <img src="~/assets/images/external-link.svg"></a></a></li>
-                <li><a href="#">Journey on Instagram <img src="~/assets/images/external-link.svg"></a></a></li>
-                <li><a href="#">WIPs on Dribbble <img src="~/assets/images/external-link.svg"></a></a></li>
-                <li><a href="#">Case studies on Behance <img src="~/assets/images/external-link.svg"></a></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer__section get-in-touch">
-            <p class="footer__title">Get in touch</p>
-            <div class="footer__body">
-              <ul>
-                <li><a href="#">DMs are open on Twitter <img src="~/assets/images/external-link.svg"></a></li>
-                <li>Work: <a href="#">super-project@yannglt.com</a></li>
-                <li>Say bonjour: <a href="#">hello@yannglt.com</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="copyright">
-          <img src="~/assets/images/logo-copyright.svg" alt="">
-          <span></span>
-          <p>All rights reserved ⓒ Yann-Edern Gillet 2019</p>
-        </div>
-      </div>
-
-    </div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
+  import Footer from '../components/Footer.vue'
 
   import { TimelineLite, Power1 } from 'gsap'
 
   export default {
 
+    components: {
+      Footer,
+    },
+
     mounted() {
 
-      if(document.body.width >= 1440) {
+      let ScrollMagic
+      ScrollMagic = require('scrollmagic')
 
-        let ScrollMagic
-        ScrollMagic = require('scrollmagic')
+      const showreelAlertCircle = new TimelineLite();
+      const showreelAlertArrow = new TimelineLite();
+      const showreelVideoPin = new TimelineLite();
+      const showreelVideoContent = new TimelineLite();
 
-        const showreelAlertCircle = new TimelineLite();
-        const showreelAlertArrow = new TimelineLite();
-        const showreelVideoPin = new TimelineLite();
-        const showreelVideoContent = new TimelineLite();
+      const controllerShowreelAlertCircle = new ScrollMagic.Controller();
+      const controllerShowreelAlertArrow = new ScrollMagic.Controller();
+      const controllerShowreelVideoPin = new ScrollMagic.Controller();
+      const controllerShowreelContent = new ScrollMagic.Controller();
 
-        const controllerShowreelAlertCircle = new ScrollMagic.Controller();
-        const controllerShowreelAlertArrow = new ScrollMagic.Controller();
-        const controllerShowreelVideoPin = new ScrollMagic.Controller();
-        const controllerShowreelContent = new ScrollMagic.Controller();
+      showreelAlertCircle.to('.circle', 1, { rotation: 132, })
 
-        showreelAlertCircle.to('.circle', 1, { rotation: 132, })
+      showreelAlertArrow.to('.arrow', 1, { rotation: 45, })
 
-        showreelAlertArrow.to('.arrow', 1, { rotation: 45, })
+      const sceneShowreelAlertCircle = new ScrollMagic.Scene({
+        offset: 50,
+        duration: 650
+      })
 
-        const sceneShowreelAlertCircle = new ScrollMagic.Scene({
-          offset: 50,
-          duration: 650
-        })
+      const sceneShowreelAlertArrow = new ScrollMagic.Scene({
+        offset: 460,
+        duration: 240
+      })
 
-        const sceneShowreelAlertArrow = new ScrollMagic.Scene({
-          offset: 460,
-          duration: 240
-        })
+      const sceneShowreelVideoPin = new ScrollMagic.Scene({
+        triggerHook: 'onLeave',
+        triggerElement: '#showreelVideo .container',
+        duration: window.innerHeight
+      })
 
-        const sceneShowreelVideoPin = new ScrollMagic.Scene({
-          triggerHook: 'onLeave',
-          triggerElement: '#showreelVideo',
-          duration: 1200
-        })
+      const sceneShowreelContent = new ScrollMagic.Scene({
+        triggerHook: 'onEnter',
+        triggerElement: '#showreelContent'
+      })
 
-        const sceneShowreelContent = new ScrollMagic.Scene({
-          triggerHook: 'onEnter',
-          triggerElement: '#showreelContent'
-        })
+      sceneShowreelAlertCircle
+      // .addIndicators()
+      .setTween(showreelAlertCircle)
+      .addTo(controllerShowreelAlertCircle)
 
-        sceneShowreelAlertCircle
-        // .addIndicators()
-        .setTween(showreelAlertCircle)
-        .addTo(controllerShowreelAlertCircle)
+      sceneShowreelAlertArrow
+      // .addIndicators()
+      .setTween(showreelAlertArrow)
+      .addTo(controllerShowreelAlertArrow)
 
-        sceneShowreelAlertArrow
-        // .addIndicators()
-        .setTween(showreelAlertArrow)
-        .addTo(controllerShowreelAlertArrow)
+      sceneShowreelVideoPin
+      // .addIndicators()
+      .setPin('.showreelVideo__player')
+      .addTo(controllerShowreelVideoPin)
 
-        sceneShowreelVideoPin
-        // .addIndicators()
-        .setPin('.showreelVideo__player')
-        .addTo(controllerShowreelVideoPin)
+      showreelVideoContent
+      .to('.showreelVideoReveal', 0.150, {
+        backgroundColor: '#F7FAFF',
+      })
+      .fromTo('#showreelContent', 0.4,
+        { opacity: 0, transform: 'translateY(0px)' },
+        { opacity: 1, transform: 'translateY(-120px)', ease: Power1.EaseInOut },
+      )
 
-        showreelVideoContent
-        .to('.showreelVideoReveal', 0.150, {
-          backgroundColor: '#F7FAFF',
-        })
-        .fromTo('#showreelContent', 0.4,
-          { opacity: 0, transform: 'translateY(157px)' },
-          { opacity: 1, transform: 'translateY(71px)', ease: Power1.EaseInOut },
-        )
-
-        sceneShowreelContent
-        // .addIndicators()
-        .setTween(showreelVideoContent)
-        .addTo(controllerShowreelContent)
-      }
+      sceneShowreelContent
+      .setTween(showreelVideoContent)
+      .addTo(controllerShowreelContent)
     }
   }
 
@@ -228,7 +193,7 @@
       margin-bottom: 120px
 
     +adapt(1440px)
-      margin-bottom: 156px
+      // margin-bottom: 156px
 
   .me__container
 
@@ -284,7 +249,6 @@
       &:first-of-type
         grid-column: 2 / span 3
 
-
   .who
 
     p:last-of-type
@@ -308,6 +272,9 @@
   .showreel-alert__container
     display: none
 
+    .circle, .arrow
+      pointer-events: none
+
     +adapt(1440px)
       display: block
       position: relative
@@ -329,17 +296,18 @@
     +adapt(768px)
       margin-bottom: 71px
 
-  .showreelVideoReveal
+    +adapt(1440px)
+      // padding-top: 156px
 
-    // +adapt(1440px)
-    //   position: absolute
-    //   z-index: -50
-    //   bottom: 0
-    //   height: 1200px
-    //   width: 100%
-    //   background-color: #000
-    //
-    //   transform: translateY(157px)
+    .container
+      +adapt(1440px)
+        padding-top: calc((100vh - 684px) / 2)
+        padding-bottom: calc((100vh - 684px) / 2)
+        // margin-bottom: 0
+        // height: 100vh
+        // display: flex
+        // justify-content: center
+        // align-items: center
 
   .showreelVideo__player
     background-color: #FFFFFF
@@ -358,9 +326,21 @@
       height: 516px
 
     +adapt(1440px)
-      position: relative
       top: 0px
       height: 684px
+      position: relative
+
+  .showreelVideoReveal
+
+    +adapt(1440px)
+      position: absolute
+      z-index: -50
+      bottom: 0
+      height: calc(100vh + 156px)
+      width: 100%
+      background-color: #000
+
+      transform: translateY(156px)
 
   .projects__container
     display: block
@@ -378,6 +358,15 @@
       display: grid
       grid-template-columns: repeat(12, 74px)
       column-gap: 32px
+
+    #showreelContent
+      margin-bottom: 80px
+
+      +adapt(768px)
+        margin-bottom: 138px
+
+      +adapt(1440px)
+        margin-bottom: 146px
 
   .projects__intro
     margin-left: 40px
@@ -467,15 +456,6 @@
       grid-column: span 1
       margin-bottom: 0
 
-  #showreelContent
-    margin-bottom: 80px
-
-    +adapt(768px)
-      margin-bottom: 138px
-
-    +adapt(1440px)
-      margin-bottom: 146px
-
   #workTogether
     padding-top: 52px
     padding-bottom: 56px
@@ -488,6 +468,11 @@
     +adapt(1024px)
       padding-top: 115px
       padding-bottom: 120px
+
+    +adapt(1440px)
+      //
+      margin-top: 80px
+      //
 
     .container
 
@@ -529,79 +514,5 @@
 
         img
           transform: translate(4px, 6px)
-
-  #footer
-    padding: 39px 0 54px
-    background-color: #06080A
-
-    +adapt(768px)
-      padding: 59px 0 48px
-
-    +adapt(1024px)
-      padding: 47px 0 54px
-
-    +adapt(1024px)
-      padding: 87px 0 84px
-
-    .container
-
-      +adapt(1024px)
-        display: grid
-        grid-template-columns: repeat(12, 48px)
-        column-gap: 32px
-
-      +adapt(1440px)
-        display: grid
-        grid-template-columns: repeat(12, 74px)
-        column-gap: 32px
-
-  .footer__section
-    margin-bottom: 65px
-
-    +adapt(768px)
-      margin-bottom: 68px
-
-    +adapt(1440px)
-      margin-bottom: 86px
-
-  .about-me
-
-    +adapt(768px)
-      margin-right: 168px
-
-    +adapt(1024px)
-      margin-right: 0
-      grid-column: 1 / span 7
-
-    +adapt(1440px)
-      grid-column: 1 / span 5
-
-  .links
-
-    +adapt(768px)
-      display: grid
-      grid-template-columns: repeat(4, 136px)
-      column-gap: 32px
-
-    +adapt(1024px)
-      grid-column: 1 / span 12
-      grid-template-columns: repeat(12, 48px)
-      column-gap: 32px
-
-    +adapt(1440px)
-      grid-column: 7 / span 6
-
-  .follow-work, .get-in-touch
-
-    +adapt(768px)
-      grid-column: span 2
-
-    +adapt(1024px)
-      grid-column: span 4
-
-  .copyright
-
-    +adapt(1024px)
-      grid-column: 1 / span 12
 
 </style>
