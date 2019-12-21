@@ -60,7 +60,7 @@
     +adapt(1024px)
       padding: 47px 0 54px
 
-    +adapt(1024px)
+    +adapt(1440px)
       padding: 87px 0 84px
 
     .container
@@ -123,5 +123,12 @@
 
     +adapt(1024px)
       grid-column: 1 / span 12
+
+    span
+      height: 4px
+      width: 4px
+      background-color: rgba(#F5F9FF, 0.16)
+      border-radius: 50%
+      margin-right: 8px
 
 </style>

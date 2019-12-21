@@ -42,7 +42,7 @@
     <div id="showreelContent">
       <div class="projects__container container">
         <div class="projects__intro">
-          <h2>Projects mentionned in this showreel</h2>
+          <h2>Projects mentionned <span class="cr"><br></span>in this showreel</h2>
           <p >These projects were made late 2018 and 2019, with other designers at Source and friends, credits available in case studies.</p>
         </div>
         <div class="projects">
@@ -103,24 +103,19 @@
     components: {
       Footer,
     },
-
     mounted() {
-
       let ScrollMagic
       ScrollMagic = require('scrollmagic')
-
       const showreelAlertCircle = new TimelineLite();
       const showreelAlertArrow = new TimelineLite();
       const showreelVideoPin = new TimelineLite();
       const showreelVideoContent = new TimelineLite();
-
       const controllerShowreelAlertCircle = new ScrollMagic.Controller();
       const controllerShowreelAlertArrow = new ScrollMagic.Controller();
       const controllerShowreelVideoPin = new ScrollMagic.Controller();
       const controllerShowreelContent = new ScrollMagic.Controller();
 
       showreelAlertCircle.to('.circle', 1, { rotation: 132, })
-
       showreelAlertArrow.to('.arrow', 1, { rotation: 45, })
 
       const sceneShowreelAlertCircle = new ScrollMagic.Scene({
@@ -135,8 +130,8 @@
 
       const sceneShowreelVideoPin = new ScrollMagic.Scene({
         triggerHook: 'onLeave',
-        triggerElement: '#showreelVideo .container',
-        duration: window.innerHeight
+        triggerElement: '#showreelVideo',
+        duration: window.innerHeight * 1.25
       })
 
       const sceneShowreelContent = new ScrollMagic.Scene({
@@ -145,12 +140,10 @@
       })
 
       sceneShowreelAlertCircle
-      // .addIndicators()
       .setTween(showreelAlertCircle)
       .addTo(controllerShowreelAlertCircle)
 
       sceneShowreelAlertArrow
-      // .addIndicators()
       .setTween(showreelAlertArrow)
       .addTo(controllerShowreelAlertArrow)
 
@@ -164,10 +157,9 @@
         backgroundColor: '#F7FAFF',
       })
       .fromTo('#showreelContent', 0.4,
-        { opacity: 0, transform: 'translateY(0px)' },
-        { opacity: 1, transform: 'translateY(-120px)', ease: Power1.EaseInOut },
+        { opacity: 0, transform: 'translateY('+ window.getComputedStyle(document.querySelector("#showreelVideo .container")).paddingTop +'px)' },
+        { opacity: 1, transform: 'translateY(0px)', ease: Power1.EaseInOut }
       )
-
       sceneShowreelContent
       .setTween(showreelVideoContent)
       .addTo(controllerShowreelContent)
@@ -184,16 +176,16 @@
     overflow-x: hidden
 
   #intro
-    margin-bottom: 72px
+    margin-bottom: calc(72px - ((100vh - 212px)/2))
 
     +adapt(768px)
-      margin-bottom: 122px
+      margin-bottom: calc(122px - ((100vh - 356px)/2))
 
     +adapt(1024px)
-      margin-bottom: 120px
+      margin-bottom: calc(120px - ((100vh - 516px)/2))
 
     +adapt(1440px)
-      // margin-bottom: 156px
+      margin-bottom: calc(156px - ((100vh - 684px)/2))
 
   .me__container
 
@@ -249,6 +241,12 @@
       &:first-of-type
         grid-column: 2 / span 3
 
+  .who-and-showreel-alert
+    +adapt(1440px)
+      display: grid
+      grid-template-columns: repeat(12, 74px)
+      column-gap: 32px
+
   .who
 
     p:last-of-type
@@ -262,12 +260,9 @@
       margin-right: 80px
 
     +adapt(1440px)
-      margin-left: 106px
+      margin-left: 0
       margin-right: 0
-
-  .who-and-showreel-alert
-    +adapt(1440px)
-      display: flex
+      grid-column: 2 / span 7
 
   .showreel-alert__container
     display: none
@@ -277,11 +272,12 @@
 
     +adapt(1440px)
       display: block
+      grid-column: span 4
       position: relative
       height: 480px
       width: 480px
 
-      transform: translate(185px, -44px)
+      transform: translate(8px, -44px)
 
       .arrow
         position: absolute
@@ -291,35 +287,33 @@
 
   #showreelVideo
     position: relative
-    margin-bottom: 35px
-
-    +adapt(768px)
-      margin-bottom: 71px
-
-    +adapt(1440px)
-      // padding-top: 156px
 
     .container
+      padding-top: calc((100vh - 212px) / 2)
+      // padding-bottom: calc((100vh - 212px) / 2)
+
+      +adapt(768px)
+        padding-top: calc((100vh - 356px) / 2)
+        // padding-bottom: calc((100vh - 356px) / 2)
+
+      +adapt(1024px)
+        padding-top: calc((100vh - 516px) / 2)
+        // padding-bottom: calc((100vh - 516px) / 2)
+
       +adapt(1440px)
         padding-top: calc((100vh - 684px) / 2)
-        padding-bottom: calc((100vh - 684px) / 2)
-        // margin-bottom: 0
-        // height: 100vh
-        // display: flex
-        // justify-content: center
-        // align-items: center
+        // padding-bottom: calc((100vh - 684px) / 2)
 
   .showreelVideo__player
     background-color: #FFFFFF
     mix-blend-mode: difference
+    position: relative
     width: 100%
     height: 212px
-    width: calc(100% + 32px)
-    margin-left: -16px
+    width: calc(100%)
 
     +adapt(768px)
       width: 100%
-      margin-left: 0
       height: 356px
 
     +adapt(1024px)
@@ -328,19 +322,42 @@
     +adapt(1440px)
       top: 0px
       height: 684px
-      position: relative
 
   .showreelVideoReveal
+    position: absolute
+    z-index: -50
+    height: 125vh
+    width: 100%
+    bottom: 0
+    background-color: #000
+    transform: translateY(calc((100vh - 212px) / 2))
+
+    +adapt(768px)
+      transform: translateY(calc((100vh - 356px) / 2))
+
+    +adapt(1024px)
+      transform: translateY(calc((100vh - 516px) / 2))
 
     +adapt(1440px)
-      position: absolute
-      z-index: -50
-      bottom: 0
-      height: calc(100vh + 156px)
-      width: 100%
-      background-color: #000
+      transform: translateY(calc((100vh - 684px) / 2))
 
-      transform: translateY(156px)
+  #showreelContent
+    margin-top: 35px
+
+    +adapt(768px)
+      margin-top: 71px
+
+    .cr
+      display: inline
+
+      +adapt(768px)
+        display: none
+
+      +adapt(1024px)
+        display: none
+
+      +adapt(1440px)
+        display: inline
 
   .projects__container
     display: block
@@ -358,15 +375,6 @@
       display: grid
       grid-template-columns: repeat(12, 74px)
       column-gap: 32px
-
-    #showreelContent
-      margin-bottom: 80px
-
-      +adapt(768px)
-        margin-bottom: 138px
-
-      +adapt(1440px)
-        margin-bottom: 146px
 
   .projects__intro
     margin-left: 40px
@@ -459,20 +467,20 @@
   #workTogether
     padding-top: 52px
     padding-bottom: 56px
+    margin-top: 80px
     background-color: rgba(#06080A, 0.96)
 
     +adapt(768px)
       padding-top: 79px
       padding-bottom: 120px
+      margin-top: 138px
 
     +adapt(1024px)
       padding-top: 115px
       padding-bottom: 120px
 
     +adapt(1440px)
-      //
-      margin-top: 80px
-      //
+      margin-top: 146px
 
     .container
 
