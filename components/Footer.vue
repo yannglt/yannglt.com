@@ -75,6 +75,50 @@
         grid-template-columns: repeat(12, 74px)
         column-gap: 32px
 
+    .footer
+
+      &__title
+        color: #F5F9FF
+        font-family: GT America Mono
+        font-size: 13px
+        font-weight: 700
+        letter-spacing: 1.5px
+        line-height: 24px
+        text-transform: uppercase
+
+        margin-bottom: 13px
+
+      &__body
+
+        p:last-of-type, li:last-of-type
+          margin-bottom: 0
+
+        p, li
+          color: rgba(#F5F9FF, 0.84)
+
+        li
+          margin-bottom: 16px
+          line-height: 20px
+
+          a
+            text-decoration: none
+
+            img
+              transform: translateY(4px)
+
+    .about-me a, .get-in-touch li:nth-of-type(2) a, .get-in-touch li:nth-of-type(3) a
+      text-decoration: none
+      position: relative
+
+      &::after
+        content: ''
+        position: absolute
+        left: 0
+        bottom: -2px
+        height: 1px
+        width: 100%
+        background-color: rgba(#F5F9FF, 0.4)
+
   .footer__section
     margin-bottom: 65px
 
@@ -120,6 +164,17 @@
       grid-column: span 4
 
   .copyright
+    display: flex
+    align-items: center
+    transform: translateX(-11px)
+
+    p
+      color: rgba(#F5F9FF, 0.84)
+      font-size: 13px
+      line-height: 20px
+      letter-spacing: 0.1px
+
+      margin-bottom: 0
 
     +adapt(1024px)
       grid-column: 1 / span 12
