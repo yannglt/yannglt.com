@@ -4,7 +4,7 @@
       <div class="footer__section about-me">
         <p class="footer__title">About me</p>
         <div class="footer__body">
-          <p>Product designer based in Paris,  currently working at <a href="#">Source</a>. Human who likes chocolate, dogs and design operations, but must of all someone with a passion for why and how things are designed.</p>
+          <p>Product designer based in Paris,  currently working at <a href="#">Source</a>. <br>Human who likes chocolate, dogs and design operations, but must of all someone with a passion for why and how things are designed.</p>
           <p><a href="#">HETIC</a> graduate (P2019) • <a href="#">Synerg’hetic</a> alumnus</p>
         </div>
       </div>
