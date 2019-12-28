@@ -4,8 +4,8 @@
       <div class="footer__section about-me">
         <p class="footer__title">About me</p>
         <div class="footer__body">
-          <p>Product designer based in Paris,  currently working at <a href="#">Source</a>. <br>Human who likes chocolate, dogs and design operations, but must of all someone with a passion for why and how things are designed.</p>
-          <p><a href="#">HETIC</a> graduate (P2019) • <a href="#">Synerg’hetic</a> alumnus</p>
+          <p>Product designer based in Paris,  currently working at <a href="https://source.paris/" target="_blank">Source</a>. <br>Human who likes chocolate, dogs and design operations, but must of all someone with a passion for why and how things are designed.</p>
+          <p><a href="https://www.hetic.net/" target="_blank">HETIC</a> graduate (P2019) • <a href="https://synerghetic.net/" target="_blank">Synerg’hetic</a> alumnus</p>
         </div>
       </div>
       <div class="links">
@@ -13,10 +13,10 @@
           <p class="footer__title">Follow my work</p>
           <div class="footer__body">
             <ul>
-              <li><a href="#">Stories on Medium <img src="~/assets/images/external-link.svg"></a></a></li>
-              <li><a href="#">Journey on Instagram <img src="~/assets/images/external-link.svg"></a></a></li>
-              <li><a href="#">WIPs on Dribbble <img src="~/assets/images/external-link.svg"></a></a></li>
-              <li><a href="#">Case studies on Behance <img src="~/assets/images/external-link.svg"></a></a></li>
+              <li><a href="https://medium.com/@yannglt" target="_blank">Stories on Medium <img src="~/assets/images/external-link.svg"></a></a></li>
+              <li><a href="https://www.instagram.com/ynngllt/" target="_blank">Journey on Instagram <img src="~/assets/images/external-link.svg"></a></a></li>
+              <li><a href="https://dribbble.com/yannglt" target="_blank">WIPs on Dribbble <img src="~/assets/images/external-link.svg"></a></a></li>
+              <li><a href="https://www.behance.net/yannglt/" target="_blank">Case studies on Behance <img src="~/assets/images/external-link.svg"></a></a></li>
             </ul>
           </div>
         </div>
@@ -24,9 +24,9 @@
           <p class="footer__title">Get in touch</p>
           <div class="footer__body">
             <ul>
-              <li><a href="#">DMs are open on Twitter <img src="~/assets/images/external-link.svg"></a></li>
-              <li>Work: <a href="#">super-project@yannglt.com</a></li>
-              <li>Say bonjour: <a href="#">hello@yannglt.com</a></li>
+              <li><a href="https://twitter.com/yannglt" target="_blank">DMs are open on Twitter <img src="~/assets/images/external-link.svg"></a></li>
+              <li>Work: <a href="mailto:super-project@yannglt.com">super-project@yannglt.com</a></li>
+              <li>Say bonjour: <a href="mailto:hello@yannglt.com">hello@yannglt.com</a></li>
             </ul>
           </div>
         </div>

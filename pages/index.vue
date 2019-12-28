@@ -20,7 +20,7 @@
         </div>
         <div class="who-and-showreel-alert">
           <div class="who emphasis">
-            <p>I am currently living in Paris, France and working at a product design studio called <a href="#">Source</a>, where I help to define and create products and services for businesses and people.</p>
+            <p>I am currently living in Paris, France and working at a product design studio called <a href="https://source.paris/" target="_blank">Source</a>, where I help to define and create products and services for businesses and people.</p>
             <p>Aside this day job, I often spend time <a href="#">thinking</a>, <a href="#">writing</a> and <a href="#">talking</a> about the design operations and their impacts on organizations, teams and end-users.</p>
             <p>Here you will find a <a href="#">selection of my latest works</a> and collaborations with startups and some friends, you can also <a href="#">read more about my story (soon)</a>, ask for freelance work, or just send me an invitation to <a href="#">grab a coffee together.</a></p>
           </div>
