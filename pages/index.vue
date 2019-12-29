@@ -7,6 +7,10 @@
           <h1>Product Designer of things made of strategy, empathy and work precision</h1>
         </div>
         <div class="tldr__container">
+          <div class="tldr__intro">
+            <p class="tldr__introText">tl;dr</p>
+            <img class="tldr__introImage" src="~/assets/images/arrow-tldr.svg" alt="" height="24px" width="24px">
+          </div>
           <div class="tldr tldr__who">
             <p class="extract__tag">Current position</p>
             <p class="extract__title">Product Designer, Source</p>
@@ -19,6 +23,10 @@
           </div>
         </div>
         <div class="who-and-showreel-alert">
+          <div class="tldr__intro">
+            <p class="tldr__introText">hello</p>
+            <img class="tldr__introImage" src="~/assets/images/arrow-tldr.svg" alt="" height="24px" width="24px">
+          </div>
           <div class="who emphasis">
             <p>I am currently living in Paris, France and working at a product design studio called <a href="https://source.paris/" target="_blank">Source</a>, where I help to define and create products and services for businesses and people.</p>
             <p>Aside this day job, I often spend time <a href="#">thinking</a>, <a href="#">writing</a> and <a href="#">talking</a> about the design operations and their impacts on organizations, teams and end-users.</p>
