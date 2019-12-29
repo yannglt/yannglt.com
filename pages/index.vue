@@ -10,7 +10,7 @@
           <div class="tldr tldr__who">
             <p class="extract__tag">Current position</p>
             <p class="extract__title">Product Designer, Source</p>
-            <p class="extract__body">A tech company providing value through design solutions, technical expertise and financial support</p>
+            <p class="extract__body">A tech company providing value through <br>design solutions, technical expertise and financial support</p>
           </div>
           <div class="tldr tldr__what">
             <p class="extract__tag">With a passion for</p>
