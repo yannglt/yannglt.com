@@ -111,6 +111,7 @@
     components: {
       Footer,
     },
+
     mounted() {
       let ScrollMagic
       ScrollMagic = require('scrollmagic')
@@ -165,12 +166,18 @@
         backgroundColor: '#F7FAFF',
       })
       .fromTo('#showreelContent', 0.4,
-        { opacity: 0, transform: 'translateY('+ window.getComputedStyle(document.querySelector("#showreelVideo .container")).paddingTop +'px)' },
+        { opacity: 0, transform: 'translateY('+ window.getComputedStyle(document.querySelector('#showreelVideo .container')).paddingTop +'px)' },
         { opacity: 1, transform: 'translateY(0px)', ease: Power1.EaseInOut }
       )
       sceneShowreelContent
       .setTween(showreelVideoContent)
       .addTo(controllerShowreelContent)
+
+      document.querySelector('.showreel-alert__container').addEventListener('click', function(){
+        // console.log('click')
+        // window.scroll({ top: 100, behavior: 'smooth'})
+        document.getElementById('showreelVideo').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+      })
     }
   }
 
