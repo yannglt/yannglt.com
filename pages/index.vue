@@ -257,8 +257,13 @@
         grid-column: 2 / span 3
 
   .who-and-showreel-alert
-    +adapt(1440px)
+
+    +adapt(1024px)
       display: grid
+      grid-template-columns: repeat(12, 48px)
+      column-gap: 32px
+
+    +adapt(1440px)
       grid-template-columns: repeat(12, 74px)
       column-gap: 32px
 
@@ -271,11 +276,10 @@
       margin-right: 168px
 
     +adapt(1024px)
-      margin-left: 80px
-      margin-right: 80px
+      margin-right: 0
+      grid-column: 2 / span 10
 
     +adapt(1440px)
-      margin-left: 0
       margin-right: 0
       grid-column: 2 / span 7
 

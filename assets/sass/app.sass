@@ -10,10 +10,14 @@ body
   text-rendering: optimizeLegibility
 
 .container
-  max-width: 334px
-  margin: 0 auto
+  margin-left: 32px
+  margin-right: 32px
 
   // transition: background-color 200ms linear
+
+  +adapt(414px)
+    margin: 0 auto
+    max-width: 334px
 
   +adapt(768px)
     max-width: 640px
