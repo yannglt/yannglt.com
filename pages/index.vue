@@ -28,9 +28,9 @@
             <img class="tldr__introImage" src="~/assets/images/arrow-tldr.svg" alt="" height="24px" width="24px">
           </div>
           <div class="who emphasis">
-            <p>I am currently living in Paris, France and working at a product design studio called <a href="https://source.paris/" target="_blank">Source</a>, where I help to define and create products and services for businesses and people.</p>
-            <p>Aside this day job, I often spend time <a href="#">thinking</a>, <a href="#">writing</a> and <a href="#">talking</a> about the design operations and their impacts on organizations, teams and end-users.</p>
-            <p>Here you will find a <a href="#">selection of my latest works</a> and collaborations with startups and some friends, you can also <a href="#">read more about my story (soon)</a>, ask for freelance work, or just send me an invitation to <a href="#">grab a coffee together.</a></p>
+            <p>I am currently living in Paris, France and working at a product design studio called <a href="https://source.paris" target="_blank">Source</a>, where I help to define and create products and services for businesses and people.</p>
+            <p>Alongside this Product Designer position I spend some time thinking, writing and talking about design operations and their impacts on organizations, teams and end-users.</p>
+            <p>Here you will find soon a selection of my latest works</a> and collaborations with startups and some friends, you will be also able to read more about my story</a>, ask for freelance work, or just send me an invitation to <a href="mailto:hello@yannglt.com">grab a coffee together</a>.</p>
           </div>
           <div class="showreel-alert__container">
             <img class="circle" src="~/assets/images/circle.svg" alt="" height="480px" width="480px">
@@ -51,38 +51,38 @@
       <div class="projects__container container">
         <div class="projects__intro">
           <h2>Projects mentionned <span class="cr"><br></span>in this showreel</h2>
-          <p >These projects were made late 2018 and 2019, with other designers at Source and friends, credits available in case studies.</p>
+          <p >These projects were made in 2018 and 2019 with other designers, credits available in upcoming case&nbsp;studies.</p>
         </div>
         <div class="projects">
           <div class="project">
           <p class="extract__tag">Product design</p>
           <p class="extract__title">Tagether mobile app</p>
-          <p class="extract__body">Wrote a research paper on design language systems and their impacts on product teams and end users</p>
+          <p class="extract__body">Reconnect through discovery and fidelity, local shops and citizens with the aim of creating new neighborhood dynamics</p>
           </div>
           <div class="project">
             <p class="extract__tag">Information architecture</p>
             <p class="extract__title">DC Comics marketplace</p>
-            <p class="extract__body">Wrote a research paper on design language systems and their impacts on product teams and end users</p>
+            <p class="extract__body">Promote official comics products from Warner&nbsp;Bros. to french customers with a new dedicated marketplace</p>
           </div>
           <div class="project">
             <p class="extract__tag">Product design</p>
             <p class="extract__title">Rookie service</p>
-            <p class="extract__body">Wrote a research paper on design language systems and their impacts on product teams and end users</p>
+            <p class="extract__body">Find a solution for 100 000 abandoned pets each year in France with behavior problems as first target</p>
           </div>
           <div class="project">
             <p class="extract__tag">Branding workshop</p>
             <p class="extract__title">Warner Bros. Horror</p>
-            <p class="extract__body">Wrote a research paper on design language systems and their impacts on product teams and end users</p>
+            <p class="extract__body">Create a unique personality for upcoming Warner Bros. horror franchise, based on its classics and latest movies</p>
           </div>
           <div class="project">
             <p class="extract__tag">Branding, IA + ERG</p>
             <p class="extract__title">Dassault Systèmes story</p>
-            <p class="extract__body">Wrote a research paper on design language systems and their impacts on product teams and end users</p>
+            <p class="extract__body">Provide a real structure for all related content allowing stakeholders to transmit the desired messages to targets</p>
           </div>
           <div class="project">
             <p class="extract__tag">Branding + 3D</p>
             <p class="extract__title">Electricity, personal city</p>
-            <p class="extract__body">Wrote a research paper on design language systems and their impacts on product teams and end users</p>
+            <p class="extract__body">Personal playground created 8 years ago in my debuts, where I experiment my own branding and do some 3D modeling</p>
           </div>
         </div>
       </div>
@@ -93,7 +93,7 @@
         <p class="workTogether__question highlight">Enjoyed what you saw and now interested in working together?</p>
         <div class="workTogether__redirect">
           <p>I will be thrilled to bring my expertise to your project. Send me a few lines describing the design problem you encounter or the startup idea you dream of and I will be back to you within a day.</p>
-          <a class="">Take my idea to the next level</a><img src="~/assets/images/arrow-link.svg">
+          <a href="mailto:super-project@yannglt.com">Take my idea to the next level</a><img src="~/assets/images/arrow-link.svg">
         </div>
       </div>
     </div>
@@ -176,7 +176,7 @@
       document.querySelector('.showreel-alert__container').addEventListener('click', function(){
         // console.log('click')
         // window.scroll({ top: 100, behavior: 'smooth'})
-        document.getElementById('showreelVideo').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+        document.getElementById('showreelVideo').scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});
       })
     }
   }
@@ -281,9 +281,6 @@
 
   .showreel-alert__container
     display: none
-
-    .circle, .arrow
-      pointer-events: none
 
     +adapt(1440px)
       display: block
@@ -534,6 +531,9 @@
 
           +adapt(1024px)
             margin-right: 0
+
+        a
+          text-decoration: none
 
         img
           transform: translate(4px, 6px)
