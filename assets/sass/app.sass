@@ -24,6 +24,13 @@ body
   +adapt(1440px)
     max-width: 1240px
 
+*::selection
+  color: $foam
+  background-color: $oblivion
+
+img
+  pointer-events: none
+
 #intro
   margin-top: 94px
 
@@ -48,9 +55,9 @@ body
     @extend .extract__tag
 
   &__introImage
-    margin-top: 1px
+    transform: translateY(-1px)
 
 .who-and-showreel-alert
 
   .tldr__intro
-    transform: translateY(7px)
+    transform: translateY(11px)
