@@ -321,8 +321,8 @@
         // padding-bottom: calc((100vh - 684px) / 2)
 
   .showreelVideo__player
-    background-color: #FFFFFF
-    mix-blend-mode: difference
+    background-color: #06080A
+    // mix-blend-mode: difference
     position: relative
     width: 100%
     height: 212px
