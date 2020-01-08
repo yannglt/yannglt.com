@@ -140,7 +140,8 @@
       const sceneShowreelVideoPin = new ScrollMagic.Scene({
         triggerHook: 'onLeave',
         triggerElement: '#showreelVideo',
-        duration: window.innerHeight * 1.25
+        // duration: window.innerHeight * 1.25
+        duration: window.innerHeight * 0.5
       })
 
       const sceneShowreelContent = new ScrollMagic.Scene({
@@ -156,10 +157,10 @@
       .setTween(showreelAlertArrow)
       .addTo(controllerShowreelAlertArrow)
 
-      // sceneShowreelVideoPin
-      // // .addIndicators()
-      // .setPin('.showreelVideo__player')
-      // .addTo(controllerShowreelVideoPin)
+      sceneShowreelVideoPin
+      // .addIndicators()
+      .setPin('.showreelVideo__player')
+      .addTo(controllerShowreelVideoPin)
 
       // showreelVideoContent
       // .to('.showreelVideoReveal', 0.150, {
