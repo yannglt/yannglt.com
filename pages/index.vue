@@ -44,7 +44,7 @@
       <div class="container">
         <div class="showreelVideo__player"></div>
       </div>
-      <div class="showreelVideoReveal"></div>
+      <!-- <div class="showreelVideoReveal"></div> -->
     </div>
 
     <div id="showreelContent">
@@ -156,28 +156,28 @@
       .setTween(showreelAlertArrow)
       .addTo(controllerShowreelAlertArrow)
 
-      sceneShowreelVideoPin
-      // .addIndicators()
-      .setPin('.showreelVideo__player')
-      .addTo(controllerShowreelVideoPin)
+      // sceneShowreelVideoPin
+      // // .addIndicators()
+      // .setPin('.showreelVideo__player')
+      // .addTo(controllerShowreelVideoPin)
 
-      showreelVideoContent
-      .to('.showreelVideoReveal', 0.150, {
-        backgroundColor: '#F7FAFF',
-      })
-      .fromTo('#showreelContent', 0.4,
-        { opacity: 0, transform: 'translateY('+ window.getComputedStyle(document.querySelector('#showreelVideo .container')).paddingTop +'px)' },
-        { opacity: 1, transform: 'translateY(0px)', ease: Power1.EaseInOut }
-      )
-      sceneShowreelContent
-      .setTween(showreelVideoContent)
-      .addTo(controllerShowreelContent)
+      // showreelVideoContent
+      // .to('.showreelVideoReveal', 0.150, {
+      //   backgroundColor: '#F7FAFF',
+      // })
+      // .fromTo('#showreelContent', 0.4,
+      //   { opacity: 0, transform: 'translateY('+ window.getComputedStyle(document.querySelector('#showreelVideo .container')).paddingTop +'px)' },
+      //   { opacity: 1, transform: 'translateY(0px)', ease: Power1.EaseInOut }
+      // )
+      // sceneShowreelContent
+      // .setTween(showreelVideoContent)
+      // .addTo(controllerShowreelContent)
 
-      document.querySelector('.showreel-alert__container').addEventListener('click', function(){
-        // console.log('click')
-        // window.scroll({ top: 100, behavior: 'smooth'})
-        document.getElementById('showreelVideo').scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});
-      })
+      // document.querySelector('.showreel-alert__container').addEventListener('click', function(){
+      //   // console.log('click')
+      //   // window.scroll({ top: 100, behavior: 'smooth'})
+      //   document.getElementById('showreelVideo').scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});
+      // })
     }
   }
 
