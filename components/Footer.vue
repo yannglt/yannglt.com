@@ -34,7 +34,7 @@
       <div class="copyright">
         <img src="~/assets/images/logo-copyright.svg" alt="">
         <span></span>
-        <p>All rights reserved ⓒ Yann-Edern Gillet 2019</p>
+        <p>All rights reserved ⓒ Yann-Edern Gillet 2020</p>
       </div>
     </div>
   </footer>
