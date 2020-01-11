@@ -16,7 +16,7 @@
               <li><a href="https://medium.com/@yannglt" target="_blank">Stories on Medium <img src="~/assets/images/external-link.svg"></a></a></li>
               <li><a href="https://www.instagram.com/ynngllt/" target="_blank">Journey on Instagram <img src="~/assets/images/external-link.svg"></a></a></li>
               <li><a href="https://dribbble.com/yannglt" target="_blank">WIPs on Dribbble <img src="~/assets/images/external-link.svg"></a></a></li>
-              <li><a href="https://www.behance.net/yannglt/" target="_blank">Case studies on Behance <img src="~/assets/images/external-link.svg"></a></a></li>
+              <!-- <li><a href="https://www.behance.net/yannglt/" target="_blank">Case studies on Behance <img src="~/assets/images/external-link.svg"></a></a></li> -->
             </ul>
           </div>
         </div>

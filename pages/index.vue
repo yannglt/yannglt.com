@@ -14,7 +14,7 @@
           <div class="tldr tldr__who">
             <p class="extract__tag">Current position</p>
             <p class="extract__title">Product Designer, Source</p>
-            <p class="extract__body">A tech company providing value through <br>design solutions, technical expertise and financial support</p>
+            <p class="extract__body">A company providing value through <br>design solutions, technical expertise and financial support</p>
           </div>
           <div class="tldr tldr__what">
             <p class="extract__tag">With a passion for</p>
@@ -42,7 +42,9 @@
 
     <div id="showreelVideo">
       <div class="container">
-        <div class="showreelVideo__player"></div>
+        <div class="showreelVideo__player">
+          <p class="showreelWaiting">showreel is coming</p>
+        </div>
       </div>
       <!-- <div class="showreelVideoReveal"></div> -->
     </div>
@@ -340,6 +342,17 @@
       top: 0px
       height: 684px
 
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .showreelWaiting
+      color: #FFF
+      font-family: 'GT America Mono'
+      margin-bottom: 0
+
+      animation: showreelWaiting linear 1.618s infinite alternate
+
   .showreelVideoReveal
     position: absolute
     z-index: -50
@@ -542,5 +555,10 @@
 
         img
           transform: translate(4px, 6px)
+
+  @keyframes showreelWaiting
+
+    100%
+      opacity: 1
 
 </style>
