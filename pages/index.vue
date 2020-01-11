@@ -43,7 +43,7 @@
     <div id="showreelVideo">
       <div class="container">
         <div class="showreelVideo__player">
-          <p class="showreelWaiting">showreel is coming</p>
+          <p class="showreelWaiting">Showreel is coming...</p>
         </div>
       </div>
       <!-- <div class="showreelVideoReveal"></div> -->
