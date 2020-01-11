@@ -11,9 +11,11 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "vue-server-renderer": "^2.6.11"
   },
   "devDependencies": {
+    "@nuxtjs/google-analytics": "^2.2.3",
     "@nuxtjs/style-resources": "^1.0.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.2.2",
