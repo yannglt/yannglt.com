@@ -1,21 +1,67 @@
 @import "./reset.sass"
+@import "./mixins.sass"
 @import "./atoms/colors.sass"
 @import "./atoms/fonts.sass"
 @import "./atoms/type.sass"
+@import "./components/extract.sass"
+
+body
+  background-color: $foam
+  text-rendering: optimizeLegibility
 
 .container
-  max-width: 1240px
-  margin: 0 auto
+  margin-left: 32px
+  margin-right: 32px
 
-  transition: background-color 200ms linear
+  // transition: background-color 200ms linear
 
+  +adapt(414px)
+    margin: 0 auto
+    max-width: 334px
 
-// LIGHT MODE
-@media (prefers-color-scheme: light)
-  body
-    background-color: $foam
+  +adapt(768px)
+    max-width: 640px
 
-// DARK MODE
-// @media (prefers-color-scheme: dark)
-//   body
-//     background-color: $oblivion-darker
+  +adapt(1024px)
+    max-width: 928px
+
+  +adapt(1440px)
+    max-width: 1240px
+
+*::selection
+  color: $foam
+  background-color: $oblivion
+
+img
+  pointer-events: none
+
+#intro
+  margin-top: 94px
+
+  +adapt(768px)
+    margin-top: 120px
+
+  +adapt(1440px)
+    // margin-top: 196px
+    margin-top: 156px
+
+.tldr
+
+  &__intro
+    display: none
+
+    +adapt(1024px)
+      display: flex
+      align-items: center
+      flex-direction: column
+
+  &__introText
+    @extend .extract__tag
+
+  &__introImage
+    transform: translateY(-1px)
+
+.who-and-showreel-alert
+
+  .tldr__intro
+    transform: translateY(11px)

@@ -30,14 +30,15 @@ export default {
   ** Global CSS
   */
   css: [
-    '@/assets/sass/app.sass'
+    { src: '@/assets/sass/app.sass', lang: 'sass' }
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/gsap-scrollmagic.js', ssr: false }
+    { src: '~/plugins/gsap-scrollmagic.js', ssr: false },
+    { src: '~plugins/ga.js', mode: 'client' }
   ],
 
   // module.exports = {
@@ -61,5 +62,5 @@ export default {
     */
     extend(config, ctx) {
     }
-  }
+  },
 }

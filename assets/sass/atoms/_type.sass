@@ -1,67 +1,119 @@
 h1
-  width: 816px
-
+  position: relative
   color: $type-primary
   font-family: Bluu Suuperstar
-  font-size: 61px
-  letter-spacing: -1.8px
-  line-height: 80px
+  font-size: 25px
+  letter-spacing: -0.81px
+  line-height: 36px
+
   text-decoration: underline
+  text-decoration-color: $type-secondary
+  text-decoration-style: solid
+  text-decoration-thickness: 2px
+  text-underline-position: auto
+  text-decoration-skip-ink: auto
 
-  margin-bottom: 85px
+  margin-bottom: 47px
 
-p
-  font-family: GT America
+  +adapt(768px)
+    font-size: 48px
+    letter-spacing: -1.4px
+    line-height: 64px
 
-.tag
+    margin-bottom: 40px
+
+  +adapt(1024px)
+    font-size: 61px
+    letter-spacing: -1.8px
+    line-height: 80px
+
+    margin-bottom: 85px
+
+h2
+  color: $type-primary
+  font-size: 1.5625rem
+  font-family: Bluu Suuperstar
+  letter-spacing: -0.4px
+  line-height: 1.28em
+
+  margin-bottom: 15px
+
+p, li
   color: $type-secondary
+  font-family: GT America
+  letter-spacing: -0.2px
+  line-height: 1.5em
+
+  margin-bottom: 16px
+
+.me
+  color: $electricity
   font-family: GT America Mono
-  font-size: 0.8rem
-  font-weight: 600
+  font-size: 16px
+  font-weight: 500
+  line-height: 31px
   letter-spacing: 1.5px
-  line-height: 24px
   text-transform: uppercase
 
-  margin-bottom: 6px
+  margin-bottom: 11px
 
-  &.main
-    color: $electricity
-    font-size: 1.25rem
-    font-weight: 500
+  +adapt(768px)
+    font-size: 20px
     letter-spacing: 2px
     line-height: 40px
-    margin-bottom: 16px
-
-.title
-  color: $type-primary
-  font-size: 1.25rem
-  font-family: Bluu Suuperstar
-  letter-spacing: -0.2px
-  line-height: 24px
-
-  margin-bottom: 5px
-
-.body
-  color: $type-tertiary
-  font-size: 1rem
-  font-family: GT America
-  font-weight: 300
-  letter-spacing: -0.3px
-  line-height: 24px
 
 .emphasis
-  max-width: 710px
 
   p
-    color: $type-secondary
-    font-size: 1.5625rem
     font-family: GT America
-    font-weight: 300
-    letter-spacing: -0.3px
-    line-height: 36px
+    font-size: 20px
+    font-weight: 500
+    color: $type-secondary
+    letter-spacing: -0.4px
+    line-height: 32px
 
-    margin-bottom: 0.8em
+    +adapt(1024px)
+      font-size: 25px
+      letter-spacing: -0.3px
+      line-height: 36px
 
   a
     color: $cobalt
-    font-weight: 400
+    font-weight: 700
+    letter-spacing: -0.5px
+
+.highlight
+  font-family: Bluu Suuperstar
+  font-size: 31px
+  color: #FFFFFF
+  letter-spacing: -1px
+  line-height: 44px
+  text-decoration: underline
+
+  margin-bottom: 27px
+
+  +adapt(768px)
+    font-size: 61px
+    letter-spacing: -1.8px
+    line-height: 80px
+
+.workTogether__redirect a
+  display: inline-block
+  position: relative
+  color: $electricity
+  font-family: GT America
+  font-size: 16px
+  font-weight: 600
+  letter-spacing: -0.1px
+  line-height: 24px
+
+  margin-bottom: 24px
+
+  &::after
+    content: ''
+    position: absolute
+    left: 0
+    bottom: -4px
+    height: 1px
+    width: 100%
+    background-color: $electricity
