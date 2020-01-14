@@ -1,4 +1,4 @@
-# portfolio-v7
+# yannglt.com
 
 > My riveting Nuxt.js project
 
