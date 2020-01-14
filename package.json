@@ -1,8 +1,8 @@
 {
-  "name": "portfolio-v7",
+  "name": "yannglt.com",
   "version": "1.0.0",
   "description": "My riveting Nuxt.js project",
-  "author": "yannglt",
+  "author": "Yann-Edern Gillet",
   "private": true,
   "scripts": {
     "dev": "nuxt",
