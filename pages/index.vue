@@ -30,7 +30,7 @@
           <div class="who emphasis">
             <p>I am currently living in Paris, France and working at a product design studio called <a href="https://source.paris" target="_blank">Source</a>, where I help to define and create products and services for businesses and people.</p>
             <p>Alongside this Product Designer position I spend some time thinking, writing and talking about design operations and their impacts on organizations, teams and end-users.</p>
-            <p>Here you will find soon a selection of my latest works</a> and collaborations with startups and some friends, you will be also able to read more about my story</a>, ask for freelance work, or just send me an invitation to <a href="mailto:hello@yannglt.com">grab a coffee together</a>.</p>
+            <p>Here you will find soon a selection of my latest works and collaborations with startups and some friends, you will be also able to read more about my story, ask for freelance work, or just send me an invitation to <a href="mailto:hello@yannglt.com">grab a coffee together</a>.</p>
           </div>
           <div class="showreel-alert__container">
             <img class="circle" src="~/assets/images/circle.svg" alt="" height="480px" width="480px">
