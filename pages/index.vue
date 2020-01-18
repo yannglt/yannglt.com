@@ -56,36 +56,7 @@
           <p >These projects were made in 2018 and 2019 with other designers, credits available in upcoming case&nbsp;studies.</p>
         </div>
         <div class="projects">
-          <div class="project">
-          <p class="extract__tag">Product design</p>
-          <p class="extract__title">Tagether mobile app</p>
-          <p class="extract__body">Reconnect through discovery and fidelity, local shops and citizens with the aim of creating new neighborhood dynamics</p>
-          </div>
-          <div class="project">
-            <p class="extract__tag">Information architecture</p>
-            <p class="extract__title">DC Comics marketplace</p>
-            <p class="extract__body">Promote official comics products from Warner&nbsp;Bros. to french customers with a new dedicated marketplace</p>
-          </div>
-          <div class="project">
-            <p class="extract__tag">Product design</p>
-            <p class="extract__title">Rookie service</p>
-            <p class="extract__body">Find a solution for 100 000 abandoned pets each year in France with behavior problems as first target</p>
-          </div>
-          <div class="project">
-            <p class="extract__tag">Branding workshop</p>
-            <p class="extract__title">Warner Bros. Horror</p>
-            <p class="extract__body">Create a unique personality for upcoming Warner Bros. horror franchise, based on its classics and latest movies</p>
-          </div>
-          <div class="project">
-            <p class="extract__tag">Branding, IA + ERG</p>
-            <p class="extract__title">Dassault Systèmes story</p>
-            <p class="extract__body">Provide a real structure for all related content allowing stakeholders to transmit the desired messages to targets</p>
-          </div>
-          <div class="project">
-            <p class="extract__tag">Branding + 3D</p>
-            <p class="extract__title">Electricity, personal city</p>
-            <p class="extract__body">Personal playground created 8 years ago in my debuts, where I experiment my own branding and do some 3D modeling</p>
-          </div>
+          <ProjectExtract v-for="project in projects" :key="project.id" :type="project.type" :name="project.name" :desc="project.desc"></ProjectExtract> 
         </div>
       </div>
     </div>
@@ -104,14 +75,59 @@
 </template>
 
 <script>
+  import ProjectExtract from '../components/ProjectExtract.vue'
   import Footer from '../components/Footer.vue'
 
   import { TimelineLite, Power1 } from 'gsap'
 
   export default {
 
+    data() {
+      return {
+        projects: [
+          { 
+            'id': 1,
+            'name': 'Tagether mobile app',
+            'desc': 'Reconnect through discovery and fidelity, local shops and citizens with the aim of creating new neighborhood dynamics',
+            'type': 'Product design'
+          },
+          { 
+            'id': 2,
+            'name': 'DC Comics marketplace',
+            'desc': 'Promote official comics products from Warner&nbsp;Bros. to french customers with a new dedicated marketplace',
+            'type': 'Information architecture'
+          },
+          { 
+            'id': 3,
+            'name': 'Rookie service', 'desc':
+            'Find a solution for 100 000 abandoned pets each year in France with behavior problems as first target',
+            'type': 'Product design'
+          },
+          { 
+            'id': 4,
+            'name': 'Warner Bros. Horror',
+            'desc': 'Create a unique personality for upcoming Warner Bros. horror franchise, based on its classics and latest movies',
+            'type': 'Branding workshop'
+          },
+          { 
+            'id': 5,
+            'name': 'Dassault Systèmes story',
+            'desc': 'Provide a real structure for all related content allowing stakeholders to transmit the desired messages to targets',
+            'type': 'Branding, IA + ERG'
+          },
+          { 
+            'id': 6,
+            'name': 'Electricity, personal city',
+            'desc': 'Personal playground created 8 years ago in my debuts, where I experiment my own branding and do some 3D modeling',
+            'type': 'Branding + 3D'
+          },
+        ]
+      }
+    },
+
     components: {
-      Footer,
+      ProjectExtract,
+      Footer
     },
 
     mounted() {
