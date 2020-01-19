@@ -18,12 +18,12 @@
     "@nuxtjs/google-analytics": "^2.2.3",
     "@nuxtjs/style-resources": "^1.0.0",
     "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.2.2",
+    "eslint-plugin-vue": "^6.1.2",
     "gsap": "^2.1.2",
     "imports-loader": "^0.8.0",
-    "node-sass": "^4.13.0",
-    "nodemon": "^1.18.9",
     "sass-loader": "^8.0.2",
+    "node-sass": "^4.13.1",
+    "nodemon": "^2.0.2",
     "scrollmagic": "^2.0.6",
     "vue-scrollmagic": "^1.1.0"
   }
