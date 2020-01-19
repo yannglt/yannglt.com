@@ -56,7 +56,7 @@
           <p >These projects were made in 2018 and 2019 with other designers, credits available in upcoming case&nbsp;studies.</p>
         </div>
         <div class="projects">
-          <ProjectExtract v-for="project in projects" :key="project.id" :type="project.type" :name="project.name" :desc="project.desc"></ProjectExtract> 
+          <ProjectExtract v-for="project in projects" :key="project.id" :type="project.type" :name="project.name" :desc="project.desc"></ProjectExtract>
         </div>
       </div>
     </div>
@@ -325,19 +325,15 @@
 
     .container
       padding-top: calc((100vh - 212px) / 2)
-      // padding-bottom: calc((100vh - 212px) / 2)
 
       +adapt(768px)
         padding-top: calc((100vh - 356px) / 2)
-        // padding-bottom: calc((100vh - 356px) / 2)
 
       +adapt(1024px)
         padding-top: calc((100vh - 516px) / 2)
-        // padding-bottom: calc((100vh - 516px) / 2)
 
       +adapt(1440px)
         padding-top: calc((100vh - 684px) / 2)
-        // padding-bottom: calc((100vh - 684px) / 2)
 
   .showreelVideo__player
     background-color: #06080A
