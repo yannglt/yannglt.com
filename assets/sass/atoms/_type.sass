@@ -2,19 +2,33 @@
 @font-face
   font-family: 'Bluu Suuperstar'
   src: url('https://yannglt-type.s3.eu-west-3.amazonaws.com/bluu-suuperstar-black.woff') format('woff'), url('https://yannglt-type.s3.eu-west-3.amazonaws.com/bluu-suuperstar-black.woff2') format('woff2')
+  font-display: swap
 
 @font-face
   font-family: 'GT America'
   src: url('https://yannglt-type.s3.eu-west-3.amazonaws.com/gt-america-light.woff') format('woff'), url('https://yannglt-type.s3.eu-west-3.amazonaws.com/gt-america-light.woff2') format('woff2'), url('https://yannglt-type.s3.eu-west-3.amazonaws.com/gt-america-regular.woff') format('woff'), url('https://yannglt-type.s3.eu-west-3.amazonaws.com/gt-america-regular.woff2') format('woff2'), url('https://yannglt-type.s3.eu-west-3.amazonaws.com/gt-america-medium.woff') format('woff'), url('https://yannglt-type.s3.eu-west-3.amazonaws.com/gt-america-medium.woff2') format('woff2')
+  font-display: swap
 
 @font-face
   font-family: 'GT America Mono'
   src: url('https://yannglt-type.s3.eu-west-3.amazonaws.com/gt-america-mono-medium.woff') format('woff'), url('https://yannglt-type.s3.eu-west-3.amazonaws.com/gt-america-mono-medium.woff2') format('woff2'), url('https://yannglt-type.s3.eu-west-3.amazonaws.com/gt-america-mono-bold.woff') format('woff'), url('https://yannglt-type.s3.eu-west-3.amazonaws.com/gt-america-mono-bold.woff2') format('woff2')
+  font-display: swap
+
+$fontSerif: 'Bluu Suuperstar', serif
+$fontSansSerif: 'GT America', 'Helvetica Neue', 'Arial', sans-serif
+$fontMono: 'GT America Mono', 'Menlo', monospace
+
+body
+  font-size: 16px
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
+  font-display: swap
+  line-height: 1.5em
+  margin-bottom: 1em
 
 h1
   position: relative
   color: $type-primary
-  font-family: Bluu Suuperstar
+  font-family: $fontSerif
   font-size: 25px
   letter-spacing: -0.81px
   line-height: 36px
@@ -45,7 +59,7 @@ h1
 h2
   color: $type-primary
   font-size: 1.5625rem
-  font-family: Bluu Suuperstar
+  font-family: $fontSerif
   letter-spacing: -0.4px
   line-height: 1.28em
 
@@ -53,7 +67,7 @@ h2
 
 p, li
   color: $type-secondary
-  font-family: GT America
+  font-family: $fontSansSerif
   letter-spacing: -0.2px
   line-height: 1.5em
 
@@ -61,7 +75,7 @@ p, li
 
 .me
   color: $electricity
-  font-family: GT America Mono
+  font-family: $fontMono
   font-size: 16px
   font-weight: 500
   line-height: 31px
@@ -78,7 +92,7 @@ p, li
 .emphasis
 
   p
-    font-family: GT America
+    font-family: $fontSansSerif
     font-size: 20px
     font-weight: 500
     color: $type-secondary
@@ -96,7 +110,7 @@ p, li
     letter-spacing: -0.5px
 
 .highlight
-  font-family: Bluu Suuperstar
+  font-family: $fontSerif
   font-size: 31px
   color: #FFFFFF
   letter-spacing: -1px
@@ -114,7 +128,7 @@ p, li
   display: inline-block
   position: relative
   color: $electricity
-  font-family: GT America
+  font-family: $fontSansSerif
   font-size: 16px
   font-weight: 600
   letter-spacing: -0.1px
