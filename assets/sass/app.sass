@@ -108,34 +108,25 @@ img
   margin-bottom: 42px
 
   +adapt($tablet)
-    display: grid
-    grid-template-columns: repeat(4, 136px)
-    column-gap: 32px
+    +gCols(4, 136px, 32px)
 
     margin-bottom: 52px
 
   +adapt($desktop-sd)
-    display: grid
-    grid-template-columns: repeat(12, 48px)
-    column-gap: 32px
+    +gCols(12, 48px, 32px)
 
     margin-bottom: 94px
 
   +adapt($desktop-hd)
-    display: grid
-    grid-template-columns: repeat(12, 74px)
-    column-gap: 32px
+    +gCols(12, 74px, 32px)
 
 .who-and-showreel-alert
 
   +adapt($desktop-sd)
-    display: grid
-    grid-template-columns: repeat(12, 48px)
-    column-gap: 32px
+    +gCols(12, 48px, 32px)
 
   +adapt($desktop-hd)
-    grid-template-columns: repeat(12, 74px)
-    column-gap: 32px
+    +gCols(12, 74px, 32px)
 
 .who
 
