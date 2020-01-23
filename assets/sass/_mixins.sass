@@ -10,3 +10,8 @@
   @media (any-hover: hover)
     &:hover
       @content
+
+@mixin gCols($columns-nb, $columns-width, $gutter-width)
+  display: grid
+  grid-template-columns: repeat($columns-nb, $columns-width)
+  column-gap: $gutter-width

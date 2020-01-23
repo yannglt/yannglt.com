@@ -1,0 +1,22 @@
+// Breakpoints
+$desktop-hd: 1440px
+$desktop-sd: 1024px
+$tablet: 768px
+$mobile: 414px
+
+.gridSystem
+  // Grid used for mobiles
+  +adapt($mobile)
+    +gCols(3, 106px, 24px)
+
+  // Grid used for portrait tablets
+  +adapt($tablet)
+    +gCols(8, 62px, 32px)
+
+  // Grid used for standard-definition desktops and landscape tablets
+  +adapt($desktop-sd)
+    +gCols(12, 48px, 32px)
+
+  // Grid used for high-definition desktops
+  +adapt($desktop-hd)
+    +gCols(12, 74px, 32px)
