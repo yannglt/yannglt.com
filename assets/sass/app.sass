@@ -1,12 +1,15 @@
-@import "./reset.sass"
-@import "./mixins.sass"
-@import "./atoms/colors.sass"
-@import "./atoms/type.sass"
-@import "./components/extract.sass"
+@import 'reset'
+@import 'mixins'
+@import 'atoms/colors'
+@import 'atoms/grid'
+@import 'atoms/type'
+@import 'components/extract'
 
 body
   background-color: $foam
+  max-width: $desktop-hd
   overflow-x: hidden
+  margin: 0 auto
 
 .container
   margin-left: 32px
@@ -208,7 +211,7 @@ img
 
   .showreelWaiting
     color: #FFF
-    font-family: 'GT America Mono'
+    font-family: $fontMono
     margin-bottom: 0
 
     animation: showreelWaiting linear 1.618s infinite alternate
