@@ -17,17 +17,17 @@ body
 
   // transition: background-color 200ms linear
 
-  +adapt(414px)
+  +adapt($mobile)
     margin: 0 auto
     max-width: 334px
 
-  +adapt(768px)
+  +adapt($tablet)
     max-width: 640px
 
-  +adapt(1024px)
+  +adapt($desktop-sd)
     max-width: 928px
 
-  +adapt(1440px)
+  +adapt($desktop-hd)
     max-width: 1240px
 
 *::selection
@@ -47,24 +47,24 @@ img
   margin-top: 94px
   margin-bottom: calc(72px - ((100vh - 212px)/2))
 
-  +adapt(768px)
+  +adapt($tablet)
     margin-top: 120px
     margin-bottom: calc(122px - ((100vh - 356px)/2))
 
-  +adapt(1024px)
+  +adapt($desktop-sd)
     margin-bottom: calc(120px - ((100vh - 516px)/2))
 
-  +adapt(1440px)
+  +adapt($desktop-hd)
     margin-bottom: calc(156px - ((100vh - 684px)/2))
     margin-top: 156px
 
 .me__container
 
-  +adapt(1024px)
+  +adapt($desktop-sd)
     margin-left: 80px
     margin-right: 80px
 
-  +adapt(1440px)
+  +adapt($desktop-hd)
     margin-left: 106px
     margin-right: 318px
 
@@ -77,7 +77,7 @@ img
   &__intro
     display: none
 
-    +adapt(1024px)
+    +adapt($desktop-sd)
       display: flex
       align-items: center
       flex-direction: column
@@ -88,17 +88,17 @@ img
   &__introImage
     transform: translateY(-1px)
 
-  +adapt(768px)
+  +adapt($tablet)
     grid-column: span 2
     margin-bottom: 0
 
-  +adapt(1024px)
+  +adapt($desktop-sd)
     grid-column: span 4
 
     &:first-of-type
       grid-column: 2 / span 4
 
-  +adapt(1440px)
+  +adapt($desktop-hd)
     grid-column: span 3
 
     &:first-of-type
@@ -107,56 +107,47 @@ img
 .tldr__container
   margin-bottom: 42px
 
-  +adapt(768px)
-    display: grid
-    grid-template-columns: repeat(4, 136px)
-    column-gap: 32px
+  +adapt($tablet)
+    +gCols(4, 136px, 32px)
 
     margin-bottom: 52px
 
-  +adapt(1024px)
-    display: grid
-    grid-template-columns: repeat(12, 48px)
-    column-gap: 32px
+  +adapt($desktop-sd)
+    +gCols(12, 48px, 32px)
 
     margin-bottom: 94px
 
-  +adapt(1440px)
-    display: grid
-    grid-template-columns: repeat(12, 74px)
-    column-gap: 32px
+  +adapt($desktop-hd)
+    +gCols(12, 74px, 32px)
 
 .who-and-showreel-alert
 
-  +adapt(1024px)
-    display: grid
-    grid-template-columns: repeat(12, 48px)
-    column-gap: 32px
+  +adapt($desktop-sd)
+    +gCols(12, 48px, 32px)
 
-  +adapt(1440px)
-    grid-template-columns: repeat(12, 74px)
-    column-gap: 32px
+  +adapt($desktop-hd)
+    +gCols(12, 74px, 32px)
 
 .who
 
   p:last-of-type
     margin-bottom: 0
 
-  +adapt(768px)
+  +adapt($tablet)
     margin-right: 168px
 
-  +adapt(1024px)
+  +adapt($desktop-sd)
     margin-right: 0
     grid-column: 2 / span 10
 
-  +adapt(1440px)
+  +adapt($desktop-hd)
     margin-right: 0
     grid-column: 2 / span 7
 
 .showreel-alert__container
   display: none
 
-  +adapt(1440px)
+  +adapt($desktop-hd)
     display: block
     grid-column: span 4
     position: relative
@@ -177,14 +168,14 @@ img
   .container
     padding-top: calc((100vh - 212px) / 2)
 
-    +adapt(768px)
+    +adapt($tablet)
       padding-top: calc((100vh - 356px) / 2)
 
-    +adapt(1024px)
+    +adapt($desktop-sd)
       padding-top: calc((100vh - 516px) / 2)
 
-    +adapt(1440px)
-      padding-top: calc((100vh - 684px) / 2)
+    +adapt($desktop-hd)
+      padding-top: calc((100vh - 586px) / 2)
 
 .showreelVideo__player
   background-color: #06080A
@@ -194,16 +185,16 @@ img
   height: 212px
   width: calc(100%)
 
-  +adapt(768px)
+  +adapt($tablet)
     width: 100%
     height: 356px
 
-  +adapt(1024px)
+  +adapt($desktop-sd)
     height: 516px
 
-  +adapt(1440px)
+  +adapt($desktop-hd)
     top: 0px
-    height: 684px
+    height: 568px
 
   display: flex
   justify-content: center
@@ -225,44 +216,44 @@ img
   background-color: #000
   transform: translateY(calc((100vh - 212px) / 2))
 
-  +adapt(768px)
+  +adapt($tablet)
     transform: translateY(calc((100vh - 356px) / 2))
 
-  +adapt(1024px)
+  +adapt($desktop-sd)
     transform: translateY(calc((100vh - 516px) / 2))
 
-  +adapt(1440px)
+  +adapt($desktop-hd)
     transform: translateY(calc((100vh - 684px) / 2))
 
 #showreelContent
   margin-top: 35px
 
-  +adapt(768px)
+  +adapt($tablet)
     margin-top: 71px
 
   .cr
     display: inline
 
-    +adapt(768px)
+    +adapt($tablet)
       display: none
 
-    +adapt(1024px)
+    +adapt($desktop-sd)
       display: none
 
-    +adapt(1440px)
+    +adapt($desktop-hd)
       display: inline
 
 .projects__container
   display: block
   max-width: 100%
 
-  +adapt(768px)
+  +adapt($tablet)
     max-width: 640px
 
-  +adapt(1024px)
+  +adapt($desktop-sd)
     max-width: 928px
 
-  +adapt(1440px)
+  +adapt($desktop-hd)
     max-width: 1240px
 
     display: grid
@@ -274,28 +265,28 @@ img
   margin-right: 40px
   margin-bottom: 54px
 
-  +adapt(768px)
+  +adapt($tablet)
     margin-left: 0
     margin-right: 0
     margin-bottom: 74px
     text-align: center
 
-  +adapt(1440px)
+  +adapt($desktop-hd)
     text-align: left
     grid-column: 2 / span 4
     padding-right: 74px
     margin-bottom: 0
 
   p
-    +adapt(768px)
+    +adapt($tablet)
       margin-left: 84px
       margin-right: 84px
 
-    +adapt(1024px)
+    +adapt($desktop-sd)
       margin-left: 160px
       margin-right: 160px
 
-    +adapt(1440px)
+    +adapt($desktop-hd)
       margin-left: 0
       margin-right: 0
 
@@ -313,7 +304,7 @@ img
   &::-webkit-scrollbar
     display: none
 
-  +adapt(768px)
+  +adapt($tablet)
     scroll-snap-type: none
     overflow-x: hidden
     display: grid
@@ -321,12 +312,12 @@ img
     column-gap: 32px
     padding-left: 0
 
-  +adapt(1024px)
+  +adapt($desktop-sd)
     display: grid
     grid-template-columns: repeat(12, 48px)
     column-gap: 32px
 
-  +adapt(1440px)
+  +adapt($desktop-hd)
     grid-column: span 6
     display: grid
     grid-template-columns: repeat(2, 286px)
@@ -344,16 +335,16 @@ img
   &:last-of-type
     padding-right: 89px
 
-  +adapt(768px)
+  +adapt($tablet)
     width: 100%
     padding-right: 0
     grid-column: span 2
     margin-bottom: 53px
 
-  +adapt(1024px)
+  +adapt($desktop-sd)
     grid-column: span 4
 
-  +adapt(1440px)
+  +adapt($desktop-hd)
     grid-column: span 1
     margin-bottom: 0
 
@@ -363,54 +354,54 @@ img
   margin-top: 80px
   background-color: rgba(#06080A, 0.96)
 
-  +adapt(768px)
+  +adapt($tablet)
     padding-top: 79px
     padding-bottom: 120px
     margin-top: 138px
 
-  +adapt(1024px)
+  +adapt($desktop-sd)
     padding-top: 115px
     padding-bottom: 120px
 
-  +adapt(1440px)
+  +adapt($desktop-hd)
     margin-top: 146px
 
   .container
 
-    +adapt(1024px)
+    +adapt($desktop-sd)
       display: grid
       grid-template-columns: repeat(12, 48px)
       column-gap: 32px
 
-    +adapt(1440px)
+    +adapt($desktop-hd)
       display: grid
       grid-template-columns: repeat(12, 74px)
       column-gap: 32px
 
     .workTogether__question
 
-      +adapt(1024px)
+      +adapt($desktop-sd)
         grid-column: 2 / span 9
 
-      +adapt(1440px)
+      +adapt($desktop-hd)
         grid-column: 1 / span 7
 
     .workTogether__redirect
 
-      +adapt(1024px)
+      +adapt($desktop-sd)
         grid-column: 2 / span 5
 
-      +adapt(1440px)
+      +adapt($desktop-hd)
         grid-column: 9 / span 4
         transform: translateY(27px)
 
       p
         color: rgba(#FFFFFF, 0.84)
 
-        +adapt(768px)
+        +adapt($tablet)
           margin-right: 240px
 
-        +adapt(1024px)
+        +adapt($desktop-sd)
           margin-right: 0
 
       a
