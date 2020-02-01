@@ -10,9 +10,7 @@ export default {
     title: 'Yann-Edern Gillet, Product Designer',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width:device-width, initial-scale:1' },
-      { name: 'msapplication-TileColor', content:'#0c0d0f' },
-      { name: 'theme-color', content:'#ffffff' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
