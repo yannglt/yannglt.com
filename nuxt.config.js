@@ -11,16 +11,22 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:image', property: 'og:image', content: 'https://yannglt.com/og-image-cover.png' },
-      { hid: 'og:image:type', property: 'og:image:type', content: 'image/png' },
-      { hid: 'og:image:width', property: 'og:image:width', content: '1200' },
-      { hid: 'og:image:height', property: 'og:image:height', content: '627' },
-      { hid: 'og:image:alt', property: 'og:image:alt', content: 'Yann-Edern Gillet, Product Designer at Source — Welcome to my personal Space on the Internets' },
-      { hid: 'og:url', property: 'og:url', content: 'https://yannglt.com' },
-      { hid:'twitter:card', name: 'twitter:card', content: 'summary' },
-      { hid:'twitter:creator', name: 'twitter:creator', content: '@yannglt' }
+      { name: 'description', content: 'Personal space on the Internets of Yann-Edern Gillet, Product Designer of things made of strategy, empathy and work precision. Here you will find soon a selection of my latest works and collaborations with startups and some friends, you will be also able to read more about my story, ask for freelance work, or just send me an invitation to grab a coffee together.' },
+
+      { property: 'og:type', content: 'website' },
+      { property: 'og:image', content: 'https://yannglt.com/og-image-cover.png' },
+      { property: 'og:image:secure_url', content: 'https://yannglt.com/og-image-cover.png' },
+      { property: 'og:image:type', content: 'image/png' },
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '627' },
+      { property: 'og:image:alt', content: 'Personal space on the Internets of Yann-Edern Gillet, Product Designer of things made of strategy, empathy and work precision' },
+      { property: 'og:url', content: 'https://yannglt.com' },
+
+      { name: 'twitter:title', content: 'Yann-Edern Gillet, Product Designer' },
+      { name: 'twitter:description', content: 'Personal space on the Internets of Yann-Edern Gillet, Product Designer of things made of strategy, empathy and work precision' },
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:image', content: 'https://yannglt.com/og-image-cover.png' },
+      { name: 'twitter:creator', content: '@yannglt' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '~/static/favicon.ico' },
