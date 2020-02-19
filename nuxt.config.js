@@ -12,13 +12,16 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:image', property: 'og:image', content: 'https://yannglt.com/og-image-cover.png' },
-      { hid: 'og:image:type', property: 'og:image:type', content: 'image/png' },
-      { hid: 'og:image:width', property: 'og:image:width', content: '1200' },
-      { hid: 'og:image:height', property: 'og:image:height', content: '627' },
-      { hid: 'og:image:alt', property: 'og:image:alt', content: 'Yann-Edern Gillet, Product Designer at Source — Welcome to my personal Space on the Internets' },
-      { hid: 'og:url', property: 'og:url', content: 'https://yannglt.com' },
+
+      { hid: 'og:type', name: 'og:type', content: 'website' },
+      { hid: 'og:image', name: 'og:image', content: 'https://yannglt.com/og-image-cover.png' },
+      { hid: ' og:image:secure_url', name: ' og:image:secure_url', content: 'https://yannglt.com/og-image-cover.png' },
+      { hid: 'og:image:type', name: 'og:image:type', content: 'image/png' },
+      { hid: 'og:image:width', name: 'og:image:width', content: '1200' },
+      { hid: 'og:image:height', name: 'og:image:height', content: '627' },
+      { hid: 'og:image:alt', name: 'og:image:alt', content: 'Personal space on the Internets of Yann-Edern Gillet, Product Designer of things made of strategy, empathy and work precision' },
+      { hid: 'og:url', name: 'og:url', content: 'https://yannglt.com' },
+
       { hid:'twitter:card', name: 'twitter:card', content: 'summary' },
       { hid:'twitter:creator', name: 'twitter:creator', content: '@yannglt' }
     ],
