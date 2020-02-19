@@ -11,7 +11,16 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: '' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:image', property: 'og:image', content: 'https://yannglt.com/og-image-cover.png' },
+      { hid: 'og:image:type', property: 'og:image:type', content: 'image/png' },
+      { hid: 'og:image:width', property: 'og:image:width', content: '1200' },
+      { hid: 'og:image:height', property: 'og:image:height', content: '627' },
+      { hid: 'og:image:alt', property: 'og:image:alt', content: 'Yann-Edern Gillet, Product Designer at Source — Welcome to my personal Space on the Internets' },
+      { hid: 'og:url', property: 'og:url', content: 'https://yannglt.com' },
+      { hid:'twitter:card', name: 'twitter:card', content: 'summary' },
+      { hid:'twitter:creator', name: 'twitter:creator', content: '@yannglt' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '~/static/favicon.ico' },
