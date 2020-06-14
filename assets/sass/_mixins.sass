@@ -1,7 +1,3 @@
-@mixin adapt($width)
-  @media screen and (min-width: $width)
-    @content
-
 @mixin hover()
   @media (any-hover: none)
     &:active
@@ -10,6 +6,10 @@
   @media (any-hover: hover)
     &:hover
       @content
+
+@mixin adapt($width)
+  @media screen and (min-width: $width)
+    @content
 
 @mixin gCols($columns-nb, $columns-width, $gutter-width)
   display: grid
