@@ -1,0 +1,46 @@
+.navbar
+  position: fixed
+  width: 100%
+  top: 0
+  left: 0
+
+.navbar-content
+  padding: 40px 0
+  width: 100%
+  display: flex
+  flex-flow: row nowrap
+  justify-content: space-between
+
+  .index
+    display: flex
+
+    &-me
+      margin-top: 5px
+      margin-left: 16px
+
+    &-currentpos
+      transform: translateY(-4px)
+
+    &-logo
+      height: 48px
+      width: 48px
+      border: 1px solid $oblivion-700
+      border-radius: 24px
+
+    &-name, &-currentpos
+      @extend .caption-tag
+      color: #ffffff
+
+    &-currentpos
+      color: $oblivion-300
+      letter-spacing: 0
+      text-transform: none
+
+  li
+    display: inline-block
+
+    a
+      @extend .caption-tag
+      color: #ffffff
+      padding-left: 20px
+      padding-right: 20px

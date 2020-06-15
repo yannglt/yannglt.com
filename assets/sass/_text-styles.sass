@@ -1,3 +1,13 @@
+// FIXING WEB BROWSERS FONT WEIGHT RENDERS
+body
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  font-smoothing: antialiased
+
+@-moz-document url-prefix()
+  body
+    font-weight: lighter !important
+
 // TEXT STYLES FOR DISPLAY TITLES
 .display-1
   font-family: bluu-suuperstar-black
@@ -44,6 +54,8 @@
 .caption-tag
   font-family: gt-america-mono-bold
   font-size: 13px
+  line-height: 24px
+  letter-spacing: 1px
   text-transform: uppercase
 
 .caption-title

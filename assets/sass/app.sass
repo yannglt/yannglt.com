@@ -1,3 +1,77 @@
+// ATOMS
 @import 'reset'
 @import 'mixins'
-@import 'grid'
+@import 'colors'
+@import 'typefaces'
+@import 'text-styles'
+@import 'grids'
+
+// COMPONENTS
+@import 'components/navbar'
+
+// BASE THEME
+body
+  font-family: gt-america-regular
+  font-size: 16px
+  line-height: 28px
+  background-color: $oblivion-1100
+
+.intro
+  margin-top: 160px
+  position: relative
+
+  .container
+    text-align: center
+
+.intro p
+  width: 100%
+  @extend .display-1
+  color: $oblivion-1100
+  text-shadow: #FFF 0px 0px 1px
+  position: absolute
+  top: 0
+  left: 0
+
+  &:nth-child(8)
+    color: #ffffff
+    text-shadow: none
+
+  @for $i from 1 through 8
+    &:nth-child(#{$i})
+      // @debug "color: #{$oblivion}-#{$i}"
+      transform: translateY(480 - $i * 60px)
+
+  &:nth-child(7)
+    text-shadow: -1px -1px 0 $oblivion-300, 1px -1px 0 $oblivion-300, -1px 1px 0 $oblivion-300, 1px 1px 0 $oblivion-300
+    // -webkit-text-stroke: 0.5px $oblivion-300
+    // text-stroke: 0.5px $oblivion-300
+
+  &:nth-child(6)
+    text-shadow: -1px -1px 0 $oblivion-400, 1px -1px 0 $oblivion-400, -1px 1px 0 $oblivion-400, 1px 1px 0 $oblivion-400
+    // -webkit-text-stroke: 0.5px $oblivion-400
+    // text-stroke: 0.5px $oblivion-400
+
+  &:nth-child(5)
+    text-shadow: -1px -1px 0 $oblivion-500, 1px -1px 0 $oblivion-500, -1px 1px 0 $oblivion-500, 1px 1px 0 $oblivion-500
+    // -webkit-text-stroke: 0.5px $oblivion-500
+    // text-stroke: 0.5px $oblivion-500
+
+  &:nth-child(4)
+    text-shadow: -1px -1px 0 $oblivion-600, 1px -1px 0 $oblivion-600, -1px 1px 0 $oblivion-600, 1px 1px 0 $oblivion-600
+    // -webkit-text-stroke: 0.5px $oblivion-600
+    // text-stroke: 0.5px $oblivion-600
+
+  &:nth-child(3)
+    text-shadow: -1px -1px 0 $oblivion-700, 1px -1px 0 $oblivion-700, -1px 1px 0 $oblivion-700, 1px 1px 0 $oblivion-700
+    // -webkit-text-stroke: 0.5px $oblivion-700
+    // text-stroke: 0.5px $oblivion-700
+
+  &:nth-child(2)
+    text-shadow: -1px -1px 0 $oblivion-800, 1px -1px 0 $oblivion-800, -1px 1px 0 $oblivion-800, 1px 1px 0 $oblivion-800
+    // -webkit-text-stroke: 0.5px $oblivion-800
+    // text-stroke: 0.5px $oblivion-800
+
+  &:nth-child(1)
+    text-shadow: -1px -1px 0 $oblivion-900, 1px -1px 0 $oblivion-900, -1px 1px 0 $oblivion-900, 1px 1px 0 $oblivion-900
+    // -webkit-text-stroke: 0.5px $oblivion-900
+    // text-stroke: 0.5px $oblivion-900

@@ -1,8 +1,23 @@
-// Breakpoints
+// BREAKPOINTS
 $desktop-hd: 1440px
 $desktop-sd: 1024px
 $tablet: 768px
 $mobile: 414px
+
+.container
+  margin: 0 auto
+  
+  +adapt($mobile)
+    // max-width:
+
+  +adapt($tablet)
+    // max-width:
+
+  +adapt($desktop-sd)
+    // max-width:
+
+  +adapt($desktop-hd)
+    max-width: 1180px
 
 .gridSystem
   // Grid used for mobiles
