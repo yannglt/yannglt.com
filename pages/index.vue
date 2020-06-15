@@ -35,7 +35,7 @@
           </div>
           <div class="etiquette-logo"></div>
           <p class="etiquette-subtitle">danger</p>
-          <p class="etiquette-desc">May present some work under NDA agreement. Just kidding, relax. Open headspace.</p>
+          <p class="etiquette-desc">May present some work under NDA. <br>Just kidding, relax. Open headspace.</p>
           <p class="etiquette-annotation">LF-11235813-21345892-150242392</p>
         </div>
       </div>
