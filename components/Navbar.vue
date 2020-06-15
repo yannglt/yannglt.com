@@ -3,9 +3,7 @@
     <div class="container">
       <div class="navbar-content">
         <div class="index">
-          <div class="index-logo">
-
-          </div>
+          <div class="index-logo"></div>
           <div class="index-me">
             <p class="index-name">Yann-Edern Gillet</p>
             <p class="index-currentpos">Product Designer, Source</p>

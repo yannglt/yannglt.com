@@ -20,10 +20,10 @@ body
   margin-top: 160px
   position: relative
 
-  .container
+  .welcome
     text-align: center
 
-.intro p
+.welcome p
   width: 100%
   @extend .display-1
   color: $oblivion-1100
@@ -75,3 +75,73 @@ body
     text-shadow: -1px -1px 0 $oblivion-900, 1px -1px 0 $oblivion-900, -1px 1px 0 $oblivion-900, 1px 1px 0 $oblivion-900
     // -webkit-text-stroke: 0.5px $oblivion-900
     // text-stroke: 0.5px $oblivion-900
+
+.etiquette
+  margin: 0 auto
+  padding: 16px
+  width: 100%
+  max-width: 392px
+  position: relative
+
+  background-color: $thunderstorm-500
+
+  transform: translateY(124px)
+
+  &-title
+    @extend .display-3
+    padding: 17px 0 23px 0
+    color: $thunderstorm-500
+    text-align: center
+    background-color: $oblivion-1100
+
+  &-properties
+    margin-top: 9px
+    margin-bottom: 39px
+
+  &-property
+    margin-top: 14px
+    padding-bottom: 19px
+    border-bottom: 1px solid $oblivion-1100
+
+    &Name
+      margin-bottom: 2px
+
+      @extend .caption-tag
+      color: $thunderstorm-900
+
+    &Value
+      @extend .caption-title
+      color: $oblivion-1100
+
+  &-logo
+    margin: 0 auto
+    margin-bottom: 21px
+    height: 96px
+    width: 96px
+
+    background-image: url("../../static/icons/logo-thunderstorm-96.svg")
+    background-repeat: no-repeat
+    background-size: 96px 96px
+    background-position: center
+
+  &-subtitle
+    margin-bottom: 10px
+
+    @extend .display-3
+    color: $oblivion-1100
+    text-align: center
+
+  &-desc
+    margin-bottom: 49px
+
+    @extend .caption-tag
+    text-align: center
+    letter-spacing: 0
+
+  &-annotation
+    margin-bottom: 16px
+    
+    font-family: gt-america-mono-medium
+    font-size: 10px
+    line-height: 24px
+    text-align: center
