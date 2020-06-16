@@ -39,6 +39,9 @@
           <p class="etiquette-annotation">LF-11235813-21345892-150242392</p>
         </div>
       </div>
+      <div class="etiquette-electricity">
+        <div class="etiquette-electricity-middle"></div>
+      </div>
     </section>
   </div>
 </template>

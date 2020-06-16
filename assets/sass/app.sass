@@ -85,26 +85,6 @@ body
 
   transform: translateY(124px)
 
-  &::before, &::after
-    content: ""
-    position: absolute
-    bottom: 136px
-
-    height: 240px
-    width: 524px
-    background-image: url("../../static/images/intro@2x.png")
-    background-repeat: no-repeat
-    background-size: 524px 240px
-    background-position: center
-
-  &::before
-    left: -524px
-    transform: scaleX(-1)
-
-  &::after
-    right: -524px
-    transform-origin: left center
-
   &-title
     @extend .display-3
     padding: 17px 0 23px 0
@@ -163,3 +143,41 @@ body
     font-size: 10px
     line-height: 24px
     text-align: center
+
+
+  &-electricity
+    position: relative
+    width: 100vw
+    left: 0
+
+    &-middle
+      position: relative
+      height: 4px
+      left: 524px
+      right: 524px
+      width: calc(100vw - 524px - 524px)
+      background-color: $oblivion-500
+
+      z-index: -5
+      transform: translateY(-66px)
+
+    &::before, &::after
+      content: ""
+      position: absolute
+      bottom: 12px
+
+      height: 240px
+      width: 524px
+      background-image: url("../../static/images/intro@2x.png")
+      background-repeat: no-repeat
+      background-size: 524px 240px
+      background-position: center
+
+      z-index: -10
+
+    &::before
+      left: 0
+      transform: scaleX(-1)
+
+    &::after
+      right: 0
