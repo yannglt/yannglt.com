@@ -4,8 +4,11 @@
   top: 0
   left: 0
 
+  z-index: 50
+
 .navbar-content
   padding: 40px 0
+
   width: 100%
   display: flex
   flex-flow: row nowrap
@@ -44,7 +47,8 @@
     display: inline-block
 
     a
-      @extend .caption-tag
-      color: #ffffff
       padding-left: 20px
       padding-right: 20px
+      
+      @extend .caption-tag
+      color: #ffffff

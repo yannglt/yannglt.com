@@ -1,9 +1,9 @@
 <template lang="html">
   <div id="app">
     <Navbar></Navbar>
-    <section class="intro">
+    <section class="tldr">
       <div class="container">
-        <div class="welcome">
+        <div class="welcome-repeat">
           <p>Welcome</p>
           <p>Welcome</p>
           <p>Welcome</p>
@@ -41,6 +41,19 @@
       </div>
       <div class="etiquette-electricity">
         <div class="etiquette-electricity-middle"></div>
+      </div>
+    </section>
+
+    <section class="intro">
+      <div class="container">
+        <p class="introTag">Welcome to my space on the Internets</p>
+        <h1 class="introTitle">I think, create and break interfaces, products and systems with a passion for design operations.</h1>
+        <p class="introDesc">Here you will find a selection of my latest works and collaborations with startups and some friends, you will be also able to read more about my story and ask for help on your idea/problem.</p>
+        <ul class="introLinks">
+          <li><a href="" title=""></a>Thoughts on Twitter</li>
+          <li><a href="" title=""></a>Works in progress on Dribbble</li>
+          <li><a href="" title=""></a>Journey on Instagram</li>
+        </ul>
       </div>
     </section>
   </div>

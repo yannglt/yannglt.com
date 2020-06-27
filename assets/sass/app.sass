@@ -16,23 +16,24 @@ body
   line-height: 28px
   background-color: $oblivion-1100
 
-.intro
+.tldr
   margin-top: 160px
   position: relative
 
-  .welcome
+  .welcome-repeat
     text-align: center
 
-.welcome p
-  width: 100%
+.welcome-repeat p
   @extend .display-1
-  color: $oblivion-1100
   position: absolute
   top: 0
   left: 0
+  width: 100%
+  color: $oblivion-1100
 
   &:nth-child(1)
     color: #ffffff
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff
 
   @for $i from 1 through 8
     &:nth-child(#{$i})
@@ -41,53 +42,41 @@ body
 
   &:nth-child(2)
     text-shadow: -1px -1px 0 $oblivion-300, 1px -1px 0 $oblivion-300, -1px 1px 0 $oblivion-300, 1px 1px 0 $oblivion-300
-    // -webkit-text-stroke: 0.5px $oblivion-300
-    // text-stroke: 0.5px $oblivion-300
 
   &:nth-child(3)
     text-shadow: -1px -1px 0 $oblivion-400, 1px -1px 0 $oblivion-400, -1px 1px 0 $oblivion-400, 1px 1px 0 $oblivion-400
-    // -webkit-text-stroke: 0.5px $oblivion-400
-    // text-stroke: 0.5px $oblivion-400
 
   &:nth-child(4)
     text-shadow: -1px -1px 0 $oblivion-500, 1px -1px 0 $oblivion-500, -1px 1px 0 $oblivion-500, 1px 1px 0 $oblivion-500
-    // -webkit-text-stroke: 0.5px $oblivion-500
-    // text-stroke: 0.5px $oblivion-500
 
   &:nth-child(5)
     text-shadow: -1px -1px 0 $oblivion-600, 1px -1px 0 $oblivion-600, -1px 1px 0 $oblivion-600, 1px 1px 0 $oblivion-600
-    // -webkit-text-stroke: 0.5px $oblivion-600
-    // text-stroke: 0.5px $oblivion-600
 
   &:nth-child(6)
     text-shadow: -1px -1px 0 $oblivion-700, 1px -1px 0 $oblivion-700, -1px 1px 0 $oblivion-700, 1px 1px 0 $oblivion-700
-    // -webkit-text-stroke: 0.5px $oblivion-700
-    // text-stroke: 0.5px $oblivion-700
 
   &:nth-child(7)
     text-shadow: -1px -1px 0 $oblivion-800, 1px -1px 0 $oblivion-800, -1px 1px 0 $oblivion-800, 1px 1px 0 $oblivion-800
-    // -webkit-text-stroke: 0.5px $oblivion-800
-    // text-stroke: 0.5px $oblivion-800
 
   &:nth-child(8)
     text-shadow: -1px -1px 0 $oblivion-900, 1px -1px 0 $oblivion-900, -1px 1px 0 $oblivion-900, 1px 1px 0 $oblivion-900
-    // -webkit-text-stroke: 0.5px $oblivion-900
-    // text-stroke: 0.5px $oblivion-900
 
 .etiquette
   margin: 0 auto
+  margin-bottom: 124px
   padding: 16px
+
   width: 100%
   max-width: 392px
   position: relative
-
   background-color: $thunderstorm-500
 
   transform: translateY(124px)
 
   &-title
-    @extend .display-3
     padding: 17px 0 23px 0
+
+    @extend .display-3
     color: $thunderstorm-500
     text-align: center
     background-color: $oblivion-1100
@@ -99,6 +88,7 @@ body
   &-property
     margin-top: 14px
     padding-bottom: 19px
+
     border-bottom: 1px solid $oblivion-1100
 
     &Name
@@ -114,9 +104,9 @@ body
   &-logo
     margin: 0 auto
     margin-bottom: 21px
+
     height: 96px
     width: 96px
-
     background-image: url("../../static/icons/logo-thunderstorm-96.svg")
     background-repeat: no-repeat
     background-size: 96px 96px
@@ -147,15 +137,15 @@ body
 
   &-electricity
     position: relative
-    width: 100vw
     left: 0
+    width: 100vw
 
     &-middle
       position: relative
       height: 4px
+      width: calc(100vw - 524px - 524px)
       left: 524px
       right: 524px
-      width: calc(100vw - 524px - 524px)
       background-color: $oblivion-500
 
       z-index: -5
@@ -181,3 +171,41 @@ body
 
     &::after
       right: 0
+
+.intro
+  margin-top: 179px
+  margin-bottom: 200px
+
+  .container
+    @extend .gridSystem
+
+  &Tag
+    margin-bottom: 22px
+
+    @extend .caption-tag
+    color: $thunderstorm-500
+
+    +adapt($desktop-hd)
+      grid-column: 2 / span 10
+
+
+  &Title
+    margin-bottom: 39px
+
+    @extend .heading-1
+    color: #fff
+
+    +adapt($desktop-hd)
+      grid-column: 2 / span 10
+
+  &Desc, &Links
+    @extend .emphasis
+    color: $oblivion-100
+
+  &Desc
+    +adapt($desktop-hd)
+      grid-column: 2 / span 6
+
+  &Links
+    +adapt($desktop-hd)
+      grid-column: 9 / span 4
