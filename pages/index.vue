@@ -22,7 +22,7 @@
             </div>
             <div class="etiquette-property">
               <p class="etiquette-propertyName">Current position</p>
-              <p class="etiquette-propertyValue">Product Designer, Source</p>
+              <p class="etiquette-propertyValue">Digital Product Designer, Source</p>
             </div>
             <div class="etiquette-property">
               <p class="etiquette-propertyName">Passion</p>
