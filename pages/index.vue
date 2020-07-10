@@ -40,7 +40,12 @@
         </div>
       </div>
       <div class="etiquette-electricity">
-        <div class="etiquette-electricity-middle"></div>
+        <div class="etiquette-electricityLink"></div>
+        <div class="etiquette-electricityExtension"></div>
+        <div class="etiquette-electricityExtension"></div>
+        <div class="etiquette-electricityExtension"></div>
+        <div class="etiquette-electricityExtension"></div>
+        <div class="etiquette-electricityExtension"></div>
       </div>
     </section>
 

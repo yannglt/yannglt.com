@@ -71,7 +71,6 @@ body
 
 .etiquette
   margin: 0 auto
-  margin-bottom: 124px
   padding: 16px
 
   width: 100%
@@ -146,47 +145,129 @@ body
   &-electricity
     position: relative
     left: 0
+    bottom: 0
     width: 100vw
 
     z-index: -50
 
-    transform: translateY(-216px)
-
-    &-middle
-      position: relative
-      height: 4px
-      width: calc(100vw - 524px - 524px)
-      left: 524px
-      right: 524px
-      background-color: $oblivion-500
-
-      z-index: -5
-      transform: translateY(-66px)
+    transform: translateY(calc(-216px + 124px + 12px))
+    // transform: translateY(0)
 
     &::before, &::after
-      content: ""
-      position: absolute
-      bottom: 12px
-      bottom: 12px
 
-      height: 240px
-      width: 524px
-      background-image: url("../../static/images/intro@2x.png")
-      background-repeat: no-repeat
-      background-size: 524px 240px
-      background-position: center
+      +adapt(1440px)
+        content: ""
+        position: absolute
+        bottom: 12px
 
-      z-index: -10
+        height: 240px
+        width: 524px
+        background-image: url("../../static/images/intro@2x.png")
+        background-repeat: no-repeat
+        background-size: 524px 240px
+        background-position: center
+
+        // transform: translateY(-24px)
+        z-index: -10
 
     &::before
-      left: 0
-      transform: scaleX(-1)
+      +adapt(1440px)
+        left: 0
+        transform: scaleX(-1)
+
+      +adapt(1680px)
+        left: 50%
+        transform: scaleX(-1) translateX(calc(100% + 316px))
 
     &::after
-      right: 0
+      +adapt(1440px)
+        right: 0
+
+      +adapt(1680px)
+        right: 50%
+        transform: translateX(calc(100% + 316px))
+
+
+    &Link
+
+      +adapt(1440px)
+        position: absolute
+        height: 4px
+        width: calc(100vw - 524px - 524px + 8px)
+        left: 50%
+        background-color: $oblivion-500
+
+        z-index: 50
+        transform: translateY(-70px) translateX(-50%)
+
+      +adapt(1680px)
+        left: 50%
+        width: calc(1680px - 524px - 524px + 8px)
+
+    &Extension
+      +adapt(1440px)
+        position: relative
+
+      &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6)
+
+        +adapt(1440px)
+
+          &:before, &:after
+            content: ''
+            position: absolute
+            height: 4px
+            width: calc((100vw - 1680px)/2)
+
+            z-index: -5
+
+          &:before
+            left: 0
+
+          &:after
+            right: 0
+
+      &:nth-child(2)
+
+        &:before, &:after
+
+          +adapt(1440px)
+            background-color: $oblivion-700
+            transform: translateY(-230px)
+
+      &:nth-child(3)
+
+        &:before, &:after
+
+          +adapt(1440px)
+            background-color: $oblivion-500
+            transform: translateY(-198px)
+
+      &:nth-child(4)
+
+        &:before, &:after
+
+          +adapt(1440px)
+            background-color: $oblivion-500
+            transform: translateY(-102px)
+
+      &:nth-child(5)
+
+        &:before, &:after
+
+          +adapt(1440px)
+            background-color: $oblivion-700
+            transform: translateY(-70px)
+
+      &:nth-child(6)
+
+        &:before, &:after
+
+          +adapt(1440px)
+            background-color: $oblivion-500
+            transform: translateY(-38px)
 
 .intro
-  margin-top: 179px
+  margin-top: calc(124px + 179px)
   margin-bottom: 200px
 
   .container
@@ -224,5 +305,5 @@ body
       grid-column: 9 / span 4
 
     .icon
-      margin-left: 4px
+      padding-left: 4px
       color: $oblivion-400
