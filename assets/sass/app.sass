@@ -41,7 +41,7 @@ body
 
   &:nth-child(1)
     color: #ffffff
-    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff
+    -webkit-text-stroke: 1px #ffffff
 
   @for $i from 1 through 8
     &:nth-child(#{$i})
@@ -49,25 +49,32 @@ body
       transform: translateY(-60 + $i * 60px)
 
   &:nth-child(2)
-    text-shadow: -1px -1px 0 $oblivion-300, 1px -1px 0 $oblivion-300, -1px 1px 0 $oblivion-300, 1px 1px 0 $oblivion-300
+    -webkit-text-stroke: 1px $oblivion-300
+    -webkit-text-fill-color: $oblivion-1100
 
   &:nth-child(3)
-    text-shadow: -1px -1px 0 $oblivion-400, 1px -1px 0 $oblivion-400, -1px 1px 0 $oblivion-400, 1px 1px 0 $oblivion-400
+    -webkit-text-stroke: 1px $oblivion-400
+    -webkit-text-fill-color: $oblivion-1100
 
   &:nth-child(4)
-    text-shadow: -1px -1px 0 $oblivion-500, 1px -1px 0 $oblivion-500, -1px 1px 0 $oblivion-500, 1px 1px 0 $oblivion-500
+    -webkit-text-stroke: 1px $oblivion-500
+    -webkit-text-fill-color: $oblivion-1100
 
   &:nth-child(5)
-    text-shadow: -1px -1px 0 $oblivion-600, 1px -1px 0 $oblivion-600, -1px 1px 0 $oblivion-600, 1px 1px 0 $oblivion-600
+    -webkit-text-stroke: 1px $oblivion-600
+    -webkit-text-fill-color: $oblivion-1100
 
   &:nth-child(6)
-    text-shadow: -1px -1px 0 $oblivion-700, 1px -1px 0 $oblivion-700, -1px 1px 0 $oblivion-700, 1px 1px 0 $oblivion-700
+    -webkit-text-stroke: 1px $oblivion-700
+    -webkit-text-fill-color: $oblivion-1100
 
   &:nth-child(7)
-    text-shadow: -1px -1px 0 $oblivion-800, 1px -1px 0 $oblivion-800, -1px 1px 0 $oblivion-800, 1px 1px 0 $oblivion-800
+    -webkit-text-stroke: 1px $oblivion-800
+    -webkit-text-fill-color: transparent
 
   &:nth-child(8)
-    text-shadow: -1px -1px 0 $oblivion-900, 1px -1px 0 $oblivion-900, -1px 1px 0 $oblivion-900, 1px 1px 0 $oblivion-900
+    -webkit-text-stroke: 1px $oblivion-900
+    -webkit-text-fill-color: transparent
 
 .etiquette
   margin: 0 auto
