@@ -275,7 +275,7 @@ body
 
 .intro
   margin-top: calc(124px + 179px)
-  margin-bottom: 200px
+  margin-bottom: 112px
 
   .container
     @extend .gridSystem
@@ -299,7 +299,8 @@ body
     +adapt($desktop-hd)
       grid-column: 2 / span 10
 
-  &Desc, &Links
+  &Desc,
+  &Links
     @extend .emphasis
     color: $oblivion-100
 
@@ -314,3 +315,75 @@ body
     .icon
       padding-left: 4px
       color: $oblivion-400
+
+.projects
+  margin-bottom: 200px
+
+  .container
+    @extend .gridSystem
+
+  .project
+    +adapt($desktop-hd)
+      grid-column: span 4
+
+    &-cover
+      margin-bottom: 20px
+
+      background-color: #FFFFFF
+      width: 100%
+      height: 528px
+
+    &-client
+      margin-bottom: -8px
+
+      color: $oblivion-025
+      font-size: 20px
+      line-height: 32px
+
+    &-name
+      margin-bottom: 9px
+
+      color: $oblivion-300
+      font-size: 20px
+      line-height: 32px
+
+    &-desc
+      margin-bottom: 18px
+
+      @extend .body
+      color: $oblivion-100
+      line-height: 24px
+
+      .nda-classification
+        color: transparent
+        font-size: 13px
+        background-color: $oblivion-100
+
+    .link
+      @extend .caption-tag
+
+      .icon
+        height: 16px
+        width: 16px
+        padding-left: 4px
+
+      &.wip,
+      &.nda
+        cursor: not-allowed
+
+      &.wip
+        color: $oblivion-300
+        .icon
+          color: $oblivion-600
+
+      &.case-study
+        color: $thunderstorm-500
+
+        .icon
+          color: $thunderstorm-800
+
+      &.nda
+        color: $firework-500
+
+        .icon
+          color: $firework-800

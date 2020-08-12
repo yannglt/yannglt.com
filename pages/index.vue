@@ -55,13 +55,36 @@
         <h1 class="introTitle">I think, create and break interfaces, products and systems with a passion for design operations.</h1>
         <p class="introDesc">Here you will find a selection of my latest works and collaborations with startups and some friends, you will be also able to read more about my story and ask for help on your idea/problem.</p>
         <ul class="introLinks">
-          <li><a href="" title="">Thoughts on Twitter<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward"></use>
-  </svg></a></li>
-          <li><a href="" title="">Works in progress on Dribbble<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward"></use>
-  </svg></a></li>
-          <li><a href="" title="">Journey on Instagram<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward"></use>
-  </svg></a></li>
+          <li><a href="" title="">Thoughts on Twitter<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward"></use></svg></a></li>
+          <li><a href="" title="">Works in progress on Dribbble<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward"></use></svg></a></li>
+          <li><a href="" title="">Journey on Instagram<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward"></use></svg></a></li>
         </ul>
+      </div>
+    </section>
+
+    <section class="projects">
+      <div class="container">
+        <article class="project">
+          <img src="" alt="" class="project-cover">
+          <p class="project-client">Indépendants.co</p>
+          <p class="project-name">Website and platform overhaul</p>
+          <p class="project-desc">Currently building a new online space for the new french syndicate of independent workers, with a solid information architecture and use of its brand identity.</p>
+          <a href="" title="" class="link wip">Work in progress<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#auto-renew"></use></svg></a>
+        </article>
+        <article class="project">
+          <img src="" alt="" class="project-cover">
+          <p class="project-client">Abu Dhabi Executive Office (ADEO)</p>
+          <p class="project-name">Design language system</p>
+          <p class="project-desc">Help designers to create consistent experiences and interfaces through meaningful guidelines that emphasize the ethos and philosophy behind ADEO.</p>
+          <a href="" title="" class="link case-study">Read case study<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward"></use></svg></a>
+        </article>
+        <article class="project">
+          <img src="" alt="" class="project-cover">
+          <p class="project-client">BNP Paribas</p>
+          <p class="project-name">Future of Customer Experience</p>
+          <p class="project-desc">NDA  <span class="nda-classification">projects are really cool, don't you think? Collaborate with people of</span>  BNP Paribas, PACE and Source  <span class="nda-classification">on this project was</span>  very interesting.</p>
+          <a href="" title="" class="link nda">Project under NDA<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#block"></use></svg></a>
+        </article>
       </div>
     </section>
   </div>
