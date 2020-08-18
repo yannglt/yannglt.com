@@ -55,9 +55,9 @@
         <h1 class="introTitle">I think, create and break interfaces, products and systems with a passion for design operations.</h1>
         <p class="introDesc">Here you will find a selection of my latest works and collaborations with startups and some friends, you will be also able to read more about my story and ask for help on your idea/problem.</p>
         <ul class="introLinks">
-          <li><a href="" title="">Thoughts on Twitter<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward"></use></svg></a></li>
-          <li><a href="" title="">Works in progress on Dribbble<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward"></use></svg></a></li>
-          <li><a href="" title="">Journey on Instagram<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward"></use></svg></a></li>
+          <li><a href="" title="">Thoughts on Twitter<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a></li>
+          <li><a href="" title="">Works in progress on Dribbble<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a></li>
+          <li><a href="" title="">Journey on Instagram<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a></li>
         </ul>
       </div>
     </section>
@@ -76,7 +76,7 @@
           <p class="project-client">Abu Dhabi Executive Office (ADEO)</p>
           <p class="project-name">Design language system</p>
           <p class="project-desc">Help designers to create consistent experiences and interfaces through meaningful guidelines that emphasize the ethos and philosophy behind ADEO.</p>
-          <a href="" title="" class="link case-study">Read case study<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward"></use></svg></a>
+          <a href="" title="" class="link case-study">Read case study<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-16"></use></svg></a>
         </article>
         <article class="project">
           <img src="" alt="" class="project-cover">
@@ -85,6 +85,41 @@
           <p class="project-desc">NDA  <span class="nda-classification">projects are really cool, don't you think? Collaborate with people of</span>  BNP Paribas, PACE and Source  <span class="nda-classification">on this project was</span>  very interesting.</p>
           <a href="" title="" class="link nda">Project under NDA<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#block"></use></svg></a>
         </article>
+      </div>
+    </section>
+
+    <section class="manifesto">
+      <div class="container">
+        <div class="subwrapper">
+          <p class="subtitle">personal manifesto<span>and short introduction</span></p>
+          <h2>Who am I, what kind of stuff I do and after all, why?</h2>
+          <div class="manifesto-tldr">
+            <div class="entry">
+              <p>tl;dr</p>
+              <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#entry-20"></use></svg>
+            </div>
+            <div class="current-position">
+              <p class="tag">Current position</p>
+              <p class="title">Product Designer at Source</p>
+              <p class="description">A house of designers providing value through design solutions, technical expertise and financial support</p>
+            </div>
+            <div class="passion">
+              <p class="tag">With a passion for</p>
+              <p class="title">Design Operations </p>
+              <p class="description">Wrote a research paper on design language systems and their impacts on product teams and end users</p>
+            </div>
+          </div>
+          <div class="manifesto-hello">
+            <div class="entry">
+              <p>hello</p>
+              <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#entry-20"></use></svg>
+            </div>
+            <div class="content">
+              <p>TK Drinking vinegar meggings microdosing, fashion axe tilde meditation poutine. Humblebrag mustache street art, swag disrupt waistcoat tattooed chambray roof party art party health goth. Pitchfork franzen listicle meditation wolf moon scenester tilde selfies hoodie chambray post-ironic, cardigan echo park you probably haven’t heard of them chicharrones wolf moon williamsburg microdosing umami. Selfies echo park farm-to-table blue bottle austin franzen marfa pug, kickstarter sartorial tacos shabby chic whatever ethical pickled selfies beard before they sold out art party blue bottle retro venmo skateboard pickled. Drinking vinegar meggings microdosing, fashion axe tilde meditation poutine humblebrag mustache street art, swag disrupt waistcoat tattooed chambray roof party.</p>
+              <p>Pitchfork franzen listicle meditation wolf moon scenester tilde selfies hoodie chambray post-ironic, cardigan echo park you probably haven’t heard of them chicharrones wolf moon williamsburg microdosing umami. Selfies echo park farm-to-table blue bottle austin franzen marfa pug.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </div>

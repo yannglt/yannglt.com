@@ -1,10 +1,19 @@
 // ATOMS
 @import 'reset'
-@import 'mixins'
 @import 'colors'
 @import 'typefaces'
 @import 'text-styles'
+@import 'motion'
 @import 'grids'
+
+@mixin hover()
+  @media (any-hover: none)
+    &:active
+      @content
+
+  @media (any-hover: hover)
+    &:hover
+      @content
 
 // ICONS
 .icon
@@ -19,10 +28,11 @@
 
 // BASE THEME
 body
-  font-family: gt-america-regular
+  font-family: gt-america-light
   font-size: 16px
   line-height: 28px
   background-color: $oblivion-1100
+  text-rendering: optimizeLegibility
 
 .tldr
   margin-top: 160px
@@ -108,11 +118,11 @@ body
     &Name
       margin-bottom: 2px
 
-      @extend .caption-tag
+      @extend .tag
       color: $thunderstorm-900
 
     &Value
-      @extend .caption-title
+      @extend .heading-3
       color: $oblivion-1100
 
   &-logo
@@ -136,12 +146,12 @@ body
   &-desc
     margin-bottom: 33px
 
-    @extend .caption-tag
+    @extend .tag
     text-align: center
     letter-spacing: 0
 
   &-annotation
-    margin-bottom: 8px
+    margin-bottom: 20px
 
     font-family: gt-america-mono-medium
     font-size: 10px
@@ -157,7 +167,7 @@ body
 
     z-index: -50
 
-    transform: translateY(calc(-216px + 124px + 12px))
+    transform: translateY(calc(-216px + 124px + 0px))
     // transform: translateY(0)
 
     &::before, &::after
@@ -283,7 +293,7 @@ body
   &Tag
     margin-bottom: 22px
 
-    @extend .caption-tag
+    @extend .tag
     color: $thunderstorm-500
 
     +adapt($desktop-hd)
@@ -312,12 +322,18 @@ body
     +adapt($desktop-hd)
       grid-column: 9 / span 4
 
+    li:hover
+      .icon
+        transform: translate(8px)
+
     .icon
       padding-left: 4px
       color: $oblivion-400
 
+      +motion(transform, $time-quick, $speed-standard, $weight-medium)
+
 .projects
-  margin-bottom: 200px
+  margin-bottom: 181px
 
   .container
     @extend .gridSystem
@@ -331,7 +347,7 @@ body
 
       background-color: #FFFFFF
       width: 100%
-      height: 528px
+      height: 532px
 
     &-client
       margin-bottom: -8px
@@ -357,10 +373,10 @@ body
       .nda-classification
         color: transparent
         font-size: 13px
-        background-color: $oblivion-100
+        background-color: $oblivion-700
 
     .link
-      @extend .caption-tag
+      @extend .tag
 
       .icon
         height: 16px
@@ -373,17 +389,120 @@ body
 
       &.wip
         color: $oblivion-300
+
         .icon
-          color: $oblivion-600
+          color: $oblivion-500
 
       &.case-study
         color: $thunderstorm-500
 
+        &:hover
+          .icon
+            transform: translateX(4px)
+
         .icon
           color: $thunderstorm-800
 
+          +motion(transform, $time-quick, $speed-standard, $weight-small)
+
       &.nda
         color: $firework-500
+        text-decoration: line-through
 
         .icon
           color: $firework-800
+
+.manifesto
+
+  .container
+    @extend .gridSystem
+    background-color: #ffffff
+    background-image: url("../../static/images/atlas@2x.png")
+    background-repeat: no-repeat
+    background-size: 100% 656px
+    background-position: top
+
+    height: 2064px
+    border-radius: 16px
+
+  .subwrapper
+    padding-top: 188px
+    grid-column: 3 / span 8
+
+  .subtitle
+    @extend .tag
+
+    margin-bottom: 52px
+    padding: 4px 0
+    font-size: 10px
+    letter-spacing: 0
+
+    border-top: 4px solid $oblivion-1100
+    border-bottom: 1px solid $oblivion-1100
+
+    span
+      margin-left: 4px
+      color: $oblivion-400
+
+  h2
+    margin-bottom: 78px
+
+    color: $oblivion-1100
+    font-size: 95px
+    font-family: "bluu-suuperstar-black"
+    line-height: 108px
+    letter-spacing: -2px
+    text-decoration: underline
+
+  .manifesto-tldr,
+  .manifesto-hello
+    @extend .gridSystem
+
+    .entry
+      @extend .tag
+
+      grid-column: span 1
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      p
+        margin-bottom: 5px
+
+    .tag
+      margin-bottom: 6px
+
+    .title
+      @extend .heading-3
+
+      margin-bottom: 5px
+
+    .description
+      line-height: 24px
+
+  .manifesto-tldr
+    margin-bottom: 82px
+
+    .entry
+      color: $firework-500
+
+  .manifesto-hello
+
+    .entry
+      color: $maelstrom-500
+
+      transform: translateY(3px)
+
+  .current-position,
+  .passion
+    grid-column: span 3
+
+  .content
+    grid-column: span 6
+
+    p
+      margin-bottom: 32px
+
+      &:last-of-type
+        margin-bottom: 0
+

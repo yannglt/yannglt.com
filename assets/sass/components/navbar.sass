@@ -6,13 +6,19 @@
 
   z-index: 50
 
+  backdrop-filter: blur(12px) saturate(20%)
+  // border-bottom: 1px solid rgba($oblivion-400, 0.2)
+  background-color: rgba($oblivion-1100, 0.8)
+
 .navbar-content
-  padding: 40px 0
+  // padding: 40px 0
+  padding: 24px 0
 
   width: 100%
   display: flex
   flex-flow: row nowrap
   justify-content: space-between
+  align-items: center
 
   .index
     display: flex
@@ -35,7 +41,7 @@
       background-position: center
 
     &-name, &-currentpos
-      @extend .caption-tag
+      @extend .tag
       color: #ffffff
 
     &-currentpos
@@ -43,12 +49,18 @@
       letter-spacing: 0
       text-transform: none
 
+  .links
+    transform: translateY(1px)
+
   li
     display: inline-block
 
     a
       padding-left: 20px
       padding-right: 20px
-      
-      @extend .caption-tag
+
+      @extend .tag
       color: #ffffff
+
+      &:last-of-type
+        padding-right: 0
