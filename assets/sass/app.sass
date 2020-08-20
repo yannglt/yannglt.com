@@ -34,6 +34,18 @@ body
   background-color: $oblivion-1100
   text-rendering: optimizeLegibility
 
+// html::after
+//   content: ''
+//   position: fixed
+//   top: 0
+//   bottom: 0
+//   left: 0
+//   height: 100%
+//   width: 100%
+//   background-image: url("https://basehold.it/i/4/255/42/85/1")
+//   background-size: 4px 4px
+//   z-index: 9999
+
 .tldr
   margin-top: 160px
   position: relative
@@ -348,6 +360,15 @@ body
       background-color: #FFFFFF
       width: 100%
       height: 532px
+      display: flex
+      justify-content: center
+      align-items: center
+
+      img
+        max-width: 50%
+        // width: 100%
+        // height: auto
+        // object-fit: contain
 
     &-client
       margin-bottom: -8px
@@ -377,11 +398,16 @@ body
 
     .link
       @extend .tag
+      display: flex
+      flex-direction: row
+      align-items: center
 
       .icon
         height: 16px
         width: 16px
         padding-left: 4px
+
+        // transform: translateY(-5px)
 
       &.wip,
       &.nda
@@ -401,7 +427,7 @@ body
             transform: translateX(4px)
 
         .icon
-          color: $thunderstorm-800
+          color: $thunderstorm-700
 
           +motion(transform, $time-quick, $speed-standard, $weight-small)
 
@@ -410,7 +436,7 @@ body
         text-decoration: line-through
 
         .icon
-          color: $firework-800
+          color: $firework-700
 
 .manifesto
 
