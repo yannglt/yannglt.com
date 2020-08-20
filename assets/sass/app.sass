@@ -34,6 +34,8 @@ body
   background-color: $oblivion-1100
   text-rendering: optimizeLegibility
 
+  padding-bottom: 240px
+
 // html::after
 //   content: ''
 //   position: fixed
@@ -439,19 +441,23 @@ body
           color: $firework-700
 
 .manifesto
+  background-color: #ffffff
+
+  +adapt($desktop-hd)
+    margin: 0 auto
+    max-width: 1240px
+    border-radius: 16px
+    overflow: hidden
 
   .container
     @extend .gridSystem
-    background-color: #ffffff
     background-image: url("../../static/images/atlas@2x.png")
     background-repeat: no-repeat
     background-size: 100% 656px
     background-position: top
 
-    height: 2064px
-    border-radius: 16px
-
   .subwrapper
+    margin-bottom: 128px
     padding-top: 188px
     grid-column: 3 / span 8
 
@@ -482,7 +488,8 @@ body
 
   .manifesto-tldr,
   .manifesto-hello
-    @extend .gridSystem
+    +adapt($desktop-hd)
+      +gCols(8, 74px, 32px)
 
     .entry
       @extend .tag
@@ -532,3 +539,43 @@ body
       &:last-of-type
         margin-bottom: 0
 
+.process
+  grid-column: span 12
+  outline: 2px solid $oblivion-100
+
+  background-image: url("../../static/images/process.svg")
+  background-repeat: no-repeat
+  // background-size: 100% 656px
+  background-position: left 90px
+
+  &-content
+    max-width: 603px
+    margin-top: 105px
+    margin-left: 107px
+    padding-bottom: 284px
+
+  &-title
+    @extend .heading-2
+    margin-bottom: 25px
+
+  &-cta
+    display: flex
+    flex-direction: row
+    align-items: center
+
+    color: $maelstrom-500
+    font-family: "gt-america-mono-bold"
+    font-size: 16px
+    line-height: 24px
+    letter-spacing: 1px
+    text-transform: uppercase
+
+    &:hover
+      .icon
+        transform: translateX(4px)
+
+    .icon
+      color: $maelstrom-700
+      padding-left: 4px
+
+      +motion(transform, $time-quick, $speed-standard, $weight-small)
