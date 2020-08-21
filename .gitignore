@@ -90,3 +90,8 @@ sw.*
 *.swp
 
 ngrok
+
+# Font files
+*.woff
+*.woff2
+*.otf

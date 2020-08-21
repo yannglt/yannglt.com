@@ -30,14 +30,6 @@ export default {
       // { name: 'twitter:image', content: 'https://yannglt.com/og-image-cover.png' },
       // { name: 'twitter:creator', content: '@yannglt' }
     ],
-    link: [
-      // { rel: 'icon', type: 'image/x-icon', href: '~/static/favicon.ico' },
-      // { rel: 'apple-touch-icon', sizes:'180x180', href:'~/static/apple-touch-icon.png' },
-      // { rel: 'icon', type:'image/png', sizes:'32x32', href:'~/static/favicon-32x32.png' },
-      // { rel: 'icon', type:'image/png', sizes:'16x16', href:'~/static/favicon-16x16.png' },
-      // { rel: 'manifest', href:'~/site.webmanifest' },
-      // { rel: 'mask-icon', href:'~/static/safari-pinned-tab.svg', color:'#0c0d0f' }
-    ],
     script: [
 
     ]
@@ -59,7 +51,6 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/gsap-scrollmagic.js', ssr: false },
     { src: '~plugins/ga.js', mode: 'client' }
   ],
 
