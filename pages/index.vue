@@ -1,5 +1,6 @@
 <template lang="html">
   <div id="app">
+    <a id="eji-banner" href="https://support.eji.org/give/153413/#!/donation/checkout">Black Lives Matter. Support&nbsp;the&nbsp;Equal&nbsp;Justice&nbsp;Initiative.</a>
     <div id="intro">
       <div class="container">
         <div class="me__container">
@@ -73,6 +74,26 @@
     <Footer></Footer>
   </div>
 </template>
+
+<style scoped>
+  #eji-banner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 3rem;
+    padding: 6rem 1rem 0 1rem;
+    background: #222;
+    z-index: 999;
+    transform: translate(0, -6rem);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #eee;
+    font-weight: 500;
+  }
+</style>
 
 <script>
   import ProjectExtract from '../components/ProjectExtract.vue'
