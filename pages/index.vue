@@ -92,6 +92,11 @@
     justify-content: center;
     color: #eee;
     font-weight: 500;
+    text-decoration: none;
+  }
+  
+  #eji-banner:hover {
+    text-decoration: underline;
   }
 </style>
 
