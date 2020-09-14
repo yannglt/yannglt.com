@@ -11,7 +11,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.14.4",
+    "nuxt": "^2.14.5",
     "vue-server-renderer": "^2.6.11"
   },
   "devDependencies": {
