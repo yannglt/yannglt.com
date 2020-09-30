@@ -53,7 +53,7 @@
       <div class="container">
         <p class="introTag">Welcome to my space on the Internets</p>
         <h1 class="introTitle">I think, create and break interfaces, products and systems with a passion for design operations.</h1>
-        <p class="introDesc">Here you will find a selection of my latest works and collaborations with startups and some friends, you will be also able to read more about my story and ask for help on your idea/problem.</p>
+        <p class="introDesc">Find here a selection of my latest works and collaborations with startups and some friends, you will be also able to read more about my story and ask for help on your idea/problem.</p>
         <ul class="introLinks">
           <li><a href="" title="">Thoughts on Twitter<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a></li>
           <li><a href="" title="">Works in progress on Dribbble<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a></li>
@@ -70,7 +70,7 @@
           </div>
           <p class="project-client">Indépendants.co</p>
           <p class="project-name">Website and platform overhaul</p>
-          <p class="project-desc">Currently building a new online space for the new french syndicate of independent workers, with a solid information architecture and use of its brand identity.</p>
+          <p class="project-desc">Currently a new online space for the new french syndicate of independent workers, with solid information architecture and use of its identity.</p>
           <a href="" title="" class="link wip">Work in progress<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#auto-renew-16"></use></svg></a>
         </article>
         <article class="project">
@@ -98,7 +98,7 @@
       <div class="container">
         <div class="subwrapper">
           <p class="subtitle">personal manifesto<span>and short introduction</span></p>
-          <h2>Who am I, what kind of stuff I do and after all, why?</h2>
+          <h2>Who am I, what kind of stuff I do & above all, why?</h2>
           <div class="manifesto-tldr">
             <div class="entry">
               <p>tl;dr</p>

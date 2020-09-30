@@ -36,20 +36,8 @@ body
 
   padding-bottom: 240px
 
-// html::after
-//   content: ''
-//   position: fixed
-//   top: 0
-//   bottom: 0
-//   left: 0
-//   height: 100%
-//   width: 100%
-//   background-image: url("https://basehold.it/i/4/255/42/85/1")
-//   background-size: 4px 4px
-//   z-index: 9999
-
 .tldr
-  margin-top: 160px
+  margin-top: 172px
   position: relative
 
   .welcome-repeat
@@ -70,7 +58,7 @@ body
   @for $i from 1 through 8
     &:nth-child(#{$i})
       z-index: 0 - $i * 10
-      transform: translateY(-60 + $i * 60px)
+      transform: translateY(-64 + $i * 64px)
 
   &:nth-child(2)
     -webkit-text-stroke: 1px $oblivion-300
@@ -105,11 +93,11 @@ body
   padding: 16px
 
   width: 100%
-  max-width: 392px
+  max-width: 376px
   position: relative
   background-color: $thunderstorm-500
 
-  transform: translateY(124px)
+  transform: translateY(120px)
 
   &-title
     padding: 17px 0 23px 0
@@ -181,7 +169,7 @@ body
 
     z-index: -50
 
-    transform: translateY(calc(-216px + 124px + 0px))
+    transform: translateY(calc(-216px + 120px + 0px))
     // transform: translateY(0)
 
     &::before, &::after
@@ -298,14 +286,14 @@ body
             transform: translateY(-38px)
 
 .intro
-  margin-top: calc(124px + 179px)
-  margin-bottom: 112px
+  margin-top: calc(124px + 243px)
+  margin-bottom: 172px
 
   .container
     @extend .gridSystem
 
   &Tag
-    margin-bottom: 22px
+    margin-bottom: 18px
 
     @extend .tag
     color: $thunderstorm-500
@@ -315,7 +303,7 @@ body
 
 
   &Title
-    margin-bottom: 39px
+    margin-bottom: 35px
 
     @extend .heading-1
     color: #fff
@@ -347,7 +335,7 @@ body
       +motion(transform, $time-quick, $speed-standard, $weight-medium)
 
 .projects
-  margin-bottom: 181px
+  margin-bottom: 201px
 
   .container
     @extend .gridSystem
@@ -373,21 +361,21 @@ body
         // object-fit: contain
 
     &-client
-      margin-bottom: -8px
+      margin-bottom: -4px
 
       color: $oblivion-025
       font-size: 20px
       line-height: 32px
 
     &-name
-      margin-bottom: 9px
+      margin-bottom: 10px
 
       color: $oblivion-300
       font-size: 20px
       line-height: 32px
 
     &-desc
-      margin-bottom: 18px
+      margin-bottom: 21px
 
       @extend .body
       color: $oblivion-100
@@ -445,7 +433,7 @@ body
 
   +adapt($desktop-hd)
     margin: 0 auto
-    max-width: 1240px
+    max-width: 1208px
     border-radius: 16px
     overflow: hidden
 
@@ -453,18 +441,18 @@ body
     @extend .gridSystem
     background-image: url("../../static/images/atlas@2x.png")
     background-repeat: no-repeat
-    background-size: 100% 656px
+    background-size: 100% 684px
     background-position: top
 
   .subwrapper
-    margin-bottom: 128px
-    padding-top: 188px
+    margin-bottom: 136px
+    padding-top: 176px
     grid-column: 3 / span 8
 
   .subtitle
     @extend .tag
 
-    margin-bottom: 52px
+    margin-bottom: 56px
     padding: 4px 0
     font-size: 10px
     letter-spacing: 0
@@ -489,7 +477,7 @@ body
   .manifesto-tldr,
   .manifesto-hello
     +adapt($desktop-hd)
-      +gCols(8, 74px, 32px)
+      +gCols(8, 64px, 40px)
 
     .entry
       @extend .tag
@@ -514,7 +502,7 @@ body
       line-height: 24px
 
   .manifesto-tldr
-    margin-bottom: 82px
+    margin-bottom: 70px
 
     .entry
       color: $firework-500

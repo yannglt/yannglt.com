@@ -5,14 +5,17 @@
   left: 0
 
   z-index: 50
+  
+  background-color: $oblivion-1100
 
-  backdrop-filter: blur(12px) saturate(20%)
-  // border-bottom: 1px solid rgba($oblivion-400, 0.2)
-  background-color: rgba($oblivion-1100, 0.8)
+  @supports (backdrop-filter: blur(12px))
+    &
+      background-color: rgba($oblivion-1100, 0.9)
+      backdrop-filter: blur(12px) saturate(20%)
 
 .navbar-content
-  // padding: 40px 0
   padding: 24px 0
+  border-bottom: 1px solid rgba($oblivion-700, 1)
 
   width: 100%
   display: flex
@@ -62,5 +65,5 @@
       @extend .tag
       color: #ffffff
 
-      &:last-of-type
-        padding-right: 0
+    &:last-of-type a
+      padding-right: 0
