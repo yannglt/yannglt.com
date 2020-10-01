@@ -567,3 +567,105 @@ body
       padding-left: 4px
 
       +motion(transform, $time-quick, $speed-standard, $weight-small)
+
+.human
+  margin-top: 167px
+  margin-bottom: calc(200px + 480px)
+
+  .container
+    @extend .gridSystem
+
+  &Title
+    @extend .heading-1
+    color: $oblivion-025
+    text-align: center
+
+    +adapt($desktop-hd)
+      grid-column: 2/ span 10
+
+  &Link
+    margin-top: 41px
+    grid-column: span 12
+    justify-self: center
+
+    @extend .tag
+    display: flex
+    flex-direction: row
+    align-items: center
+    color: $thunderstorm-500
+
+    .icon
+      padding-left: 4px
+      color: $thunderstorm-700
+
+  &Logo
+    grid-column: span 12
+    justify-self: center
+    margin-top: 34px
+    height: 48px
+    width: 48px
+    border: 1px solid $oblivion-700
+    border-radius: 24px
+    background-image: url("../../static/icons/logo-white-24.svg")
+    background-repeat: no-repeat
+    background-size: 24px 24px
+    background-position: center
+
+  .facts
+    grid-column: span 12
+    position: relative
+
+  .fact
+    z-index: -50
+    position: absolute
+    width: 480px
+    padding: 51px 52px
+    border: 1px solid $oblivion-700
+    border-radius: 8px
+    background-color: $oblivion-1100
+
+    box-shadow: 0px 16px 80px 0px rgba(0, 0, 0, 0.8)
+
+    &Sub
+      @extend .tag
+      color: $oblivion-100
+      font-size: 13px
+      line-height: 24px
+
+    &Title
+      margin-top: 4px
+      @extend .heading-3
+      color: $oblivion-025
+      line-height: 28px
+
+    &Desc
+      margin-top: 7px
+      color: $oblivion-300
+
+      p
+        margin-bottom: 16px
+
+        &:last-of-type
+          margin-bottom: 0
+
+      a
+        color: $oblivion-100
+        text-decoration: underline
+
+        &:hover
+          color: pink
+
+    &:nth-child(1)
+      top: 216px
+      left: 56px
+      transform: rotate(-15deg)
+
+    &:nth-child(2)
+      top: 304px
+      right: 40px
+      transform: rotate(22.5deg)
+
+    &:nth-child(3)
+      top: 424px
+      left: 51%
+      transform: rotate(-7.5deg) translate(-50%)

@@ -134,15 +134,52 @@
         </div>
       </div>
     </section>
+
+    <section class="human">
+      <div class="container">
+        <div class="facts">
+          <Fact v-for="fact in facts" :key="fact.id" :sub="fact.sub" :title="fact.title" :desc="fact.desc"></Fact>
+        </div>
+        <h2 class="humanTitle">Interfaces, products and systems are a big part of my daily life, but what about the human behind all of this?</h2>
+        <a href="" class="humanLink">Read more about me as a human<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a>
+        <div class="humanLogo"></div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
   import Navbar from '../components/Navbar.vue'
+  import Fact from '../components/Fact.vue'
 
   export default {
+    data() {
+      return {
+        facts: [
+          {
+            id: '0',
+            sub: 'Quick fact #1',
+            title: 'Started practicing visual design at 11 with themes for jailbreaked iPhones',
+            desc: '<p>And it was a real mess at first, as I didn’t know anything about icons or interface design. But with time and practice, I felt in love with all the possibilities Cydia (more or less an AppStore for jailbreaked iPhones) offers for designers and developers as me.</p><p>I started my journey with Photofiltre Studio X, then downloaded a hacked version of Photoshop CS5 to be able to follow the community tutorials on masking, shadows and other effects...</p><p>As I was too young to have a PayPal account, I had to ask my mother to create one to publish my first paid theme on this hidden marketplace.</p>'
+          },
+          {
+            id: '1',
+            sub: 'Quick fact #3',
+            title: 'Never stopped playing with LEGO',
+            desc: '<p>In fact, I continue to play while being in high-school, in university and then college, from City, Star Wars or Mars series to my current Architecture collection, these little bricks help me to stay away from the screen every once in a while.</p><p>I’m not a huge collector anymore but I’m still obsessed with certain pieces and I’m always trying to find good excuses to buy some.</p>'
+          },
+          {
+            id: '2',
+            sub: 'Quick fact #5',
+            title: 'Dad of 8 healthy plants',
+            desc: '<p>As a lot ot of humans around the globe during the 2020 pandemic + lockdown, I decided to improve my workspace and bring more life to my apartment.</p><p>With my loved one, Sabrina (<a href="https://sabrinanedjah.fr">go check her portfolio</a>), we chose plants from different places of the world and after running trials, we found out how to mix LEGOs and our green newcommers.</p>'
+          }
+        ]
+      }
+    },
     components: {
       Navbar,
+      Fact
     }
   }
 
