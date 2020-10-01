@@ -576,6 +576,7 @@ body
     @extend .gridSystem
 
   &Title
+    z-index: 50
     @extend .heading-1
     color: $oblivion-025
     text-align: center
@@ -617,7 +618,7 @@ body
   .facts
     grid-column: span 12
     position: relative
-    // z-index: 5
+    // perspective: 1500px
 
   .fact
     position: absolute
@@ -628,12 +629,15 @@ body
     background-color: $oblivion-1100
 
     box-shadow: 0px 16px 80px 0px rgba(0, 0, 0, 0.8)
+    // transform-style: preserve-3d
+    +motion($time-standard, $weight-xlarge, $speed-emphasized, transform, border-radius)
 
     &Sub
       @extend .tag
       color: $oblivion-100
       font-size: 13px
       line-height: 24px
+      +motion($time-quick, $weight-small, $speed-standard, color)
 
     &Title
       margin-top: 4px
@@ -644,6 +648,7 @@ body
     &Desc
       margin-top: 7px
       color: $oblivion-300
+      +motion($time-quick, $weight-small, $speed-standard, color)
 
       p
         margin-bottom: 16px
@@ -660,28 +665,46 @@ body
 
     &:nth-child(1)
       top: -88px
+      // top: -120px
       left: 56px
       transform: rotate(-15deg)
+      // transform: rotate3d(2, 1.5, 0, 24deg) rotate(-15deg)
 
     &:nth-child(2)
-      top: 48px
-      right: 40px
+      top: 24px
+      // top: 0px
+      right: 32px
       transform: rotate(22.5deg)
+      // transform: rotate3d(2, -1.5, 0, 24deg) rotate(22.5deg)
 
     &:nth-child(3)
       top: 136px
-      left: 50%
-      transform: rotate(-7.5deg) translate(-48%)
+      left: 32%
+      transform: rotate(-7.5deg)
+      // transform: rotate3d(2, 1.5, 0, 8deg) rotate(-7.5deg)
 
-    // &:hover
-    //   border: 1px solid $oblivion-300
-    //
-    // &:nth-child(1):hover
-    //   transform: rotate(-15deg) translate(-16px, -16px)
-    //
-    //
-    // &:nth-child(2):hover
-    //
-    //
-    // &:nth-child(3):hover
+    &:hover
+      border: 1px solid $oblivion-300
+      cursor: pointer
+
+      .factSub
+        color: $thunderstorm-500
+
+      .factDesc
+        color: $oblivion-100
+
+    $move: 16px
+
+    &:nth-child(1):hover
+      transform: rotate(-15deg) translate(-$move, -$move)
+      // transform: translate(-$move, -$move) rotate3d(2, 1.5, 0, 8deg) rotate(-15deg)
+
+    &:nth-child(2):hover
+      transform: rotate(22.5deg) translate($move, -$move)
+      // transform: translate($move, -$move) rotate3d(2, -1.5, 0, 8deg) rotate(15deg)
+
+    &:nth-child(3):hover
+      transform: rotate(-7.5deg) translateY(-$move)
+      // transform: translate($move, -$move*2) rotate3d(2, 1.5, 0, 4deg) rotate(-2deg)
+
 
