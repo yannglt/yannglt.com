@@ -4,20 +4,21 @@ $time-standard: 150ms
 $time-medium: 225ms
 $time-extended: 300ms
 
-// ELEMENT WEIGHT
-$weight-small: 1
-$weight-medium: 1.250
-$weight-large: 1.5625
-$weight-xlarge: 1.9531
-
 // BEZIER CURVES
 $speed-standard: cubic-bezier(0.4, 0.0, 0.2, 1)
 $speed-emphasized: cubic-bezier(0.2, 0.0, 0.2, 1)
 $speed-decelerated: cubic-bezier(0.0, 0.0, 0.2, 1)
 $speed-accelerated: cubic-bezier(0.4, 0.0, 1, 1)
 
-@mixin motion($property, $time, $speed, $weight, $delay: 0s)
-  transition-property: $property
+// ELEMENT WEIGHT
+$weight-small: 1
+$weight-medium: 1.250
+$weight-large: 1.5625
+$weight-xlarge: 1.9531
+
+@mixin motion($properties, $time, $speed, $weight, $delay: 0s)
+  @each $property in $properties
+    transition-property: $property
   transition-duration: calc(#{$time} * #{$weight})
   transition-timing-function: $speed
   transition-delay: $delay

@@ -584,9 +584,12 @@ body
       grid-column: 2/ span 10
 
   &Link
+    z-index: 50
     margin-top: 41px
     grid-column: span 12
     justify-self: center
+    font-size: 16px
+    line-height: 24px
 
     @extend .tag
     display: flex
@@ -614,9 +617,9 @@ body
   .facts
     grid-column: span 12
     position: relative
+    // z-index: 5
 
   .fact
-    z-index: -50
     position: absolute
     width: 480px
     padding: 51px 52px
@@ -656,16 +659,29 @@ body
           color: pink
 
     &:nth-child(1)
-      top: 216px
+      top: -88px
       left: 56px
       transform: rotate(-15deg)
 
     &:nth-child(2)
-      top: 304px
+      top: 48px
       right: 40px
       transform: rotate(22.5deg)
 
     &:nth-child(3)
-      top: 424px
-      left: 51%
-      transform: rotate(-7.5deg) translate(-50%)
+      top: 136px
+      left: 50%
+      transform: rotate(-7.5deg) translate(-48%)
+
+    // &:hover
+    //   border: 1px solid $oblivion-300
+    //
+    // &:nth-child(1):hover
+    //   transform: rotate(-15deg) translate(-16px, -16px)
+    //
+    //
+    // &:nth-child(2):hover
+    //
+    //
+    // &:nth-child(3):hover
+
