@@ -298,7 +298,6 @@ body
     +adapt($desktop-hd)
       grid-column: 2 / span 10
 
-
   &Title
     margin-bottom: 35px
 
@@ -548,11 +547,9 @@ body
     flex-direction: row
     align-items: center
 
+    @extend .tag
     color: $maelstrom-500
-    font-family: "gt-america-mono-bold"
     font-size: 16px
-    line-height: 24px
-    letter-spacing: 1px
     text-transform: uppercase
 
     &:hover
@@ -632,8 +629,6 @@ body
     &Sub
       @extend .tag
       color: $oblivion-100
-      font-size: 13px
-      line-height: 24px
       +motion($time-quick, $weight-small, $speed-standard, color)
 
     &Title
