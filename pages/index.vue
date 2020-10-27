@@ -65,31 +65,21 @@
     <section class="projects">
       <div class="container">
         <article class="project">
-          <div class="project-cover">
-            <img src="images/independants-logo@2x.png" alt="">
-          </div>
+          <div class="project-cover"></div>
           <p class="project-client">Indépendants.co</p>
           <p class="project-name">Website and platform overhaul</p>
           <p class="project-desc">Currently a new online space for the new french syndicate of independent workers, with solid information architecture and use of its identity.</p>
           <a href="" title="" class="link wip">Work in progress<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#auto-renew-16"></use></svg></a>
         </article>
         <article class="project">
-          <div class="project-cover" style="background-color: #F5F6F8">
-            <picture>
-              <source type="image/webp" srcset="images/adeo-logo@2x.webp">
-              <source type="image/png" srcset="images/adeo-logo@2x.png">
-              <img src="images/adeo-logo@2x.png" alt="">
-            </picture>
-          </div>
+          <div class="project-cover"></div>
           <p class="project-client">Abu Dhabi Executive Office (ADEO)</p>
           <p class="project-name">Design language system</p>
           <p class="project-desc">Help designers to create consistent experiences and interfaces through meaningful guidelines that emphasize the ethos and philosophy behind ADEO.</p>
           <a href="" title="" class="link wip">Case study in progress<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#auto-renew-16"></use></svg></a>
         </article>
         <article class="project">
-          <div class="project-cover" style="background-color: #F0EAE6">
-            <img src="images/bnpp-logo.svg" alt="">
-          </div>
+          <div class="project-cover"></div>
           <p class="project-client">BNP Paribas</p>
           <p class="project-name">Future of Customer Experience</p>
           <p class="project-desc">NDA  <span class="nda-classification">projects are really cool, don't you think? Collaborate with people of</span>  BNP Paribas, PACE and Source  <span class="nda-classification">on this project was</span>  very interesting.</p>

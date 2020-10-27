@@ -178,7 +178,7 @@ body
 
         height: 240px
         width: 524px
-        background-image: url("../../static/images/intro@2x.png")
+        background-image: url("../../static/images/intro.svg")
         background-repeat: no-repeat
         background-size: 524px 240px
         background-position: center
@@ -326,7 +326,7 @@ body
 
     .icon
       padding-left: 4px
-      color: $oblivion-400
+      color: $oblivion-300
 
       +motion($time-quick, $weight-medium, $speed-standard, transform)
 
@@ -349,12 +349,6 @@ body
       display: flex
       justify-content: center
       align-items: center
-
-      img, picture
-        max-width: 50%
-        // width: 100%
-        // height: auto
-        // object-fit: contain
 
     &-client
       margin-bottom: -4px
@@ -393,13 +387,9 @@ body
         width: 16px
         padding-left: 4px
 
-        // transform: translateY(-5px)
-
       &.wip,
       &.nda
         cursor: not-allowed
-
-      &.wip
         color: $oblivion-300
 
         .icon
@@ -418,11 +408,7 @@ body
           +motion($time-quick, $weight-small, $speed-standard, transform)
 
       &.nda
-        color: $firework-500
         text-decoration: line-through
-
-        .icon
-          color: $firework-700
 
 .manifesto
   background-color: #ffffff
@@ -518,10 +504,16 @@ body
     .entry
       color: $firework-500
 
+      .icon
+        color: $firework-700
+
   .manifesto-hello
 
     .entry
       color: $maelstrom-500
+
+      .icon
+        color: $maelstrom-700
 
       transform: translateY(3px)
 
