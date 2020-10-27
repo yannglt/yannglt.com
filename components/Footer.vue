@@ -7,11 +7,11 @@
         <form class="" action="" method="post">
           <div class="clubFormFirstname">
             <label for="firstname">Your firstname</label>
-            <input type="text" name="firstname" placeholder="Anakin">
+            <input type="text" name="firstname" id="firstname" placeholder="Anakin">
           </div>
           <div class="clubFormEmail">
             <label for="email">Your email</label>
-            <input type="email" name="email" placeholder="a.skywalker@email.com">
+            <input type="email" name="email" id="email" placeholder="a.skywalker@email.com">
           </div>
           <button>
             <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#add-circle-24"></use></svg>Join the club

@@ -7,6 +7,9 @@ export default {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: 'en'
+    },
     title: 'Yann-Edern Gillet, Product Designer',
     meta: [
       { charset: 'utf-8' },
