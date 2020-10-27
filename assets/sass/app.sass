@@ -435,15 +435,30 @@ body
 
   .container
     @extend .gridSystem
-    // background-image: url("../../static/images/atlas@2x.png")
-    background-repeat: no-repeat
-    background-size: 100% 684px
-    background-position: top
+    position: relative
+
+    .atlas-bg
+      position: absolute
+      height: 684px
+      width: 100%
+      background-image: linear-gradient(rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.76)), url("../../static/images/atlas.svg")
+      background-repeat: repeat
+      background-size: 600px 600px
+      background-position: top
+
+    &::after
+      content: ""
+      position: absolute
+      height: 684px
+      width: 100%
+      background-image: radial-gradient(136% 100% at 50% 0%, rgba(255, 255, 255, 0.64) 0%, #FFFFFF 100%)
+      background-size: 100% 100%
 
   .subwrapper
     margin-bottom: 136px
     padding-top: 176px
     grid-column: 3 / span 8
+    z-index: 5
 
   .subtitle
     @extend .tag
