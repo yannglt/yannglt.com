@@ -75,7 +75,11 @@
         </article>
         <article class="project">
           <div class="project-cover" style="background-color: #F5F6F8">
-            <img src="images/adeo-logo@2x.png" alt="">
+            <picture>
+              <source type="image/webp" srcset="images/adeo-logo@2x.webp">
+              <source type="image/png" srcset="images/adeo-logo@2x.png">
+              <img src="images/adeo-logo@2x.png" alt="">
+            </picture>
           </div>
           <p class="project-client">Abu Dhabi Executive Office (ADEO)</p>
           <p class="project-name">Design language system</p>
