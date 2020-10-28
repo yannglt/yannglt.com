@@ -55,9 +55,9 @@
         <h1 class="introTitle">I think, create and break interfaces, products and systems with a passion for design operations.</h1>
         <p class="introDesc">Find here a selection of my latest works and collaborations with startups and some friends, you will be also able to read more about my story and ask for help on your idea/problem.</p>
         <ul class="introLinks">
-          <li><a href="'#" title="">Thoughts on Twitter<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a></li>
-          <li><a href="'#" title="">Works in progress on Dribbble<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a></li>
-          <li><a href="'#" title="">Journey on Instagram<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a></li>
+          <li><a href="'#" title="">Thoughts on Twitter<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a></li>
+          <li><a href="'#" title="">Works in progress on Dribbble<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a></li>
+          <li><a href="'#" title="">Journey on Instagram<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a></li>
         </ul>
       </div>
     </section>
