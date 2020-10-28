@@ -56,13 +56,13 @@
         <p class="introDesc">Find here a selection of my latest works and collaborations with startups and some friends, you will be also able to read more about my story and ask for help on your idea/problem.</p>
         <ul class="introLinks">
           <li>
-            <a href="https://twitter.com/yannglt" title="" target="_blank">Thoughts on Twitter<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a>
+            <a href="https://twitter.com/yannglt" title="" target="_blank"  rel="noopener">Thoughts on Twitter<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a>
           </li>
           <li>
-            <a href="https://dribbble.com/yannglt" title="" target="_blank">Works in progress on Dribbble<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a>
+            <a href="https://dribbble.com/yannglt" title="" target="_blank"  rel="noopener">Works in progress on Dribbble<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a>
           </li>
           <li>
-            <a href="https://www.instagram.com/ynngllt/" title="" target="_blank">Journey on Instagram<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a>
+            <a href="https://www.instagram.com/ynngllt/" title="" target="_blank"  rel="noopener">Journey on Instagram<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a>
           </li>
         </ul>
       </div>
@@ -75,21 +75,21 @@
           <p class="project-client">Indépendants.co</p>
           <p class="project-name">Website and platform overhaul</p>
           <p class="project-desc">Currently a new online space for the new french syndicate of independent workers, with solid information architecture and use of its identity.</p>
-          <a href="https://www.notion.so/yannglt/Ind-pendants-co-website-and-plateform-overhaul-56e64ca3f3074b6590cfcbc3ce598080" title="" target="_blank" class="link wip">Work in progress<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#auto-renew-16"></use></svg></a>
+          <a href="https://www.notion.so/yannglt/Ind-pendants-co-website-and-plateform-overhaul-56e64ca3f3074b6590cfcbc3ce598080" title="" target="_blank"  rel="noopener" class="link wip">Work in progress<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#auto-renew-16"></use></svg></a>
         </article>
         <article class="project">
           <div class="project-cover"></div>
           <p class="project-client">Abu Dhabi Executive Office (ADEO)</p>
           <p class="project-name">Design language system</p>
           <p class="project-desc">Help designers to create consistent experiences and interfaces through meaningful guidelines that emphasize the ethos and philosophy behind ADEO.</p>
-          <a href="https://www.notion.so/yannglt/Abu-Dhabi-Executive-Office-ADEO-Design-language-system-ee8f37f7945e4f08b6032441ce7ebaef" title="" target="_blank" class="link wip">Case study in progress<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#auto-renew-16"></use></svg></a>
+          <a href="https://www.notion.so/yannglt/Abu-Dhabi-Executive-Office-ADEO-Design-language-system-ee8f37f7945e4f08b6032441ce7ebaef" title="" target="_blank"  rel="noopener" class="link wip">Case study in progress<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#auto-renew-16"></use></svg></a>
         </article>
         <article class="project">
           <div class="project-cover"></div>
           <p class="project-client">BNP Paribas</p>
           <p class="project-name">Future of Customer Experience</p>
           <p class="project-desc">NDA  <span class="nda-classification">projects are really cool, don't you think? Collaborate with people of</span>  BNP Paribas, PACE and Source  <span class="nda-classification">on this project was</span>  very interesting.</p>
-          <a href="https://www.notion.so/yannglt/BNP-Paribas-Future-of-Customer-Experience-6a9a5a47e47547dfb687ba66b571326b" title="" target="_blank" class="link nda">Project under NDA<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#block-16"></use></svg></a>
+          <a href="https://www.notion.so/yannglt/BNP-Paribas-Future-of-Customer-Experience-6a9a5a47e47547dfb687ba66b571326b" title="" target="_blank"  rel="noopener" class="link nda">Project under NDA<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#block-16"></use></svg></a>
         </article>
       </div>
     </section>
