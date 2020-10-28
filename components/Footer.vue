@@ -27,18 +27,18 @@
         <div class="footer-explore">
           <p class="footer-exploreTitle">In this space</p>
           <ul class="footer-exploreLinks">
-            <li><a href="">Discover my work</a></li>
-            <li><a href="">Learn about my process</a></li>
-            <li><a href="">Know more about me</a></li>
-            <li><a href="">Get in touch</a></li>
+            <li><a href="/works">Discover my work</a></li>
+            <li><a href="/process">Learn about my process</a></li>
+            <li><a href="/about">Know more about me</a></li>
+            <li><a href="/contact">Get in touch</a></li>
           </ul>
         </div>
         <div class="footer-follow">
           <p class="footer-followTitle">Follow my work</p>
           <ul class="footer-followLinks">
-            <li><a href="">Thoughts on Twitter</a></li>
-            <li><a href="">Works in progress on Dribbble</a></li>
-            <li><a href="">RSS feed</a></li>
+            <li><a href="https://twitter.com/yannglt">Thoughts on Twitter</a></li>
+            <li><a href="https://dribbble.com/yannglt">Works in progress on Dribbble</a></li>
+            <li><a href="/feed">RSS feed</a></li>
           </ul>
         </div>
       </div>
