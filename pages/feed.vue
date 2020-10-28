@@ -1,6 +1,6 @@
 <template lang="html">
-  <div class="wip-page wip-about">
-    <h1>About</h1>
+  <div class="wip-page wip-feed">
+    <h1>Feed</h1>
     <a href="/"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg>back to homepage</a>
   </div>
 </template>

@@ -44,6 +44,29 @@ body
   .welcome-repeat
     text-align: center
 
+.wip-page
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: 100vh
+  flex-direction: column
+
+  h1
+    @extend .heading-1
+    color: $oblivion-025
+    margin-bottom: 24px
+
+  a
+    @extend .tag
+    display: flex
+    flex-direction: row
+    align-items: center
+    color: $oblivion-300
+    font-size: 16px
+
+    .icon
+      transform: scaleX(-1) translateX(8px)
+
 .welcome-repeat p
   @extend .display-1
   position: absolute
