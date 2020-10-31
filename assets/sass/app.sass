@@ -103,11 +103,11 @@ body
 
   &:nth-child(7)
     -webkit-text-stroke: 1px $oblivion-800
-    -webkit-text-fill-color: transparent
+    -webkit-text-fill-color: $oblivion-1100
 
   &:nth-child(8)
     -webkit-text-stroke: 1px $oblivion-900
-    -webkit-text-fill-color: transparent
+    -webkit-text-fill-color: $oblivion-1100
 
 .etiquette
   margin: 0 auto
@@ -130,7 +130,7 @@ body
 
   &-properties
     margin-top: 1px
-    margin-bottom: 39px
+    margin-bottom: 31px
 
   &-property
     margin-top: 14px
@@ -150,7 +150,7 @@ body
 
   &-logo
     margin: 0 auto
-    margin-bottom: 21px
+    margin-bottom: 29px
 
     height: 96px
     width: 96px
@@ -190,24 +190,24 @@ body
 
     z-index: -50
 
-    transform: translateY(calc(-216px + 120px + 0px))
-    // transform: translateY(0)
+    transform: translateY(calc(-1 * (240px + 236px + 4px - 120px)))
+    // 240px = illustration height
+    // 236px = translateY from etiquette bottom
+    // 4px = electricityLink's height
+    // 120px = etiquette inital translateY
 
     &::before, &::after
 
       +adapt(1440px)
         content: ""
         position: absolute
-        bottom: 12px
-
         height: 240px
-        width: 524px
+        width: 532px
         background-image: url("../../static/images/intro.svg")
         background-repeat: no-repeat
-        background-size: 524px 240px
+        background-size: 532px 240px
         background-position: center
 
-        // transform: translateY(-24px)
         z-index: -10
 
     &::before
@@ -217,7 +217,8 @@ body
 
       +adapt(1680px)
         left: 50%
-        transform: scaleX(-1) translateX(calc(100% + 316px))
+        transform: scaleX(-1) translateX(calc(100% + (1680px - 532px - 532px)/2))
+        // electricity illustration full translation + electricityLink at 1680px / 2
 
     &::after
       +adapt(1440px)
@@ -225,24 +226,26 @@ body
 
       +adapt(1680px)
         right: 50%
-        transform: translateX(calc(100% + 316px))
-
+        transform: translateX(calc(100% + (1680px - 532px - 532px)/2))
 
     &Link
 
       +adapt(1440px)
         position: absolute
         height: 4px
-        width: calc(100vw - 524px - 524px + 8px)
+        width: calc(100vw - 532px - 532px)
         left: 50%
         background-color: $oblivion-500
+        // 532px = one electricty illustration width
 
         z-index: 50
-        transform: translateY(-70px) translateX(-50%)
+        transform: translate(-50%, calc((240px / 2) + 62px))
+        // 240px / 2 = illustration center
+        // 62px = translation to match illustrations' strokes position
 
       +adapt(1680px)
         left: 50%
-        width: calc(1680px - 524px - 524px + 8px)
+        width: calc(1680px - 532px - 532px)
 
     &Extension
       +adapt(1440px)
@@ -250,13 +253,13 @@ body
 
       &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6)
 
-        +adapt(1440px)
+        +adapt(1680px)
 
-          &:before, &:after
+          &:before, &::after
             content: ''
             position: absolute
             height: 4px
-            width: calc((100vw - 1680px)/2)
+            width: calc((100vw - 532px - 532px - (1680px - 532px - 532px))/2)
 
             z-index: -5
 
