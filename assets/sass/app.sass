@@ -502,12 +502,16 @@ body
 
 .manifesto
   background-color: #ffffff
+  margin: 0 auto
+  overflow: hidden
+
+  border-radius: 16px
+
+  +adapt($bkp-desktop-sd)
+    max-width: $bkp-desktop-sd
 
   +adapt($bkp-desktop-hd)
-    margin: 0 auto
-    max-width: 1208px
-    border-radius: 16px
-    overflow: hidden
+    max-width: $bkp-desktop-hd
 
   .container
     @extend .gridSystem
@@ -515,26 +519,45 @@ body
 
     .atlas-bg
       position: absolute
-      height: 684px
       width: 100%
       background-image: linear-gradient(rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.76)), url("../../static/images/atlas.svg")
       background-repeat: repeat
       background-size: 600px 600px
       background-position: top
 
+      +adapt($bkp-desktop-sd)
+        height: 612px
+
+      +adapt($bkp-desktop-hd)
+        height: 684px
+
     &::after
       content: ""
       position: absolute
-      height: 684px
       width: 100%
       background-image: radial-gradient(136% 100% at 50% 0%, rgba(255, 255, 255, 0.64) 0%, #FFFFFF 100%)
       background-size: 100% 100%
 
+      +adapt($bkp-desktop-sd)
+        height: 612px
+
+      +adapt($bkp-desktop-hd)
+        height: 684px
+
   .subwrapper
-    margin-bottom: 136px
-    padding-top: 176px
-    grid-column: 3 / span 8
     z-index: 5
+
+    +adapt($bkp-desktop-sd)
+      margin-bottom: 100px
+      padding-top: 100px
+      grid-column: 2 / span 9
+
+
+    +adapt($bkp-desktop-hd)
+      margin-bottom: 171px
+      padding-top: 168px
+      grid-column: 3 / span 8
+
 
   .subtitle
     @extend .tag
