@@ -18,11 +18,23 @@
   padding: 24px 0
   border-bottom: 1px solid rgba($oblivion-700, 1)
 
-  max-width: $bkp-desktop-hd
   display: flex
   flex-flow: row nowrap
   justify-content: space-between
   align-items: center
+
+  +adapt($bkp-mobile)
+    max-width: $bkp-mobile
+
+  +adapt($bkp-tablet)
+    max-width: $bkp-tablet
+
+  +adapt($bkp-desktop-sd)
+    max-width: $bkp-desktop-sd
+
+  +adapt($bkp-desktop-hd)
+    max-width: $bkp-desktop-hd
+
 
   .index
     display: flex

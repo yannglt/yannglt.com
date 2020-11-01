@@ -1,10 +1,10 @@
 // ATOMS
 @import 'reset'
+@import 'grids'
 @import 'colors'
 @import 'typefaces'
 @import 'text-styles'
 @import 'motion'
-@import 'grids'
 
 // DEBUGGOR
 // a:is(:not([href]), [href=""], [href="#"])
@@ -114,11 +114,16 @@ body
   padding: 16px
 
   width: 100%
-  max-width: 376px
   position: relative
   background-color: $thunderstorm-500
 
   transform: translateY(120px)
+
+  +adapt($bkp-mobile)
+    max-width: 360px
+
+  +adapt($bkp-desktop-hd)
+    max-width: 376px
 
   &-title
     padding: 17px 0 23px 0
@@ -180,7 +185,6 @@ body
     font-size: 10px
     line-height: 24px
     text-align: center
-
 
   &-electricity
     position: relative
@@ -255,7 +259,7 @@ body
 
         +adapt(1680px)
 
-          &:before, &::after
+          &:before, &:after
             content: ''
             position: absolute
             height: 4px
@@ -273,7 +277,7 @@ body
 
         &:before, &:after
 
-          +adapt(1440px)
+          +adapt(1680px)
             background-color: $oblivion-700
             transform: translateY(-230px)
 
@@ -281,7 +285,7 @@ body
 
         &:before, &:after
 
-          +adapt(1440px)
+          +adapt(1680px)
             background-color: $oblivion-500
             transform: translateY(-198px)
 
@@ -289,7 +293,7 @@ body
 
         &:before, &:after
 
-          +adapt(1440px)
+          +adapt(1680px)
             background-color: $oblivion-500
             transform: translateY(-102px)
 
@@ -297,7 +301,7 @@ body
 
         &:before, &:after
 
-          +adapt(1440px)
+          +adapt(1680px)
             background-color: $oblivion-700
             transform: translateY(-70px)
 
@@ -305,13 +309,21 @@ body
 
         &:before, &:after
 
-          +adapt(1440px)
+          +adapt(1680px)
             background-color: $oblivion-500
             transform: translateY(-38px)
 
 .intro
-  margin-top: calc(124px + 243px)
-  margin-bottom: 172px
+
+  +adapt($bkp-desktop-sd)
+    margin-bottom: 76px
+    margin-top: calc(120px + 191px)
+    // 120px = etiquette initial translateY
+
+  +adapt($bkp-desktop-hd)
+    margin-bottom: 172px
+    margin-top: calc(120px + 243px)
+    // 120px = etiquette initial translateY
 
   .container
     @extend .gridSystem
@@ -322,7 +334,10 @@ body
     @extend .tag
     color: $thunderstorm-500
 
-    +adapt($width-desktop-hd)
+    +adapt($bkp-desktop-sd)
+      grid-column: 2 / span 8
+
+    +adapt($bkp-desktop-hd)
       grid-column: 2 / span 10
 
   &Title
@@ -331,7 +346,10 @@ body
     @extend .heading-1
     color: #fff
 
-    +adapt($width-desktop-hd)
+    +adapt($bkp-desktop-sd)
+      grid-column: 2 / span 8
+
+    +adapt($bkp-desktop-hd)
       grid-column: 2 / span 10
 
   &Desc,
@@ -340,11 +358,14 @@ body
     color: $oblivion-100
 
   &Desc
-    +adapt($width-desktop-hd)
+    +adapt($bkp-desktop-sd)
       grid-column: 2 / span 6
 
   &Links
-    +adapt($width-desktop-hd)
+    +adapt($bkp-desktop-sd)
+      grid-column: span 2
+
+    +adapt($bkp-desktop-hd)
       grid-column: 9 / span 4
 
     li:hover
@@ -358,13 +379,55 @@ body
       +motion($time-quick, $weight-medium, $speed-standard, transform)
 
 .projects
-  margin-bottom: 201px
+  +adapt($bkp-desktop-sd)
+    margin-bottom: 161px
+
+  +adapt($bkp-desktop-hd)
+    margin-bottom: 201px
 
   .container
-    @extend .gridSystem
+    margin: 0 auto
+    max-width: $bkp-desktop-hd
+
+  .projectsWrapper
+    margin-left: -32px
+    margin-right: -32px
+    display: flex
+    flex-direction: row
+    overflow-x: auto
+    overflow-y: hidden
+    scroll-snap-type: x mandatory
+    scroll-padding-left: 92px
+    padding-left: 92px
+    scroll-bar-width: none
+
+    +adapt($bkp-desktop-hd)
+      margin-left: 0
+      margin-right: 0
+      max-width: $width-desktop-hd
+
+      display: grid
+      grid-template-columns: repeat(12, 1fr)
+      column-gap: 40px
+
+      scroll-padding-left: 0
+      padding-left: 0
 
   .project
-    +adapt($width-desktop-hd)
+    +adapt($bkp-desktop-sd)
+      width: calc(360px + 40px)
+      // Need to include padding inside width to allow last item to scroll
+      flex-shrink: 0
+      scroll-snap-align: start
+      padding-right: 40px
+
+      &:last-of-type
+        width: calc(360px + 132px)
+        padding-right: 132px
+
+    +adapt($bkp-desktop-hd)
+      width: auto
+      padding: 0
       grid-column: span 4
 
     &-cover
@@ -440,7 +503,7 @@ body
 .manifesto
   background-color: #ffffff
 
-  +adapt($width-desktop-hd)
+  +adapt($bkp-desktop-hd)
     margin: 0 auto
     max-width: 1208px
     border-radius: 16px
@@ -500,7 +563,7 @@ body
 
   .manifesto-tldr,
   .manifesto-hello
-    +adapt($width-desktop-hd)
+    +adapt($bkp-desktop-hd)
       +gCols(8, 64px, 40px)
 
     .entry
@@ -609,7 +672,7 @@ body
     color: $oblivion-025
     text-align: center
 
-    +adapt($width-desktop-hd)
+    +adapt($bkp-desktop-hd)
       grid-column: 2/ span 10
 
   &Link
@@ -732,5 +795,3 @@ body
     &:nth-child(3):hover
       transform: rotate(-7.5deg) translateY(-$move)
       // transform: translate($move, -$move*2) rotate3d(2, 1.5, 0, 4deg) rotate(-2deg)
-
-

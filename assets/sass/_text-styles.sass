@@ -27,8 +27,16 @@ body
 // TEXT STYLES FOR HEADINGS
 .heading-1
   font-family: bluu-suuperstar-black
-  font-size: 48px
-  line-height: 60px
+  font-size: 32px
+  line-height: 44px
+
+  +adapt($bkp-desktop-sd)
+    font-size: 40px
+    line-height: 52px
+
+  +adapt($bkp-desktop-hd)
+    font-size: 48px
+    line-height: 60px
 
 .heading-2
   font-family: bluu-suuperstar-black
