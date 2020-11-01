@@ -8,39 +8,57 @@
   column-gap: $gutter-width
 
 // BREAKPOINTS
-$desktop-hd: 1440px
-$desktop-sd: 1024px
-$tablet: 768px
-$mobile: 414px
+$bkp-mobile: 336px
+$width-mobile: 414px
 
-.container
+$bkp-tablet: 664px
+$width-tablet: 768px
+
+$bkp-desktop-sd: 800px
+$width-desktop-sd: 1024px
+
+$bkp-desktop-hd: 1208px
+$width-desktop-hd: 1440px
+
+body
   margin: 0 auto
+  max-width: $width-desktop-hd
 
-  +adapt($mobile)
-    // max-width:
+  padding-left: calc(max(19px, 8vw))
+  padding-right: calc(max(19px, 8vw))
 
-  +adapt($tablet)
-    // max-width:
+  +adapt($bkp-mobile)
+    padding-left: calc(clamp(27px, 6.64vw, 32px))
+    padding-right: calc(clamp(27px, 6.64vw, 32px))
 
-  +adapt($desktop-sd)
-    // max-width:
+  +adapt($bkp-tablet)
+    padding-left: 32px
+    padding-right: 32px
 
-  +adapt($desktop-hd)
-    max-width: 1208px
+  +adapt($bkp-desktop-sd)
+    padding-left: 32px
+    padding-right: 32px
+
+  +adapt($bkp-desktop-hd)
+    padding-left: calc(min(32px, 116px))
+    padding-right: calc(min(32px, 116px))
 
 .gridSystem
+  margin: 0 auto
+  max-width: $bkp-desktop-hd
+
   // Grid used for mobiles
-  +adapt($mobile)
-    +gCols(3, 106px, 24px)
+  +adapt($bkp-mobile)
+    +gCols(2, 1fr, 32px)
 
   // Grid used for portrait tablets
-  +adapt($tablet)
-    +gCols(8, 62px, 32px)
+  +adapt($bkp-tablet)
+    +gCols(8, 1fr, 32px)
 
   // Grid used for standard-definition desktops and landscape tablets
-  +adapt($desktop-sd)
-    +gCols(12, 48px, 32px)
+  +adapt($bkp-desktop-sd)
+    +gCols(10, 1fr, 40px)
 
   // Grid used for high-definition desktops
-  +adapt($desktop-hd)
-    +gCols(12, 64px, 40px)
+  +adapt($bkp-desktop-hd)
+    +gCols(12, 1fr, 40px)

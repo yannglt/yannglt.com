@@ -322,7 +322,7 @@ body
     @extend .tag
     color: $thunderstorm-500
 
-    +adapt($desktop-hd)
+    +adapt($width-desktop-hd)
       grid-column: 2 / span 10
 
   &Title
@@ -331,7 +331,7 @@ body
     @extend .heading-1
     color: #fff
 
-    +adapt($desktop-hd)
+    +adapt($width-desktop-hd)
       grid-column: 2 / span 10
 
   &Desc,
@@ -340,11 +340,11 @@ body
     color: $oblivion-100
 
   &Desc
-    +adapt($desktop-hd)
+    +adapt($width-desktop-hd)
       grid-column: 2 / span 6
 
   &Links
-    +adapt($desktop-hd)
+    +adapt($width-desktop-hd)
       grid-column: 9 / span 4
 
     li:hover
@@ -364,7 +364,7 @@ body
     @extend .gridSystem
 
   .project
-    +adapt($desktop-hd)
+    +adapt($width-desktop-hd)
       grid-column: span 4
 
     &-cover
@@ -440,7 +440,7 @@ body
 .manifesto
   background-color: #ffffff
 
-  +adapt($desktop-hd)
+  +adapt($width-desktop-hd)
     margin: 0 auto
     max-width: 1208px
     border-radius: 16px
@@ -500,7 +500,7 @@ body
 
   .manifesto-tldr,
   .manifesto-hello
-    +adapt($desktop-hd)
+    +adapt($width-desktop-hd)
       +gCols(8, 64px, 40px)
 
     .entry
@@ -609,7 +609,7 @@ body
     color: $oblivion-025
     text-align: center
 
-    +adapt($desktop-hd)
+    +adapt($width-desktop-hd)
       grid-column: 2/ span 10
 
   &Link

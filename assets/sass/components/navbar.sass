@@ -4,9 +4,9 @@
   top: 0
   left: 0
 
-  z-index: 500
-
   background-color: $oblivion-1100
+
+  z-index: 500
 
   @supports (backdrop-filter: blur(12px))
     &
@@ -14,10 +14,11 @@
       backdrop-filter: blur(12px) saturate(20%)
 
 .navbar-content
+  margin: 0 auto
   padding: 24px 0
   border-bottom: 1px solid rgba($oblivion-700, 1)
 
-  width: 100%
+  max-width: $bkp-desktop-hd
   display: flex
   flex-flow: row nowrap
   justify-content: space-between
