@@ -188,19 +188,19 @@ body
 
   &-electricity
     position: relative
-    left: 0
+    left: 50%
     bottom: 0
-    width: 100vw
+    width: 1440px
 
     z-index: -50
 
-    transform: translateY(calc(-1 * (240px + 236px + 4px - 120px)))
+    transform: translateX(-50%) translateY(calc(-1 * (240px + 236px + 4px - 120px)))
     // 240px = illustration height
     // 236px = translateY from etiquette bottom
     // 4px = electricityLink's height
     // 120px = etiquette inital translateY
 
-    &::before, &::after
+    &:before, &:after
 
       +adapt(1440px)
         content: ""
@@ -214,7 +214,7 @@ body
 
         z-index: -10
 
-    &::before
+    &:before
       +adapt(1440px)
         left: 0
         transform: scaleX(-1)
@@ -224,7 +224,7 @@ body
         transform: scaleX(-1) translateX(calc(100% + (1680px - 532px - 532px)/2))
         // electricity illustration full translation + electricityLink at 1680px / 2
 
-    &::after
+    &:after
       +adapt(1440px)
         right: 0
 
@@ -323,7 +323,6 @@ body
   +adapt($bkp-desktop-hd)
     margin-bottom: 172px
     margin-top: calc(120px + 243px)
-    // 120px = etiquette initial translateY
 
   .container
     @extend .gridSystem
@@ -430,6 +429,10 @@ body
       padding: 0
       grid-column: span 4
 
+      &:last-of-type
+        width: auto
+        padding-right: 0
+
     &-cover
       margin-bottom: 20px
 
@@ -531,18 +534,18 @@ body
       +adapt($bkp-desktop-hd)
         height: 684px
 
-    &::after
-      content: ""
-      position: absolute
-      width: 100%
-      background-image: radial-gradient(136% 100% at 50% 0%, rgba(255, 255, 255, 0.64) 0%, #FFFFFF 100%)
-      background-size: 100% 100%
+      &::after
+        content: ""
+        position: absolute
+        width: 100%
+        background-image: radial-gradient(136% 100% at 50% 0%, rgba(255, 255, 255, 0.64) 0%, #FFFFFF 100%)
+        background-size: 100% 100%
 
-      +adapt($bkp-desktop-sd)
-        height: 612px
+        +adapt($bkp-desktop-sd)
+          height: 612px
 
-      +adapt($bkp-desktop-hd)
-        height: 684px
+        +adapt($bkp-desktop-hd)
+          height: 684px
 
   .subwrapper
     z-index: 5
@@ -550,19 +553,16 @@ body
     +adapt($bkp-desktop-sd)
       margin-bottom: 100px
       padding-top: 100px
-      grid-column: 2 / span 9
-
+      grid-column: 2 / span 8
 
     +adapt($bkp-desktop-hd)
       margin-bottom: 171px
       padding-top: 168px
       grid-column: 3 / span 8
 
-
   .subtitle
     @extend .tag
 
-    margin-bottom: 56px
     padding: 4px 0
     font-size: 10px
     letter-spacing: 0
@@ -570,13 +570,17 @@ body
     border-top: 4px solid $oblivion-1100
     border-bottom: 1px solid $oblivion-1100
 
+    +adapt($bkp-desktop-sd)
+      margin-bottom: 48px
+
+    +adapt($bkp-desktop-hd)
+      margin-bottom: 56px
+
     span
       margin-left: 4px
       color: $oblivion-400
 
   h2
-    margin-bottom: 78px
-
     color: $oblivion-1100
     font-size: 95px
     font-family: "bluu-suuperstar-black"
@@ -584,10 +588,16 @@ body
     letter-spacing: -2px
     text-decoration: underline
 
+    +adapt($bkp-desktop-sd)
+      margin-bottom: 78px
+
   .manifesto-tldr,
   .manifesto-hello
+    +adapt($bkp-desktop-sd)
+      +gCols(8, 1fr, 40px)
+
     +adapt($bkp-desktop-hd)
-      +gCols(8, 64px, 40px)
+      +gCols(8, 1fr, 40px)
 
     .entry
       @extend .tag
@@ -632,10 +642,12 @@ body
 
   .current-position,
   .passion
-    grid-column: span 3
+    +adapt($bkp-desktop-sd)
+      grid-column: span 3
 
   .content
-    grid-column: span 6
+    +adapt($bkp-desktop-sd)
+      grid-column: span 6
 
     p
       margin-bottom: 32px

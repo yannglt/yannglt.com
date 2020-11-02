@@ -50,25 +50,25 @@
     </section>
 
     <section class="intro">
-      <div class="container">
+      <div class="container">&nbsp;
         <p class="introTag">Welcome to my space on the Internets</p>
         <h1 class="introTitle">I think, create and break interfaces, products and systems with a passion for design operations.</h1>
         <p class="introDesc">Find here a selection of my latest works and collaborations with startups and some friends, you will be also able to read more about my story and ask for help on your idea/problem.</p>
         <ul class="introLinks">
           <li>
-            <a href="https://twitter.com/yannglt" title="" target="_blank"  rel="noopener"><!--Thoughts on -->Twitter<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a>
+            <a href="https://twitter.com/yannglt" title="" target="_blank"  rel="noopener">Thoughts on Twitter<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a>
           </li>
           <li>
-            <a href="https://dribbble.com/yannglt" title="" target="_blank"  rel="noopener"><!--Works in progress on -->Dribbble<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a>
+            <a href="https://dribbble.com/yannglt" title="" target="_blank"  rel="noopener">Works in progress on Dribbble<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a>
           </li>
           <li>
-            <a href="https://www.instagram.com/ynngllt/" title="" target="_blank"  rel="noopener"><!--Journey on -->Instagram<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a>
+            <a href="https://www.instagram.com/ynngllt/" title="" target="_blank"  rel="noopener">Journey on Instagram<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="projects">
+    <!-- <section class="projects">
       <div class="container">
         <div class="projectsWrapper">
           <article class="project">
@@ -94,9 +94,9 @@
           </article>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="manifesto">
+    <!-- <section class="manifesto">
       <div class="container">
         <div class="atlas-bg"></div>
         <div class="subwrapper">
@@ -136,9 +136,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="human">
+    <!-- <section class="human">
       <div class="container">
         <h2 class="humanTitle">Interfaces, products and systems are a big part of my daily life, but what about the human behind all of this?</h2>
         <a href="/about" class="humanLink">Read more about me as a human<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a>
@@ -147,9 +147,9 @@
           <Fact v-for="fact in facts" :key="fact.id" :sub="fact.sub" :title="fact.title" :desc="fact.desc"></Fact>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <Footer></Footer>
+    <!-- <Footer></Footer> -->
   </div>
 </template>
 
