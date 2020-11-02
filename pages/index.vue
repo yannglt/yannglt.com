@@ -98,7 +98,7 @@
 
     <section class="manifesto">
       <div class="container">
-        <div class="atlas-bg"></div>
+        <!-- <div class="atlas-bg"></div> -->
         <div class="subwrapper">
           <p class="subtitle">personal manifesto<span>and short introduction</span></p>
           <h2>Who am I, what kind of stuff I do & above all, why?</h2>
@@ -109,8 +109,8 @@
             </div>
             <div class="current-position">
               <p class="tag">Current position</p>
-              <p class="title">Product Designer at Source</p>
-              <p class="description">A house of designers providing value through design solutions, technical expertise and financial support</p>
+              <p class="title">Product Designer, Source</p>
+              <p class="description">Maison of designers providing value through design solutions, technical expertise and financial support</p>
             </div>
             <div class="passion">
               <p class="tag">With a passion for</p>
@@ -149,7 +149,7 @@
       </div>
     </section>
 
-    <Footer></Footer>
+    <!-- <Footer></Footer> -->
   </div>
 </template>
 
