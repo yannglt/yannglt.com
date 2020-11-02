@@ -202,7 +202,7 @@ body
 
     &:before, &:after
 
-      +adapt(1440px)
+      +adapt($bkp-tablet)
         content: ""
         position: absolute
         height: 240px
@@ -215,7 +215,11 @@ body
         z-index: -10
 
     &:before
-      +adapt(1440px)
+      +adapt($bkp-tablet)
+        left: 50%
+        transform: translateX(calc(-100% - 360px / 2)) scaleX(-1)
+
+      +adapt($width-desktop-hd)
         left: 0
         transform: scaleX(-1)
 
@@ -225,8 +229,13 @@ body
         // electricity illustration full translation + electricityLink at 1680px / 2
 
     &:after
-      +adapt(1440px)
+      +adapt($bkp-tablet)
+        right: 50%
+        transform: translateX(calc(100% + 360px / 2))
+
+      +adapt($width-desktop-hd)
         right: 0
+        transform: none
 
       +adapt(1680px)
         right: 50%
@@ -234,7 +243,7 @@ body
 
     &Link
 
-      +adapt(1440px)
+      +adapt($width-desktop-hd)
         position: absolute
         height: 4px
         width: calc(100vw - 532px - 532px)
@@ -252,7 +261,7 @@ body
         width: calc(1680px - 532px - 532px)
 
     &Extension
-      +adapt(1440px)
+      +adapt($width-desktop-hd)
         position: relative
         transform: translateY(214px)
         // 214px = match electricty illustration endings
@@ -367,6 +376,12 @@ body
 
     +adapt($bkp-desktop-hd)
       grid-column: 9 / span 4
+
+    .introLinkPrefix
+      display: none
+
+      +adapt($bkp-desktop-hd)
+        display: inline
 
     li:hover
       .icon
@@ -547,12 +562,12 @@ body
     z-index: 5
 
     +adapt($bkp-desktop-sd)
-      margin-bottom: 100px
+      margin-bottom: 153px
       padding-top: 100px
       grid-column: 2 / span 8
 
     +adapt($bkp-desktop-hd)
-      margin-bottom: 171px
+      margin-bottom: 241px
       padding-top: 168px
       grid-column: 3 / span 8
 
@@ -653,34 +668,28 @@ body
 
 .process
   // outline: 2px solid $oblivion-100
-
   background-image: url("../../static/images/process.svg")
   background-repeat: no-repeat
-  // background-size: 100% 656px
-  background-position: left 90px
 
   +adapt($bkp-desktop-sd)
-    grid-column: span 10
-
     +gCols(10, 1fr, 40px)
+    grid-column: span 10
+    background-position: -6px -15px
 
   +adapt($bkp-desktop-hd)
-    grid-column: span 12
-    // margin-left: -104px
-    // margin-right: -104px
     +gCols(12, 1fr, 40px)
+    grid-column: span 12
+    background-position: left -3px
 
   &-content
 
     +adapt($bkp-desktop-sd)
       max-width: 560px
-      margin-top: 105px
-      padding-bottom: 284px
+      padding-bottom: 270px
       grid-column: 2 / span 6
 
     +adapt($bkp-desktop-hd)
       max-width: 584px
-      margin-top: 136px
       padding-bottom: 284px
       grid-column: 2 / span 6
 

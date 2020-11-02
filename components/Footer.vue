@@ -37,7 +37,7 @@
           <p class="footer-followTitle">Follow my work</p>
           <ul class="footer-followLinks">
             <li><a href="https://twitter.com/yannglt">Thoughts on Twitter</a></li>
-            <li><a href="https://dribbble.com/yannglt">Works in progress on Dribbble</a></li>
+            <li><a href="https://dribbble.com/yannglt">WiPs on Dribbble</a></li>
             <li><a href="/feed">RSS feed</a></li>
           </ul>
         </div>
