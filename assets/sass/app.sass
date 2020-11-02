@@ -709,8 +709,13 @@ body
       +motion($time-quick, $weight-small, $speed-standard, transform)
 
 .human
-  margin-top: 167px
   margin-bottom: calc(200px + 480px)
+
+  +adapt($bkp-desktop-sd)
+    margin-top: 100px
+
+  +adapt($bkp-desktop-hd)
+    margin-top: 167px
 
   .container
     @extend .gridSystem
@@ -721,13 +726,15 @@ body
     color: $oblivion-025
     text-align: center
 
+    +adapt($bkp-desktop-sd)
+      grid-column: 2 / span 8
+
     +adapt($bkp-desktop-hd)
-      grid-column: 2/ span 10
+      grid-column: 2 / span 10
 
   &Link
     z-index: 50
     margin-top: 41px
-    grid-column: span 12
     justify-self: center
     font-size: 16px
     line-height: 24px
@@ -738,12 +745,17 @@ body
     align-items: center
     color: $thunderstorm-500
 
+    +adapt($bkp-desktop-sd)
+      grid-column: 2 / span 8
+
+    +adapt($bkp-desktop-hd)
+      grid-column: 2 / span 10
+
     .icon
       padding-left: 4px
       color: $thunderstorm-700
 
   &Logo
-    grid-column: span 12
     justify-self: center
     margin-top: 34px
     height: 48px
@@ -755,10 +767,20 @@ body
     background-size: 24px 24px
     background-position: center
 
+    +adapt($bkp-desktop-sd)
+      grid-column: 2 / span 8
+
+    +adapt($bkp-desktop-hd)
+      grid-column: 2 / span 10
+
   .facts
-    grid-column: span 12
     position: relative
-    // perspective: 1500px
+
+    +adapt($bkp-desktop-sd)
+      grid-column: span 10
+
+    +adapt($bkp-desktop-hd)
+      grid-column: 2 / span 10
 
   .fact
     position: absolute
@@ -769,7 +791,6 @@ body
     background-color: $oblivion-1100
 
     box-shadow: 0px 16px 80px 0px rgba(0, 0, 0, 0.8)
-    // transform-style: preserve-3d
     +motion($time-standard, $weight-xlarge, $speed-emphasized, transform, border-radius)
 
     &Sub
@@ -802,24 +823,34 @@ body
           color: pink
 
     &:nth-child(1)
-      top: -88px
-      // top: -120px
-      left: 56px
-      transform: rotate(-15deg)
-      // transform: rotate3d(2, 1.5, 0, 24deg) rotate(-15deg)
+      +adapt($bkp-desktop-sd)
+        top: -88px
+        left: 0px
+        transform: rotate(-15deg)
+
+      +adapt($bkp-desktop-hd)
+        top: -88px
+        left: 56px
 
     &:nth-child(2)
-      top: 24px
-      // top: 0px
-      right: 32px
-      transform: rotate(22.5deg)
-      // transform: rotate3d(2, -1.5, 0, 24deg) rotate(22.5deg)
+      +adapt($bkp-desktop-sd)
+        top: 24px
+        right: 24px
+        transform: rotate(22.5deg)
+
+      +adapt($bkp-desktop-hd)
+        top: 24px
+        right: 32px
 
     &:nth-child(3)
-      top: 136px
-      left: 32%
-      transform: rotate(-7.5deg)
-      // transform: rotate3d(2, 1.5, 0, 8deg) rotate(-7.5deg)
+      +adapt($bkp-desktop-sd)
+        top: 184px
+        left: 28%
+        transform: rotate(-7.5deg)
+
+      +adapt($bkp-desktop-hd)
+        top: 136px
+        left: 32%
 
     &:hover
       border: 1px solid $oblivion-300
@@ -835,12 +866,9 @@ body
 
     &:nth-child(1):hover
       transform: rotate(-15deg) translate(-$move, -$move)
-      // transform: translate(-$move, -$move) rotate3d(2, 1.5, 0, 8deg) rotate(-15deg)
 
     &:nth-child(2):hover
       transform: rotate(22.5deg) translate($move, -$move)
-      // transform: translate($move, -$move) rotate3d(2, -1.5, 0, 8deg) rotate(15deg)
 
     &:nth-child(3):hover
       transform: rotate(-7.5deg) translateY(-$move)
-      // transform: translate($move, -$move*2) rotate3d(2, 1.5, 0, 4deg) rotate(-2deg)

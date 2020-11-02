@@ -140,7 +140,7 @@
 
     <section class="human">
       <div class="container">
-        <h2 class="humanTitle">Interfaces, products and systems are a big part of my daily life, but what about the human behind all of this?</h2>
+        <h2 class="humanTitle">Interfaces, products and systems are a big part of my life, but what about the human behind all of this?</h2>
         <a href="/about" class="humanLink">Read more about me as a human<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a>
         <div class="humanLogo"></div>
         <div class="facts">
