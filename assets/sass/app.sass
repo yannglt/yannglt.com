@@ -37,13 +37,6 @@ body
   background-color: $oblivion-1100
   text-rendering: optimizeLegibility
 
-.tldr
-  margin-top: 172px
-  position: relative
-
-  .welcome-repeat
-    text-align: center
-
 .wip-page
   display: flex
   justify-content: center
@@ -63,6 +56,13 @@ body
     align-items: center
     color: $oblivion-300
     font-size: 16px
+
+.tldr
+  margin-top: 172px
+  position: relative
+
+  .welcome-repeat
+    text-align: center
 
 .welcome-repeat p
   @extend .display-1
@@ -190,7 +190,7 @@ body
     position: relative
     left: 50%
     bottom: 0
-    width: 1440px
+    width: 100vw
 
     z-index: -50
 
@@ -254,6 +254,8 @@ body
     &Extension
       +adapt(1440px)
         position: relative
+        transform: translateY(214px)
+        // 214px = match electricty illustration endings
 
       &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6)
 
@@ -279,7 +281,7 @@ body
 
           +adapt(1680px)
             background-color: $oblivion-700
-            transform: translateY(-230px)
+            transform: translateY(-192px)
 
       &:nth-child(3)
 
@@ -287,7 +289,7 @@ body
 
           +adapt(1680px)
             background-color: $oblivion-500
-            transform: translateY(-198px)
+            transform: translateY(-160px)
 
       &:nth-child(4)
 
@@ -295,7 +297,7 @@ body
 
           +adapt(1680px)
             background-color: $oblivion-500
-            transform: translateY(-102px)
+            transform: translateY(-64px)
 
       &:nth-child(5)
 
@@ -303,7 +305,7 @@ body
 
           +adapt(1680px)
             background-color: $oblivion-700
-            transform: translateY(-70px)
+            transform: translateY(-32px)
 
       &:nth-child(6)
 
@@ -311,7 +313,6 @@ body
 
           +adapt(1680px)
             background-color: $oblivion-500
-            transform: translateY(-38px)
 
 .intro
 
