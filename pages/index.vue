@@ -98,7 +98,7 @@
 
     <section class="manifesto">
       <div class="container">
-        <!-- <div class="atlas-bg"></div> -->
+        <div class="atlas-bg"></div>
         <div class="subwrapper">
           <p class="subtitle">personal manifesto<span>and short introduction</span></p>
           <h2>Who am I, what kind of stuff I do & above all, why?</h2>
