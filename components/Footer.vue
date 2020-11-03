@@ -2,8 +2,8 @@
   <div class="footer">
     <div class="container">
       <div class="club">
-        <p class="clubTitle">Join the club, get (ir)regular updates</p>
-        <p class="clubDesc">Every two weeks or so I try to gather things that inspire me or tick my curiosity. <br>Articles, essays and notes are also shared on the list one week before public.</p>
+        <p class="clubTitle">Join the club, <span class="line-breaker"><br /></span>get (ir)regular updates</p>
+        <p class="clubDesc">Every two weeks or so I try to gather things that inspire me or tick my curiosity. <span class="line-breaker"><br /></span>Articles, essays and notes are also shared on the list one week before public.</p>
         <form class="" action="" method="post">
           <div class="clubFormFirstname">
             <label for="firstname">Your firstname</label>
@@ -37,7 +37,7 @@
           <p class="footer-followTitle">Follow my work</p>
           <ul class="footer-followLinks">
             <li><a href="https://twitter.com/yannglt">Thoughts on Twitter</a></li>
-            <li><a href="https://dribbble.com/yannglt">WiPs on Dribbble</a></li>
+            <li><a href="https://dribbble.com/yannglt">WIPs on Dribbble</a></li>
             <li><a href="/feed">RSS feed</a></li>
           </ul>
         </div>
