@@ -31,15 +31,22 @@
     @extend .gridSystem
 
   .club
-    padding-top: 93px
-    margin-bottom: 108px
     text-align: center
+    padding-top: 64px
+    margin-bottom: 68px
+
+    +adapt($bkp-mobile)
+      grid-column: span 2
 
     +adapt($bkp-tablet)
       grid-column: 2 / span 6
+      padding-top: 69px
+      margin-bottom: 115px
 
     +adapt($bkp-desktop-sd)
       grid-column: span 10
+      padding-top: 93px
+      margin-bottom: 108px
 
     +adapt($bkp-desktop-hd)
       grid-column: span 12
@@ -83,13 +90,11 @@
 
     .clubFormFirstname,
     .clubFormEmail
+      margin-bottom: 24px
 
       +adapt($bkp-tablet)
         width: auto
         grid-column: span 6
-
-      +adapt($bkp-tablet)
-        margin-bottom: 24px
 
       +adapt($bkp-desktop-sd)
         width: 240px
@@ -125,17 +130,19 @@
 
     button
       @extend .tag
+      margin-top: 8px
       font-size: 16px
       line-height: 48px
       padding: 0
       padding-left: 16px
       padding-right: 20px
       height: 48px
+      width: 100%
       background-color: $maelstrom-500
       border: 0
       color: #FFFFFF
       border-radius: 4px
-      display: flex
+      display: inline-flex
       flex-direction: row
       align-items: center
       justify-content: center
@@ -145,7 +152,6 @@
 
       +adapt($bkp-tablet)
         grid-column: span 6
-        margin-top: 8px
 
       +adapt($bkp-desktop-sd)
         margin-top: 0
@@ -169,8 +175,14 @@
         box-shadow: 0px 2px 6px -4px rgba(#000000, 0.08), 0px 6px 12px -2px rgba(#000000, 0.12)
 
   .footer-links
+    display: flex
+    flex-direction: column
     padding: 34px 0 112px
     border-top: 1px solid $oblivion-050
+
+    +adapt($bkp-mobile)
+      padding: 34px 0 108px
+      grid-column: span 2
 
     +adapt($bkp-tablet)
       padding: 34px 0 86px
@@ -188,6 +200,8 @@
       +gCols(10, 1fr, 40px)
 
     .footer-copyright
+      order: 3
+
       +adapt($bkp-tablet)
         grid-column: span 3
 
@@ -209,8 +223,12 @@
         background-position: center
 
     .footer-explore
+      order: 1
+      margin-bottom: 42px
+
       +adapt($bkp-tablet)
         grid-column: span 3
+        margin-bottom: 0
 
       +adapt($bkp-desktop-sd)
         grid-column: span 3
@@ -219,8 +237,12 @@
         grid-column: 6 / span 3
 
     .footer-follow
+      order: 2
+      margin-bottom: 42px
+
       +adapt($bkp-tablet)
         grid-column: span 2
+        margin-bottom: 0
 
     .footer-copyright,
     .footer-explore,

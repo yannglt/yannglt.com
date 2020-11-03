@@ -6,27 +6,6 @@
 @import 'text-styles'
 @import 'motion'
 
-// DEBUGGOR
-// a:is(:not([href]), [href=""], [href="#"])
-//   outline: 2px dotted red
-
-@mixin hover()
-  @media (any-hover: none)
-    &:active
-      @content
-
-  @media (any-hover: hover)
-    &:hover
-      @content
-
-// ICONS
-.icon
-  fill: currentColor
-  height: 20px
-  width: 20px
-  vertical-align: middle
-  overflow: hidden
-
 // COMPONENTS
 @import 'components/navbar'
 @import 'components/footer'
@@ -37,28 +16,29 @@ body
   background-color: $oblivion-1100
   text-rendering: optimizeLegibility
 
-.wip-page
-  display: flex
-  justify-content: center
-  align-items: center
-  min-height: 100vh
-  flex-direction: column
+// ICONS
+.icon
+  fill: currentColor
+  height: 20px
+  width: 20px
+  vertical-align: middle
+  overflow: hidden
 
-  h1
-    @extend .heading-1
-    color: $oblivion-025
-    margin-bottom: 24px
+@mixin hover()
+  @media (any-hover: none)
+    &:active
+      @content
 
-  a
-    @extend .tag
-    display: flex
-    flex-direction: row
-    align-items: center
-    color: $oblivion-300
-    font-size: 16px
+  @media (any-hover: hover)
+    &:hover
+      @content
+
+// DEBUGGOR
+// a:is(:not([href]), [href=""], [href="#"])
+//   outline: 2px dotted red
 
 .tldr
-  margin-top: 172px
+  margin-top: 148px
   position: relative
   margin-left: -19px
   margin-right: -19px
@@ -68,8 +48,12 @@ body
     margin-right: -27px
 
   +adapt($bkp-tablet)
+    margin-top: 184px
     margin-left: -32px
     margin-right: -32px
+
+  +adapt($bkp-desktop-sd)
+    margin-top: 172px
 
   .welcome-repeat
     text-align: center
@@ -483,6 +467,9 @@ body
       +motion($time-quick, $weight-medium, $speed-standard, transform)
 
 .projects
+  +adapt($bkp-mobile)
+    margin-bottom: 137px
+
   +adapt($bkp-tablet)
     margin-bottom: 101px
 
@@ -508,6 +495,12 @@ body
     padding-left: 0
     scroll-bar-width: none
 
+    +adapt($bkp-mobile)
+      margin-left: -27px
+      margin-right: -27px
+      scroll-padding-left: 27px
+      padding-left: 27px
+
     +adapt($bkp-tablet)
       margin-left: -32px
       margin-right: -32px
@@ -529,6 +522,14 @@ body
   .project
     scroll-snap-align: start
     flex-shrink: 0
+
+    +adapt($bkp-mobile)
+      width: calc(320px + 32px)
+      padding-right: 32px
+
+      &:last-of-type
+        width: calc(320px + 27px)
+        padding-right: 27px
 
     +adapt($bkp-tablet)
       width: calc(428px + 32px)
@@ -646,6 +647,9 @@ body
       background-size: 600px 600px
       background-position: top
 
+      +adapt($bkp-mobile)
+        height: 396px
+
       +adapt($bkp-tablet)
         height: 516px
 
@@ -665,9 +669,15 @@ body
 
   .subwrapper
     z-index: 5
+    padding: 0 32px
+
+    +adapt($bkp-mobile)
+      margin-bottom: 96px
+      padding-top: 32px
+      grid-column: span 2
 
     +adapt($bkp-tablet)
-      margin-bottom: 89px
+      margin-bottom: 84px
       padding-top: 92px
       grid-column: 2 / span 6
 
@@ -690,6 +700,9 @@ body
     border-top: 4px solid $oblivion-1100
     border-bottom: 1px solid $oblivion-1100
 
+    +adapt($bkp-mobile)
+      margin-bottom: 30px
+
     +adapt($bkp-tablet)
       margin-bottom: 41px
 
@@ -707,6 +720,9 @@ body
     @extend .display-2
     color: $oblivion-1100
     text-decoration: underline
+
+    +adapt($bkp-mobile)
+      margin-bottom: 32px
 
     +adapt($bkp-tablet)
       margin-bottom: 53px
@@ -728,10 +744,16 @@ body
     .entry
       @extend .tag
 
-      grid-column: span 1
-      display: flex
-      flex-direction: column
-      align-items: center
+      grid-column: span 2
+
+      .icon
+        display: none
+
+      +adapt($bkp-tablet)
+        grid-column: 1 / span 2
+        display: flex
+        flex-direction: column
+        align-items: center
 
       p
         margin-bottom: 5px
@@ -748,6 +770,9 @@ body
       line-height: 24px
 
   .manifesto-tldr
+    +adapt($bkp-mobile)
+      margin-bottom: 37px
+
     +adapt($bkp-tablet)
       margin-bottom: 54px
 
@@ -756,14 +781,23 @@ body
 
     .entry
       color: $firework-500
+      margin-bottom: 8px
+
+      +adapt($bkp-tablet)
+        margin-bottom: 0
 
       .icon
+        display: none
         color: $firework-700
 
   .manifesto-hello
 
     .entry
       color: $maelstrom-500
+      margin-bottom: 9px
+
+      +adapt($bkp-tablet)
+        margin-bottom: 0
 
       .icon
         color: $maelstrom-700
@@ -771,6 +805,8 @@ body
       transform: translateY(3px)
 
   .current-position
+    margin-bottom: 33px
+
     +adapt($bkp-tablet)
       grid-column: span 4
 
@@ -804,6 +840,11 @@ body
   background-image: url("../../static/images/process.svg")
   background-repeat: no-repeat
 
+  +adapt($bkp-mobile)
+    grid-column: span 2
+    padding: 0 32px
+    background-position: -96px 0
+
   +adapt($bkp-tablet)
     +gCols(8, 1fr, 32px)
     grid-column: span 8
@@ -820,6 +861,7 @@ body
     background-position: left -3px
 
   &-content
+    padding-bottom: 238px
 
     +adapt($bkp-tablet)
       max-width: 520px
@@ -839,11 +881,16 @@ body
   &-title
     @extend .heading-2
     margin-bottom: 25px
+    text-align: center
+
+    +adapt($bkp-tablet)
+      text-align: left
 
   &-cta
     display: flex
     flex-direction: row
     align-items: center
+    justify-content: center
 
     @extend .tag
     color: $maelstrom-500
@@ -863,6 +910,9 @@ body
 .human
   margin-bottom: calc(200px + 480px)
 
+  +adapt($bkp-mobile)
+    margin-top: 87px
+
   +adapt($bkp-tablet)
     margin-top: 84px
 
@@ -880,6 +930,9 @@ body
     @extend .heading-1
     color: $oblivion-025
     text-align: center
+
+    +adapt($bkp-mobile)
+      grid-column: span 2
 
     +adapt($bkp-tablet)
       grid-column: span 8
@@ -902,6 +955,9 @@ body
     flex-direction: row
     align-items: center
     color: $thunderstorm-500
+
+    +adapt($bkp-mobile)
+      grid-column: span 2
 
     +adapt($bkp-tablet)
       grid-column: span 8
@@ -927,6 +983,9 @@ body
     background-repeat: no-repeat
     background-size: 24px 24px
     background-position: center
+
+    +adapt($bkp-mobile)
+      grid-column: span 2
 
     +adapt($bkp-tablet)
       grid-column: span 8
@@ -1036,3 +1095,23 @@ body
 
     &:nth-child(3):hover
       transform: rotate(-7.5deg) translateY(-$move)
+
+.wip-page
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: 100vh
+  flex-direction: column
+
+  h1
+    @extend .heading-1
+    color: $oblivion-025
+    margin-bottom: 24px
+
+  a
+    @extend .tag
+    display: flex
+    flex-direction: row
+    align-items: center
+    color: $oblivion-300
+    font-size: 16px
