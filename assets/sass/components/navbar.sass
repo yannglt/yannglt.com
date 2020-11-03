@@ -24,7 +24,6 @@
 
   max-width: $bkp-desktop-hd
 
-
   .index
     display: flex
 
@@ -55,7 +54,11 @@
       text-transform: none
 
   .links
+    display: none
     transform: translateY(1px)
+
+    +adapt($bkp-tablet)
+      display: block
 
   li
     display: inline-block
