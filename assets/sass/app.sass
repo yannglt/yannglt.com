@@ -474,6 +474,9 @@ body
       +motion($time-quick, $weight-medium, $speed-standard, transform)
 
 .projects
+  +adapt($bkp-tablet)
+    margin-bottom: 101px
+
   +adapt($bkp-desktop-sd)
     margin-bottom: 161px
 
@@ -485,16 +488,22 @@ body
     max-width: $bkp-desktop-hd
 
   .projectsWrapper
-    margin-left: -32px
-    margin-right: -32px
+    margin-left: -27px
+    margin-right: -27px
     display: flex
     flex-direction: row
     overflow-x: auto
     overflow-y: hidden
     scroll-snap-type: x mandatory
-    scroll-padding-left: 92px
-    padding-left: 92px
+    scroll-padding-left: 0
+    padding-left: 0
     scroll-bar-width: none
+
+    +adapt($bkp-tablet)
+      margin-left: -32px
+      margin-right: -32px
+      scroll-padding-left: 92px
+      padding-left: 92px
 
     +adapt($bkp-desktop-hd)
       margin-left: 0
@@ -509,11 +518,20 @@ body
       padding-left: 0
 
   .project
+    scroll-snap-align: start
+    flex-shrink: 0
+
+    +adapt($bkp-tablet)
+      width: calc(428px + 32px)
+      padding-right: 32px
+
+      &:last-of-type
+        width: calc(428px + 248px)
+        padding-right: 248px
+
     +adapt($bkp-desktop-sd)
       width: calc(360px + 40px)
       // Need to include padding inside width to allow last item to scroll
-      flex-shrink: 0
-      scroll-snap-align: start
       padding-right: 40px
 
       &:last-of-type
