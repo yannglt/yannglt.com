@@ -8,9 +8,19 @@ body
 // TEXT STYLES FOR DISPLAY TITLES
 .display-1
   font-family: "bluu-suuperstar-black"
-  font-size: 183px
   letter-spacing: -2px
-  line-height: 200px
+
+  +adapt($bkp-mobile)
+    font-size: 72px
+    line-height: 96px
+
+  +adapt($bkp-tablet)
+    font-size: 136px
+    line-height: 144px
+
+  +adapt($bkp-desktop-sd)
+    font-size: 183px
+    line-height: 200px
 
 .display-2
   font-family: bluu-suuperstar-black

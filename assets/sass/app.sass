@@ -76,10 +76,23 @@ body
     color: #ffffff
     -webkit-text-stroke: 1px #ffffff
 
-  @for $i from 1 through 8
-    &:nth-child(#{$i})
-      z-index: 0 - $i * 10
-      transform: translateY(-64 + $i * 64px)
+  +adapt($bkp-mobile)
+    @for $i from 1 through 8
+      &:nth-child(#{$i})
+        z-index: 0 - $i * 10
+        transform: translateY(-24 + $i * 24px)
+
+  +adapt($bkp-tablet)
+    @for $i from 1 through 8
+      &:nth-child(#{$i})
+        z-index: 0 - $i * 10
+        transform: translateY(-48 + $i * 48px)
+
+  +adapt($bkp-desktop-sd)
+    @for $i from 1 through 8
+      &:nth-child(#{$i})
+        z-index: 0 - $i * 10
+        transform: translateY(-64 + $i * 64px)
 
   &:nth-child(2)
     -webkit-text-stroke: 1px $oblivion-300
@@ -117,10 +130,15 @@ body
   position: relative
   background-color: $thunderstorm-500
 
-  transform: translateY(120px)
-
   +adapt($bkp-mobile)
     max-width: 360px
+    transform: translateY(261px)
+
+  +adapt($bkp-tablet)
+    transform: translateY(92px)
+
+  +adapt($bkp-desktop-sd)
+    transform: translateY(120px)
 
   +adapt($bkp-desktop-hd)
     max-width: 376px
@@ -194,11 +212,18 @@ body
 
     z-index: -50
 
-    transform: translateX(-50%) translateY(calc(-1 * (240px + 236px + 4px - 120px)))
-    // 240px = illustration height
-    // 236px = translateY from etiquette bottom
-    // 4px = electricityLink's height
-    // 120px = etiquette inital translateY
+    +adapt($bkp-mobile)
+      transform: translateX(-50%) translateY(calc(-1 * (240px + 236px + 4px - 261px)))
+
+    +adapt($bkp-tablet)
+      transform: translateX(-50%) translateY(calc(-1 * (240px + 236px + 4px - 92px)))
+
+    +adapt($bkp-desktop-sd)
+      transform: translateX(-50%) translateY(calc(-1 * (240px + 236px + 4px - 120px)))
+      // 240px = illustration height
+      // 236px = translateY from etiquette bottom
+      // 4px = electricityLink's height
+      // 120px = etiquette inital translateY
 
     &:before, &:after
 
@@ -325,40 +350,64 @@ body
 
 .intro
 
+  +adapt($bkp-mobile)
+    margin-bottom: 84px
+    margin-top: calc(261px + 119px)
+
+  +adapt($bkp-tablet)
+    margin-bottom: 80px
+    margin-top: calc(92px + 195px)
+
   +adapt($bkp-desktop-sd)
     margin-bottom: 76px
     margin-top: calc(120px + 191px)
-    // 120px = etiquette initial translateY
 
   +adapt($bkp-desktop-hd)
     margin-bottom: 172px
     margin-top: calc(120px + 243px)
+    // 120px = etiquette initial translateY
 
   .container
     @extend .gridSystem
 
   &Tag
-    margin-bottom: 18px
 
     @extend .tag
     color: $thunderstorm-500
 
+    +adapt($bkp-mobile)
+      margin-bottom: 16px
+      grid-column: span 2
+
+    +adapt($bkp-tablet)
+      margin-bottom: 17px
+      grid-column: 2 / span 6
+
     +adapt($bkp-desktop-sd)
       grid-column: 2 / span 8
 
     +adapt($bkp-desktop-hd)
+      margin-bottom: 18px
       grid-column: 2 / span 10
 
   &Title
-    margin-bottom: 35px
 
     @extend .heading-1
     color: #fff
 
+    +adapt($bkp-mobile)
+      margin-bottom: 29px
+      grid-column: span 2
+
+    +adapt($bkp-tablet)
+      margin-bottom: 36px
+      grid-column: 2 / span 6
+
     +adapt($bkp-desktop-sd)
       grid-column: 2 / span 8
 
     +adapt($bkp-desktop-hd)
+      margin-bottom: 35px
       grid-column: 2 / span 10
 
   &Desc,
@@ -367,12 +416,43 @@ body
     color: $oblivion-100
 
   &Desc
+
+    +adapt($bkp-mobile)
+      grid-column: span 2
+
+    +adapt($bkp-tablet)
+      grid-column: 2 / span 6
+
     +adapt($bkp-desktop-sd)
       grid-column: 2 / span 6
 
   &Links
-    +adapt($bkp-desktop-sd)
+
+    +adapt($bkp-mobile)
+      margin-top: 32px
+      display: flex
+      flex-direction: column
       grid-column: span 2
+
+      li:not(:last-of-type)
+        margin-bottom: 8px
+
+    +adapt($bkp-tablet)
+      grid-column: 2 / span 6
+      flex-direction: row
+      margin-top: 32px
+
+      li:not(:last-of-type)
+        margin-right: 48px
+        margin-bottom: 0
+
+    +adapt($bkp-desktop-sd)
+      display: inline
+      grid-column: span 2
+      margin-top: 0
+
+      li:not(:last-of-type)
+        margin-right: 0
 
     +adapt($bkp-desktop-hd)
       grid-column: 9 / span 4
