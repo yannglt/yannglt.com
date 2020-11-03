@@ -151,6 +151,7 @@
       +motion($time-standard, $weight-small, $speed-standard, background-color, box-shadow, transform)
 
       +adapt($bkp-tablet)
+        width: auto
         grid-column: span 6
 
       +adapt($bkp-desktop-sd)
@@ -203,13 +204,11 @@
       order: 3
 
       +adapt($bkp-tablet)
-        grid-column: span 3
-
-      +adapt($bkp-desktop-sd)
+        order: 1
         grid-column: span 3
 
       +adapt($bkp-desktop-hd)
-        grid-column: span 3
+        grid-column: span 5
 
       &Logo
         margin-top: 34px
@@ -227,6 +226,7 @@
       margin-bottom: 42px
 
       +adapt($bkp-tablet)
+        order: 2
         grid-column: span 3
         margin-bottom: 0
 
@@ -237,7 +237,7 @@
         grid-column: 6 / span 3
 
     .footer-follow
-      order: 2
+      order: 3
       margin-bottom: 42px
 
       +adapt($bkp-tablet)
