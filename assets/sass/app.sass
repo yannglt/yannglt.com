@@ -637,6 +637,9 @@ body
       background-size: 600px 600px
       background-position: top
 
+      +adapt($bkp-tablet)
+        height: 516px
+
       +adapt($bkp-desktop-sd)
         height: 612px
 
@@ -647,17 +650,17 @@ body
         content: ""
         position: absolute
         width: 100%
+        height: 100%
         background-image: radial-gradient(136% 100% at 50% 0%, rgba(255, 255, 255, 0.64) 0%, #FFFFFF 100%)
         background-size: 100% 100%
 
-        +adapt($bkp-desktop-sd)
-          height: 612px
-
-        +adapt($bkp-desktop-hd)
-          height: 684px
-
   .subwrapper
     z-index: 5
+
+    +adapt($bkp-tablet)
+      margin-bottom: 89px
+      padding-top: 92px
+      grid-column: 2 / span 6
 
     +adapt($bkp-desktop-sd)
       margin-bottom: 153px
@@ -671,13 +674,15 @@ body
 
   .subtitle
     @extend .tag
-
     padding: 4px 0
     font-size: 10px
     letter-spacing: 0
 
     border-top: 4px solid $oblivion-1100
     border-bottom: 1px solid $oblivion-1100
+
+    +adapt($bkp-tablet)
+      margin-bottom: 41px
 
     +adapt($bkp-desktop-sd)
       margin-bottom: 48px
@@ -690,18 +695,21 @@ body
       color: $oblivion-400
 
   h2
+    @extend .display-2
     color: $oblivion-1100
-    font-size: 95px
-    font-family: "bluu-suuperstar-black"
-    line-height: 108px
-    letter-spacing: -2px
     text-decoration: underline
+
+    +adapt($bkp-tablet)
+      margin-bottom: 53px
 
     +adapt($bkp-desktop-sd)
       margin-bottom: 78px
 
   .manifesto-tldr,
   .manifesto-hello
+    +adapt($bkp-tablet)
+      +gCols(6, 1fr, 32px)
+
     +adapt($bkp-desktop-sd)
       +gCols(8, 1fr, 40px)
 
@@ -731,7 +739,11 @@ body
       line-height: 24px
 
   .manifesto-tldr
-    margin-bottom: 70px
+    +adapt($bkp-tablet)
+      margin-bottom: 54px
+
+    +adapt($bkp-desktop-sd)
+      margin-bottom: 70px
 
     .entry
       color: $firework-500
@@ -749,12 +761,26 @@ body
 
       transform: translateY(3px)
 
-  .current-position,
-  .passion
+  .current-position
+    +adapt($bkp-tablet)
+      grid-column: span 4
+
     +adapt($bkp-desktop-sd)
       grid-column: span 3
 
+  .passion
+    +adapt($bkp-tablet)
+      margin-top: 33px
+      grid-column: 2 / span 4
+
+    +adapt($bkp-desktop-sd)
+      margin-top: 0
+      grid-column: span 3
+
   .content
+    +adapt($bkp-tablet)
+      grid-column: span 5
+
     +adapt($bkp-desktop-sd)
       grid-column: span 6
 
@@ -769,6 +795,11 @@ body
   background-image: url("../../static/images/process.svg")
   background-repeat: no-repeat
 
+  +adapt($bkp-tablet)
+    +gCols(8, 1fr, 32px)
+    grid-column: span 8
+    background-position: -14px 23px
+
   +adapt($bkp-desktop-sd)
     +gCols(10, 1fr, 40px)
     grid-column: span 10
@@ -780,6 +811,11 @@ body
     background-position: left -3px
 
   &-content
+
+    +adapt($bkp-tablet)
+      max-width: 520px
+      padding-bottom: 298px
+      grid-column: 2 / span 6
 
     +adapt($bkp-desktop-sd)
       max-width: 560px
@@ -817,6 +853,9 @@ body
 
 .human
   margin-bottom: calc(200px + 480px)
+
+  +adapt($bkp-tablet)
+    margin-top: 84px
 
   +adapt($bkp-desktop-sd)
     margin-top: 100px

@@ -24,9 +24,19 @@ body
 
 .display-2
   font-family: bluu-suuperstar-black
-  font-size: 95px
   letter-spacing: -2px
-  line-height: 108px
+
+  +adapt($bkp-mobile)
+    font-size: 44px
+    line-height: 52px
+
+  +adapt($bkp-tablet)
+    font-size: 64px
+    line-height: 80px
+
+  +adapt($bkp-desktop-sd)
+    font-size: 95px
+    line-height: 108px
 
 .display-3
   font-family: gt-america-expanded-black
