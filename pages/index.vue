@@ -178,7 +178,7 @@
             id: '2',
             sub: 'Quick fact #5',
             title: 'Dad of 9 healthy plants',
-            desc: '<p>As a lot ot of humans around the globe during the 2020 pandemic + lockdown, I decided to improve my workspace and bring more life to my apartment.</p><p>With my loved one, Sabrina (<a href="https://sabrinanedjah.fr">go check her portfolio</a>), we chose plants from different places of the world and after running trials, we found out how to mix LEGOs and our green newcommers.</p>'
+            desc: '<p>As a lot ot of humans around the globe during the 2020 pandemic + lockdown, I decided to improve my workspace and bring more life to my apartment.</p><p>With my loved one, Sabrina (<a href="https://sabrinanedjah.fr" target="_blank"  rel="noopener">go check her portfolio</a>), we chose plants from different places of the world and after running trials, we found out how to mix LEGOs and our green newcommers.</p>'
           }
         ]
       }
