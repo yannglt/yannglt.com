@@ -128,8 +128,11 @@ body
   background-color: $thunderstorm-500
 
   +adapt($bkp-mobile)
-    max-width: 360px
+    max-width: calc(360px - 19px)
     transform: translateY(261px)
+
+  +adapt($width-mobile)
+    max-width: 360px
 
   +adapt($bkp-tablet)
     transform: translateY(92px)
@@ -147,6 +150,12 @@ body
     color: $thunderstorm-500
     text-align: center
     background-color: $oblivion-1100
+
+    .add-oo
+      display: none
+
+      +adapt($width-mobile)
+        display: inline
 
   &-properties
     margin-top: 1px
@@ -368,7 +377,6 @@ body
     @extend .gridSystem
 
   &Tag
-
     @extend .tag
     color: $thunderstorm-500
 
@@ -386,6 +394,12 @@ body
     +adapt($bkp-desktop-hd)
       margin-bottom: 18px
       grid-column: 2 / span 10
+
+    .line-breaker
+      display: inline
+
+      +adapt($width-mobile)
+        display: none
 
   &Title
 
@@ -524,10 +538,12 @@ body
       padding-left: 0
 
   .project
+    width: calc(375px - 32px - 27px)
+    padding-right: 32px
     scroll-snap-align: start
     flex-shrink: 0
 
-    +adapt($bkp-mobile)
+    +adapt($width-mobile)
       width: calc(320px + 32px)
       padding-right: 32px
 
@@ -764,6 +780,9 @@ body
       .icon
         display: none
 
+        +adapt($bkp-tablet)
+          display: block
+
       p
         margin-bottom: 5px
 
@@ -795,7 +814,6 @@ body
         margin-bottom: 0
 
       .icon
-        display: none
         color: $firework-700
 
   .manifesto-hello
@@ -966,12 +984,20 @@ body
 
     @extend .tag
     display: flex
-    flex-direction: row
     align-items: center
     color: $thunderstorm-500
 
     +adapt($bkp-mobile)
       grid-column: span 2
+      flex-direction: column
+      text-align: center
+      margin-left: 64px
+      margin-right: 64px
+
+    +adapt($width-mobile)
+      flex-direction: row
+      margin-left: 0
+      margin-right: 0
 
     +adapt($bkp-tablet)
       grid-column: span 8
@@ -985,6 +1011,12 @@ body
     .icon
       padding-left: 4px
       color: $thunderstorm-700
+
+      +adapt($bkp-mobile)
+        margin-top: 8px
+
+      +adapt($width-mobile)
+        margin-top: 0
 
   &Logo
     justify-self: center

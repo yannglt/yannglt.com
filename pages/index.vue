@@ -14,7 +14,7 @@
           <p>Welcome</p>
         </div>
         <div class="etiquette">
-          <p class="etiquette-title">introoo</p>
+          <p class="etiquette-title">intro<span class="add-oo">oo</span></p>
           <div class="etiquette-properties">
             <div class="etiquette-property">
               <p class="etiquette-propertyName">Identity</p>
@@ -51,7 +51,7 @@
 
     <section class="intro">
       <div class="container">
-        <p class="introTag">Welcome to my space on the Internets</p>
+        <p class="introTag">Welcome to my space <span class="line-breaker"><br /></span>on the Internets</p>
         <h1 class="introTitle">I think, create and break interfaces, products and systems with a passion for design operations.</h1>
         <p class="introDesc">Find here a selection of my latest works and collaborations with startups and some friends, you will be also able to read more about my story and ask for help on your idea/problem.</p>
         <ul class="introLinks">
@@ -80,7 +80,7 @@
           </article>
           <article class="project">
             <div class="project-cover"></div>
-            <p class="project-client">Abu Dhabi Executive Office (ADEO)</p>
+            <p class="project-client">Abu Dhabi Executive Office</p>
             <p class="project-name">Design language system</p>
             <p class="project-desc">Help designers to create consistent experiences and interfaces through meaningful guidelines that emphasize ethos and philosophy behind ADEO.</p>
             <a href="https://www.notion.so/yannglt/Abu-Dhabi-Executive-Office-ADEO-ee8f37f7945e4f08b6032441ce7ebaef" title="" target="_blank"  rel="noopener" class="link wip">Case study in progress<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#auto-renew-16"></use></svg></a>
