@@ -559,13 +559,18 @@ body
 
     &-cover
       margin-bottom: 20px
-
+      height: 416px
       background-color: #FFFFFF
       width: 100%
-      height: 532px
       display: flex
       justify-content: center
       align-items: center
+
+      +adapt($bkp-tablet)
+        height: 520px
+
+      +adapt($bkp-desktop-sd)
+        height: 532px
 
     &-client
       margin-bottom: -4px
