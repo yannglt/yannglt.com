@@ -857,6 +857,7 @@ body
   +adapt($bkp-tablet)
     +gCols(8, 1fr, 32px)
     grid-column: span 8
+    padding: 0
     background-position: -14px 23px
 
   +adapt($bkp-desktop-sd)
@@ -905,6 +906,9 @@ body
     color: $maelstrom-500
     font-size: 16px
     text-transform: uppercase
+
+    +adapt($bkp-tablet)
+      justify-content: flex-start
 
     &:hover
       .icon
