@@ -866,7 +866,7 @@ body
     background-position: left -3px
 
   &-content
-    padding-bottom: 238px
+    padding-bottom: 242px
 
     +adapt($bkp-tablet)
       max-width: 520px
@@ -913,20 +913,20 @@ body
       +motion($time-quick, $weight-small, $speed-standard, transform)
 
 .human
-  // margin-bottom: calc(200px + 480px)
-  margin-bottom: 200px
-
-  +adapt($bkp-mobile)
-    margin-top: 87px
+  margin-top: 83px
+  margin-bottom: 940px
 
   +adapt($bkp-tablet)
     margin-top: 84px
+    margin-bottom: 816px
 
   +adapt($bkp-desktop-sd)
     margin-top: 100px
+    margin-bottom: 772px
 
   +adapt($bkp-desktop-hd)
     margin-top: 167px
+    margin-bottom: 820px
 
   .container
     @extend .gridSystem
@@ -1004,12 +1004,19 @@ body
 
   .facts
     position: relative
+    grid-column: span 2
+
+    +adapt($bkp-tablet)
+      grid-column: span 8
+      transform: translateY(calc(80px))
 
     +adapt($bkp-desktop-sd)
       grid-column: span 10
+      transform: translateY(calc(-64px))
 
     +adapt($bkp-desktop-hd)
       grid-column: 2 / span 10
+      transform: translateY(calc(-12px - 56px))
 
   .fact
     position: absolute
@@ -1029,17 +1036,18 @@ body
 
     &Title
       margin-top: 4px
+      margin-bottom: 7px
       @extend .heading-3
       color: $oblivion-025
       line-height: 28px
 
     &Desc
-      margin-top: 7px
       color: $oblivion-300
       +motion($time-quick, $weight-small, $speed-standard, color)
 
       p
         margin-bottom: 16px
+        line-height: 24px
 
         &:last-of-type
           margin-bottom: 0
@@ -1052,34 +1060,47 @@ body
           color: pink
 
     &:nth-child(1)
-      +adapt($bkp-desktop-sd)
-        top: -88px
-        left: 0px
-        transform: rotate(-15deg)
+      top: 40px
+      left: -16px
+      transform: rotate(-15deg)
 
-      +adapt($bkp-desktop-hd)
-        top: -88px
-        left: 56px
+      +adapt($bkp-tablet)
+        top: 0
+        left: 0
 
     &:nth-child(2)
+      top: 264px
+      right: -112px
+      transform: rotate(15deg)
+
+      +adapt($bkp-tablet)
+        top: calc(80px)
+        right: 0
+        transform: rotate(15deg)
+
       +adapt($bkp-desktop-sd)
-        top: 24px
-        right: 24px
-        transform: rotate(22.5deg)
+        top: calc(64px + 24px)
+        right: 0
 
       +adapt($bkp-desktop-hd)
-        top: 24px
-        right: 32px
+        top: calc(56px + 40px)
+        right: -16px
 
     &:nth-child(3)
+      top: calc(208px + 240px)
+      left: calc(50% + 24px)
+      transform: translateX(-50%) rotate(-7.5deg)
+
+      +adapt($bkp-tablet)
+        top: calc(160px + 80px)
+        left: calc(50% + 16px)
+        transform: translateX(-50%) rotate(-7.5deg)
+
       +adapt($bkp-desktop-sd)
-        top: 184px
-        left: 28%
-        transform: rotate(-7.5deg)
+        top: calc(208px + 32px)
 
       +adapt($bkp-desktop-hd)
-        top: 136px
-        left: 32%
+        top: calc(208px + 56px)
 
     &:hover
       border: 1px solid $oblivion-300
@@ -1097,10 +1118,10 @@ body
       transform: rotate(-15deg) translate(-$move, -$move)
 
     &:nth-child(2):hover
-      transform: rotate(22.5deg) translate($move, -$move)
+      transform: rotate(15deg) translate($move, -$move)
 
     &:nth-child(3):hover
-      transform: rotate(-7.5deg) translateY(-$move)
+      transform: translate(-50%, -$move) rotate(-7.5deg)
 
 .wip-page
   display: flex

@@ -98,7 +98,7 @@
 
     <section class="manifesto">
       <div class="container">
-        <!-- <div class="atlas-bg"></div> -->
+        <div class="atlas-bg"></div>
         <div class="subwrapper">
           <p class="subtitle">personal manifesto<span>and short introduction</span></p>
           <h2>Who am I, what kind of stuff I do & above all, why?</h2>
@@ -129,12 +129,12 @@
             </div>
           </div>
         </div>
-        <!-- <div class="process">
+        <div class="process">
           <div class="process-content">
             <p class="process-title">This vision is powered by a process improved over the years with talented people and projects</p>
             <a href="/process" class="process-cta">Discover the process<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a>
           </div>
-        </div> -->
+        </div>
       </div>
     </section>
 
@@ -143,9 +143,9 @@
         <h2 class="humanTitle">Interfaces, products and systems are a big part of my life, but what about the human behind all of this?</h2>
         <a href="/about" class="humanLink">Read more about me as a human<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a>
         <div class="humanLogo"></div>
-        <!-- <div class="facts">
+        <div class="facts">
           <Fact v-for="fact in facts" :key="fact.id" :sub="fact.sub" :title="fact.title" :desc="fact.desc"></Fact>
-        </div> -->
+        </div>
       </div>
     </section>
 
@@ -177,7 +177,7 @@
           {
             id: '2',
             sub: 'Quick fact #5',
-            title: 'Dad of 8 healthy plants',
+            title: 'Dad of 9 healthy plants',
             desc: '<p>As a lot ot of humans around the globe during the 2020 pandemic + lockdown, I decided to improve my workspace and bring more life to my apartment.</p><p>With my loved one, Sabrina (<a href="https://sabrinanedjah.fr">go check her portfolio</a>), we chose plants from different places of the world and after running trials, we found out how to mix LEGOs and our green newcommers.</p>'
           }
         ]
