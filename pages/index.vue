@@ -98,7 +98,7 @@
 
     <section class="manifesto">
       <div class="container">
-        <div class="atlas-bg"></div>
+        <!-- <div class="atlas-bg"></div> -->
         <div class="subwrapper">
           <p class="subtitle">personal manifesto<span>and short introduction</span></p>
           <h2>Who am I, what kind of stuff I do & above all, why?</h2>
@@ -129,12 +129,12 @@
             </div>
           </div>
         </div>
-        <div class="process">
+        <!-- <div class="process">
           <div class="process-content">
             <p class="process-title">This vision is powered by a process improved over the years with talented people and projects</p>
             <a href="/process" class="process-cta">Discover the process<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 

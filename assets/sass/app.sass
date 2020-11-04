@@ -683,6 +683,7 @@ body
 
     +adapt($bkp-tablet)
       margin-bottom: 84px
+      padding: 0
       padding-top: 92px
       grid-column: 2 / span 6
 
@@ -748,17 +749,16 @@ body
 
     .entry
       @extend .tag
-
       grid-column: span 2
 
-      .icon
-        display: none
-
       +adapt($bkp-tablet)
-        grid-column: 1 / span 2
+        grid-column: span 1
         display: flex
         flex-direction: column
         align-items: center
+
+      .icon
+        display: none
 
       p
         margin-bottom: 5px
@@ -768,7 +768,6 @@ body
 
     .title
       @extend .heading-3
-
       margin-bottom: 5px
 
     .description
@@ -814,6 +813,7 @@ body
 
     +adapt($bkp-tablet)
       grid-column: span 4
+      margin-bottom: 0
 
     +adapt($bkp-desktop-sd)
       grid-column: span 3
