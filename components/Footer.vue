@@ -4,7 +4,7 @@
       <div class="club">
         <p class="clubTitle">Join the club, <span class="line-breaker"><br /></span>get (ir)regular updates</p>
         <p class="clubDesc">Every two weeks or so I try to gather things that inspire me or tick my curiosity. <span class="line-breaker"><br /></span>Articles, essays and notes are also shared on the list one week before public.</p>
-        <form name="thunderstorm-newsletter" netlify>
+        <form name="thunderstorm-newsletter" method="POST" data-netlify="true">
           <div class="clubFormFirstname">
             <label for="firstname">Your firstname</label>
             <input type="text" name="firstname" id="firstname" placeholder="Anakin" required>
