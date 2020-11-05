@@ -4,14 +4,14 @@
       <div class="club">
         <p class="clubTitle">Join the club, <span class="line-breaker"><br /></span>get (ir)regular updates</p>
         <p class="clubDesc">Every two weeks or so I try to gather things that inspire me or tick my curiosity. <span class="line-breaker"><br /></span>Articles, essays and notes are also shared on the list one week before public.</p>
-        <form name="thunderstorm-newsletter" method="POST" data-netlify="true">
+        <form name="thunderstorm-newsletter" method="post" data-netlify="true">
           <div class="clubFormFirstname">
             <label for="firstname">Your firstname</label>
-            <input type="text" name="firstname" id="firstname" placeholder="Anakin" required>
+            <input type="text" name="firstname" id="firstname" placeholder="Anakin">
           </div>
           <div class="clubFormEmail">
             <label for="email">Your email</label>
-            <input type="email" name="email" id="email" placeholder="a.skywalker@email.com" required>
+            <input type="email" name="email" id="email" placeholder="a.skywalker@email.com">
           </div>
           <button type="submit">
             <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#add-circle-24"></use></svg>Join the club
