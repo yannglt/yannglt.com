@@ -13,7 +13,7 @@
             <label for="email">Your email</label>
             <input type="email" name="email" id="email" placeholder="a.skywalker@email.com">
           </div>
-          <button>
+          <button type="submit">
             <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#add-circle-24"></use></svg>Join the club
           </button>
         </form>

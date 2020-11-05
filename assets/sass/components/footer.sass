@@ -87,20 +87,22 @@
         flex-direction: row
         justify-content: center
         align-items: flex-end
+        column-gap: 0
 
     .clubFormFirstname,
     .clubFormEmail
       margin-bottom: 24px
+      position: relative
 
       +adapt($bkp-tablet)
         width: auto
         grid-column: span 6
 
       +adapt($bkp-desktop-sd)
-        width: 240px
+        margin-right: 24px
         margin-bottom: 0
-        margin-right: -16px
-
+        width: 256px
+        
     label
       @extend .tag
       display: inline-block
@@ -112,12 +114,16 @@
     input
       -webkit-appearance: none
       display: block
+      block-size: auto
+      margin: 0
+      margin-right: 16px
+      padding: 11px 16px 13px
+      height: 48px
       width: 100%
+
       border: 1px solid $oblivion-100
       border-radius: 4px
       background-color: transparent
-      padding: 11px 16px 13px
-      height: 48px
 
       &::-webkit-input-placeholder,
       &::-moz-placeholder,
@@ -127,26 +133,25 @@
       &:focus
         border: 1px solid $maelstrom-500
 
-      &:active
-
     button
       @extend .tag
       margin-top: 8px
-      font-size: 16px
-      line-height: 48px
-      padding: 0
       padding-left: 16px
       padding-right: 20px
-      height: 48px
-      width: 100%
-      background-color: $maelstrom-500
-      border: 0
-      color: #FFFFFF
-      border-radius: 4px
       display: inline-flex
       flex-direction: row
       align-items: center
       justify-content: center
+      height: 48px
+      width: 100%
+
+      color: #FFFFFF
+      font-size: 16px
+      line-height: 48px
+      background-color: $maelstrom-500
+      border: 0
+      border-radius: 4px
+
       box-shadow: 0px 1px 3px 0px rgba(#000000, 0.08), 0px 2px 6px 0px rgba(#000000, 0.12)
 
       +motion($time-standard, $weight-small, $speed-standard, background-color, box-shadow, transform)
@@ -157,7 +162,6 @@
 
       +adapt($bkp-desktop-sd)
         margin-top: 0
-        grid-column: auto
 
       .icon
         margin-right: 8px
