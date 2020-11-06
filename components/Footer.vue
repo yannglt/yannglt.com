@@ -70,7 +70,7 @@
 <script src="https://unpkg.com/vee-validate@latest"></script>
 
 <script>
-  import clubModal from './clubModal.vue'
+  import ClubModal from './ClubModal.vue'
   import { ValidationObserver, ValidationProvider } from "vee-validate"
 
   export default {
@@ -80,7 +80,7 @@
       showClubModal: false
     }),
     components: {
-      clubModal,
+      ClubModal,
       ValidationObserver: ValidationObserver,
       ValidationProvider: ValidationProvider
     },
