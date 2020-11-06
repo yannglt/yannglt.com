@@ -8,7 +8,12 @@
 
         <ValidationObserver v-slot="{ invalid }" ref="form">
 
-          <form name="thunderstorm-newsletter" method="post" data-netlify="true"  @submit.prevent="onSubmit">
+          <form name="thunderstorm-newsletter" method="post" data-netlify="true"  @submit.prevent="onSubmit" netlify-honeypot="anti-robots">
+
+            <div class="anti-robots">
+              <label for="anti-robots">Don’t fill this out if you're human:</label>
+              <input name="anti-robots" id="anti-robots" hidden>
+            </div>
 
             <ValidationProvider rules="required" mode="eager" v-slot="{ errors, classes }">
               <div class="clubFormFirstname" :class="classes">
