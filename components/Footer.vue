@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="footer">
+    <clubModal v-if="showClubModal" @close="showClubModal = false"></clubModal>
     <div class="container">
       <div class="club">
         <p class="clubTitle">Join the club, <span class="line-breaker"><br /></span>get (ir)regular updates</p>
@@ -64,31 +65,26 @@
 <script src="https://unpkg.com/vee-validate@latest"></script>
 
 <script>
+  import clubModal from './clubModal.vue'
   import { ValidationObserver, ValidationProvider } from "vee-validate"
 
   export default {
     data: () => ({
       firstname: '',
-      email: ''
+      email: '',
+      showClubModal: false
     }),
     components: {
+      clubModal,
       ValidationObserver: ValidationObserver,
       ValidationProvider: ValidationProvider
     },
     methods: {
       onSubmit () {
-        alert('Form has been submitted!');
+        this.showClubModal = true
       }
     }
   }
-
-  // configure({
-  //   classes: {
-  //     valid: 'is-valid',
-  //     invalid: 'is-invalid',
-  //     dirty: ['is-dirty', 'is-dirty'], // multiple classes per flag!
-  //   }
-  // })
 </script>
 
 <style lang="sass" scoped>

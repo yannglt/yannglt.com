@@ -1,0 +1,96 @@
+.clubModal
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  min-height: 100vh
+
+  z-index: 250
+
+  &Overlay
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100vh
+    width: 100vw
+    background-color: rgba(#000000, 0.8)
+
+  &Box
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    max-width: 584px
+    padding: 48px
+
+    text-align: center
+
+    border-radius: 16px
+    background-color: #ffffff
+    background-image: url("../../static/images/clubmodalsuccess.svg")
+    background-repeat: no-repeat
+    background-position: 8px auto
+
+  &Check
+    position: absolute
+    top: 70px
+    height: 36px
+    width: 36px
+
+    border-radius: 32px
+    background-color: $maelstrom-500
+
+    &:before, &:after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+
+      transform: translate(-50%, -50%)
+
+    &:before
+      height: 48px
+      width: 48px
+
+      border: 2px solid $maelstrom-300
+      border-radius: 50%
+
+    &:after
+      height: 64px
+      width: 64px
+
+      border: 1px solid $maelstrom-100
+      border-radius: 50%
+
+    .icon
+      color: #ffffff
+      height: 24px
+      width: 24px
+
+      transform: translateY(2px)
+
+  &Title
+    @extend .heading-2
+    color: $oblivion-1100
+    padding-top: calc(177px - 48px)
+    margin-bottom: 13px
+
+  &Desc
+    color: $oblivion-700
+    margin-bottom: 22px
+
+  &Close
+    @extend .tag
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 8px 16px
+
+    color: $oblivion-500
+    border: 1px solid $oblivion-100
+    border-radius: 4px
+    background-color: #ffffff
+
+    &:hover
+      cursor: pointer
+      background-color: $oblivion-025
