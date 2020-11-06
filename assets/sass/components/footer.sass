@@ -79,6 +79,10 @@
     form
       margin: 0 auto
 
+      span
+        +adapt($bkp-tablet)
+          grid-column: span 6
+
       +adapt($bkp-tablet)
         +gCols(6, 1fr, 32px)
 
@@ -86,7 +90,7 @@
         display: flex
         flex-direction: row
         justify-content: center
-        align-items: flex-end
+        align-items: flex-start
         column-gap: 0
 
     .clubFormFirstname,
@@ -94,9 +98,17 @@
       margin-bottom: 24px
       position: relative
 
-      +adapt($bkp-tablet)
-        width: auto
-        grid-column: span 6
+      &.is-valid input
+        border: 1px solid $maelstrom-500
+
+      &.is-invalid
+        margin-bottom: calc(24px + 20px)
+
+        input
+          border: 1px solid $firework-500
+
+        +adapt($bkp-desktop-sd)
+          margin-bottom: 0
 
       +adapt($bkp-desktop-sd)
         margin-right: 24px
@@ -113,6 +125,7 @@
 
     input
       -webkit-appearance: none
+      appearance: none
       display: block
       block-size: auto
       padding: 11px 16px 13px
@@ -129,10 +142,10 @@
         color: $oblivion-400
 
       &:focus
-        border: 1px solid $maelstrom-500
-
-      &:valid
         border: 1px solid $oblivion-300
+
+      &:invalid
+        box-shadow: none
 
     button
       @extend .tag
@@ -161,7 +174,7 @@
         grid-column: span 6
 
       +adapt($bkp-desktop-sd)
-        margin-top: 0
+        margin-top: 32px
 
       .icon
         margin-right: 8px
@@ -169,16 +182,33 @@
         width: 24px
         color: $maelstrom-100
 
-      &:hover
+      &[disabled="disabled"]
+        color: $oblivion-300
+        background-color: $oblivion-100
+        box-shadow: none
+
+        .icon
+          color: $oblivion-200
+
+      &:not([disabled="disabled"]):hover
         cursor: pointer
         background-color: lighten($maelstrom-500, 4%)
         transform: translateY(-2px)
         box-shadow: 0px 2px 6px 0px rgba(#000000, 0.08), 0px 6px 12px 0px rgba(#000000, 0.12)
 
-      &:active
+      &:not([disabled="disabled"]):active
         background-color: darken($maelstrom-500, 4%)
         transform: translateY(0)
         box-shadow: 0px 2px 6px -4px rgba(#000000, 0.08), 0px 6px 12px -2px rgba(#000000, 0.12)
+
+    .inputError
+      position: absolute
+      color: $firework-500
+      font-size: 14px
+      line-height: 20px
+      text-align: left
+
+      transform: translateY(4px)
 
   .footer-links
     display: flex

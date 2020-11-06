@@ -54,7 +54,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~plugins/ga.js', mode: 'client' }
+    { src: '~plugins/ga.js', mode: 'client' },
+    { src: '~/plugins/vee-validate.js' }
   ],
 
   // module.exports = {
@@ -84,6 +85,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    transpile: ["vee-validate/dist/rules"],
     extend(config, ctx) {
     }
   },

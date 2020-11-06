@@ -4,19 +4,34 @@
       <div class="club">
         <p class="clubTitle">Join the club, <span class="line-breaker"><br /></span>get (ir)regular updates</p>
         <p class="clubDesc">Every two weeks or so I try to gather things that inspire me or tick my curiosity. <span class="line-breaker"><br /></span>Articles, essays and notes are also shared on the list one week before public.</p>
-        <form name="thunderstorm-newsletter" method="post" data-netlify="true">
-          <div class="clubFormFirstname">
-            <label for="firstname">Your firstname</label>
-            <input type="text" name="firstname" id="firstname" placeholder="Anakin">
-          </div>
-          <div class="clubFormEmail">
-            <label for="email">Your email</label>
-            <input type="email" name="email" id="email" placeholder="a.skywalker@email.com">
-          </div>
-          <button type="submit">
-            <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#add-circle-24"></use></svg>Join the club
-          </button>
-        </form>
+
+        <ValidationObserver v-slot="{ invalid }">
+
+          <form name="thunderstorm-newsletter" method="post" data-netlify="true"  @submit.prevent="onSubmit">
+
+            <ValidationProvider rules="required" mode="eager" v-slot="{ errors, classes }">
+              <div class="clubFormFirstname" :class="classes">
+                <label for="firstname">Your firstname</label>
+                <input type="text" name="firstname" id="firstname" placeholder="Anakin" v-model="firstname">
+                <span class="inputError">{{ errors[0] }}</span>
+              </div>
+            </ValidationProvider>
+
+            <ValidationProvider rules="required|email" mode="eager" v-slot="{ errors, classes }">
+              <div class="clubFormEmail" :class="classes">
+                <label for="email">Your email</label>
+                <input type="email" name="email" id="email" placeholder="a.skywalker@email.com" v-model="email">
+                <span class="inputError">{{ errors[0] }}</span>
+              </div>
+            </ValidationProvider>
+
+            <button type="submit" :disabled="invalid">
+              <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#add-circle-24"></use></svg>Join the club
+            </button>
+          </form>
+
+        </ValidationObserver>
+
       </div>
       <div class="footer-links">
         <div class="footer-copyright">
@@ -46,10 +61,38 @@
   </div>
 </template>
 
+<script src="https://unpkg.com/vee-validate@latest"></script>
+
 <script>
+  import { ValidationObserver, ValidationProvider } from "vee-validate"
+
   export default {
-    data: function () {
-      return {}
+    data: () => ({
+      firstname: '',
+      email: ''
+    }),
+    components: {
+      ValidationObserver: ValidationObserver,
+      ValidationProvider: ValidationProvider
+    },
+    methods: {
+      onSubmit () {
+        alert('Form has been submitted!');
+      }
     }
   }
+
+  // configure({
+  //   classes: {
+  //     valid: 'is-valid',
+  //     invalid: 'is-invalid',
+  //     dirty: ['is-dirty', 'is-dirty'], // multiple classes per flag!
+  //   }
+  // })
 </script>
+
+<style lang="sass" scoped>
+  span
+    display: block
+
+</style>
