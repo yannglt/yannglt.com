@@ -6,7 +6,7 @@
         <p class="clubTitle">Join the club, <span class="line-breaker"><br /></span>get (ir)regular updates</p>
         <p class="clubDesc">Every two weeks or so I try to gather things that inspire me or tick my curiosity. <span class="line-breaker"><br /></span>Articles, essays and notes are also shared on the list one week before public.</p>
 
-        <ValidationObserver v-slot="{ invalid }">
+        <ValidationObserver v-slot="{ invalid }" ref="form">
 
           <form name="thunderstorm-newsletter" method="post" data-netlify="true"  @submit.prevent="onSubmit">
 
@@ -81,7 +81,21 @@
     },
     methods: {
       onSubmit () {
-        this.showClubModal = true
+        this.$refs.form.validate().then(success => {
+          if (!success) {
+            return
+          }
+
+          this.showClubModal = true
+
+          // Resetting Values
+          this.firstname = this.email = ''
+
+          // Wait until the models are updated in the UI
+          this.$nextTick(() => {
+            this.$refs.form.reset()
+          })
+        })
       }
     }
   }
