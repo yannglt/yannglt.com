@@ -8,10 +8,9 @@
 
         <ValidationObserver v-slot="{ invalid }" ref="form">
 
-          <!-- <form name="thunderstorm-newsletter" method="post" data-netlify="true" @submit.prevent="onSubmit" netlify-honeypot="anti-robots"> -->
-          <form name="thunderstorm-newsletter" method="post" data-netlify="true" @submit.prevent="onSubmit">
+          <form name="thunderstorm-newsletter" method="post" data-netlify="true" @submit.prevent="onSubmit" data-netlify-honeypot="anti-robots">
 
-            <!-- <input name="anti-robots" type="hidden"> -->
+            <input type="hidden" name="form-name" value="thunderstorm-newsletter">
 
             <ValidationProvider rules="required" mode="eager" v-slot="{ errors, classes }">
               <div class="clubFormFirstname" :class="classes">
