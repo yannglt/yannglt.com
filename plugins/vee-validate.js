@@ -4,7 +4,7 @@ import { configure } from 'vee-validate';
 
 extend("required", {
   ...required,
-  message: "This field is required"
+  message: "Don't be shy, what's your firstname?"
 })
 
 extend("email", {
