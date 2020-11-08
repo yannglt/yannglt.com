@@ -8,12 +8,10 @@
 
         <ValidationObserver v-slot="{ invalid }" ref="form">
 
-          <form name="thunderstorm-newsletter" method="post" data-netlify="true"  @submit.prevent="onSubmit" netlify-honeypot="anti-robots">
+          <!-- <form name="thunderstorm-newsletter" method="post" data-netlify="true" @submit.prevent="onSubmit" netlify-honeypot="anti-robots"> -->
+          <form name="thunderstorm-newsletter" method="post" data-netlify="true" @submit.prevent="onSubmit">
 
-            <div class="anti-robots">
-              <label for="anti-robots">Don’t fill this out if you're human:</label>
-              <input name="anti-robots" id="anti-robots" hidden>
-            </div>
+            <!-- <input name="anti-robots" type="hidden"> -->
 
             <ValidationProvider rules="required" mode="eager" v-slot="{ errors, classes }">
               <div class="clubFormFirstname" :class="classes">
@@ -81,8 +79,8 @@
     }),
     components: {
       ClubModal,
-      ValidationObserver: ValidationObserver,
-      ValidationProvider: ValidationProvider
+      ValidationObserver,
+      ValidationProvider
     },
     methods: {
       onSubmit () {

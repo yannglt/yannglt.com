@@ -58,12 +58,6 @@ export default {
     { src: '~/plugins/vee-validate.js' }
   ],
 
-  // module.exports = {
-  //   build: {
-  //     transpile: ['scrollmagic']
-  //   }
-  // },
-
   /*
   ** Nuxt.js modules
   */
