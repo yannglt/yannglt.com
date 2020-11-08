@@ -108,15 +108,16 @@
           })
           .then(() => {
             this.showClubModal = true
+
+            // Resetting Values
+            this.firstname = this.email = ''
+
+            // Wait until the models are updated in the UI
+            this.$nextTick(() => {
+              this.$refs.form.reset()
+            })
           })
 
-          // Resetting Values
-          this.firstname = this.email = ''
-
-          // Wait until the models are updated in the UI
-          this.$nextTick(() => {
-            this.$refs.form.reset()
-          })
         })
       }
     }
