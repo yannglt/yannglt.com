@@ -10,12 +10,12 @@
 
           <form name="thunderstorm-newsletter" method="post" data-netlify="true" @submit.prevent="onSubmit" data-netlify-honeypot="anti-robots">
 
-            <input type="hidden" name="form-name" value="thunderstorm-newsletter">
+            <input type="hidden" name="form-name" value="thunderstorm-newsletterr">
 
             <ValidationProvider rules="required" mode="eager" v-slot="{ errors, classes }">
               <div class="clubFormFirstname" :class="classes">
                 <label for="firstname">Your firstname</label>
-                <input type="text" name="firstname" id="firstname" placeholder="Anakin" v-model="firstname">
+                <input type="text" name="firstname" id="firstname" placeholder="Anakin" v-model="form.firstname">
                 <span class="inputError">{{ errors[0] }}</span>
               </div>
             </ValidationProvider>
@@ -23,7 +23,7 @@
             <ValidationProvider rules="required|email" mode="eager" v-slot="{ errors, classes }">
               <div class="clubFormEmail" :class="classes">
                 <label for="email">Your email</label>
-                <input type="email" name="email" id="email" placeholder="a.skywalker@email.com" v-model="email">
+                <input type="email" name="email" id="email" placeholder="a.skywalker@email.com" v-model="form.email">
                 <span class="inputError">{{ errors[0] }}</span>
               </div>
             </ValidationProvider>
@@ -71,10 +71,13 @@
   import { ValidationObserver, ValidationProvider } from "vee-validate"
 
   export default {
+    name: 'thunderstorm-newsletter',
     data: () => ({
-      firstname: '',
-      email: '',
-      showClubModal: false
+      showClubModal: false,
+      form: {
+        firstname: '',
+        email: ''
+      }
     }),
     components: {
       ClubModal,
@@ -82,13 +85,30 @@
       ValidationProvider
     },
     methods: {
+      encode(data) {
+        return Object.keys(data)
+          .map(
+            key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+          )
+          .join("&");
+      },
       onSubmit () {
         this.$refs.form.validate().then(success => {
           if (!success) {
             return
           }
 
-          this.showClubModal = true
+          fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: this.encode({
+              "form-name": "thunderstorm-newsletter",
+              ...this.form
+            })
+          })
+          .then(() => {
+            this.showClubModal = true
+          })
 
           // Resetting Values
           this.firstname = this.email = ''
@@ -102,9 +122,3 @@
     }
   }
 </script>
-
-<style lang="sass" scoped>
-  span
-    display: block
-
-</style>
