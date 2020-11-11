@@ -356,10 +356,8 @@ body
             background-color: $oblivion-500
 
 .intro
-
-  +adapt($bkp-mobile)
-    margin-bottom: 84px
-    margin-top: calc(261px + 119px)
+  margin-top: calc(261px + 119px)
+  margin-bottom: 84px
 
   +adapt($bkp-tablet)
     margin-bottom: 80px
@@ -380,9 +378,9 @@ body
   &Tag
     @extend .tag
     color: $thunderstorm-500
+    margin-bottom: 16px
 
     +adapt($bkp-mobile)
-      margin-bottom: 16px
       grid-column: span 2
 
     +adapt($bkp-tablet)
@@ -439,15 +437,58 @@ body
       grid-column: 2 / span 6
 
   &Links
+    margin-top: 32px
+    position: relative
+    display: flex
+    flex-direction: column
+    grid-column: span 2
 
-    +adapt($bkp-mobile)
-      margin-top: 32px
-      display: flex
-      flex-direction: column
-      grid-column: span 2
+    li
+      display: inline-flex
+      position: relative
 
-      li:not(:last-of-type)
-        margin-bottom: 8px
+      +motion($time-quick, $weight-small, $speed-standard, color)
+
+      a
+        +motion($time-standard, $weight-medium, $speed-emphasized, padding-left)
+
+      &:before
+        content: ''
+        position: absolute
+        top: 17px
+        width: 40px
+        height: 2px
+
+        background-color: $oblivion-100
+        transform: scaleX(0)
+        transform-origin: left
+        +motion($time-standard, $weight-medium, $speed-emphasized, background-color, transform)
+
+      &:not(:last-of-type)
+          margin-bottom: 8px
+
+      &:hover
+        color: $thunderstorm-500
+
+        &:before
+          background-color: $thunderstorm-500
+          transform: scaleX(1)
+
+        a
+          padding-left: 48px
+
+        .icon
+          color: $thunderstorm-700
+
+    .introLinkPrefix
+      display: none
+
+    .icon
+      padding-left: 4px
+
+      color: $oblivion-300
+
+      +motion($time-quick, $weight-small, $speed-standard, color)
 
     +adapt($bkp-tablet)
       grid-column: 2 / span 6
@@ -469,21 +510,8 @@ body
     +adapt($bkp-desktop-hd)
       grid-column: 9 / span 4
 
-    .introLinkPrefix
-      display: none
-
-      +adapt($bkp-desktop-hd)
+      .introLinkPrefix
         display: inline
-
-    li:hover
-      .icon
-        // transform: translate(8px)
-
-    .icon
-      padding-left: 4px
-      color: $oblivion-300
-
-      +motion($time-quick, $weight-medium, $speed-standard, transform)
 
 .projects
   +adapt($bkp-mobile)
