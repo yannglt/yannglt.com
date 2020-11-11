@@ -862,7 +862,7 @@ body
       .icon
         color: $maelstrom-700
 
-      transform: translateY(3px)
+        transform: translateY(3px)
 
   .current-position
     margin-bottom: 33px
@@ -949,7 +949,8 @@ body
       text-align: left
 
   &-cta
-    display: flex
+    display: inline-flex
+    position: relative
     flex-direction: row
     align-items: center
     justify-content: center
@@ -959,12 +960,26 @@ body
     font-size: 16px
     text-transform: uppercase
 
-    +adapt($bkp-tablet)
-      justify-content: flex-start
+    &:before
+      content: ''
+      position: absolute
+      top: -4px
+      left: -8px
+      right: -8px
+      width: calc(100% + 16px)
+      height: calc(100% + 8px)
+      z-index: -50
+
+      border-radius: 4px
+      +motion($time-standard, $weight-small, $speed-standard, background-color)
 
     &:hover
-      .icon
-        transform: translateX(4px)
+
+      &:before
+        background-color: $maelstrom-100
+
+    +adapt($bkp-tablet)
+      justify-content: flex-start
 
     .icon
       color: $maelstrom-700
