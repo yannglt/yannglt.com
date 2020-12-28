@@ -73,7 +73,7 @@
   export default {
     name: 'thunderstorm-newsletter',
     data: () => ({
-      showClubModal: false,
+      showClubModal: true,
       form: {
         firstname: '',
         email: ''

@@ -2,7 +2,7 @@
   position: fixed
   top: 0
   left: 0
-  width: 100vw
+  max-width: 100vw
   min-height: 100vh
 
   z-index: 250
@@ -21,7 +21,10 @@
     flex-direction: column
     align-items: center
     max-width: 584px
-    padding: 48px
+    margin-left: 19px
+    margin-right: 19px
+    padding: 32px
+    padding-bottom: 48px
 
     text-align: center
 
@@ -29,7 +32,16 @@
     background-color: #ffffff
     background-image: url("../../static/images/clubmodalsuccess.svg")
     background-repeat: no-repeat
-    background-position: 8px auto
+    background-position: 50% 0
+
+    +adapt($bkp-mobile)
+      padding: 40px
+      padding-bottom: 48px
+
+    +adapt($bkp-tablet)
+      margin-left: 32px
+      margin-right: 32px
+      padding: 48px
 
   &Check
     position: absolute
