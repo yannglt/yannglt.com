@@ -515,171 +515,22 @@ body
 
 .projects
   +adapt($bkp-mobile)
-    margin-bottom: 137px
+    display: none
 
   +adapt($bkp-tablet)
-    margin-bottom: 101px
+    // margin-bottom: 101px
 
   +adapt($bkp-desktop-sd)
-    margin-bottom: 161px
+    // margin-bottom: 161px
 
   +adapt($bkp-desktop-hd)
-    margin-bottom: 201px
+    margin-bottom: 200px
 
   .container
     margin: 0 auto
     max-width: $bkp-desktop-hd
 
-  .projectsWrapper
-    margin-left: -27px
-    margin-right: -27px
-    display: flex
-    flex-direction: row
-    overflow-x: auto
-    overflow-y: hidden
-    scroll-snap-type: x mandatory
-    scroll-padding-left: 0
-    padding-left: 0
-    scroll-bar-width: none
-
-    +adapt($bkp-mobile)
-      margin-left: -27px
-      margin-right: -27px
-      scroll-padding-left: 27px
-      padding-left: 27px
-
-    +adapt($bkp-tablet)
-      margin-left: -32px
-      margin-right: -32px
-      scroll-padding-left: 92px
-      padding-left: 92px
-
-    +adapt($bkp-desktop-hd)
-      margin-left: 0
-      margin-right: 0
-      max-width: $width-desktop-hd
-
-      display: grid
-      grid-template-columns: repeat(12, 1fr)
-      column-gap: 40px
-
-      scroll-padding-left: 0
-      padding-left: 0
-
-  .project
-    width: calc(375px - 32px - 27px)
-    padding-right: 32px
-    scroll-snap-align: start
-    flex-shrink: 0
-
-    +adapt($width-mobile)
-      width: calc(320px + 32px)
-      padding-right: 32px
-
-      &:last-of-type
-        width: calc(320px + 27px)
-        padding-right: 27px
-
-    +adapt($bkp-tablet)
-      width: calc(428px + 32px)
-      padding-right: 32px
-
-      &:last-of-type
-        width: calc(428px + 248px)
-        padding-right: 248px
-
-    +adapt($bkp-desktop-sd)
-      width: calc(360px + 40px)
-      // Need to include padding inside width to allow last item to scroll
-      padding-right: 40px
-
-      &:last-of-type
-        width: calc(360px + 132px)
-        padding-right: 132px
-
-    +adapt($bkp-desktop-hd)
-      width: auto
-      padding: 0
-      grid-column: span 4
-
-      &:last-of-type
-        width: auto
-        padding-right: 0
-
-    &-cover
-      margin-bottom: 20px
-      height: 416px
-      background-color: #FFFFFF
-      width: 100%
-      display: flex
-      justify-content: center
-      align-items: center
-
-      +adapt($bkp-tablet)
-        height: 520px
-
-      +adapt($bkp-desktop-sd)
-        height: 532px
-
-    &-client
-      margin-bottom: -4px
-
-      color: $oblivion-025
-      font-size: 20px
-      line-height: 32px
-
-    &-name
-      margin-bottom: 10px
-
-      color: $oblivion-300
-      font-size: 20px
-      line-height: 32px
-
-    &-desc
-      margin-bottom: 21px
-
-      @extend .body
-      color: $oblivion-100
-      line-height: 24px
-
-      .nda-classification
-        color: transparent
-        font-size: 13px
-        background-color: $oblivion-700
-
-    .link
-      @extend .tag
-      display: flex
-      flex-direction: row
-      align-items: center
-
-      .icon
-        height: 16px
-        width: 16px
-        padding-left: 4px
-
-      &.wip,
-      &.nda
-        cursor: not-allowed
-        color: $oblivion-300
-
-        .icon
-          color: $oblivion-500
-
-      &.case-study
-        color: $thunderstorm-500
-
-        &:hover
-          .icon
-            transform: translateX(4px)
-
-        .icon
-          color: $thunderstorm-700
-
-          +motion($time-quick, $weight-small, $speed-standard, transform)
-
-      &.nda
-        text-decoration: line-through
+  
 
 .manifesto
   margin: 0 auto

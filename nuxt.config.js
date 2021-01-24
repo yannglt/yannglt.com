@@ -80,8 +80,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    transpile: ["vee-validate/dist/rules"],
-    extend(config, ctx) {
-    }
+    transpile: ["vee-validate/dist/rules", "vue-notion"],
+    extend(config, ctx) {}
   },
 }
