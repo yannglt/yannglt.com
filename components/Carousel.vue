@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="slides">
     <div class="slides-view">
-      <div v-for="slide in slides" :key="slide.id" class="slide" :class="{ active : slide.id == index }" :style="'left: calc(' + ((slide.id + 1) * 40 - 40) + 'px + ' + ((slide.id + 1) * 100 - 100) + '%); transform: translateX(calc(' + (-index * 40) + 'px + ' + (-index * 100) + '%));'">
+      <div v-for="slide in slides" :key="slide.id" class="slide" :class="{ activeSlide : slide.id == index }" :style="'left: calc(' + ((slide.id + 1) * 40 - 40) + 'px + ' + ((slide.id + 1) * 100 - 100) + '%); transform: translateX(calc(' + (-index * 40) + 'px + ' + (-index * 100) + '%));'">
         <div class="project-client">Abu Dhabi Executive Office</div>
         <div class="project-subwrap">
           <div class="project-infos">
@@ -33,7 +33,7 @@
         <div class="progress-current" :style="'width: calc(' + (index + 1) / slidesCount * 100 + '%)'"></div>
       </div>
       <div class="current-navs">
-        <div class="current">00<span v-for="slide in slides" :class="{ active : slide.id == index }" class="slideNumber" :key="slide.id" :style="'bottom: calc(' + ((-slide.id + 1) * 50 - 50) + '%); transform: translateY(calc(' + (-index * 50) + '%))'">{{ slide.id + 1 }}</span>
+        <div class="current">00<span v-for="slide in slides" :class="{ activeNumber : slide.id == index }" class="slideNumber" :key="slide.id" :style="'bottom: calc(' + ((-slide.id + 1) * 50 - 50) + '%); transform: translateY(calc(' + (-index * 50) + '%))'">{{ slide.id + 1 }}</span>
           <span class="total"> &nbsp;/ 00{{ slidesCount}}</span></div>
         <div class="navs">
           <button class="next" :disabled="index == slidesCount - 1" @click="next"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></button>
