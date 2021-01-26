@@ -22,7 +22,7 @@
     "eslint-plugin-vue": "^7.1.0",
     "gsap": "^3.6.0",
     "imports-loader": "^1.2.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^5.0.0",
     "nodemon": "^2.0.6",
     "prismjs": "^1.22.0",
     "sass-loader": "^10.0.3",
