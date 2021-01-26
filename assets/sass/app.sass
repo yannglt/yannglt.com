@@ -368,7 +368,7 @@ body
     margin-top: calc(120px + 191px)
 
   +adapt($bkp-desktop-hd)
-    margin-bottom: 172px
+    margin-bottom: 132px
     margin-top: calc(120px + 243px)
     // 120px = etiquette initial translateY
 
@@ -517,20 +517,175 @@ body
   +adapt($bkp-mobile)
     display: none
 
-  +adapt($bkp-tablet)
-    // margin-bottom: 101px
-
-  +adapt($bkp-desktop-sd)
-    // margin-bottom: 161px
-
   +adapt($bkp-desktop-hd)
+    display: block
     margin-bottom: 200px
 
   .container
     margin: 0 auto
     max-width: $bkp-desktop-hd
+    +gCols(12, 1fr, 40px)
 
-  
+  .slides
+    grid-column: span 12
+    max-width: 1208px
+
+  .slides-view
+    position: relative
+    height: 480px
+
+  .slide
+    position: absolute
+    top: 0%
+    left: 0%
+    min-width: 1000px
+    width: 100%
+    height: 100%
+    padding: 43px 48px 48px 48px
+
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    background-color: #ffffff
+    border-radius: 8px
+
+    +motion($time-extended, $weight-large, $speed-emphasized, transform, opacity)
+
+    &:not(.active)
+      opacity: 40%
+
+    .project-subwrap
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: flex-end
+
+    .project-client, .attribute
+      @extend .tag
+      color: $oblivion-900
+
+    .project-infos
+      max-width: 584px
+
+    .title
+      margin-bottom: 34px
+
+      @extend .heading-2
+      color: $oblivion-900
+
+    .properties
+      display: flex
+      flex-direction: row
+
+    .property:not(:last-of-type)
+        margin-right: 48px
+
+    .value
+      color: $oblivion-700
+
+    .project-links
+      display: inline-flex
+      justify-content: flex-end
+      align-items: flex-end
+      flex-direction: row-reverse
+
+      .button-primary-icon
+        display: flex
+        align-items: center
+        margin-left: 16px
+
+        @extend .tag
+        color: #ffffff
+        font-size: 16px
+        padding: 12px 16px 12px 20px
+
+        border-radius: 4px
+        background-color: $maelstrom-500
+
+        .icon
+          padding-left: 8px
+
+      .button-secondary-icon
+        display: inline-flex
+        padding: 13px
+        color: $oblivion-500
+        border: 1px solid $oblivion-300
+        border-radius: 4px
+
+  .slides-navigator
+    margin-top: 40px
+
+    .progress
+      height: 1px
+      width: 100%
+      background-color: $oblivion-500
+
+      &-current
+        height: 100%
+        width: 33%
+        background-color: #ffffff
+
+        +motion($time-medium, $weight-small, $speed-standard, width)
+
+    .current-navs
+      margin-top: 15px
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: flex-start
+
+    .current
+      @extend .tag
+      color: #ffffff
+      position: relative
+
+      transform: translateY(-2px)
+
+      .slideNumber
+        position: absolute
+
+        +motion($time-medium, $weight-small, $speed-standard, transform, opacity)
+
+        &:not(.active)
+          opacity: 0
+
+
+      .total
+        color: $oblivion-500
+
+    .navs
+      display: flex
+      align-items: flex-start
+      justify-content: flex-start
+      flex-direction: row-reverse
+
+      .next, .prev
+        display: inline-flex
+        padding: 5px
+
+        color: #ffffff
+        background-color: transparent
+        border-radius: 4px
+        border: 1px solid $oblivion-300
+
+        +motion($time-standard, $weight-small, $speed-standard, color, border-color, background-color)
+
+        &:not(:disabled):hover
+          cursor: pointer
+          color: $oblivion-1100
+          border-color: transparent
+          background-color: #ffffff
+
+        &:focus
+          outline: none
+
+        &:disabled
+          opacity: 40%
+          cursor: not-allowed
+
+      .prev
+        margin-right: 16px
 
 .manifesto
   margin: 0 auto
