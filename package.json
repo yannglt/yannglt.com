@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.5",
-    "nuxt": "^2.14.7",
+    "nuxt": "^2.14.12",
     "vue-server-renderer": "^2.6.11"
   },
   "devDependencies": {
