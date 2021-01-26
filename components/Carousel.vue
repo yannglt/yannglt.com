@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="slides">
     <div class="slides-view">
-      <div v-for="slide in slides" :key="slide.id" class="slide" :class="{ activeSlide : slide.id == index }" :style="'left: calc(' + ((slide.id + 1) * 40 - 40) + 'px + ' + ((slide.id + 1) * 100 - 100) + '%); transform: translateX(calc(' + (-index * 40) + 'px + ' + (-index * 100) + '%));'">
+      <div v-for="slide in slides" :key="slide.id" @click="goto(slide.id)" class="slide" :class="{ prevSlide : slide.id == index - 1, activeSlide : slide.id == index, nextSlide : slide.id == index + 1 }"  :style="'left: calc(' + ((slide.id + 1) * 40 - 40) + 'px + ' + ((slide.id + 1) * 100 - 100) + '%); transform: translateX(calc(' + (-index * 40) + 'px + ' + (-index * 100) + '%));'">
         <div class="project-client">Abu Dhabi Executive Office</div>
         <div class="project-subwrap">
           <div class="project-infos">
@@ -59,6 +59,9 @@
       }
     },
     methods: {
+      goto (dest) {
+        this.index = dest
+      },
       next () {
         if (this.index < this.slidesCount - 1) {
           this.index++
