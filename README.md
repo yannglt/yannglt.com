@@ -2,6 +2,8 @@
 
 > My riveting Nuxt.js project
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6cc692f2-e459-49ba-b1b1-7e44a58bace6/deploy-status)](https://app.netlify.com/sites/supersayann-preprod/deploys)
+
 ## Build Setup
 
 ``` bash
