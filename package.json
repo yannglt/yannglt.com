@@ -27,6 +27,6 @@
     "prismjs": "^1.22.0",
     "sass-loader": "^10.0.3",
     "vee-validate": "^3.4.5",
-    "vue-notion": "^0.2.15"
+    "vue-notion": "^0.3.0"
   }
 }
