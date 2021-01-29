@@ -11,10 +11,10 @@
         </div>
         <div class="links">
           <ul>
-            <li><a href="/works" title="">Works</a></li>
-            <li><a href="/process" title="">Process</a></li>
-            <li><a href="/about" title="">About</a></li>
-            <li><a href="/contact" title="">Contact</a></li>
+            <li><a class="wip">Works</a></li>
+            <li><a class="wip">Process</a></li>
+            <li><a class="wip">About</a></li>
+            <li><a class="wip">Contact</a></li>
           </ul>
         </div>
       </div>
