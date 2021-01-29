@@ -38,10 +38,6 @@ body
     &:hover
       @content
 
-// DEBUGGOR
-// a:is(:not([href]), [href=""], [href="#"])
-//   outline: 2px dotted red
-
 .tldr
   margin-top: 148px
   position: relative
@@ -514,34 +510,64 @@ body
         display: inline
 
 .projects
-  +adapt($bkp-mobile)
-    display: none
+  margin-bottom: 112px
+
+  +adapt($bkp-tablet)
+    margin-bottom: 80px
+
+  +adapt($bkp-desktop-sd)
+      margin-bottom: 132px
 
   +adapt($bkp-desktop-hd)
-    display: block
     margin-bottom: 200px
 
   .container
     margin: 0 auto
     max-width: $bkp-desktop-hd
-    +gCols(12, 1fr, 40px)
+    @extend .gridSystem
 
   .slides
-    grid-column: span 12
+    width: 100%
     max-width: 1208px
+
+    +adapt($bkp-mobile)
+      grid-column: span 2
+
+    +adapt($bkp-tablet)
+      grid-column: span 8
+
+    +adapt($bkp-desktop-sd)
+      grid-column: span 10
+
+    +adapt($bkp-desktop-hd)
+      grid-column: span 12
 
   .slides-view
     position: relative
     height: 480px
+    width: 100%
+
+    +adapt($width-mobile)
+      width: 92%
+
+    +adapt($bkp-tablet)
+      width: 76%
+      height: 576px
+
+    +adapt($bkp-desktop-sd)
+      width: 96%
+      height: 480px
+
+    +adapt($bkp-desktop-hd)
+      width: 100%
 
   .slide
     position: absolute
     top: 0%
     left: 0%
-    min-width: 1000px
     width: 100%
     height: 100%
-    padding: 43px 48px 48px 48px
+    padding: 27px 32px 32px 32px
 
     display: flex
     flex-direction: column
@@ -553,6 +579,9 @@ body
     +motion($time-extended, $weight-large, $speed-emphasized, transform, opacity)
 
     user-select: none
+
+    +adapt($bkp-tablet)
+      padding: 43px 48px 48px 48px
 
     &:not(.activeSlide)
       opacity: 0.4
@@ -574,19 +603,26 @@ body
 
     .project-subwrap
       display: flex
-      flex-direction: row
+      flex-direction: column
       justify-content: space-between
-      align-items: flex-end
+      align-items: flex-start
 
     .project-client, .attribute
       @extend .tag
       color: $oblivion-900
 
     .project-infos
-      max-width: 584px
+      width: 100%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+
+      +adapt($bkp-desktop-sd)
+        flex-direction: row
 
     .title
       margin-bottom: 34px
+      max-width: 584px
 
       @extend .heading-2
       color: $oblivion-900
@@ -594,9 +630,28 @@ body
     .properties
       display: flex
       flex-direction: row
+      margin-bottom: 34px
+
+      +adapt($bkp-tablet)
+        margin-bottom: 46px
+
+      +adapt($bkp-desktop-sd)
+        margin-bottom: 0
+
+    .property
+      flex-shrink: 0
 
     .property:not(:last-of-type)
-        margin-right: 48px
+        margin-right: 32px
+
+        +adapt($bkp-tablet)
+          margin-right: 48px
+
+    .property.duration
+      display: none
+
+      +adapt($bkp-tablet)
+        display: auto
 
     .value
       color: $oblivion-700
@@ -610,7 +665,11 @@ body
       .button-primary-icon
         display: flex
         align-items: center
-        margin-left: 16px
+        justify-content: center
+        flex-grow: 2
+
+        +adapt($bkp-tablet)
+          margin-left: 16px
 
         @extend .tag
         color: #ffffff
@@ -620,15 +679,21 @@ body
         border-radius: 4px
         background-color: $maelstrom-500
 
+        +adapt($bkp-desktop-sd)
+          flex-grow: auto
+
         .icon
           padding-left: 8px
 
       .button-secondary-icon
-        display: inline-flex
+        display: none
         padding: 13px
         color: $oblivion-500
         border: 1px solid $oblivion-300
         border-radius: 4px
+
+        +adapt($bkp-tablet)
+          display: inline-flex
 
   .slides-navigator
     margin-top: 40px

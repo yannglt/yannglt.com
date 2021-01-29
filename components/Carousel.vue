@@ -4,26 +4,26 @@
       <div v-for="slide in slides" :key="slide.id" @click="goto(slide.id)" class="slide" :class="{ prevSlide : slide.id == index - 1, activeSlide : slide.id == index, nextSlide : slide.id == index + 1 }"  :style="'left: calc(' + ((slide.id + 1) * 40 - 40) + 'px + ' + ((slide.id + 1) * 100 - 100) + '%); transform: translateX(calc(' + (-index * 40) + 'px + ' + (-index * 100) + '%));'">
         <div class="project-client">Abu Dhabi Executive Office</div>
         <div class="project-subwrap">
+          <div class="title">Help designers and developers create consistent experiences and interfaces through meaningful guidelines</div>
           <div class="project-infos">
-            <div class="title">Help designers and developers create consistent experiences and interfaces through meaningful guidelines</div>
             <div class="properties">
-              <div class="property">
+              <div class="property position">
                 <p class="attribute">Position</p>
                 <p class="value">Lead Designer</p>
               </div>
-              <div class="property">
+              <div class="property expertise">
                 <p class="attribute">Expertise</p>
                 <p class="value">Design Systems</p>
               </div>
-              <div class="property">
+              <div class="property duration">
                 <p class="attribute">Duration</p>
                 <p class="value">4 months</p>
               </div>
             </div>
-          </div>
-          <div class="project-links">
-            <a class="button-primary-icon">Read case study<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a>
-            <a class="button-secondary-icon"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a>
+            <div class="project-links">
+              <a class="button-primary-icon">Read case study<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a>
+              <a class="button-secondary-icon"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a>
+            </div>
           </div>
         </div>
       </div>
