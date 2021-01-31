@@ -33,8 +33,7 @@ body
   margin: 0 calc(max(-19px, -8vw))
   padding: 12px 19px
   display: flex
-  flex-wrap: wrap
-  flex-direction: row
+  flex-direction: column
   justify-content: center
   align-items: flex-end
   background-color: $maelstrom-500
@@ -47,7 +46,9 @@ body
 
   &:hover
     cursor: pointer
-    background-color: $maelstrom-700
+
+  &:active
+    background-color: $maelstrom-600
 
   +adapt($bkp-mobile)
     margin: 0 -27px
@@ -55,6 +56,10 @@ body
 
   +adapt($bkp-tablet)
     margin: 0 -32px
+
+  .line-breaker
+    +adapt($bkp-tablet)
+      display: none
 
   a
     width: 100%
@@ -68,7 +73,6 @@ body
   .icon
     padding-left: 4px
     color: $maelstrom-100
-
 
 .tldr
   margin-top: 148px
@@ -700,9 +704,6 @@ body
         justify-content: center
         flex-grow: 2
 
-        +adapt($bkp-tablet)
-          margin-left: 16px
-
         @extend .tag
         color: #ffffff
         font-size: 16px
@@ -710,6 +711,17 @@ body
 
         border-radius: 4px
         background-color: $maelstrom-500
+
+        &:hover
+          cursor: pointer
+
+        &:active
+          background-color: $maelstrom-600
+
+        +motion($time-quick, $weight-medium, $speed-standard, background-color)
+
+        +adapt($bkp-tablet)
+          margin-left: 16px
 
         +adapt($bkp-desktop-sd)
           flex-grow: auto
