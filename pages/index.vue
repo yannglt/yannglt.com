@@ -70,46 +70,6 @@
 
     <section class="projects">
       <div class="container">
-        <!-- <div class="slides">
-          <div class="slide">
-            <div class="project-client">Abu Dhabi Executive Office</div>
-            <div class="project-subwrap">
-              <div class="project-infos">
-                <div class="title">Help designers and developers create consistent experiences and interfaces through meaningful guidelines</div>
-                <div class="properties">
-                  <div class="property">
-                    <p class="attribute">Position</p>
-                    <p class="value">Lead Designer</p>
-                  </div>
-                  <div class="property">
-                    <p class="attribute">Expertise</p>
-                    <p class="value">Design Systems</p>
-                  </div>
-                  <div class="property">
-                    <p class="attribute">Duration</p>
-                    <p class="value">4 months</p>
-                  </div>
-                </div>
-              </div>
-              <div class="project-links">
-                <a class="button-primary-icon">Read case study<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a>
-                <a class="button-secondary-icon"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slides-navigator">
-          <div class="progress">
-            <div class="progress-current"></div>
-          </div>
-          <div class="current-navs">
-            <div class="current">001<span class="total"> / 003</span></div>
-            <div class="navs">
-              <div class="next"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></div>
-              <div class="prev"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-backward-20"></use></svg></div>
-            </div>
-          </div>
-        </div> -->
         <Carousel />
       </div>
     </section>
