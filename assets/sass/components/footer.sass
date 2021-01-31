@@ -173,7 +173,7 @@
 
       box-shadow: 0px 1px 3px 0px rgba(#000000, 0.08), 0px 2px 6px 0px rgba(#000000, 0.12)
 
-      +motion($time-standard, $weight-small, $speed-standard, background-color, box-shadow, transform)
+      +motion($time-standard, $weight-small, $speed-standard, background-color, box-shadow, transform, opacity)
 
       +adapt($bkp-tablet)
         width: auto
@@ -190,12 +190,7 @@
 
       &[disabled="disabled"]
         opacity: 0.64
-        // color: $oblivion-300
-        // background-color: $oblivion-100
         box-shadow: none
-
-        .icon
-          // color: $oblivion-200
 
       &:not([disabled="disabled"]):hover
         cursor: pointer
