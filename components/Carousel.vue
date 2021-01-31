@@ -139,28 +139,25 @@
       },
 
       mousedown(event) {
-        console.log(this.mouse.startX)
-
+        event.preventDefault()
         this.mouseIsDown = true
         this.mouse.startX = event.clientX
-        // this.mouse.endX = 0
+        this.mouse.endX = 0
       },
 
       mousemove(event) {
+        event.preventDefault()
         if(!this.mouseIsDown) return false
-        // console.log(this.mouse.endX)
         this.mouse.endX = event.clientX
       },
 
       mouseup() {
-        console.log(this.mouse.endX)
 
+        event.preventDefault()
         this.mouseIsDown = false
         if(this.mouse.endX < this.mouse.startX) {
-          console.log('Next slide please')
           this.next()
         } else {
-          console.log('Previous slide pelase')
           this.previous()
         }
       },
