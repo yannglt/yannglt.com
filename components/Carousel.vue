@@ -100,7 +100,8 @@
           mouseIsDown: false,
           startX: 0,
           endX: 0
-        }
+        },
+        thresold: 30
       }
     },
 
@@ -127,38 +128,45 @@
       },
 
       touchmove(event) {
+        event.preventDefault()
         this.touch.endX = event.touches[0].clientX
       },
 
       touchend() {
+        if(this.touch.endX == 0) return false
         if(this.touch.endX < this.touch.startX) {
-          this.next()
+          if(this.touch.startX - this.touch.endX >= this.thresold) {
+            this.next()
+          }
         } else {
-          this.previous()
+          if(this.touch.endX - this.touch.startX >= this.thresold) {
+            this.previous()
+          }
         }
       },
 
       mousedown(event) {
-        event.preventDefault()
         this.mouseIsDown = true
         this.mouse.startX = event.clientX
         this.mouse.endX = 0
       },
 
       mousemove(event) {
-        event.preventDefault()
         if(!this.mouseIsDown) return false
         this.mouse.endX = event.clientX
       },
 
       mouseup() {
-
-        event.preventDefault()
+        if(this.mouse.endX == 0) return false
         this.mouseIsDown = false
         if(this.mouse.endX < this.mouse.startX) {
-          this.next()
+          if(this.mouse.startX - this.mouse.endX >= this.thresold) {
+            this.next()
+          }
         } else {
-          this.previous()
+          if(this.mouse.endX - this.mouse.startX >= this.thresold) {
+            this.previous()
+          }
         }
       },
     },
