@@ -22,7 +22,7 @@
             </div>
             <div class="project-links">
               <a v-if="!slide.nda" class="button-primary-icon caseStudy">Read case study<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a>
-              <a v-if="slide.nda" class="button-primary-icon nda">Under NDA<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#lock-20"></use></svg></a>
+              <a v-if="slide.nda" class="button-primary-icon nda">Under NDA<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#forbidden-20"></use></svg></a>
               <a v-if="slide.link" class="button-secondary-icon"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a>
             </div>
           </div>
