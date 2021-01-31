@@ -29,15 +29,6 @@ body
   vertical-align: middle
   overflow: hidden
 
-@mixin hover()
-  @media (any-hover: none)
-    &:active
-      @content
-
-  @media (any-hover: hover)
-    &:hover
-      @content
-
 .new-space
   margin: 0 calc(max(-19px, -8vw))
   padding: 12px 19px
@@ -48,9 +39,15 @@ body
   align-items: flex-end
   background-color: $maelstrom-500
 
+  +motion($time-quick, $weight-medium, $speed-standard, background-color)
+
   @extend .bold
   color: #ffffff
   text-align: center
+
+  &:hover
+    cursor: pointer
+    background-color: $maelstrom-700
 
   +adapt($bkp-mobile)
     margin: 0 -27px
@@ -60,6 +57,9 @@ body
     margin: 0 -32px
 
   a
+    width: 100%
+
+  .link
     text-decoration: underline
 
     +adapt($bkp-tablet)
