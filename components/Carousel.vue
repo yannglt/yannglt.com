@@ -101,7 +101,7 @@
           startX: 0,
           endX: 0
         },
-        thresold: 30
+        threshold: 30
       }
     },
 
@@ -128,18 +128,17 @@
       },
 
       touchmove(event) {
-        event.preventDefault()
         this.touch.endX = event.touches[0].clientX
       },
 
       touchend() {
         if(this.touch.endX == 0) return false
         if(this.touch.endX < this.touch.startX) {
-          if(this.touch.startX - this.touch.endX >= this.thresold) {
+          if(this.touch.startX - this.touch.endX >= this.threshold) {
             this.next()
           }
         } else {
-          if(this.touch.endX - this.touch.startX >= this.thresold) {
+          if(this.touch.endX - this.touch.startX >= this.threshold) {
             this.previous()
           }
         }
@@ -160,11 +159,11 @@
         if(this.mouse.endX == 0) return false
         this.mouseIsDown = false
         if(this.mouse.endX < this.mouse.startX) {
-          if(this.mouse.startX - this.mouse.endX >= this.thresold) {
+          if(this.mouse.startX - this.mouse.endX >= this.threshold) {
             this.next()
           }
         } else {
-          if(this.mouse.endX - this.mouse.startX >= this.thresold) {
+          if(this.mouse.endX - this.mouse.startX >= this.threshold) {
             this.previous()
           }
         }
