@@ -167,6 +167,7 @@
         ]
       }
     },
+    
     components: {
       Navbar,
       Carousel,

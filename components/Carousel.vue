@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="slides">
     <div class="slides-view">
-      <div v-for="slide in slides" :key="slide.id" @click="goto(slide.id)" class="slide" :class="{ prevSlide : slide.id == index - 1, activeSlide : slide.id == index, nextSlide : slide.id == index + 1 }"  :style="'left: calc(' + ((slide.id + 1) * 40 - 40) + 'px + ' + ((slide.id + 1) * 100 - 100) + '%); transform: translateX(calc(' + (-index * 40) + 'px + ' + (-index * 100) + '%));'">
+      <div v-for="slide in slides" :key="slide.id" class="slide" :class="{ prevSlide : slide.id == index - 1, activeSlide : slide.id == index, nextSlide : slide.id == index + 1 }"  :style="'left: calc(' + ((slide.id + 1) * 40 - 40) + 'px + ' + ((slide.id + 1) * 100 - 100) + '%); transform: translateX(calc(' + (-index * 40) + 'px + ' + (-index * 100) + '%));'">
         <div class="project-client">{{ slide.client }}</div>
         <div class="project-subwrap">
           <div class="title">{{ slide.title }}</div>
@@ -91,28 +91,95 @@
             caseStudy: '',
             nda: true
           }
-        ]
+        ],
+        touch: {
+          startX: 0,
+          endX: 0,
+        },
+        mouse: {
+          mouseIsDown: false,
+          startX: 0,
+          endX: 0
+        }
       }
     },
+
     methods: {
       goto (dest) {
         this.index = dest
       },
+
       next () {
         if (this.index < this.slidesCount - 1) {
           this.index++
-          // console.log("Slide n°" + this.index)
         }
       },
+
       previous () {
         if (this.index > 0) {
           this.index--
-          // console.log("Slide n°" + this.index)
         }
-      }
+      },
+
+      touchstart(event) {
+        this.touch.startX = event.touches[0].clientX
+        this.touch.endX = 0
+      },
+
+      touchmove(event) {
+        this.touch.endX = event.touches[0].clientX
+      },
+
+      touchend() {
+        if(this.touch.endX < this.touch.startX) {
+          this.next()
+        } else {
+          this.previous()
+        }
+      },
+
+      mousedown(event) {
+        console.log(this.mouse.startX)
+
+        this.mouseIsDown = true
+        this.mouse.startX = event.clientX
+        // this.mouse.endX = 0
+      },
+
+      mousemove(event) {
+        if(!this.mouseIsDown) return false
+        // console.log(this.mouse.endX)
+        this.mouse.endX = event.clientX
+      },
+
+      mouseup() {
+        console.log(this.mouse.endX)
+
+        this.mouseIsDown = false
+        if(this.mouse.endX < this.mouse.startX) {
+          console.log('Next slide please')
+          this.next()
+        } else {
+          console.log('Previous slide pelase')
+          this.previous()
+        }
+      },
     },
+
+    mounted() {
+      document.querySelector('.slides-view').addEventListener('touchstart', event => this.touchstart(event))
+      document.querySelector('.slides-view').addEventListener('touchmove', event => this.touchmove(event))
+      document.querySelector('.slides-view').addEventListener('touchend', () => this.touchend())
+
+      document.querySelector('.slides-view').addEventListener('mousedown', event => this.mousedown(event))
+      document.querySelector('.slides-view').addEventListener('mousemove', event => this.mousemove(event))
+      document.querySelector('.slides-view').addEventListener('mouseup', () => this.mouseup())
+    },
+
     computed: {
-      slidesCount () { return this.slides.length }
-    },
+      slidesCount () {
+        return this.slides.length
+      }
+    }
   }
 </script>

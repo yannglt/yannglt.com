@@ -624,17 +624,17 @@ body
     & *::selection
       background-color: white
 
-    &.prevSlide:hover
-      cursor: url("../../static/icons/prev.svg") 8 8, pointer
-
     &.prevSlide:active
       opacity: 0.64
 
-    &.nextSlide:hover
-      cursor: url("../../static/icons/next.svg") 8 8, pointer
-
     &.nextSlide:active
       opacity: 0.64
+
+    &.activeSlide:hover
+      cursor: grab
+
+    &.activeSlide:active
+      cursor: grabbing
 
     .project-subwrap
       display: flex
