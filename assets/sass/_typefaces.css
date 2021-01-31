@@ -20,6 +20,13 @@
 }
 
 @font-face {
+  font-family: "gt-america-medium";
+  src: url("https://yannglt-type.s3.eu-west-3.amazonaws.com/gt-america-medium.woff") format("woff"),
+       url("https://yannglt-type.s3.eu-west-3.amazonaws.com/gt-america-medium.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
   font-family: "gt-america-mono-medium";
   src: url("https://yannglt-type.s3.eu-west-3.amazonaws.com/gt-america-mono-medium.woff") format("woff"),
        url("https://yannglt-type.s3.eu-west-3.amazonaws.com/gt-america-mono-medium.woff2") format("woff2");
