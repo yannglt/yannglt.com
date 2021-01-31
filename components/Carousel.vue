@@ -2,27 +2,28 @@
   <div class="slides">
     <div class="slides-view">
       <div v-for="slide in slides" :key="slide.id" @click="goto(slide.id)" class="slide" :class="{ prevSlide : slide.id == index - 1, activeSlide : slide.id == index, nextSlide : slide.id == index + 1 }"  :style="'left: calc(' + ((slide.id + 1) * 40 - 40) + 'px + ' + ((slide.id + 1) * 100 - 100) + '%); transform: translateX(calc(' + (-index * 40) + 'px + ' + (-index * 100) + '%));'">
-        <div class="project-client">Abu Dhabi Executive Office</div>
+        <div class="project-client">{{ slide.client }}</div>
         <div class="project-subwrap">
-          <div class="title">Help designers and developers create consistent experiences and interfaces through meaningful guidelines</div>
+          <div class="title">{{ slide.title }}</div>
           <div class="project-infos">
             <div class="properties">
               <div class="property position">
                 <p class="attribute">Position</p>
-                <p class="value">Lead Designer</p>
+                <p class="value">{{ slide.position }}</p>
               </div>
               <div class="property expertise">
                 <p class="attribute">Expertise</p>
-                <p class="value">Design Systems</p>
+                <p class="value">{{ slide.expertise }}</p>
               </div>
               <div class="property duration">
                 <p class="attribute">Duration</p>
-                <p class="value">4 months</p>
+                <p class="value">{{ slide.duration }} months</p>
               </div>
             </div>
             <div class="project-links">
-              <a class="button-primary-icon">Read case study<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a>
-              <a class="button-secondary-icon"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a>
+              <a v-if="!slide.nda" class="button-primary-icon caseStudy">Read case study<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a>
+              <a v-if="slide.nda" class="button-primary-icon nda">Under NDA<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#lock-20"></use></svg></a>
+              <a v-if="slide.link" class="button-secondary-icon"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a>
             </div>
           </div>
         </div>
@@ -50,11 +51,46 @@
       return {
         index: 0,
         slides: [
-          { id: 0 },
-          { id: 1 },
-          { id: 2 },
-          { id: 3 },
-          { id: 4 }
+          { id: 0,
+            client: 'Abu Dhabi Executive Office',
+            title: 'Help designers and developers create consistent experiences and interfaces through meaningful guidelines',
+            position: 'Lead Designer',
+            expertise: 'Design Systems',
+            duration: '8',
+            link: '',
+            caseStudy: '',
+            nda: true
+          },
+          { id: 1,
+            client: 'BNP Paribas',
+            title: 'Make the vision of Customer Experience for 2024 real, from user and business insights to a high-fidelity prototype',
+            position: 'Designer',
+            expertise: 'Product Design',
+            duration: '4',
+            link: '',
+            caseStudy: '',
+            nda: true
+          },
+          { id: 2,
+            client: 'Indépendants.co',
+            title: 'Build a website for the french syndicate defending independent workers, clarifying its goals and views',
+            position: 'Designer',
+            expertise: 'UX/UI Design',
+            duration: '2',
+            link: '',
+            caseStudy: '',
+            nda: false
+          },
+          { id: 3,
+            client: 'BPCE · Banque Populaire',
+            title: 'Define the 2021 roadmap for bank advisors support mobile app, then build a high-fidelity prototype',
+            position: 'Designer',
+            expertise: 'Strategic Design',
+            duration: '2',
+            link: '',
+            caseStudy: '',
+            nda: true
+          }
         ]
       }
     },

@@ -709,13 +709,30 @@ body
         padding: 12px 16px 12px 20px
 
         border-radius: 4px
-        background-color: $maelstrom-500
 
-        &:hover
-          cursor: pointer
+        .icon
+          padding-left: 8px
 
-        &:active
-          background-color: $maelstrom-600
+        &.caseStudy
+          background-color: $maelstrom-500
+
+          .icon
+            color: $maelstrom-100
+
+        &.caseStudy:hover
+        cursor: pointer
+
+        &.caseStudy:active
+        background-color: $maelstrom-600
+
+        &.nda
+          background-color: $oblivion-500
+
+          .icon
+            color: $oblivion-100
+
+        &.nda:hover
+          cursor: not-allowed
 
         +motion($time-quick, $weight-medium, $speed-standard, background-color)
 
@@ -724,10 +741,6 @@ body
 
         +adapt($bkp-desktop-sd)
           flex-grow: auto
-
-        .icon
-          color: $maelstrom-100
-          padding-left: 8px
 
       .button-secondary-icon
         display: none
@@ -759,7 +772,7 @@ body
       display: flex
       flex-direction: row
       justify-content: space-between
-      align-items: flex-start
+      align-items: center
 
     .current
       @extend .tag
