@@ -1,5 +1,8 @@
 <template lang="html">
   <div id="app">
+    <div class="new-space">
+      Welcome on my new space on the Internets.<a href="" title="">Learn more about this new version<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a>
+    </div>
     <Navbar></Navbar>
     <section class="tldr">
       <div class="container">

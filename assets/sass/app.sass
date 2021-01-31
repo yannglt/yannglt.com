@@ -38,6 +38,38 @@ body
     &:hover
       @content
 
+.new-space
+  margin: 0 calc(max(-19px, -8vw))
+  padding: 12px 19px
+  display: flex
+  flex-wrap: wrap
+  flex-direction: row
+  justify-content: center
+  align-items: flex-end
+  background-color: $maelstrom-500
+
+  @extend .bold
+  color: #ffffff
+  text-align: center
+
+  +adapt($bkp-mobile)
+    margin: 0 -27px
+    margin: 0 -32px
+
+  +adapt($bkp-tablet)
+    margin: 0 -32px
+
+  a
+    text-decoration: underline
+
+    +adapt($bkp-tablet)
+      padding-left: 4px
+
+  .icon
+    padding-left: 4px
+    color: $maelstrom-100
+
+
 .tldr
   margin-top: 148px
   position: relative
