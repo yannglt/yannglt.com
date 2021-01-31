@@ -1042,7 +1042,6 @@ body
         margin-bottom: 0
 
 .process
-  // outline: 2px solid $oblivion-100
   background-image: url("../../static/images/process.svg")
   background-repeat: no-repeat
 
@@ -1096,6 +1095,7 @@ body
   &-cta
     display: inline-flex
     position: relative
+    width: 100%
     flex-direction: row
     align-items: center
     justify-content: center
@@ -1124,6 +1124,7 @@ body
         background-color: $maelstrom-100
 
     +adapt($bkp-tablet)
+      width: auto
       justify-content: flex-start
 
     .icon
