@@ -18,7 +18,7 @@
   "devDependencies": {
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/style-resources": "^1.0.0",
-    "eslint": "^7.18.0",
+    "eslint": "^7.19.0",
     "eslint-plugin-vue": "^7.5.0",
     "gsap": "^3.6.0",
     "imports-loader": "^1.2.0",
