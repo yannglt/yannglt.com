@@ -73,6 +73,30 @@ body
     padding-left: 4px
     color: $maelstrom-100
 
+.under-construction
+  margin: 0 calc(max(-19px, -8vw))
+  padding: 12px 19px
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+  @extend .bold
+  color: #000000
+  text-align: center
+  background-color: $thunderstorm-500
+
+  +motion($time-quick, $weight-medium, $speed-standard, background-color)
+
+  &:hover
+    cursor: pointer
+
+  +adapt($bkp-mobile)
+    margin: 0 -27px
+    margin: 0 -32px
+
+  +adapt($bkp-tablet)
+    margin: 0 -32px
+
 .tldr
   margin-top: 148px
   position: relative
