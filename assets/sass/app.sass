@@ -851,7 +851,7 @@ body
         margin-right: 16px
 
 .manifesto
-  margin: 0 auto
+  margin: 0 -19px
   max-width: $bkp-desktop-hd
   background-color: #ffffff
   overflow: hidden
@@ -862,6 +862,10 @@ body
   -moz-backface-visibility: hidden
   -webkit-transform: translate3d(0, 0, 0)
   -moz-transform: translate3d(0, 0, 0)
+
+  +adapt($bkp-tablet)
+    margin: 0 auto
+
 
   .container
     @extend .gridSystem
