@@ -28,6 +28,7 @@ body
   vertical-align: middle
   overflow: hidden
 
+// HOME SECTIONS
 .new-space
   margin: 0 calc(max(-19px, -8vw))
   padding: 12px 19px
@@ -1385,6 +1386,229 @@ body
 
     &:nth-child(3):hover
       transform: translate(-50%, -$move) rotate(-7.5deg)
+
+// ABOUT
+.moodboard
+  margin-top: 168px
+  margin-bottom: 121px
+
+  .container
+    @extend .gridSystem
+    min-height: 624px
+    border: 1px solid $oblivion-500
+
+    background-image: url("../../static/images/moodboard-grid.svg")
+    background-repeat: repeat
+    background-size: 104px 104px
+    background-position: top left
+
+  .left
+    position: relative
+    grid-column: span 5
+
+  .right
+    position: relative
+    grid-column: 8 / span 5
+
+  .atlas, .logo, .electricity-toolkit, .gt-america, .bluu-suuperstar
+    background-repeat: no-repeat
+    background-position: center center
+
+  .atlas::after, .logo::after, .gt-america::after, .bluu-suuperstar::after, .pinned-top::before, .pinned-top::after, .pinned-bottom::before, .pinned-bottom::after
+      content: ''
+      position: absolute
+      height: 8px
+      width: 8px
+
+      border-radius: 8px
+
+  .atlas::after, .logo::after, .gt-america::after, .bluu-suuperstar::after
+    top: -5px
+    left: 50%
+    transform: translateX(-50%)
+
+  .atlas
+    position: absolute
+    top: 143px
+    left: 102px
+    height: 272px
+    width: 168px
+
+    background-color: $thunderstorm-500
+    background-image: url("../../static/images/atlas-min.svg")
+    background-size: 168px 272px
+    transform: rotate3d(0, 0, 1, -7.5deg)
+
+    &::after
+      background-color: $thunderstorm-500
+      border: 1px solid $thunderstorm-900
+
+  .logo
+    position: absolute
+    top: 101px
+    left: 219px
+    height: 144px
+    width: 144px
+
+    background-color: #ffffff
+    background-image: url("../../static/images/logo.svg")
+    background-size: 144px 144px
+    transform: rotate3d(0, 0, 1, -15deg)
+
+    &::after
+      background-color: $oblivion-300
+      border: 1px solid $oblivion-700
+
+  .electricity-toolkit
+    position: absolute
+    top: 20px
+    right: 20px
+    height: 208px
+    width: 440px
+
+    border: 1px solid $oblivion-500
+    background-image: url("../../static/images/electricity-toolkit.svg")
+    background-size: 440px 208px
+    background-color: $oblivion-1100
+
+    .pinned-top, .pinned-bottom
+      width: 100%
+      height: 100%
+      position: absolute
+
+    .pinned-top::before, .pinned-top::after, .pinned-bottom::before, .pinned-bottom::after
+      background-color: $oblivion-500
+      border: 1px solid $oblivion-900
+
+    .pinned-top::before
+      top: -5px
+      left: -5px
+
+    .pinned-top::after
+      top: -5px
+      right: -5px
+
+    .pinned-bottom::before
+      bottom: -5px
+      left: -5px
+
+    .pinned-bottom::after
+      bottom: -5px
+      right: -5px
+
+  .bluu-suuperstar
+    position: absolute
+    top: 311px
+    right: 181px
+    height: 208px
+    width: 208px
+
+    background-color: $firework-500
+    background-image: url("../../static/images/bluu-suuperstar.svg")
+    background-size: 208px 208px
+    transform: rotate3d(0, 0, 1, 7.5deg)
+
+    &::after
+      background-color: $firework-500
+      border: 1px solid $firework-900
+
+  .gt-america
+    position: absolute
+    top: 350px
+    right: 44px
+    height: 208px
+    width: 208px
+
+    background-color: $maelstrom-500
+    background-image: url("../../static/images/gt-america.svg")
+    background-size: 208px 208px
+    transform: rotate3d(0, 0, 1, -7.5deg)
+
+    &::after
+      background-color: $maelstrom-500
+      border: 1px solid $maelstrom-900
+
+.discover
+  padding-bottom: 1200px
+
+  .container
+    @extend .gridSystem
+
+  &--hero
+    margin-bottom: 111px
+
+    @extend .display-2
+    grid-column: span 12
+    color: #ffffff
+
+    +adapt($bkp-mobile)
+      grid-column: span 2
+
+    +adapt($bkp-tablet)
+      grid-column: span 8
+
+    +adapt($bkp-desktop-sd)
+      grid-column: span 10
+
+    +adapt($bkp-desktop-hd)
+      grid-column: span 12
+
+
+  &--bloc
+    margin-bottom: 65px
+
+    +adapt($bkp-mobile)
+      grid-column: span 2
+
+    +adapt($bkp-tablet)
+      grid-column: span 4
+
+    +adapt($bkp-desktop-sd)
+      grid-column: span 5
+
+    +adapt($bkp-desktop-hd)
+      grid-column: span 4
+
+  &--icon
+    margin-bottom: 25px
+    height: 80px
+    width: 128px
+
+    background-size: 128px 80px
+    background-repeat: no-repeat
+    background-position: center center
+
+    &.story
+      background-image: url("../../static/images/discover-story.svg")
+
+    &.electricity
+      background-image: url("../../static/images/discover-electricity.svg")
+
+    &.mood
+      background-image: url("../../static/images/discover-moodboard.svg")
+
+  &--title
+    margin-bottom: 13px
+
+    @extend .heading-2
+    color: $oblivion-025
+
+  &--desc
+    margin-bottom: 25px
+
+    color: $oblivion-300
+
+  &--link
+    @extend .tag
+    color: $oblivion-025
+
+    .icon
+      padding-left: 4px
+      height: 12px
+      width: 12px
+      color: $thunderstorm-500
+
+// OTHERS
 
 .wip-page
   display: flex

@@ -1,11 +1,52 @@
 <template lang="html">
-  <div class="wip-page wip-about">
-    <h1>About</h1>
-    <a href="/">◀︎ back to homepage</a>
+  <div id="about">
+    <Navbar></Navbar>
+    <section class="moodboard">
+      <div class="container">
+        <div class="left">
+          <div class="atlas"></div>
+          <div class="logo"></div>
+        </div>
+        <div class="right">
+          <div class="electricity-toolkit">
+            <div class="pinned-top"></div>
+            <div class="pinned-bottom"></div>
+          </div>
+          <div class="gt-america"></div>
+          <div class="bluu-suuperstar"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="discover">
+      <div class="container">
+        <h1 class="discover--hero">Hi! Hope you enjoyed your travel in my personal space so far, here are some ways to learn more about me:</h1>
+        <div class="discover--bloc">
+          <div class="discover--icon story"></div>
+          <p class="discover--title">Story</p>
+          <p class="discover--desc">From playing with small bricks of colors to become a Product Designer, some time have passed and I wanted to share anecdotes and funny stories you may find interesting.</p>
+          <a class="discover--link" href="">Read more about me<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-12"></use></svg></a>
+        </div>
+        <div class="discover--bloc">
+          <div class="discover--icon electricity"></div>
+          <p class="discover--title">Electricity</p>
+          <p class="discover--desc">Since my first portfolio on October 2016, I began building my universe around one thing that kept my attention since I was a child: cities and their energy, using the symbols of light in physics and flash.</p>
+          <a class="discover--link" href="">Explore my city<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-12"></use></svg></a>
+        </div>
+        <div class="discover--bloc">
+          <div class="discover--icon mood"></div>
+          <p class="discover--title">Moodboard</p>
+          <p class="discover--desc">Maybe the more visual way to dive into my universe, you may find superabundance of references of color palettes inspired by Piet Mondriaan, typography compositions and physics symbols.</p>
+          <a class="discover--link" href="">Dive into my inspirations<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-12"></use></svg></a>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
+  import Navbar from '../components/Navbar.vue'
+
   export default {
     head () {
       return {
@@ -14,8 +55,13 @@
         ]
       }
     },
+
     data: function () {
       return { }
+    },
+
+    components: {
+      Navbar
     }
   }
 </script>

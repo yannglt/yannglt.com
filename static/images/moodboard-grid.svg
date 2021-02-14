@@ -1,0 +1,8 @@
+<svg width="105" height="105" viewBox="0 0 105 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M64 0V104" stroke="#1B2433"/>
+<path d="M104 40L0 40" stroke="#1B2433"/>
+<rect width="104" height="0.5" fill="#1B2433"/>
+<rect y="104" width="104" height="0.5" fill="#1B2433"/>
+<rect width="0.5" height="104" fill="#1B2433"/>
+<rect x="104" width="0.5" height="104" fill="#1B2433"/>
+</svg>

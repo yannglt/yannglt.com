@@ -148,6 +148,14 @@
   import Footer from '../components/Footer.vue'
 
   export default {
+    head () {
+      return {
+        meta: [
+          { hid: 'robots', name: 'robots', content: 'noindex, nofollow' }
+        ]
+      }
+    },
+    
     data() {
       return {
         facts: [
