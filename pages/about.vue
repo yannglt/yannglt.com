@@ -36,8 +36,22 @@
         <div class="discover--bloc">
           <div class="discover--icon mood"></div>
           <p class="discover--title">Moodboard</p>
-          <p class="discover--desc">Maybe the more visual way to dive into my universe, you may find superabundance of references of color palettes inspired by Piet Mondriaan, typography compositions and physics symbols.</p>
+          <p class="discover--desc">Maybe the more visual way to dive into my universe, you may find superabundance of references of color palettes inspired by Piet Mondrian, typography compositions and physics symbols.</p>
           <a class="discover--link" href="">Dive into my inspirations<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-12"></use></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="exps">
+      <div class="container">
+        <p class="exps--tag">Or maybe the more classic way</p>
+        <h2 class="exps--title">Experiences, design on-demand services and some quick facts</h2>
+        <p class="exps--desc">S/O to all the people I met these last years, from colleagues to partners, from clients to users, loved ones and friends.</p>
+        <div class="cv">
+          <div class="cv--intro">
+            <h3 class="cv--title">Experiences</h3>
+            <p class="cv--desc">S/O to all the people I met these last years, from colleagues to partners, from clients to users, loved ones and friends.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -57,7 +71,37 @@
     },
 
     data: function () {
-      return { }
+      return {
+        experiences: [
+          {
+            id: '0',
+            company: 'Source',
+            position: 'Product Designer',
+            desc: 'In fact, I continue to play while being in high-school, in university and then college, from City, Star Wars or Mars series to my current Architecture collection, these little bricks help me to stay away from the screen every once in a while.',
+            start: '',
+            end: '',
+            duration: '',
+          },
+          {
+            id: '1',
+            company: 'Source',
+            position: 'Junior Designer',
+            desc: 'In fact, I continue to play while being in high-school, in university and then college, from City, Star Wars or Mars series to my current Architecture collection, these little bricks help me to stay away from the screen every once in a while.',
+            start: '',
+            end: '',
+            duration: '',
+          },
+          {
+            id: '2',
+            company: 'Synerg\' hetic',
+            position: 'Design Consultant',
+            desc: 'In fact, I continue to play while being in high-school, in university and then college, from City, Star Wars or Mars series to my current Architecture collection, these little bricks help me to stay away from the screen every once in a while.',
+            start: '',
+            end: '',
+            duration: '',
+          },
+        ]
+      }
     },
 
     components: {

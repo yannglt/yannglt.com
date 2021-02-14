@@ -1436,9 +1436,19 @@ body
     width: 168px
 
     background-color: $thunderstorm-500
-    background-image: url("../../static/images/atlas-min.svg")
-    background-size: 168px 272px
     transform: rotate3d(0, 0, 1, -7.5deg)
+
+    &::before
+      content: ''
+      position: absolute
+      height: 272px
+      width: 168px
+
+      background-color: $thunderstorm-900
+      mask-image: url("../../static/images/atlas.svg")
+      mask-size: 288px 288px
+      background-size: 272px 168px
+      background-position: left top
 
     &::after
       background-color: $thunderstorm-500
@@ -1530,7 +1540,7 @@ body
       border: 1px solid $maelstrom-900
 
 .discover
-  padding-bottom: 1200px
+  margin-bottom: 224px
 
   .container
     @extend .gridSystem
@@ -1608,6 +1618,49 @@ body
       height: 12px
       width: 12px
       color: $thunderstorm-500
+
+.exps
+  padding-bottom: 1200px
+
+  .container
+    @extend .gridSystem
+
+  &--tag
+    margin-bottom: 16px
+    grid-column: span 9
+
+    @extend .tag
+    color: $thunderstorm-500
+
+  &--title
+    margin-bottom: 27px
+    grid-column: span 9
+
+    @extend .heading-1
+    color: #ffffff
+
+  &--desc
+    grid-column: span 6
+
+    @extend .emphasis
+    color: $oblivion-100
+
+.cv
+  margin-top: 97px
+  grid-column: span 12
+  @extend .gridSystem
+
+  .cv--intro
+    grid-column: span 5
+
+  &--title
+    margin-bottom: 23px
+
+    @extend .heading-2
+    color: $oblivion-025
+
+  &--desc
+    color: $oblivion-300
 
 // OTHERS
 
