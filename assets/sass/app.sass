@@ -28,7 +28,6 @@ body
   vertical-align: middle
   overflow: hidden
 
-// HOME SECTIONS
 .new-space
   margin: 0 calc(max(-19px, -8vw))
   padding: 12px 19px
@@ -1286,6 +1285,7 @@ body
     position: absolute
     width: 480px
     padding: 51px 52px
+
     border: 1px solid $oblivion-700
     border-radius: 8px
     background-color: $oblivion-1100
@@ -1387,7 +1387,6 @@ body
     &:nth-child(3):hover
       transform: translate(-50%, -$move) rotate(-7.5deg)
 
-// ABOUT
 .moodboard
   margin-top: 168px
   margin-bottom: 121px
@@ -1619,6 +1618,8 @@ body
       width: 12px
       color: $thunderstorm-500
 
+      transform: translateY(-1px)
+
 .exps
   padding-bottom: 1200px
 
@@ -1662,7 +1663,82 @@ body
   &--desc
     color: $oblivion-300
 
-// OTHERS
+  &--experiences
+    grid-column: 8 / span 5
+    margin-top: 10px
+
+    color: $oblivion-025
+
+    .experience
+      position: relative
+
+      &:not(:first-of-type)::before
+        content: ''
+        position: absolute
+        top: 0px
+        left: -31px
+        height: 40px
+        width: 2px
+
+        background-color: $oblivion-300
+
+      &:not(:last-of-type)::after
+        content: ''
+        position: absolute
+        top: 40px
+        left: -31px
+        height: calc(100%)
+        width: 2px
+
+        background-color: $oblivion-300
+
+      &:first-of-type .dot::after
+        content: ''
+        position: absolute
+        z-index: 50
+        top: 29px
+        left: -34px
+        height: 8px
+        width: 8px
+
+        border-radius: 8px
+        background-color: $oblivion-025
+
+    .dot
+      position: absolute
+      top: 0
+      left: 0
+
+      &::before
+        content: ''
+        position: absolute
+        z-index: 50
+        top: 22px
+        left: -41px
+        height: 18px
+        width: 18px
+
+        border: 2px solid $oblivion-300
+        border-radius: 18px
+        background-color: $oblivion-1100
+
+    .position
+      margin-bottom: 4px
+
+      @extend .heading-3
+      line-height: 28px
+      color: $oblivion-025
+
+    .duration
+      margin-bottom: 15px
+
+      @extend .tag
+      color: $oblivion-100
+
+    .desc
+      padding-bottom: 57px
+
+      color: $oblivion-300
 
 .wip-page
   display: flex

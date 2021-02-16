@@ -49,7 +49,15 @@
         <div class="cv">
           <div class="cv--intro">
             <h3 class="cv--title">Experiences</h3>
-            <p class="cv--desc">S/O to all the people I met these last years, from colleagues to partners, from clients to users, loved ones and friends.</p>
+            <p class="cv--desc">TK S/O to all the people I met these last years, from colleagues to partners, from clients to users, loved ones and friends.</p>
+          </div>
+          <div class="cv--experiences">
+            <div v-for="experience in experiences" :key="experience.id" class="experience">
+              <div class="dot"></div>
+              <p class="position">{{ experience.company }}, {{ experience.position }}</p>
+              <p class="duration">{{ experience.start }} - {{ experience.end }} ({{experience.duration}})</p>
+              <div class="desc" v-html="experience.desc"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -75,28 +83,28 @@
             id: '0',
             company: 'Source',
             position: 'Product Designer',
-            desc: 'In fact, I continue to play while being in high-school, in university and then college, from City, Star Wars or Mars series to my current Architecture collection, these little bricks help me to stay away from the screen every once in a while.',
-            start: '',
-            end: '',
-            duration: '',
+            desc: '<p>TK In fact, I continue to play while being in high-school, in university and then college, from City, Star Wars or Mars series to my current Architecture collection, these little bricks help me to stay away from the screen every once in a while.</p>',
+            start: 'Jan 2019',
+            end: 'Now',
+            duration: '2.5 years',
           },
           {
             id: '1',
             company: 'Source',
             position: 'Junior Designer',
-            desc: 'In fact, I continue to play while being in high-school, in university and then college, from City, Star Wars or Mars series to my current Architecture collection, these little bricks help me to stay away from the screen every once in a while.',
-            start: '',
-            end: '',
-            duration: '',
+            desc: '<p>TK In fact, I continue to play while being in high-school, in university and then college, from City, Star Wars or Mars series to my current Architecture collection, these little bricks help me to stay away from the screen every once in a while.</p>',
+            start: 'Jul 2018',
+            end: 'Dec 2018',
+            duration: '0.5 year',
           },
           {
             id: '2',
             company: 'Synerg\' hetic',
             position: 'Design Consultant',
-            desc: 'In fact, I continue to play while being in high-school, in university and then college, from City, Star Wars or Mars series to my current Architecture collection, these little bricks help me to stay away from the screen every once in a while.',
-            start: '',
-            end: '',
-            duration: '',
+            desc: '<p>TK In fact, I continue to play while being in high-school, in university and then college, from City, Star Wars or Mars series to my current Architecture collection, these little bricks help me to stay away from the screen every once in a while.</p>',
+            start: 'May 2018',
+            end: 'Nov 2018',
+            duration: '0.5 year',
           },
         ]
       }
