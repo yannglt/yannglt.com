@@ -1,12 +1,5 @@
 <template lang="html">
   <div id="app">
-    <!-- <div class="new-space">
-      <a href="#" title="">Welcome on my new space on the Internets.<span class="line-breaker"><br></span><span class="link">Learn more about this new version<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></span></a>
-    </div> -->
-    <div class="under-construction">
-      <a href="#" title="">New space on the Internets under construction.<span class="line-breaker"><br></span></a>
-    </div>
-    <Navbar></Navbar>
     <section class="tldr">
       <div class="container">
         <div class="welcome-repeat">
@@ -134,18 +127,14 @@
         </div>
       </div>
     </section>
-
-    <Footer></Footer>
   </div>
 </template>
 
 <script>
   import gsap from 'gsap'
 
-  import Navbar from '../components/Navbar.vue'
   import Carousel from '../components/Carousel.vue'
   import Fact from '../components/Fact.vue'
-  import Footer from '../components/Footer.vue'
 
   export default {
     head () {
@@ -155,7 +144,7 @@
         ]
       }
     },
-    
+
     data() {
       return {
         facts: [
@@ -182,10 +171,8 @@
     },
 
     components: {
-      Navbar,
       Carousel,
       Fact,
-      Footer
     }
   }
 
