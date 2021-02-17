@@ -21,9 +21,9 @@
               </div>
             </div>
             <div class="project-links">
-              <a v-if="!slide.nda" class="button-primary-icon caseStudy">Read case study<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a>
-              <a v-if="slide.nda" class="button-primary-icon nda">Under NDA<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#forbidden-20"></use></svg></a>
-              <a v-if="slide.link" class="button-secondary-icon"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a>
+              <a v-if="!slide.nda" class="button-primary-icon caseStudy">Read case study<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></a>
+              <a v-if="slide.nda" class="button-primary-icon nda">Under NDA<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#forbidden-20"></use></svg></a>
+              <a v-if="slide.link" class="button-secondary-icon"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#external-link-20"></use></svg></a>
             </div>
           </div>
         </div>
@@ -37,8 +37,8 @@
         <div class="current">00<span v-for="slide in slides" :class="{ activeNumber : slide.id == index }" class="slideNumber" :key="slide.id" :style="'bottom: calc(' + ((-slide.id + 1) * 50 - 50) + '%); transform: translateY(calc(' + (-index * 50) + '%))'">{{ slide.id + 1 }}</span>
           <span class="total"> &nbsp;/ 00{{ slidesCount}}</span></div>
         <div class="navs">
-          <button class="next" :disabled="index == slidesCount - 1" @click="next"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></button>
-          <button class="prev" :disabled="index == 0" @click="previous"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-backward-20"></use></svg></button>
+          <button class="next" :disabled="index == slidesCount - 1" @click="next"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></button>
+          <button class="prev" :disabled="index == 0" @click="previous"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-backward-20"></use></svg></button>
         </div>
       </div>
     </div>

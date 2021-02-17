@@ -55,13 +55,13 @@
         <p class="introDesc">Find here a selection of my latest works and collaborations with startups and some friends, you will be also able to read more about my story and ask for help on your idea/problem.</p>
         <ul class="introLinks">
           <li>
-            <a href="https://twitter.com/yannglt" title="" target="_blank"  rel="noopener"><span class="introLinkPrefix">Thoughts on </span>Twitter<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a>
+            <a href="https://twitter.com/yannglt" title="" target="_blank"  rel="noopener"><span class="introLinkPrefix">Thoughts on </span>Twitter<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#external-link-20"></use></svg></a>
           </li>
           <li>
-            <a href="https://dribbble.com/yannglt" title="" target="_blank"  rel="noopener"><span class="introLinkPrefix">Works in progress on </span>Dribbble<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a>
+            <a href="https://dribbble.com/yannglt" title="" target="_blank"  rel="noopener"><span class="introLinkPrefix">Works in progress on </span>Dribbble<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#external-link-20"></use></svg></a>
           </li>
           <li>
-            <a href="https://www.instagram.com/ynngllt/" title="" target="_blank"  rel="noopener"><span class="introLinkPrefix">Journey on </span>Instagram<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#external-link-20"></use></svg></a>
+            <a href="https://www.instagram.com/ynngllt/" title="" target="_blank"  rel="noopener"><span class="introLinkPrefix">Journey on </span>Instagram<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#external-link-20"></use></svg></a>
           </li>
         </ul>
       </div>
@@ -82,7 +82,7 @@
           <div class="manifesto-tldr">
             <div class="entry">
               <p>tl;dr</p>
-              <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#entry-20"></use></svg>
+              <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#entry-20"></use></svg>
             </div>
             <div class="current-position">
               <p class="tag">Current position</p>
@@ -98,7 +98,7 @@
           <div class="manifesto-hello">
             <div class="entry">
               <p>hello</p>
-              <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#entry-20"></use></svg>
+              <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#entry-20"></use></svg>
             </div>
             <div class="content">
               <p>Pikachu and Spiderman. A yellow flash on a dark background. Movement, people and energy. All my life, I’ve been drawing inspiration from cities and electrical networks. Today, I deeply believe that great work stems from a solid plan, a clean architecture and appropriate tools.</p>
@@ -111,7 +111,7 @@
         <div class="process">
           <div class="process-content">
             <p class="process-title">This vision is powered by a process improved over the years with talented people and projects</p>
-            <a href="/process" class="process-cta">Discover the process<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a>
+            <a href="/process" class="process-cta">Discover the process<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></a>
           </div>
         </div>
       </div>
@@ -120,7 +120,7 @@
     <section class="human">
       <div class="container">
         <h2 class="humanTitle">Interfaces, products and systems are a big part of my life, but what about the human behind all of this?</h2>
-        <a href="/about" class="humanLink">Read more about me as a human<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-20"></use></svg></a>
+        <a href="/about" class="humanLink">Read more about me as a human<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></a>
         <div class="humanLogo"></div>
         <div class="facts">
           <Fact v-for="fact in facts" :key="fact.id" :sub="fact.sub" :title="fact.title" :desc="fact.desc"></Fact>

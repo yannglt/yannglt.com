@@ -24,19 +24,19 @@
           <div class="discover--icon story"></div>
           <p class="discover--title">Story</p>
           <p class="discover--desc">From playing with small bricks of colors to become a Product Designer, some time have passed and I wanted to share anecdotes and funny stories you may find interesting.</p>
-          <a class="discover--link" href="">Read more about me<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-12"></use></svg></a>
+          <a class="discover--link" href="">Read more about me<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-12"></use></svg></a>
         </div>
         <div class="discover--bloc">
           <div class="discover--icon electricity"></div>
           <p class="discover--title">Electricity</p>
           <p class="discover--desc">Since my first portfolio on October 2016, I began building my universe around one thing that kept my attention since I was a child: cities and their energy, using the symbols of light in physics and flash.</p>
-          <a class="discover--link" href="">Explore my city<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-12"></use></svg></a>
+          <a class="discover--link" href="">Explore my city<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-12"></use></svg></a>
         </div>
         <div class="discover--bloc">
           <div class="discover--icon mood"></div>
           <p class="discover--title">Moodboard</p>
           <p class="discover--desc">Maybe the more visual way to dive into my universe, you may find superabundance of references of color palettes inspired by Piet Mondrian, typography compositions and physics symbols.</p>
-          <a class="discover--link" href="">Dive into my inspirations<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons/sprite.svg#arrow-forward-12"></use></svg></a>
+          <a class="discover--link" href="">Dive into my inspirations<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-12"></use></svg></a>
         </div>
       </div>
     </section>
