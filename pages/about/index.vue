@@ -41,25 +41,42 @@
       </div>
     </section>
 
-    <section class="exps">
+    <section class="classic">
       <div class="container">
-        <p class="exps--tag">Or maybe the more classic way</p>
-        <h2 class="exps--title">Experiences, design on-demand services and some quick facts</h2>
-        <p class="exps--desc">S/O to all the people I met these last years, from colleagues to partners, from clients to users, loved ones and friends.</p>
-        <div class="cv">
-          <div class="cv--intro">
-            <h3 class="cv--title">Experiences</h3>
-            <p class="cv--desc">TK S/O to all the people I met these last years, from colleagues to partners, from clients to users, loved ones and friends.</p>
+        <div class="promise">
+          <p class="promise--tag">Or maybe the more classic way</p>
+          <h2 class="promise--title">From problems to tried and tested products, by asking questions again & again, until reaching users’ delight and company’s vision.</h2>
+          <div class="promise--desc">
+            <p>[TK] S/O to all the people I met these last years, from colleagues to partners, from clients to users, loved ones and friends. Early in his teenage years Erik started exploring interactive design and in 2004, at age 14, he completed his first commercial project.</p>
+            <p>In 2008, without any relevant education, Erik was hired as a Designer to join the in-house agency of Svenska Spel.  Originally from Sweden, Erik has spent the majority of his career in New York City working for Spotify, R/GA and Stink Studios.</p>
           </div>
-          <div class="cv--experiences">
-            <div v-for="experience in experiences" :key="experience.id" class="experience">
-              <div class="dot"></div>
-              <p class="position">{{ experience.company }}, {{ experience.position }}</p>
-              <p class="duration">{{ experience.start }} - {{ experience.end }} ({{experience.duration}})</p>
-              <div class="desc" v-html="experience.desc"></div>
-            </div>
+          <div class="promise--ctas">
+            <a class="process">Discover my process</a>
+            <a class="contact">Contact me<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#mail-20"></use></svg></a>
           </div>
         </div>
+          <div class="experiences">
+            <div v-for="experience in experiences" :key="experience.id" class="experience">
+              <div class="experience--dot"></div>
+              <p class="experience--position">{{ experience.company }}, {{ experience.position }}</p>
+              <p class="experience--duration">{{ experience.start }} - {{ experience.end }} ({{experience.duration}})</p>
+              <div class="experience--desc" v-html="experience.desc"></div>
+            </div>
+            <div class="numbers">
+              <div class="clients">
+                <p class="clients--number">8</p>
+                <div class="clients--desc">
+                  <p>industries where my expertise was involved by clients and brought to users: cinema, bank, finance, 3D softwares, blockchain, food, institutions and initiatives.</p>
+                  <p>Clients include:</p>
+                </div>
+                <p class="clients--list">Dassault Systèmes, Warner Bros., Abu Dhabi, BPCE, BNP Paribas, Banque Populaire, TON Labs, Indépendants.co and more</p>
+              </div>
+              <div class="projects">
+                <p class="projects--number">25<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#add-20"></use></svg></p>
+                <div class="projects--desc">projects over the last 3 years</div>
+              </div>
+            </div>
+          </div>
       </div>
     </section>
   </div>

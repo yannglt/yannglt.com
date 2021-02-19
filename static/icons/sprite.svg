@@ -24,4 +24,11 @@
   <symbol id="add-circle-20" viewBox="0 0 20 20">
     <path d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19ZM11 5V9H15V11H11V15H9V11H5V9H9V5H11Z"/>
   </symbol>
+  <symbol id="add-20" viewBox="0 0 20 20">
+    <path d="M11 3V17H9V3H11Z"/>
+    <path d="M3 9V11H17V9H3Z"/>
+  </symbol>
+  <symbol id="mail-20" viewBox="0 0 20 20">
+    <path d="M2 4H18V16H2V4ZM5.70326 6L10 9.68292L14.2967 6H5.70326ZM16 7.17422L10 12.3171L4 7.17422V14H16V7.17422Z"/>
+  </symbol>
 </svg>

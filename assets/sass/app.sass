@@ -1620,54 +1620,71 @@ body
 
       transform: translateY(-1px)
 
-.exps
+.classic
   padding-bottom: 1200px
 
   .container
     @extend .gridSystem
 
-  &--tag
-    margin-bottom: 16px
-    grid-column: span 9
+  .promise
+    grid-column: span 7
 
-    @extend .tag
-    color: $thunderstorm-500
+    &--tag
+      margin-bottom: 16px
 
-  &--title
-    margin-bottom: 27px
-    grid-column: span 9
+      @extend .tag
+      color: $thunderstorm-500
 
-    @extend .heading-1
-    color: #ffffff
+    &--title
+      margin-bottom: 31px
 
-  &--desc
-    grid-column: span 6
+      @extend .heading-1
+      color: #ffffff
+      line-height: 68px
 
-    @extend .emphasis
-    color: $oblivion-100
+    &--desc
+      margin-bottom: 48px
+      padding-right: 104px
 
-.cv
-  margin-top: 97px
-  grid-column: span 12
-  @extend .gridSystem
+      @extend .emphasis
+      color: $oblivion-100
 
-  .cv--intro
-    grid-column: span 5
+      p
+        margin-bottom: 20px
 
-  &--title
-    margin-bottom: 23px
+    &--ctas
+      display: flex
+      flex-direction: row
 
-    @extend .heading-2
-    color: $oblivion-025
+      a
+        display: flex
+        align-items: center
+        padding: 12px 20px
 
-  &--desc
-    color: $oblivion-300
+        @extend .tag
+        color: #ffffff
+        font-size: 16px
 
-  &--experiences
+        border-radius: 4px
+
+        .icon
+          padding-left: 8px
+
+          color: $maelstrom-100
+
+      .process
+        margin-right: 20px
+
+        border: 1px solid $oblivion-300
+
+      .contact
+        padding-right: 16px
+
+        background-color: $maelstrom-500
+
+  .experiences
+    margin-top: 56px
     grid-column: 9 / span 4
-    margin-top: 10px
-
-    color: $oblivion-025
 
     .experience
       position: relative
@@ -1682,7 +1699,7 @@ body
 
         background-color: $oblivion-300
 
-      &:not(:last-of-type)::after
+      &:not(:nth-last-of-type(2))::after
         content: ''
         position: absolute
         top: 40px
@@ -1704,41 +1721,84 @@ body
         border-radius: 8px
         background-color: $oblivion-025
 
-    .dot
-      position: absolute
-      top: 0
-      left: 0
-
-      &::before
-        content: ''
+      &--dot
         position: absolute
-        z-index: 50
-        top: 22px
-        left: -41px
-        height: 18px
-        width: 18px
+        top: 0
+        left: 0
 
-        border: 2px solid $oblivion-300
-        border-radius: 18px
-        background-color: $oblivion-1100
+        &::before
+          content: ''
+          position: absolute
+          z-index: 50
+          top: 22px
+          left: -41px
+          height: 18px
+          width: 18px
 
-    .position
-      margin-bottom: 4px
+          border: 2px solid $oblivion-300
+          border-radius: 18px
+          background-color: $oblivion-1100
 
-      @extend .heading-3
-      line-height: 28px
-      color: $oblivion-025
+      &--position
+        margin-bottom: 4px
 
-    .duration
-      margin-bottom: 15px
+        @extend .heading-3
+        line-height: 28px
+        color: $oblivion-025
 
-      @extend .tag
-      color: $oblivion-100
+      &--duration
+        margin-bottom: 15px
 
-    .desc
-      padding-bottom: 57px
+        @extend .tag
+        color: $oblivion-100
 
-      color: $oblivion-300
+      &--desc
+        padding-bottom: 57px
+
+        color: $oblivion-300
+
+    .numbers
+      border: 1px solid $oblivion-500
+      border-radius: 8px
+
+      .clients, .projects
+
+        &--number
+          margin-bottom: 1px
+
+          @extend .display-2
+          color: #ffffff
+
+        &--desc
+          margin-bottom: 10px
+          color: $oblivion-300
+
+          p
+            margin-bottom: 16px
+
+      .clients
+        padding: 22px 32px 32px
+        border-bottom: 1px solid $oblivion-500
+
+      .clients--list
+        @extend .emphasis
+
+        color: $oblivion-025
+
+      .projects
+        padding: 20px 32px 34px
+        margin-bottom: 0
+
+      .projects--number
+        display: flex
+        flex-direction: row
+        align-items: flex-end
+
+        .icon
+          margin-left: 8px
+          color: $thunderstorm-500
+
+          transform: translateY(-48px)
 
 .wip-page
   display: flex
