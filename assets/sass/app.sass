@@ -1064,6 +1064,7 @@ body
       grid-column: span 6
 
     p
+      line-height: 28px
       margin-bottom: 32px
 
       &:last-of-type
@@ -1621,7 +1622,7 @@ body
       transform: translateY(-1px)
 
 .classic
-  padding-bottom: 1200px
+  padding-bottom: 116px
 
   .container
     @extend .gridSystem
@@ -1770,15 +1771,17 @@ body
           color: #ffffff
 
         &--desc
-          margin-bottom: 10px
           color: $oblivion-300
 
-          p
-            margin-bottom: 16px
+          p ~ p
+            margin-top: 16px
 
       .clients
         padding: 22px 32px 32px
         border-bottom: 1px solid $oblivion-500
+
+        &--desc
+          margin-bottom: 10px
 
       .clients--list
         @extend .emphasis
@@ -1799,6 +1802,72 @@ body
           color: $thunderstorm-500
 
           transform: translateY(-48px)
+
+.personal
+  padding-top: 116px
+  padding-bottom: 148px
+  background-color: #ffffff
+
+  +adapt($width-desktop-hd)
+    margin-left: calc(-32px)
+    margin-right: calc(-32px)
+
+    &:before
+      left: 0
+
+    &:after
+      right: 0
+
+  .container
+    @extend .gridSystem
+
+  &--photo
+    grid-column: span 5
+
+    img
+      max-width: 100%
+      border-radius: 8px
+
+  &--content
+    grid-column: 7 / span 6
+
+  .tag
+    margin-bottom: 8px
+
+    @extend .tag
+    color: $oblivion-500
+
+  .quote
+    margin-bottom: 37px
+
+    @extend .heading-2
+    color: $oblivion-1100
+    line-height: 44px
+
+  .body
+    @extend .emphasis
+
+    p
+      color: $oblivion-700
+
+    p:not(:first-of-type)
+      margin-top: 20px
+
+    a
+      margin-top: 8px
+      margin-bottom: 44px
+      display: flex
+      flex-direction: row
+      align-items: flex-end
+
+      color: $oblivion-900
+      font-family: gt-america-medium
+
+      .icon
+        padding-left: 4px
+        color: $maelstrom-500
+
+        transform: translateY(-4px)
 
 .wip-page
   display: flex

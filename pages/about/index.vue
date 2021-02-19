@@ -55,30 +55,58 @@
             <a class="contact">Contact me<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#mail-20"></use></svg></a>
           </div>
         </div>
-          <div class="experiences">
-            <div v-for="experience in experiences" :key="experience.id" class="experience">
-              <div class="experience--dot"></div>
-              <p class="experience--position">{{ experience.company }}, {{ experience.position }}</p>
-              <p class="experience--duration">{{ experience.start }} - {{ experience.end }} ({{experience.duration}})</p>
-              <div class="experience--desc" v-html="experience.desc"></div>
+        <div class="experiences">
+          <div v-for="experience in experiences" :key="experience.id" class="experience">
+            <div class="experience--dot"></div>
+            <p class="experience--position">{{ experience.company }}, {{ experience.position }}</p>
+            <p class="experience--duration">{{ experience.start }} - {{ experience.end }} ({{experience.duration}})</p>
+            <div class="experience--desc" v-html="experience.desc"></div>
+          </div>
+          <div class="numbers">
+            <div class="clients">
+              <p class="clients--number">8</p>
+              <div class="clients--desc">
+                <p>industries where my expertise was involved by clients and brought to users: cinema, bank, finance, 3D softwares, blockchain, food, institutions and initiatives.</p>
+                <p>Clients include:</p>
+              </div>
+              <p class="clients--list">Dassault Systèmes, Warner Bros., Abu Dhabi, BPCE, BNP Paribas, Banque Populaire, TON Labs, Indépendants.co and more</p>
             </div>
-            <div class="numbers">
-              <div class="clients">
-                <p class="clients--number">8</p>
-                <div class="clients--desc">
-                  <p>industries where my expertise was involved by clients and brought to users: cinema, bank, finance, 3D softwares, blockchain, food, institutions and initiatives.</p>
-                  <p>Clients include:</p>
-                </div>
-                <p class="clients--list">Dassault Systèmes, Warner Bros., Abu Dhabi, BPCE, BNP Paribas, Banque Populaire, TON Labs, Indépendants.co and more</p>
-              </div>
-              <div class="projects">
-                <p class="projects--number">25<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#add-20"></use></svg></p>
-                <div class="projects--desc">projects over the last 3 years</div>
-              </div>
+            <div class="projects">
+              <p class="projects--number">25<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#add-20"></use></svg></p>
+              <div class="projects--desc">projects over the last 3 years</div>
             </div>
           </div>
+        </div>
       </div>
     </section>
+
+    <section class="personal">
+      <div class="container">
+        <div class="personal--photo">
+          <picture>
+            <source type="image/webp" srcset="@/static/images/yannglt.webp">
+            <source type="image/jpeg" srcset="@/static/images/yannglt.jpg">
+            <img src="@/static/images/yannglt.jpg" alt="">
+          </picture>
+        </div>
+        <div class="personal--content">
+          <p class="tag">About me as a human</p>
+          <p class="quote">“I believe in the process but even more in the connections we  build and strenghten along the way between companies, teams and end-users, all as humans.”</p>
+          <div class="body">
+            <p>My name is Yann-Edern Gillet. I’m a French designer living in Paris, France. My main area of focus today is on systems, digital products and interfaces. Still interested about my work?</p>
+            <a href="">Know more about my process<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></a>
+            <p>But let’s forget work for two seconds. In my spare time I still spend a lot of time on screens but more as a front-end engineer.</p>
+            <p>I love learning new things, especially with SASS, Nuxt and GSAP. More recently I’m learning the craft of icon design (yup, the ones you saw earlier are born on my computer). I like the idea of crafting myself every pixel of my creations, both in design and code, like this portfolio.</p>
+            <a href="">Read the code behind this website<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></a>
+            <p>When my hands are not on my mechanical keyboard, I enjoy taking care of my plants, cook/ try some italian recipes with my girlfriend and building LEGO sets.</p>
+            <p>And when my hands are not building things, I dive into others designers’ and developers’ work, thanks to Standards Manual, Increment by Stripe and Offscreen Magazine.</p>
+            <p>With this COVID—19/20/21 crisis + global lockdown, I spent a lof of time improving my workspace and discovered my self quite a passion for that, as many others designers for sure haha. Interested in learning more about my setup ?</p>
+            <a href="">Discover what it looks like<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
 </template>
 
