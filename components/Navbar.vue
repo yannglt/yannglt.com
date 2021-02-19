@@ -17,6 +17,7 @@
             <li><a class="wip">Process</a></li>
             <li><a class="wip">Blog</a></li>
             <li><a class="" href="/about/">About</a></li>
+            <li><a class="wip">Contact</a></li>
           </ul>
         </div>
       </div>
