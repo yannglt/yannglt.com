@@ -1806,7 +1806,24 @@ body
 .personal
   padding-top: 116px
   padding-bottom: 148px
+  position: relative
+  max-width: 100vw
+
   background-color: #ffffff
+
+  &:before, &:after
+    content: ''
+    position: absolute
+    background-color: #ffffff
+    width: 32px
+    height: 100%
+    top: 0
+
+  &:before
+    left: -32px
+
+  &:after
+    right: -32px
 
   +adapt($width-desktop-hd)
     margin-left: calc(-32px)
@@ -1868,6 +1885,59 @@ body
         color: $maelstrom-500
 
         transform: translateY(-4px)
+
+.thanks
+  position: relative
+  max-width: 100vw
+
+  background-color: $oblivion-050
+
+  &:before, &:after
+    content: ''
+    position: absolute
+    background-color: $oblivion-050
+    width: 32px
+    height: 100%
+    top: 0
+
+  &:before
+    left: -32px
+
+  &:after
+    right: -32px
+
+  +adapt($width-desktop-hd)
+    margin-left: calc(-32px)
+    margin-right: calc(-32px)
+
+    &:before
+      left: 0
+
+    &:after
+      right: 0
+
+  .container
+    padding: 87px 0 90px
+    @extend .gridSystem
+
+  .thanks--website, .thanks--typefaces, .thanks--people
+    grid-column: span 4
+
+  .tag
+    margin-bottom: 7px
+    color: $oblivion-1100
+
+  .content
+
+    p:not(:last-of-type)
+      margin-bottom: 20px
+
+    a
+      color: $oblivion-1100
+      text-decoration: underline
+
+      &:hover
+        color: $maelstrom-500
 
 .wip-page
   display: flex
