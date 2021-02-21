@@ -1539,6 +1539,72 @@ body
       background-color: $maelstrom-500
       border: 1px solid $maelstrom-900
 
+.moodboard.full
+
+  .container
+    height: 1872px
+    position: relative
+
+  .image
+    position: absolute
+    top: 40px
+    left: 64px
+    height: 416px
+    width: 520px
+
+    background-image: url('../../static/images/moodboard-test.jpg')
+    background-size: cover
+    background-position: center center
+
+    &.is-resizing
+
+      &::before, .anchor
+        outline: 2px solid $thunderstorm-500
+
+    &.is-rotating
+
+      &::before, .anchor
+        outline: 2px solid $firework-500
+
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      height: calc(100% - 2px)
+      width: calc(100% - 2px)
+
+      outline: 2px solid $oblivion-100
+      transform: translate(-50%, -50%)
+
+    .anchor
+      position: absolute
+      height: 8px
+      width: 8px
+
+      background-color: $oblivion-1100
+      outline: 2px solid $oblivion-100
+
+      &.ne
+        top: -4px
+        right: -4px
+        cursor: ne-resize
+
+      &.nw
+        top: -4px
+        left: -4px
+        cursor: nw-resize
+
+      &.se
+        bottom: -4px
+        right: -4px
+        cursor: se-resize
+
+      &.sw
+        bottom: -4px
+        left: -4px
+        cursor: sw-resize
+
 .discover
   margin-bottom: 224px
 
