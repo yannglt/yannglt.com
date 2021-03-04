@@ -19,7 +19,7 @@
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/style-resources": "^1.0.0",
     "eslint": "^7.21.0",
-    "eslint-plugin-vue": "^7.5.0",
+    "eslint-plugin-vue": "^7.57.0",
     "gsap": "^3.6.0",
     "imports-loader": "^1.2.0",
     "node-sass": "^4.14.1",
