@@ -52,7 +52,7 @@
       <div class="container">
         <p class="introTag">Welcome to my space <span class="line-breaker"><br /></span>on the Internets</p>
         <h1 class="introTitle">I think, create and break interfaces, products and systems with a passion for design operations.</h1>
-        <p class="introDesc">Find here a selection of my latest works and collaborations with startups and some friends, you will be also able to read more about my story and ask for help on your idea/problem.</p>
+        <p class="introDesc">Find here an overview of my latest works and collaborations with startups and companies, you will be also able to read more about my story and ask for help on your idea/problem.</p>
         <ul class="introLinks">
           <li>
             <a href="https://twitter.com/yannglt" title="" target="_blank"  rel="noopener"><span class="introLinkPrefix">Thoughts on </span>Twitter<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#external-link-20"></use></svg></a>
@@ -87,12 +87,12 @@
             <div class="current-position">
               <p class="tag">Current position</p>
               <p class="title">Product Designer, Source</p>
-              <p class="description">Maison of designers providing value through design solutions, technical expertise and financial support</p>
+              <p class="description">Design company providing value through design solutions, technical expertise and financial support</p>
             </div>
             <div class="passion">
               <p class="tag">With a passion for</p>
               <p class="title">Design Operations </p>
-              <p class="description">Wrote a research paper on design language systems and their impacts on product teams and end users</p>
+              <p class="description">Wrote a research paper on design systems and their impacts on product teams and end users in 2018</p>
             </div>
           </div>
           <div class="manifesto-hello">
@@ -101,10 +101,13 @@
               <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#entry-20"></use></svg>
             </div>
             <div class="content">
-              <p>Pikachu and Spiderman. A yellow flash on a dark background. Movement, people and energy. All my life, I’ve been drawing inspiration from cities and electrical networks. Today, I deeply believe that great work stems from a solid plan, a clean architecture and appropriate tools.</p>
-              <p>I want to create for the creators. From the Internet stranger who downloaded my first Cydia theme to all the great designers I’ve yet to meet, my goal is to give others the means to reach theirs. I know beauty is a consequence of mastery. Design is a craft and studying the method behind the methods is what drives me. I’ve learnt that listening is the key to understanding ; and understanding is the first step to solve any problem. I try to work both hard and smart, not losing myself in the process. Loved ones, mentors, clients and users (obviously) anchor me in reality. I mock my kind, to keep things in perspective, and I look up to many. Always hungry, always foolish.</p>
-              <p>This personal space is a reflection of who I am and where I’m trying to head as a Product Designer. It comes from years of wondering and wandering. I’m happy I waited as much as I did though, it helped me grow and build the set of principles I now want to stand atop. </p>
-              <p>I hope you like what you find! I’m always happy to talk about design and exchange ideas on how things should be done. So shoot me an email: hello@yannglt.com</p>
+              <p>Pallet Town and New-York. Pikachu and Spider-Man. A yellow flash on a dark background. Movement, people and energy. All my life, I’ve been drawing inspiration from cities and electrical networks. Today, I deeply believe that great work stems from a solid plan, a clean architecture and appropriate tools.</p>
+              <p>I want to create for the makers. From the first Internet stranger who helped me building my Cydia theme to all the great designers I’ve yet to meet, my goal is to give others the means to reach theirs. I know aestheticism is a consequence of mastery. Design is a craft and studying the method behind the methods is what drives me. I’ve learnt that listening is the key to understanding ; and understanding is the first step to solve any problem. I try to work both hard and smart, not losing myself in the process. Loved ones, mentors, clients and obviously, users, anchor me in reality. I mock my kind, to keep things in perspective, and I look up to many. Always hungry, always foolish.</p>
+              <p>This personal space is a reflection of who I am and where I’m trying to head as a Product Designer. It comes from years of wondering and wandering. I’m happy I waited as much as I did though, it helped me grow and build the set of principles I now want to stand atop.</p>
+              <p>I hope you like what you find! I’m always happy to talk about design, its bridges with code and/or exchange ideas on why and how things should be done.</p>
+              <a href="">Shoot me a DM on Twitter</a>
+              <p>Prefer the old fashion way ? You can just copy my email address (no mailto):</p>
+              <a href="">Copy my email address hello@yannglt.com</a>
             </div>
           </div>
         </div>
@@ -119,7 +122,7 @@
 
     <section class="human">
       <div class="container">
-        <h2 class="humanTitle">Interfaces, products and systems are a big part of my life, but what about the human behind all of this?</h2>
+        <h2 class="humanTitle">Interfaces, products and systems are an important part of my life, but what about the human behind all of this?</h2>
         <a href="/about" class="humanLink">Read more about me as a human<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></a>
         <div class="humanLogo"></div>
         <div class="facts">

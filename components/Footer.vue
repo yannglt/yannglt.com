@@ -4,7 +4,7 @@
     <div class="container">
       <div class="club">
         <p class="clubTitle">Join the club, <span class="line-breaker"><br /></span>get (ir)regular updates</p>
-        <p class="clubDesc">Every two weeks or so I try to gather things that inspire me or tick my curiosity. <span class="line-breaker"><br /></span>Articles, essays and notes are also shared on the list one week before public.</p>
+        <p class="clubDesc">From now, I will try to work with the garage door up and we will see where it<span class="line-breaker"><br /></span> brings us. New posts and updates on this space + maybe some surprises...</p>
 
         <ValidationObserver v-slot="{ invalid }" ref="form">
 
@@ -45,8 +45,8 @@
         <div class="footer-explore">
           <p class="footer-exploreTitle">In this space</p>
           <ul class="footer-exploreLinks">
-            <li><a href="/works">Discover my work</a></li>
-            <li><a href="/process">Learn about my process</a></li>
+            <!-- <li><a href="/works">Discover my work</a></li>
+            <li><a href="/process">Learn about my process</a></li> -->
             <li><a href="/about">Know more about me</a></li>
             <li><a href="/contact">Get in touch</a></li>
           </ul>
@@ -56,7 +56,7 @@
           <ul class="footer-followLinks">
             <li><a href="https://twitter.com/yannglt">Thoughts on Twitter</a></li>
             <li><a href="https://dribbble.com/yannglt">WIPs on Dribbble</a></li>
-            <li><a href="/feed">RSS feed</a></li>
+            <!-- <li><a href="/feed">RSS feed</a></li> -->
           </ul>
         </div>
       </div>

@@ -24,19 +24,19 @@
           <div class="discover--icon story"></div>
           <p class="discover--title">Story</p>
           <p class="discover--desc">From playing with small bricks of colors to become a Product Designer, some time have passed and I wanted to share anecdotes and funny stories you may find interesting.</p>
-          <a class="discover--link" href="">Read more about me<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-12"></use></svg></a>
+          <a class="discover--link" href="">Read more about me (soon)<!--<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-12"></use></svg>--></a>
         </div>
         <div class="discover--bloc">
           <div class="discover--icon electricity"></div>
           <p class="discover--title">Electricity</p>
           <p class="discover--desc">Since my first portfolio on October 2016, I began building my universe around one thing that kept my attention since I was a child: cities and their energy, using the symbols of light in physics and flash.</p>
-          <a class="discover--link" href="">Explore my city<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-12"></use></svg></a>
+          <a class="discover--link" href="">Explore my city (soon)<!--<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-12"></use></svg>--></a>
         </div>
         <div class="discover--bloc">
           <div class="discover--icon mood"></div>
           <p class="discover--title">Moodboard</p>
           <p class="discover--desc">Maybe the more visual way to dive into my universe, you may find superabundance of references of color palettes inspired by Piet Mondrian, typography compositions and physics symbols.</p>
-          <a class="discover--link" href="/about/moodboard">Dive into my inspirations<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-12"></use></svg></a>
+          <a class="discover--link" href="/about/moodboard">Dive into my inspirations (soon)<!--<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-12"></use></svg>--></a>
         </div>
       </div>
     </section>
@@ -51,8 +51,8 @@
             <p>In 2008, without any relevant education, Erik was hired as a Designer to join the in-house agency of Svenska Spel.  Originally from Sweden, Erik has spent the majority of his career in New York City working for Spotify, R/GA and Stink Studios.</p>
           </div>
           <div class="promise--ctas">
-            <a class="process">Discover my process</a>
-            <a class="contact">Contact me<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#mail-20"></use></svg></a>
+            <a class="process">Discover my process (soon)</a>
+            <a class="contact" href="/contact">Contact me<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#mail-20"></use></svg></a>
           </div>
         </div>
         <div class="experiences">
@@ -152,28 +152,28 @@
             id: '0',
             company: 'Source',
             position: 'Product Designer',
-            desc: '<p>TK In fact, I continue to play while being in high-school, in university and then college, from City, Star Wars or Mars series to my current Architecture collection, these little bricks help me to stay away from the screen every once in a while.</p>',
-            start: 'Jan 2019',
+            desc: '<p>Source exists to allow its clients and partners to fight against preconceptions, thanks to a rational and user-centered approach, from problems to sleek and efficient solutions, tailored to suit user and business needs.</p><p>Worked closely with multiple industry-related startups and companies. From doing user research, workshops around brand vision and strategy, setting up experience maps and user journeys, to high-fidelity prototypes and built solutions.</p>',
+            start: 'Jul 2018',
             end: 'Now',
-            duration: '2.5 years',
+            duration: '3 years',
           },
           {
             id: '1',
-            company: 'Source',
-            position: 'Junior Designer',
-            desc: '<p>TK In fact, I continue to play while being in high-school, in university and then college, from City, Star Wars or Mars series to my current Architecture collection, these little bricks help me to stay away from the screen every once in a while.</p>',
-            start: 'Jul 2018',
-            end: 'Dec 2018',
-            duration: '0.5 year',
+            company: 'Freelance',
+            position: 'Product Designer',
+            desc: '<p>Providing value to early and mid-stage companies through product & brand design services and design system expertise.</p>',
+            start: 'Jan 2018',
+            end: 'Now',
+            duration: '3.5 years',
           },
           {
             id: '2',
             company: 'Synerg\' hetic',
             position: 'Design Consultant',
-            desc: '<p>TK In fact, I continue to play while being in high-school, in university and then college, from City, Star Wars or Mars series to my current Architecture collection, these little bricks help me to stay away from the screen every once in a while.</p>',
+            desc: '<p>Implemented design methodologies and design thinking to the global positioning of the Junior while working closely with startups around minimum viable products and ideation workshops.</p>',
             start: 'May 2018',
             end: 'Nov 2018',
-            duration: '0.5 year',
+            duration: '1.5 year',
           },
         ]
       }
