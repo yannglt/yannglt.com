@@ -1,5 +1,6 @@
 <template lang="html">
   <div id="about">
+    <Navbar></Navbar>
     <section class="moodboard">
       <div class="container">
         <div class="left">
@@ -131,10 +132,13 @@
         </div>
       </div>
     </section>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
+  import Navbar from '../../components/Navbar.vue'
+  import Footer from '../../components/Footer.vue'
 
   export default {
     head () {
@@ -177,6 +181,11 @@
           },
         ]
       }
+    },
+
+    components: {
+      Navbar,
+      Footer,
     }
   }
 </script>

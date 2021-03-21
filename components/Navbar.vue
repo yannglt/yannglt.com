@@ -13,10 +13,10 @@
         </div>
         <div class="links">
           <ul>
-            <li><a class="wip caption">Process</a></li>
-            <li><a class="caption">Blog</a></li>
-            <li><a class="caption" href="/about/">About</a></li>
-            <li><a class="caption">Contact</a></li>
+            <!-- <li><NuxtLink class="wip caption" to="">Process</NuxtLink></li> -->
+            <li><NuxtLink class="caption" to="/blog">Blog</NuxtLink></li>
+            <li><NuxtLink class="caption" to="/about">About</NuxtLink></li>
+            <li><NuxtLink class="caption" to="/contact">Contact</NuxtLink></li>
           </ul>
         </div>
       </div>

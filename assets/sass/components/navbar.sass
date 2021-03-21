@@ -66,6 +66,28 @@
 
       color: $oblivion-025
 
+      &:not(.nuxt-link-exact-active)
+        color: $oblivion-300
+        position: relative
+
+      &.nuxt-link-exact-active
+        position: relative
+
+        &::after
+          content: ''
+          position: absolute
+          left: 50%
+          bottom: -43px
+          height: 2px
+          width: calc(100% - 48px + 16px)
+
+          background-color: $oblivion-025
+
+          transform: translateX(-50%)
+
+      &:hover
+        color: $oblivion-025
+
       &.wip
         cursor: not-allowed
         color: $oblivion-500
