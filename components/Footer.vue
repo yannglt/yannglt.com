@@ -29,7 +29,7 @@
             </ValidationProvider>
 
             <button type="submit" :disabled="invalid">
-              <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#add-circle-20"></use></svg>Join the club
+              Join the club<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#add-circle-20"></use></svg>
             </button>
           </form>
 
