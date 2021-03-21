@@ -3,14 +3,14 @@
     <section class="tldr">
       <div class="container">
         <div class="welcome-repeat">
-          <p>Welcome</p>
-          <p>Welcome</p>
-          <p>Welcome</p>
-          <p>Welcome</p>
-          <p>Welcome</p>
-          <p>Welcome</p>
-          <p>Welcome</p>
-          <p>Welcome</p>
+          <p class="display-1">Welcome</p>
+          <p class="display-1">Welcome</p>
+          <p class="display-1">Welcome</p>
+          <p class="display-1">Welcome</p>
+          <p class="display-1">Welcome</p>
+          <p class="display-1">Welcome</p>
+          <p class="display-1">Welcome</p>
+          <p class="display-1">Welcome</p>
         </div>
         <div class="etiquette">
           <p class="etiquette-title">intro<span class="add-oo">oo</span></p>

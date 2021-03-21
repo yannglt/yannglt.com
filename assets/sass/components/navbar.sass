@@ -1,11 +1,9 @@
 .navbar
   margin: 0 auto
-  margin-bottom: -97px
   max-width: $width-desktop-hd
+  z-index: 500
 
   background-color: $oblivion-1100
-
-  z-index: 500
 
   @supports (backdrop-filter: blur(12px))
     &
@@ -14,28 +12,26 @@
 
 .navbar-content
   margin: 0 auto
-  padding: 24px 0
-  border-bottom: 1px solid rgba($oblivion-700, 1)
+  padding: $space-24 0
+  max-width: $bkp-desktop-hd
 
   display: flex
   flex-flow: row nowrap
   justify-content: space-between
-  align-items: center
+  align-items: top
 
-  max-width: $bkp-desktop-hd
+  box-shadow: 0 1px 0 0 $oblivion-700
 
   .index
     display: flex
+    align-items: flex-start
 
     &-link
       display: inline-flex
+      align-items: center
 
     &-me
-      margin-top: 5px
-      margin-left: 16px
-
-    &-currentpos
-      transform: translateY(-4px)
+      margin-left: $space-16
 
     &-logo
       height: 48px
@@ -47,20 +43,15 @@
       background-size: 24px 24px
       background-position: center
 
-    &-name, &-currentpos
-      @extend .tag
-
     &-name
       color: $oblivion-025
 
-    &-currentpos
+    &-subtitle
       color: $oblivion-300
-      letter-spacing: 0
-      text-transform: none
 
   .links
     display: none
-    transform: translateY(1px)
+    margin-top: $space-8
 
     +adapt($bkp-tablet)
       display: block
@@ -70,10 +61,9 @@
 
     a
       position: relative
-      padding-left: 20px
-      padding-right: 20px
+      padding-left: $space-24
+      padding-right: $space-24
 
-      @extend .tag
       color: $oblivion-025
 
       &.wip

@@ -1,6 +1,7 @@
 // ATOMS
 @import 'reset'
 @import 'grids'
+@import 'spacing'
 @import 'colors'
 @import 'typefaces'
 @import 'text-styles'
@@ -119,7 +120,6 @@ body
     text-align: center
 
 .welcome-repeat p
-  @extend .display-1
   position: absolute
   top: 0
   left: 0
@@ -134,19 +134,19 @@ body
     @for $i from 1 through 8
       &:nth-child(#{$i})
         z-index: 0 - $i * 10
-        transform: translateY(-24 + $i * 24px)
+        transform: translateY(-$space-24 + $i * $space-24)
 
   +adapt($bkp-tablet)
     @for $i from 1 through 8
       &:nth-child(#{$i})
         z-index: 0 - $i * 10
-        transform: translateY(-48 + $i * 48px)
+        transform: translateY(-$space-48 + $i * $space-48)
 
   +adapt($bkp-desktop-sd)
     @for $i from 1 through 8
       &:nth-child(#{$i})
         z-index: 0 - $i * 10
-        transform: translateY(-64 + $i * 64px)
+        transform: translateY(-$space-64 + $i * $space-64)
 
   &:nth-child(2)
     -webkit-text-stroke: 1px $oblivion-300

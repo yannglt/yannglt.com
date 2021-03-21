@@ -6,17 +6,17 @@
           <a href="/" class="index-link">
             <div class="index-logo"></div>
             <div class="index-me">
-              <p class="index-name">Yann-Edern Gillet</p>
-              <p class="index-currentpos">Product Designer, Source</p>
+              <p class="index-name caption">Yann-Edern Gillet</p>
+              <p class="index-subtitle secret">Personal space</p>
             </div>
           </a>
         </div>
         <div class="links">
           <ul>
-            <li><a class="wip">Process</a></li>
-            <li><a >Blog</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a >Contact</a></li>
+            <li><a class="wip caption">Process</a></li>
+            <li><a class="caption">Blog</a></li>
+            <li><a class="caption" href="/about/">About</a></li>
+            <li><a class="caption">Contact</a></li>
           </ul>
         </div>
       </div>
