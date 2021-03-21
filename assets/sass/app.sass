@@ -866,7 +866,6 @@ body
   +adapt($bkp-tablet)
     margin: 0 auto
 
-
   .container
     @extend .gridSystem
     position: relative
@@ -904,23 +903,23 @@ body
     padding: 0 32px
 
     +adapt($bkp-mobile)
-      margin-bottom: 96px
+      // margin-bottom: 96px
       padding-top: 32px
       grid-column: span 2
 
     +adapt($bkp-tablet)
-      margin-bottom: 84px
+      // margin-bottom: 84px
       padding: 0
       padding-top: 92px
       grid-column: 2 / span 6
 
     +adapt($bkp-desktop-sd)
-      margin-bottom: 153px
+      // margin-bottom: 153px
       padding-top: 100px
       grid-column: 2 / span 8
 
     +adapt($bkp-desktop-hd)
-      margin-bottom: 137px
+      // margin-bottom: 137px
       padding-top: 168px
       grid-column: 3 / span 8
 
@@ -1081,96 +1080,98 @@ body
       margin-bottom: 28px
 
 .process
-  background-image: url("../../static/images/process.svg")
+  // background-image: url("../../static/images/process.svg")
+  background-image: url("../../static/images/process-wip.svg")
   background-repeat: no-repeat
 
   +adapt($bkp-mobile)
     grid-column: span 2
     padding: 0 32px
-    background-position: -96px 0
+    background-position: center 0
 
   +adapt($bkp-tablet)
     +gCols(8, 1fr, 32px)
     grid-column: span 8
     padding: 0
-    background-position: -14px 23px
+    background-position: center 23px
 
   +adapt($bkp-desktop-sd)
     +gCols(10, 1fr, 40px)
     grid-column: span 10
-    background-position: -6px -15px
+    background-position: center -15px
 
   +adapt($bkp-desktop-hd)
     +gCols(12, 1fr, 40px)
     grid-column: span 12
-    background-position: left -3px
+    background-position: center -80px
 
   &-content
-    padding-bottom: 242px
+    // padding-bottom: 242px
+    padding-bottom: 372px
 
-    +adapt($bkp-tablet)
-      max-width: 520px
-      padding-bottom: 298px
-      grid-column: 2 / span 6
-
-    +adapt($bkp-desktop-sd)
-      max-width: 560px
-      padding-bottom: 270px
-      grid-column: 2 / span 6
-
-    +adapt($bkp-desktop-hd)
-      max-width: 584px
-      padding-bottom: 284px
-      grid-column: 2 / span 6
-
-  &-title
-    @extend .heading-2
-    margin-bottom: 25px
-    text-align: center
-
-    +adapt($bkp-tablet)
-      text-align: left
-
-  &-cta
-    display: inline-flex
-    position: relative
-    width: 100%
-    flex-direction: row
-    align-items: center
-    justify-content: center
-
-    @extend .caption
-    color: $maelstrom-500
-    font-size: 16px
-    text-transform: uppercase
-
-    &:before
-      content: ''
-      position: absolute
-      top: -4px
-      left: -8px
-      right: -8px
-      width: calc(100% + 16px)
-      height: calc(100% + 8px)
-      z-index: -50
-
-      border-radius: 4px
-      +motion($time-standard, $weight-small, $speed-standard, background-color)
-
-    &:hover
-
-      &:before
-        background-color: $maelstrom-100
-
-    +adapt($bkp-tablet)
-      width: auto
-      justify-content: flex-start
-
-    .icon
-      color: $maelstrom-700
-      padding-left: 4px
-
-      +motion($time-quick, $weight-small, $speed-standard, transform)
+  //   +adapt($bkp-tablet)
+  //     max-width: 520px
+  //     padding-bottom: 298px
+  //     grid-column: 2 / span 6
+  //
+  //   +adapt($bkp-desktop-sd)
+  //     max-width: 560px
+  //     padding-bottom: 270px
+  //     grid-column: 2 / span 6
+  //
+  //   +adapt($bkp-desktop-hd)
+  //     max-width: 584px
+  //     padding-bottom: 284px
+  //     grid-column: 2 / span 6
+  //
+  // &-title
+  //   @extend .heading-2
+  //   margin-bottom: 25px
+  //   text-align: center
+  //
+  //   +adapt($bkp-tablet)
+  //     text-align: left
+  //
+  // &-cta
+  //   display: inline-flex
+  //   position: relative
+  //   width: 100%
+  //   flex-direction: row
+  //   align-items: center
+  //   justify-content: center
+  //
+  //   @extend .caption
+  //   color: $maelstrom-500
+  //   font-size: 16px
+  //   text-transform: uppercase
+  //
+  //   &:before
+  //     content: ''
+  //     position: absolute
+  //     top: -4px
+  //     left: -8px
+  //     right: -8px
+  //     width: calc(100% + 16px)
+  //     height: calc(100% + 8px)
+  //     z-index: -50
+  //
+  //     border-radius: 4px
+  //     +motion($time-standard, $weight-small, $speed-standard, background-color)
+  //
+  //   &:hover
+  //
+  //     &:before
+  //       background-color: $maelstrom-100
+  //
+  //   +adapt($bkp-tablet)
+  //     width: auto
+  //     justify-content: flex-start
+  //
+  //   .icon
+  //     color: $maelstrom-700
+  //     padding-left: 4px
+  //
+  //     +motion($time-quick, $weight-small, $speed-standard, transform)
 
 .human
   margin-top: 83px

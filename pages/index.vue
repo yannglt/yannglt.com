@@ -120,8 +120,8 @@
         </div>
         <div class="process">
           <div class="process-content">
-            <p class="process-title">This vision is powered by a process improved over the years with talented people and projects</p>
-            <a href="/process" class="process-cta">Discover the process<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></a>
+            <!-- <p class="process-title">This vision is powered by a process improved over the years with talented people and projects</p>
+            <a href="/process" class="process-cta">Discover the process<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></a> -->
           </div>
         </div>
       </div>
