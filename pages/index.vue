@@ -6,6 +6,15 @@
     <div class="under-construction">
       <a href="#" title="">New space on the Internets under construction.<span class="line-breaker"><br></span></a>
     </div>
+    <transition name="slide">
+      <div v-if="emailToast == 'show'" class="copyToast">
+        <div class="icon--container"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#check-20"></use></svg></div>
+        <div class="toast--content">
+          <p class="toast--title">Yeah! Email copied in your clipboard</p>
+          <p class="toast--desc">Paste it in your favorite email client, see you soon!</p>
+        </div>
+      </div>
+    </transition>
     <Navbar></Navbar>
     <section class="tldr">
       <div class="container">
@@ -112,9 +121,9 @@
               <p>I want to create for the makers. From the first Internet stranger who helped me building my Cydia theme to all the great designers I’ve yet to meet, my goal is to give others the means to reach theirs. I know aestheticism is a consequence of mastery. Design is a craft and studying the method behind the methods is what drives me. I’ve learnt that listening is the key to understanding ; and understanding is the first step to solve any problem. I try to work both hard and smart, not losing myself in the process. Loved ones, mentors, clients and obviously, users, anchor me in reality. I mock my kind, to keep things in perspective, and I look up to many. Always hungry, always foolish.</p>
               <p>This personal space is a reflection of who I am and where I’m trying to head as a Product Designer. It comes from years of wondering and wandering. I’m happy I waited as much as I did though, it helped me grow and build the set of principles I now want to stand atop.</p>
               <p>I hope you like what you find! I’m always happy to talk about design, its bridges with code and/or exchange ideas on why and how things should be done.</p>
-              <a href="">Shoot me a DM on Twitter<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></a>
+              <a href="https://twitter.com/yannglt" target="_blank">Shoot me a DM on Twitter<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></a>
               <p>Prefer the old fashion way ? You can just copy my email address (no mailto):</p>
-              <a href="">Copy my email address hello@yannglt.com<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></a>
+              <button @click="copyEmail">Copy my email address hello@yannglt.com<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#copy-20"></use></svg></button>
             </div>
           </div>
         </div>
@@ -146,9 +155,9 @@
   import gsap from 'gsap'
 
   import Navbar from '../components/Navbar.vue'
-  import Footer from '../components/Footer.vue'
   import Carousel from '../components/Carousel.vue'
   import Fact from '../components/Fact.vue'
+  import Footer from '../components/Footer.vue'
 
   export default {
     head () {
@@ -180,7 +189,18 @@
             title: 'Dad of 9 healthy plants',
             desc: '<p>As a lot ot of humans around the globe during the 2020 pandemic + lockdown, I decided to improve my workspace and bring more life to my apartment.</p><p>With my loved one, Sabrina (<a href="https://sabrinanedjah.fr" target="_blank"  rel="noopener">go check her portfolio</a>), we chose plants from different places of the world and after running trials, we found out how to mix LEGOs and our green newcommers.</p>'
           }
-        ]
+        ],
+        email: 'hello@yannglt.com',
+        emailToast: null
+      }
+    },
+
+    methods: {
+      copyEmail: function () {
+        this.$copyText(this.email)
+        this.emailToast = 'show'
+
+        setTimeout(() => this.emailToast = null, 2000)
       }
     },
 
@@ -188,7 +208,7 @@
       Navbar,
       Carousel,
       Fact,
-      Footer,
+      Footer
     }
   }
 

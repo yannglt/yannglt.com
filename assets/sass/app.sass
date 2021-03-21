@@ -1068,7 +1068,7 @@ body
     p ~ p
       margin-top: 32px
 
-    a
+    a, button
       @extend .bold
       text-decoration: underline
 
@@ -1076,8 +1076,63 @@ body
         color: $maelstrom-500
         padding-left: 4px
 
+    button
+      -webkit-appearance: none
+      font-size: 16px
+      line-height: 28px
+      background: none
+      box-shadow: 0
+      border: 0
+      padding: 0
+
     a:not(:last-of-type)
       margin-bottom: 28px
+
+.copyToast
+  position: fixed
+  width: 480px
+  top: $space-48
+  right: $space-48
+  padding: 12px 24px
+  display: flex
+  flex-direction: row
+  align-items: center
+
+  background-color: $maelstrom-500
+  border-radius: 8px
+
+  z-index: 999
+
+  .icon--container
+    height: 32px
+    width: 32px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-right: 16px
+
+    background-color: $maelstrom-100
+    border-radius: 16px
+
+    .icon
+      color: $maelstrom-500
+
+  .toast
+
+    &--title
+      @extend .bold
+      color: #ffffff
+      line-height: 28px
+
+    &--desc
+      color: $maelstrom-100
+      line-height: 28px
+
+.slide-enter, .slide-leave-to
+  transform: translateX(calc(100% + 48px))
+
+.slide-enter-active, .slide-leave-active
+  +motion($time-medium, $weight-small, $speed-accelerated, transform)
 
 .process
   // background-image: url("../../static/images/process.svg")

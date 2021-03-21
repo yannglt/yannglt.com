@@ -79,11 +79,13 @@
         email: ''
       }
     }),
+
     components: {
       ClubModal,
       ValidationObserver,
       ValidationProvider
     },
+    
     methods: {
       encode(data) {
         return Object.keys(data)

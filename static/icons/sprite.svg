@@ -34,4 +34,11 @@
   <symbol id="mail-20" viewBox="0 0 20 20">
     <path d="M2 4H18V16H2V4ZM5.70326 6L10 9.68292L14.2967 6H5.70326ZM16 7.17422L10 12.3171L4 7.17422V14H16V7.17422Z"/>
   </symbol>
+  <symbol id="copy-20" viewBox="0 0 20 20">
+    <path d="M12 3H4V13H6V5H12V3Z"/>
+    <path d="M16 17V7H8V17H16ZM10 15V9H14V15H10Z"/>
+  </symbol>
+  <symbol id="check-20" viewBox="0 0 20 20">
+    <path d="M16.4112 5.90588L8.04886 15.4629L3.58594 10.9999L5.00015 9.58573L7.95144 12.537L14.9061 4.58887L16.4112 5.90588Z"/>
+  </symbol>
 </svg>

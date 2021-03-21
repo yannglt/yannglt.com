@@ -38,7 +38,8 @@ export default {
   */
   plugins: [
     { src: '~plugins/ga.js', mode: 'client' },
-    { src: '~/plugins/vee-validate.js' }
+    { src: '~/plugins/vee-validate.js' },
+    { src: '~/plugins/clipboard.js' }
   ],
 
   /*
@@ -63,7 +64,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    transpile: ["vee-validate/dist/rules", "vue-notion"],
+    transpile: ['vee-validate/dist/rules', 'vue-notion', 'vue-clipboard2'],
     extend(config, ctx) {}
   },
 }
