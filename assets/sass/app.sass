@@ -1065,10 +1065,20 @@ body
 
     p
       line-height: 28px
-      margin-bottom: 32px
 
-      &:last-of-type
-        margin-bottom: 0
+    p ~ p
+      margin-top: 32px
+
+    a
+      @extend .bold
+      text-decoration: underline
+
+      .icon
+        color: $maelstrom-500
+        padding-left: 4px
+
+    a:not(:last-of-type)
+      margin-bottom: 28px
 
 .process
   background-image: url("../../static/images/process.svg")
