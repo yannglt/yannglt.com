@@ -12,12 +12,14 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.1",
+    "nuxt": "^2.14.12",
     "nuxt": "^2.15.2",
     "vue-server-renderer": "^2.6.11"
   },
   "devDependencies": {
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/style-resources": "^1.0.0",
+    "eslint": "^7.19.0",
     "eslint": "^7.21.0",
     "eslint-plugin-vue": "^7.57.0",
     "gsap": "^3.6.0",
