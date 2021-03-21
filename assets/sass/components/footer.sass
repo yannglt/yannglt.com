@@ -1,12 +1,12 @@
 .footer
   position: relative
   max-width: 100vw
-  background-color: $oblivion-025
+  background-color: $oblivion-1100
 
   &:before, &:after
     content: ''
     position: absolute
-    background-color: $oblivion-025
+    background-color: $oblivion-1100
     width: 32px
     height: 100%
     top: 0
@@ -54,6 +54,7 @@
     &Title
       @extend .heading-2
       margin-bottom: 13px
+      color: $oblivion-025
 
       .line-breaker
 
@@ -64,7 +65,7 @@
           display: none
 
     &Desc
-      color: $oblivion-700
+      color: $oblivion-300
       line-height: 24px
       margin-bottom: 37px
 
@@ -102,13 +103,13 @@
       position: relative
 
       &.is-valid input
-        border: 1px solid $maelstrom-500
+        border: 2px solid $maelstrom-500
 
       &.is-invalid
         margin-bottom: calc(24px + 20px)
 
         input
-          border: 1px solid $firework-500
+          border: 2px solid $firework-500
 
         +adapt($bkp-desktop-sd)
           margin-bottom: 0
@@ -128,6 +129,7 @@
       max-width: 100%
       text-align: left
       margin-bottom: 5px
+      color: $oblivion-025
 
     input
       -webkit-appearance: none
@@ -138,14 +140,16 @@
       height: 48px
       width: 100%
 
-      border: 1px solid $oblivion-100
+      color: $oblivion-025
+
+      border: 2px solid $oblivion-500
       border-radius: 4px
       background-color: transparent
 
       &::-webkit-input-placeholder,
       &::-moz-placeholder,
       &::placeholder
-        color: $oblivion-400
+        color: $oblivion-300
 
       &:focus
         border: 1px solid $oblivion-300
@@ -205,7 +209,7 @@
 
     .inputError
       position: absolute
-      color: $firework-500
+      color: $firework-300
       font-size: 14px
       line-height: 20px
       text-align: left
@@ -216,7 +220,7 @@
     display: flex
     flex-direction: column
     padding: 34px 0 112px
-    border-top: 1px solid $oblivion-050
+    border-top: 2px solid $oblivion-700
 
     +adapt($bkp-mobile)
       padding: 34px 0 108px
@@ -240,6 +244,9 @@
     .footer-copyright
       order: 3
 
+      &Desc
+        color: $oblivion-300
+
       +adapt($bkp-tablet)
         order: 1
         grid-column: span 3
@@ -253,7 +260,7 @@
         width: 48px
         border: 1px solid $oblivion-100
         border-radius: 24px
-        background-image: url("../../static/icons/logo-black-24.svg")
+        background-image: url("../../static/icons/logo-white-24.svg")
         background-repeat: no-repeat
         background-size: 24px 24px
         background-position: center
@@ -287,9 +294,9 @@
 
       &Title
         @extend .caption
-        color: $oblivion-900
+        color: $oblivion-025
         margin-bottom: 7px
 
       li
         margin-bottom: 4px
-        color: $oblivion-500
+        color: $oblivion-300
