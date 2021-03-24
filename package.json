@@ -17,17 +17,18 @@
   },
   "devDependencies": {
     "@nuxtjs/google-analytics": "^2.4.0",
+    "@nuxtjs/markdownit": "^2.0.0",
     "@nuxtjs/style-resources": "^1.0.0",
+    "contentful": "^8.2.0",
+    "dotenv": "^8.2.0",
     "eslint": "^7.21.0",
     "eslint-plugin-vue": "^7.7.0",
     "gsap": "^3.6.0",
     "imports-loader": "^1.2.0",
     "node-sass": "^4.14.1",
     "nodemon": "^2.0.7",
-    "prismjs": "^1.23.0",
     "sass-loader": "^10.0.3",
     "vee-validate": "^3.4.5",
-    "vue-clipboard2": "^0.3.1",
-    "vue-notion": "^0.3.0"
+    "vue-clipboard2": "^0.3.1"
   }
 }

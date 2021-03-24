@@ -1,4 +1,13 @@
 import pkg from './package'
+import dotenv from "dotenv";
+
+dotenv.config()
+
+const contentful = require("contentful");
+const client = contentful.createClient({
+  space: process.env.CONTENTFUL_SPACE,
+  accessToken: process.env.CONTENTFUL_ACCESSTOKEN
+})
 
 export default {
   target: 'static',
@@ -39,15 +48,36 @@ export default {
   plugins: [
     { src: '~plugins/ga.js', mode: 'client' },
     { src: '~/plugins/vee-validate.js' },
+    { src: '~/plugins/contentful.js' },
+    { src: '~/plugins/posts.js' },
     { src: '~/plugins/clipboard.js' }
   ],
+
+  env: {
+   CONTENTFUL_SPACE: process.env.CONTENTFUL_SPACE,
+   CONTENTFUL_ACCESSTOKEN: process.env.CONTENTFUL_ACCESSTOKEN,
+ },
 
   /*
   ** Nuxt.js modules
   */
-  modules: [
-    '@nuxtjs/axios'
-  ],
+  modules: [ '@nuxtjs/axios', '@nuxtjs/markdownit' ],
+
+  markdownit: {
+    injected: true
+  },
+
+  generate: {
+    routes() {
+      return Promise.all([
+        client.getEntries({
+          content_type: "blogPost"
+        })
+      ]).then(([blogEntries]) => {
+        return [...blogEntries.items.map(entry => entry.fields.slug)];
+      });
+    }
+  },
 
   /*
   ** Run this to be able to inspect on mobile
@@ -64,7 +94,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    transpile: ['vee-validate/dist/rules', 'vue-notion', 'vue-clipboard2'],
+    transpile: ['vee-validate/dist/rules', 'vue-clipboard2'],
     extend(config, ctx) {}
   },
 }
