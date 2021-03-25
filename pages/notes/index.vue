@@ -9,7 +9,11 @@
         </div>
         <div class="notes-list">
           <article v-for="note in notes" :key="note.fields.slug" class="note">
-            <h2 class="note-title heading-2 text-secondary-dark"><nuxt-link :to="'/notes/' + note.fields.slug">{{ note.fields.title }}<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></nuxt-link></h2>
+            <h2 class="note-title heading-2 text-secondary-dark">
+              <nuxt-link :to="'/notes/' + note.fields.slug">{{ note.fields.title }}
+                <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg>
+              </nuxt-link>
+            </h2>
             <p class="note-date caption text-tertiary-dark">{{ getHumanDate(note.fields.publishDate) }}</p>
           </article>
         </div>

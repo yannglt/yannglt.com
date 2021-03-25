@@ -1,0 +1,76 @@
+#note .note
+  margin-top: $space-128
+  margin-bottom: $space-128
+
+  .container
+    @extend .gridSystem
+
+  .notes-back, .note-content, .note-end
+    +adapt($bkp-desktop-hd)
+      grid-column: 4 / span 6
+
+  .notes-back
+    display: inline-flex
+    align-items: center
+    margin-bottom: $space-48
+
+    .icon
+      padding-right: 8px
+
+  .note-title
+    margin-bottom: $space-16
+
+  .note-date
+    margin-bottom: $space-32
+
+  .note-body
+    margin-bottom: $space-128
+
+    p:not(small)
+      @extend .emphasis
+      @extend .text-tertiary-dark
+      mb$space-24
+
+    p:not(:last-of-type)
+      margin-bottom: $space-32
+
+    h2
+      @extend .heading-2
+      @extend .text-secondary-dark
+      margin-top: $space-48
+      margin-bottom: $space-16
+
+    h3
+      @extend .heading-3
+      @extend .text-secondary-dark
+      margin-top: $space-48
+      margin-bottom: $space-12
+
+    img
+      max-width: 100%
+      margin-bottom: $space-48
+
+  .note-end
+    display: flex
+    flex-direction: column
+
+    text-align: center
+
+    &-img
+      margin-bottom: 16px
+      height: 80px
+      width: 128px
+      align-self: center
+
+      background-size: 128px 80px
+      background-repeat: no-repeat
+      background-position: center center
+      background-image: url("../../static/images/note-end.svg")
+
+    &-title
+      margin-bottom: 16px
+
+    &-desc a
+      @extend .bold
+      @extend .text-secondary-dark
+      text-decoration: underline
