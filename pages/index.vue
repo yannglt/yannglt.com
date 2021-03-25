@@ -87,7 +87,7 @@
 
     <section class="projects">
       <div class="container">
-        <Carousel />
+        <ProjectsCarousel />
       </div>
     </section>
 
@@ -157,7 +157,7 @@
   import gsap from 'gsap'
 
   import Navbar from '../components/Navbar.vue'
-  import Carousel from '../components/Carousel.vue'
+  import ProjectsCarousel from '../components/ProjectsCarousel.vue'
   import Fact from '../components/Fact.vue'
   import Footer from '../components/Footer.vue'
 
@@ -208,7 +208,7 @@
 
     components: {
       Navbar,
-      Carousel,
+      ProjectsCarousel,
       Fact,
       Footer
     }

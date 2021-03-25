@@ -12,6 +12,7 @@
 
 @import 'components/text-styles'
 @import 'components/grid'
+@import 'components/button'
 @import 'components/navbar'
 @import 'components/clubmodal'
 @import 'components/footer'
@@ -510,7 +511,7 @@
       grid-column: 9 / span 4
 
 .projects
-  margin-bottom: 112px
+  margin-bottom: $space-200
 
   +adapt($bkp-tablet)
     margin-bottom: 80px
@@ -522,13 +523,11 @@
     margin-bottom: 200px
 
   .container
-    margin: 0 auto
-    max-width: $bkp-desktop-hd
     @extend .gridSystem
 
   .slides
     width: 100%
-    max-width: 1208px
+    max-width: $bkp-desktop-hd
 
     +adapt($bkp-mobile)
       grid-column: span 2
@@ -567,7 +566,7 @@
     left: 0%
     width: 100%
     height: 100%
-    padding: 27px 32px 32px 32px
+    padding: $space-48
 
     display: flex
     flex-direction: column
@@ -579,9 +578,6 @@
     +motion($time-extended, $weight-large, $speed-emphasized, transform, opacity)
 
     user-select: none
-
-    +adapt($bkp-tablet)
-      padding: 43px 48px 48px 48px
 
     &:not(.activeSlide)
       opacity: 0.4
@@ -607,10 +603,6 @@
       justify-content: space-between
       align-items: flex-start
 
-    .project-client, .attribute
-      @extend .caption
-      color: $oblivion-900
-
     .project-infos
       width: 100%
       display: flex
@@ -623,9 +615,6 @@
     .title
       margin-bottom: 34px
       max-width: 584px
-
-      @extend .heading-2
-      color: $oblivion-900
 
     .properties
       display: flex
@@ -652,9 +641,6 @@
 
       +adapt($bkp-tablet)
         display: block
-
-    .value
-      color: $oblivion-700
 
     .project-links
       display: inline-flex

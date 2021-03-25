@@ -1,0 +1,36 @@
+.button
+  display: inline-flex
+  align-items: center
+  justify-content: center
+
+  border-radius: 4px
+
+  &.primary
+    padding: 10px 16px 10px 20px
+    border-radius: 4px
+    background-color: $action-primary-default
+
+    +motion($time-standard, $weight-small, $speed-standard, background)
+
+    .label
+      color: #ffffff
+
+    .icon
+      padding-left: 4px
+      color: $maelstrom-100
+
+    &:hover
+      cursor: pointer
+      background-color: $action-primary-hover
+
+    &:active
+      background-color: $action-primary-active
+
+    &:focus
+      background-color: $action-primary-focus
+
+  &.locked
+    background-color: $action-locked-default
+
+    &:hover
+      cursor: not-allowed

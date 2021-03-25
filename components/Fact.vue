@@ -13,6 +13,7 @@
       title: { type: String, default: '', required: true },
       desc: { type: String, default: '', required: true }
     },
+    
     data: function () {
       return { }
     }

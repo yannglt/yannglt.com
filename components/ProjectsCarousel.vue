@@ -2,28 +2,29 @@
   <div class="slides">
     <div class="slides-view">
       <div v-for="slide in slides" :key="slide.id" class="slide" :class="{ prevSlide : slide.id == index - 1, activeSlide : slide.id == index, nextSlide : slide.id == index + 1 }"  :style="'left: calc(' + ((slide.id + 1) * 40 - 40) + 'px + ' + ((slide.id + 1) * 100 - 100) + '%); transform: translateX(calc(' + (-index * 40) + 'px + ' + (-index * 100) + '%));'">
-        <div class="project-client">{{ slide.client }}</div>
+        <p class="project-client caption text-secondary-light">{{ slide.client }}</p>
         <div class="project-subwrap">
-          <div class="title">{{ slide.title }}</div>
+          <div class="title heading-2 text-primary-light">{{ slide.title }}</div>
           <div class="project-infos">
             <div class="properties">
               <div class="property position">
-                <p class="attribute">Position</p>
-                <p class="value">{{ slide.position }}</p>
+                <p class="attribute caption text-tertiary-light">Position</p>
+                <p class="value text-secondary-light">{{ slide.position }}</p>
               </div>
               <div class="property expertise">
-                <p class="attribute">Expertise</p>
-                <p class="value">{{ slide.expertise }}</p>
+                <p class="attribute caption text-tertiary-light">Expertise</p>
+                <p class="value text-secondary-light">{{ slide.expertise }}</p>
               </div>
               <div class="property duration">
-                <p class="attribute">Duration</p>
-                <p class="value">{{ slide.duration }} months</p>
+                <p class="attribute caption text-tertiary-light">Duration</p>
+                <p class="value text-secondary-light">{{ slide.duration }} months</p>
               </div>
             </div>
             <div class="project-links">
-              <a v-if="!slide.nda" class="button-primary-icon caseStudy">Read case study<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></a>
-              <a v-if="slide.nda" class="button-primary-icon nda">Under NDA<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#forbidden-20"></use></svg></a>
-              <a v-if="slide.link" class="button-secondary-icon"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#external-link-20"></use></svg></a>
+              <Button :icon="arrow-forward">Get Started</Button>
+              <!-- <a v-if="!slide.nda" class="button-primary caseStudy">Read case study<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></a>
+              <a v-if="slide.nda" class="button-primary locked">Under NDA<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#forbidden-20"></use></svg></a>
+              <a v-if="slide.link" class="button-secondary-icon-only"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#external-link-20"></use></svg></a> -->
             </div>
           </div>
         </div>
@@ -34,7 +35,7 @@
         <div class="progress-current" :style="'width: calc(' + (index + 1) / slidesCount * 100 + '%)'"></div>
       </div>
       <div class="current-navs">
-        <div class="current">00<span v-for="slide in slides" :class="{ activeNumber : slide.id == index }" class="slideNumber" :key="slide.id" :style="'bottom: calc(' + ((-slide.id + 1) * 50 - 50) + '%); transform: translateY(calc(' + (-index * 50) + '%))'">{{ slide.id + 1 }}</span>
+        <div class="current caption">00<span v-for="slide in slides" :class="{ activeNumber : slide.id == index }" class="slideNumber" :key="slide.id" :style="'bottom: calc(' + ((-slide.id + 1) * 50 - 50) + '%); transform: translateY(calc(' + (-index * 50) + '%))'">{{ slide.id + 1 }}</span>
           <span class="total"> &nbsp;/ 00{{ slidesCount}}</span></div>
         <div class="navs">
           <button class="next" :disabled="index == slidesCount - 1" @click="next"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></button>
@@ -46,6 +47,8 @@
 </template>
 
 <script>
+  import Button from './Button.vue'
+
   export default {
     data () {
       return {
@@ -184,6 +187,10 @@
       slidesCount () {
         return this.slides.length
       }
+    },
+
+    components: {
+      Button,
     }
   }
 </script>
