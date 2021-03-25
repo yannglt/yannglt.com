@@ -1,14 +1,30 @@
 <template lang="html">
-  <div class="notes">
-    <h1 class="title">Notes</h1>
-      <article v-for="post in posts" :key="post.fields.slug">
-        <h2 class="title"><nuxt-link :to="'/notes/' + post.fields.slug">{{ post.fields.title }}</nuxt-link></h2>
-        <p class="date">{{ post.fields.publishDate }}</p>
-      </article>
+  <div id="notes">
+    <Navbar></Navbar>
+    <section class="notes">
+      <div class="container">
+        <div class="notes-intro">
+          <h1 class="notes-intro-title heading-1 text-primary-dark">Notes</h1>
+          <p class="notes-intro-desc text-quaternary-dark">Find here all my writing notes, essays, blog posts, call it how you want haha. Topics cover design operations and bridges between design and code. I may use this space also like a journal, we will see.</p>
+        </div>
+        <div class="notes-list">
+          <article v-for="note in notes" :key="note.fields.slug" class="note">
+            <h2 class="note-title heading-2 text-secondary-dark"><nuxt-link :to="'/notes/' + note.fields.slug">{{ note.fields.title }}<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></nuxt-link></h2>
+            <p class="note-date caption text-tertiary-dark">{{ getHumanDate(note.fields.publishDate) }}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
+  import moment from 'moment'
+
+  import Navbar from '../../components/Navbar.vue'
+  import Footer from '../../components/Footer.vue'
+
   export default {
     head () {
       return {
@@ -18,13 +34,26 @@
       }
     },
     data: function () {
-      return { }
+      return {
+
+      }
+    },
+
+    methods: {
+      getHumanDate : function (date) {
+        return moment(date, 'YYYY-MM-DD').format('MMM DD, YYYY');
+      }
     },
 
     computed: {
-      posts() {
-        return this.$store.state.posts;
+      notes() {
+        return this.$store.state.notes;
       }
+    },
+
+    components: {
+      Navbar,
+      Footer
     }
   }
 </script>

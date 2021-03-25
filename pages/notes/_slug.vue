@@ -3,9 +3,9 @@
    <p class="back">
      <nuxt-link to="/notes">⟵ Back to Home</nuxt-link>
    </p>
-   <h1>{{ post.fields.title }}</h1>
+   <h1>{{ note.fields.title }}</h1>
    ></div>
-   <article v-html="$md.render(post.fields.body)"></article>
+   <article v-html="$md.render(note.fields.body)"></article>
  </section>
 </template>
 
@@ -14,7 +14,7 @@
   export default {
     head () {
       return {
-        title: this.post.fields.title
+        title: this.note.fields.title
       }
     },
 
@@ -23,12 +23,13 @@
         slug: this.$route.params.slug
       }
     },
+
     computed: {
-    post() {
-      let post = this.$store.state.posts.filter(
+    note() {
+      let note = this.$store.state.notes.filter(
         el => el.fields.slug === this.slug
       )
-        return post[0]
+        return note[0]
       }
     }
   }
