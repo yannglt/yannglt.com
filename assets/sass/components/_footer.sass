@@ -35,6 +35,8 @@
     padding-top: 64px
     margin-bottom: 68px
 
+    border-top: 2px solid $oblivion-700
+
     +adapt($bkp-mobile)
       grid-column: span 2
 
@@ -44,12 +46,12 @@
       margin-bottom: 115px
 
     +adapt($bkp-desktop-sd)
-      grid-column: span 10
+      grid-column: 2 / span 10
       padding-top: 93px
       margin-bottom: 108px
 
     +adapt($bkp-desktop-hd)
-      grid-column: span 12
+      grid-column: 2 / span 10
 
     &Title
       @extend .heading-2
