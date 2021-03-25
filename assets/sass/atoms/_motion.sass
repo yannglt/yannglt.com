@@ -15,9 +15,3 @@ $speed-standard: cubic-bezier(0.4, 0.0, 0.2, 1)
 $speed-emphasized: cubic-bezier(0.2, 0.0, 0.2, 1)
 $speed-decelerated: cubic-bezier(0.0, 0.0, 0.2, 1)
 $speed-accelerated: cubic-bezier(0.4, 0.0, 1, 1)
-
-@mixin motion($time, $weight, $speed, $props...)
-  $transition: ()
-  @each $prop in $props
-    $transition: append($transition, ($prop calc(#{$time} * #{$weight}) $speed), $separator: comma)
-  transition: $transition

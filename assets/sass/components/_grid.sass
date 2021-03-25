@@ -1,25 +1,3 @@
-@mixin adapt($width)
-  @media screen and (min-width: $width)
-    @content
-
-@mixin gCols($columns-nb, $columns-width, $gutter-width)
-  display: grid
-  grid-template-columns: repeat($columns-nb, $columns-width)
-  column-gap: $gutter-width
-
-// BREAKPOINTS
-$bkp-mobile: 336px
-$width-mobile: 414px
-
-$bkp-tablet: 664px
-$width-tablet: 768px
-
-$bkp-desktop-sd: 960px
-$width-desktop-sd: 1024px
-
-$bkp-desktop-hd: 1208px
-$width-desktop-hd: 1440px
-
 body
   margin: 0 auto
   max-width: 100vw

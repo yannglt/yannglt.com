@@ -15,7 +15,9 @@
         </div>
       </div>
     </transition>
+
     <Navbar></Navbar>
+
     <section class="tldr">
       <div class="container">
         <div class="welcome-repeat">
@@ -66,18 +68,18 @@
 
     <section class="intro">
       <div class="container">
-        <p class="introTag">Welcome to my space <span class="line-breaker"><br /></span>on the Internets</p>
-        <h1 class="introTitle">I think, create and break interfaces, products and systems with a passion for design operations.</h1>
-        <p class="introDesc">Find here an overview of my latest works and collaborations with startups and companies, you will be also able to read more about my story and ask for help on your idea/problem.</p>
-        <ul class="introLinks">
+        <p class="intro-subtitle caption">Welcome to my space <span class="line-breaker"><br /></span>on the Internets</p>
+        <h1 class="intro-title heading-1 text-primary-dark">I think, create and break interfaces, products and systems with a passion for design operations.</h1>
+        <p class="intro-desc emphasis text-secondary-dark">Find here an overview of my latest works and collaborations with startups and companies, you will be also able to read more about my story and ask for help on your idea/problem.</p>
+        <ul class="intro-links emphasis text-secondary-dark">
           <li>
-            <a href="https://twitter.com/yannglt" title="" target="_blank"  rel="noopener"><span class="introLinkPrefix">Thoughts on </span>Twitter<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#external-link-20"></use></svg></a>
+            <a href="https://twitter.com/yannglt" title="" target="_blank"  rel="noopener"><span class="intro-linkPrefix">Thoughts on </span>Twitter<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#external-link-20"></use></svg></a>
           </li>
           <li>
-            <a href="https://dribbble.com/yannglt" title="" target="_blank"  rel="noopener"><span class="introLinkPrefix">Works in progress on </span>Dribbble<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#external-link-20"></use></svg></a>
+            <a href="https://dribbble.com/yannglt" title="" target="_blank"  rel="noopener"><span class="intro-linkPrefix">Works in progress on </span>Dribbble<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#external-link-20"></use></svg></a>
           </li>
           <li>
-            <a href="https://www.instagram.com/ynngllt/" title="" target="_blank"  rel="noopener"><span class="introLinkPrefix">Journey on </span>Instagram<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#external-link-20"></use></svg></a>
+            <a href="https://www.instagram.com/ynngllt/" title="" target="_blank"  rel="noopener"><span class="intro-linkPrefix">Journey on </span>Instagram<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#external-link-20"></use></svg></a>
           </li>
         </ul>
       </div>

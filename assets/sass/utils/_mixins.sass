@@ -1,0 +1,14 @@
+@mixin adapt($width)
+  @media screen and (min-width: $width)
+    @content
+
+@mixin gCols($columns-nb, $columns-width, $gutter-width)
+  display: grid
+  grid-template-columns: repeat($columns-nb, $columns-width)
+  column-gap: $gutter-width
+
+@mixin motion($time, $weight, $speed, $props...)
+  $transition: ()
+  @each $prop in $props
+    $transition: append($transition, ($prop calc(#{$time} * #{$weight}) $speed), $separator: comma)
+  transition: $transition
