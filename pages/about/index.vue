@@ -24,7 +24,7 @@
         <div class="discover--bloc">
           <div class="discover--icon story"></div>
           <p class="discover--title">Story</p>
-          <p class="discover--desc">From playing with small bricks of colors to become a Product Designer, some time have passed and I wanted to share anecdotes and funny stories you may find interesting.</p>
+          <p class="discover--desc">Some time have passed between playing with my  first small bricks of color and becoming a Product Designer, I wanted to share anecdotes and funny stories you may find interesting.</p>
           <a class="discover--link" href="">Coming soon<!--<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-12"></use></svg>--></a>
         </div>
         <div class="discover--bloc">
@@ -45,11 +45,11 @@
     <section class="classic">
       <div class="container">
         <div class="promise">
-          <p class="promise--tag">Or maybe the more classic way</p>
-          <h2 class="promise--title">From problems to tried and tested products, by asking questions again & again, until reaching users’ delight and company’s vision.</h2>
+          <p class="promise--tag">How and Where I work(ed)</p>
+          <h2 class="promise--title">I make and verify hypothesis by creating and breaking solutions again and again until reaching users’ delight and company’s vision.</h2>
           <div class="promise--desc">
-            <p>[TK] S/O to all the people I met these last years, from colleagues to partners, from clients to users, loved ones and friends. Early in his teenage years Erik started exploring interactive design and in 2004, at age 14, he completed his first commercial project.</p>
-            <p>In 2008, without any relevant education, Erik was hired as a Designer to join the in-house agency of Svenska Spel.  Originally from Sweden, Erik has spent the majority of his career in New York City working for Spotify, R/GA and Stink Studios.</p>
+            <p>Started from the bottom the original problem(s) and make sure we try to tackle the correct one(s) is essential to make sure we provide efficient solutions to users and businesses.</p>
+            <p>Also, I always try to find a great balance between following the choosen methodology and keeping velocity and efficiency through the entire journey.</p>
           </div>
           <div class="promise--ctas">
             <a class="process">Discover my process (soon)</a>
@@ -156,7 +156,7 @@
             id: '0',
             company: 'Source',
             position: 'Product Designer',
-            desc: '<p>Source exists to allow its clients and partners to fight against preconceptions, thanks to a rational and user-centered approach, from problems to sleek and efficient solutions, tailored to suit user and business needs.</p><p>Worked closely with multiple industry-related startups and companies. From doing user research, workshops around brand vision and strategy, setting up experience maps and user journeys, to high-fidelity prototypes and built solutions.</p>',
+            desc: '<p>Source exists to help its clients and partners to fight against preconceptions, thanks to a rational and user-centered approach. We tailor sleek and efficient solutions to suit user and business needs.</p><p>I work closely with multiple industry-related startups and companies, by doing user research, workshops around brand vision and strategy, setting up experience maps and user journeys, to building high-fidelity prototypes and developed solutions.</p><p>6-month internship, 1 year apprenticeship and full-time employee since January 2019.</p>',
             start: 'Jul 2018',
             end: 'Now',
             duration: '3 years',
@@ -165,7 +165,7 @@
             id: '1',
             company: 'Freelance',
             position: 'Product Designer',
-            desc: '<p>Providing value to early and mid-stage companies through product & brand design services and design system expertise.</p>',
+            desc: '<p>I am providing value to early and mid-stage companies through product & brand design services and design system expertise.</p>',
             start: 'Jan 2018',
             end: 'Now',
             duration: '3.5 years',
@@ -174,7 +174,7 @@
             id: '2',
             company: 'Synerg\' hetic',
             position: 'Design Consultant',
-            desc: '<p>Implemented design methodologies and design thinking to the global positioning of the Junior while working closely with startups around minimum viable products and ideation workshops.</p>',
+            desc: '<p>I implemented design methodologies to the global positioning of the Junior Company while working closely with startups around minimum viable products and ideation workshops.</p>',
             start: 'May 2018',
             end: 'Nov 2018',
             duration: '1.5 year',
