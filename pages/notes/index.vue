@@ -1,5 +1,5 @@
 <template lang="html">
-  <div id="notes">
+  <div class="notes-page">
     <Navbar></Navbar>
     <section class="notes">
       <div class="container">
