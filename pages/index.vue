@@ -6,14 +6,9 @@
     <div class="under-construction">
       <a href="#" title="">New space on the Internets under construction.<span class="line-breaker"><br></span></a>
     </div>
+
     <transition name="slide">
-      <div v-if="emailToast == 'show'" class="copyToast">
-        <div class="icon--container"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#check-20"></use></svg></div>
-        <div class="toast--content">
-          <p class="toast--title">Yeah! Email copied in your clipboard</p>
-          <p class="toast--desc">Paste it in your favorite email client, see you soon!</p>
-        </div>
-      </div>
+      <copyToast v-if="emailToast == 'show'"></copyToast>
     </transition>
 
     <Navbar></Navbar>
@@ -129,7 +124,7 @@
             </div>
           </div>
         </div>
-        <div class="process">
+        <div class="manifesto-process">
           <div class="process-content">
             <!-- <p class="process-title">This vision is powered by a process improved over the years with talented people and projects</p>
             <a href="/process" class="process-cta">Discover the process<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></a> -->
@@ -159,6 +154,7 @@
   import Navbar from '../components/Navbar.vue'
   import ProjectsCarousel from '../components/ProjectsCarousel.vue'
   import Fact from '../components/Fact.vue'
+  import CopyToast from '../components/CopyToast.vue'
   import Footer from '../components/Footer.vue'
 
   export default {
@@ -210,6 +206,7 @@
       Navbar,
       ProjectsCarousel,
       Fact,
+      CopyToast,
       Footer
     }
   }
