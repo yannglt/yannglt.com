@@ -21,6 +21,10 @@
 
 @import 'pages/notes'
 @import 'pages/note'
+@import 'pages/contact'
+
+a.wip:hover
+  cursor: not-allowed
 
 .new-space
   margin: 0 calc(max(-19px, -8vw))
@@ -1012,17 +1016,11 @@
         color: $maelstrom-500
 
       &:active
-        cursor: pointer
         color: $maelstrom-700
 
     button
-      -webkit-appearance: none
       font-size: 16px
       line-height: 28px
-      background: none
-      box-shadow: 0
-      border: 0
-      padding: 0
 
     a:not(:last-of-type)
       margin-bottom: 28px
@@ -1073,7 +1071,7 @@
 .slide-enter-active, .slide-leave-active
   +motion($time-medium, $weight-small, $speed-accelerated, transform)
 
-.process
+.manifesto-process
   // background-image: url("../../static/images/process.svg")
   background-image: url("../../static/images/process-wip.svg")
   background-repeat: no-repeat

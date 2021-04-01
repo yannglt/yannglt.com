@@ -1,0 +1,90 @@
+.contact-page .contact
+  margin-top: $space-128
+
+  .container
+    @extend .gridSystem
+    align-items: flex-start
+
+  .contact-content
+    grid-column: span 6
+    margin-bottom: 128px
+
+  .contact-heading
+    margin-bottom: 32px
+
+    span
+      display: block
+      margin-top: 32px
+
+  .contact-links
+    grid-column: 9 / span 4
+
+    border: 2px solid $oblivion-500
+    border-radius: 8px
+
+    transform: translateY(8px)
+
+    .link-purpose
+      margin-bottom: 4px
+
+    a, button
+      @extend .bold
+      text-decoration: underline
+
+      .icon
+        color: $thunderstorm-500
+        padding-left: 4px
+
+      &:hover
+        cursor: pointer
+
+      &:active
+        color: $oblivion-025
+
+  .contact-link
+    padding: 24px 32px 28px 32px
+
+    &:first-of-type
+      border-bottom: 2px solid $oblivion-500
+
+  .redirects
+    padding: 64px 0 80px
+
+    grid-column: span 12
+    @extend .gridSystem
+
+    border-top: 2px solid $oblivion-700
+
+  .redirect
+    grid-column: span 4
+
+    &-icon
+      height: 80px
+      width: 128px
+      margin-bottom: 24px
+
+      background-size: 128px 80px
+      background-repeat: no-repeat
+      background-position: center center
+
+    &-title
+      margin-bottom: 12px
+
+    &-desc
+      margin-bottom: 16px
+
+    &.about .redirect-icon
+      background-image: url("../../static/images/redirect-about.svg")
+
+    &.notes .redirect-icon
+      background-image: url("../../static/images/redirect-notes.svg")
+
+    &.process .redirect-icon
+      background-image: url("../../static/images/redirect-process.svg")
+
+    .redirect-link .icon
+      height: 12px
+      width: 12px
+      padding-left: 4px
+
+      color: $thunderstorm-500
