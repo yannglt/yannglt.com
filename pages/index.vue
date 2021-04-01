@@ -198,7 +198,7 @@
         this.$copyText(this.email)
         this.emailToast = 'show'
 
-        setTimeout(() => this.emailToast = null, 2000)
+        setTimeout(() => this.emailToast = null, 3000)
       }
     },
 
