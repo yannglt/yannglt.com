@@ -13,6 +13,7 @@
     +motion($time-standard, $weight-small, $speed-standard, background)
 
     .label
+      @extend .caption
       color: #ffffff
 
     .icon
@@ -31,6 +32,9 @@
 
   &.locked
     background-color: $action-locked-default
+
+    .label
+      color: red
 
     &:hover
       cursor: not-allowed
