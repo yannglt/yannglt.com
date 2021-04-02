@@ -1,14 +1,22 @@
 .navbar
   margin: 0 auto
-  max-width: $width-desktop-hd
+  width: 100%
+  top: 0
+  left: 50%
+  position: fixed
   z-index: 500
 
   background-color: $oblivion-1100
+  transform: translate3d(-50%, 0, 0)
+  +motion($time-standard, $weight-large, $speed-accelerated, transform)
 
   @supports (backdrop-filter: blur(12px))
     &
       background-color: rgba($oblivion-1100, 0.9)
-      backdrop-filter: blur(12px) saturate(20%)
+      backdrop-filter: blur(12px) saturate(24%)
+
+  &.navbar-hidden
+    transform: translate3d(-50%, -100%, 0)
 
 .navbar-content
   margin: 0 auto
