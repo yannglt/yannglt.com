@@ -3,15 +3,15 @@
     <!-- <div class="new-space">
       <a href="#" title="">Welcome on my new space on the Internets.<span class="line-breaker"><br></span><span class="link">Learn more about this new version<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></span></a>
     </div> -->
-    <div class="under-construction">
+    <!-- <div class="under-construction">
       <a href="#" title="">New space on the Internets under construction.<span class="line-breaker"><br></span></a>
-    </div>
+    </div> -->
 
     <transition name="slide">
       <copyToast v-if="emailToast == 'show'"></copyToast>
     </transition>
 
-    <Navbar></Navbar>
+    <Navbar :class="{ 'navbar-hidden': !showNavbar }"></Navbar>
 
     <section class="tldr">
       <div class="container">
@@ -125,7 +125,7 @@
           </div>
         </div>
         <div class="manifesto-process">
-          <div class="process-content">
+          <div class="manifesto-process-content">
             <!-- <p class="process-title">This vision is powered by a process improved over the years with talented people and projects</p>
             <a href="/process" class="process-cta">Discover the process<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></a> -->
           </div>
