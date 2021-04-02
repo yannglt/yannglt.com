@@ -1,4 +1,7 @@
 // IMPORTS
+@import 'utils/reset'
+@import 'utils/mixins'
+
 @import 'atoms/shades'
 @import 'atoms/typefaces'
 @import 'atoms/typescale'
@@ -6,9 +9,6 @@
 @import 'atoms/motion'
 @import 'atoms/spacing'
 @import 'atoms/alias'
-
-@import 'utils/reset'
-@import 'utils/mixins'
 
 @import 'components/text-styles'
 @import 'components/grid'
@@ -1003,20 +1003,20 @@ a.wip:hover
     p ~ p
       margin-top: 32px
 
-    a, button
-      @extend .bold
-      text-decoration: underline
-
-      .icon
-        color: $maelstrom-500
-        padding-left: 4px
-
-      &:hover
-        cursor: pointer
-        color: $maelstrom-500
-
-      &:active
-        color: $maelstrom-700
+    // a, button
+    //   @extend .bold
+    //   text-decoration: underline
+    //
+    //   .icon
+    //     color: $maelstrom-500
+    //     padding-left: 4px
+    //
+    //   &:hover
+    //     cursor: pointer
+    //     color: $maelstrom-500
+    //
+    //   &:active
+    //     color: $maelstrom-700
 
     button
       font-size: 16px

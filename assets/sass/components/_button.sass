@@ -4,37 +4,109 @@
   justify-content: center
 
   border-radius: 4px
+  +motion($time-standard, $weight-small, $speed-standard, background, border-color)
 
-  &.primary
-    padding: 10px 16px 10px 20px
+  *::selection
+    background: transparent
+
+  &:not(&.icon-only) .icon
+    margin-left: 8px
+    margin-right: -4px
+
+  &:hover
+    cursor: pointer
+
+  &.primary, &.secondary, &.tertiary, &.locked
+    padding: 10px 20px
     border-radius: 4px
-    background-color: $action-primary-default
-
-    +motion($time-standard, $weight-small, $speed-standard, background)
 
     .label
-      @extend .caption
+      @extend .label
       color: #ffffff
 
+  &.primary
+    background-color: $action-primary-default
+
     .icon
-      padding-left: 4px
       color: $maelstrom-100
 
     &:hover
-      cursor: pointer
       background-color: $action-primary-hover
 
     &:active
       background-color: $action-primary-active
 
-    &:focus
-      background-color: $action-primary-focus
+  &.secondary
+    border: 2px solid $oblivion-300
+
+    &:hover
+      border-color: $action-secondary-hover
+
+    &:active
+      border-color: $action-secondary-active
+
+    &.icon-only
+      padding: 14px
+
+    &.dark
+
+      .icon
+        color: #ffffff
+
+    &.light
+
+      .label, .icon
+        color: #000000
+
+  &.tertiary
+
+    &.oblivion
+
+      &:hover
+        background-color: transparentize($action-tertiary-oblivion-hover, 0.64)
+
+      &:active
+        background-color: transparentize($action-tertiary-oblivion-hover, 0.32)
+
+      .label
+        color: $oblivion-500
+
+      .icon
+        color: $oblivion-700
+
+    &.thunderstorm
+
+      &:hover
+        background-color: transparentize($action-tertiary-thunderstorm-hover, 0.64)
+
+      &:active
+        background-color: transparentize($action-tertiary-thunderstorm-hover, 0.76)
+
+      .label
+        color: $action-tertiary-thunderstorm-default
+
+      .icon
+        color: $thunderstorm-700
+
+    &.maelstrom
+
+      &:hover
+        background-color: transparentize($action-tertiary-maelstrom-hover, 0.64)
+
+      &:active
+        background-color: transparentize($action-tertiary-maelstrom-hover, 0.32)
+
+      .label
+        color: $maelstrom-500
+
+      .icon
+        color: $maelstrom-700
 
   &.locked
     background-color: $action-locked-default
 
-    .label
-      color: red
+    .icon
+      color: $oblivion-100
 
     &:hover
       cursor: not-allowed

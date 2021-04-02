@@ -6,8 +6,16 @@
     align-items: flex-start
 
   .contact-content
-    grid-column: span 6
     margin-bottom: 128px
+
+    +adapt($bkp-mobile)
+      grid-column: span 4
+
+    +adapt($bkp-tablet)
+      grid-column: span 4
+
+    +adapt($bkp-desktop-sd)
+      grid-column: span 6
 
   .contact-heading
     margin-bottom: 32px
@@ -23,6 +31,18 @@
     border-radius: 8px
 
     transform: translateY(8px)
+
+    +adapt($bkp-mobile)
+      grid-column: span 4
+
+    +adapt($bkp-tablet)
+      grid-column: span 4
+
+    +adapt($bkp-desktop-sd)
+      // grid-column: span 6
+
+    +adapt($bkp-desktop-hd)
+      grid-column: 9 / span 4
 
     .link-purpose
       margin-bottom: 4px
