@@ -650,65 +650,25 @@ a.wip:hover
         display: block
 
     .project-links
-      display: inline-flex
+      display: flex
+      flex-direction: row-reverse
       justify-content: flex-end
       align-items: flex-end
-      flex-direction: row-reverse
 
-      // .button-primary-icon
-      //   display: flex
-      //   align-items: center
-      //   justify-content: center
-      //   flex-grow: 2
-      //
-      //   @extend .caption
-      //   color: #ffffff
-      //   font-size: 16px
-      //   padding: 12px 16px 12px 20px
-      //
-      //   border-radius: 4px
-      //
-      //   .icon
-      //     padding-left: 8px
-      //
-      //   &.caseStudy
-      //     background-color: $maelstrom-500
-      //
-      //     .icon
-      //       color: $maelstrom-100
-      //
-      //   &.caseStudy:hover
-      //   cursor: pointer
-      //
-      //   &.caseStudy:active
-      //   background-color: $maelstrom-600
-      //
-      //   &.nda
-      //     background-color: $oblivion-500
-      //
-      //     .icon
-      //       color: $oblivion-100
-      //
-      //   &.nda:hover
-      //     cursor: not-allowed
-      //
-      //   +motion($time-quick, $weight-medium, $speed-standard, background-color)
-      //
-      //   +adapt($bkp-tablet)
-      //     margin-left: 16px
-      //
-      //   +adapt($bkp-desktop-sd)
-      //     flex-grow: auto
-      //
-      // .button-secondary-icon
-      //   display: none
-      //   padding: 13px
-      //   color: $oblivion-500
-      //   border: 1px solid $oblivion-300
-      //   border-radius: 4px
-      //
-      //   +adapt($bkp-tablet)
-      //     display: inline-flex
+      .case-study
+        flex-grow: 2
+
+        +adapt($bkp-tablet)
+          margin-left: 16px
+
+        +adapt($bkp-desktop-sd)
+          flex-grow: auto
+
+      .case-live
+        display: none
+
+        +adapt($bkp-tablet)
+          display: inline-flex
 
   .slides-navigator
     margin-top: 40px

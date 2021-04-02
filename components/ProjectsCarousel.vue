@@ -21,10 +21,9 @@
               </div>
             </div>
             <div class="project-links">
-              <Button :icon="arrow-forward">Get Started</Button>
-              <!-- <a v-if="!slide.nda" class="button-primary caseStudy">Read case study<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></a>
-              <a v-if="slide.nda" class="button-primary locked">Under NDA<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#forbidden-20"></use></svg></a>
-              <a v-if="slide.link" class="button-secondary-icon-only"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#external-link-20"></use></svg></a> -->
+              <SuperButton v-if="!slide.nda" class="case-study" variant="primary" icon="#arrow-forward-20">Read case study</SuperButton>
+              <SuperButton v-if="slide.nda" variant="locked" icon="#forbidden-20">Work Under NDA</SuperButton>
+              <SuperButton v-if="slide.link" class="case-live" variant="secondary light icon-only" icon="#external-link-20"></SuperButton>
             </div>
           </div>
         </div>
@@ -47,7 +46,7 @@
 </template>
 
 <script>
-  import Button from './Button.vue'
+  import SuperButton from '../components/SuperButton.vue'
 
   export default {
     data () {
@@ -189,8 +188,8 @@
       }
     },
 
-    components: {
-      Button,
+    components: {
+      SuperButton
     }
   }
 </script>
