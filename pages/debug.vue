@@ -54,6 +54,7 @@
     grid-column: span 12
     display: flex
     padding: 32px
+    align-items: flex-end
 
     &.dark
       background-color: #00030A

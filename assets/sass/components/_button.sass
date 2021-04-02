@@ -17,6 +17,9 @@
     cursor: pointer
 
   &.primary, &.secondary, &.tertiary, &.locked
+    border-radius: 4px
+
+  &.primary, &.tertiary, &.locked
     padding: 10px 20px
     border-radius: 4px
 
@@ -37,7 +40,12 @@
       background-color: $action-primary-active
 
   &.secondary
+    padding: 8px 18px
     border: 2px solid $oblivion-300
+
+    .label
+      @extend .label
+      color: #ffffff
 
     &:hover
       border-color: $action-secondary-hover
