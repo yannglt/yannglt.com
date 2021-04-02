@@ -46,12 +46,9 @@
       margin-bottom: 115px
 
     +adapt($bkp-desktop-sd)
-      grid-column: 2 / span 10
+      grid-column: span 12
       padding-top: 93px
       margin-bottom: 108px
-
-    +adapt($bkp-desktop-hd)
-      grid-column: span 12
 
     &Title
       @extend .heading-2
@@ -235,8 +232,8 @@
 
     +adapt($bkp-desktop-sd)
       padding: 34px 0 114px
-      grid-column: 2 / span 8
-      +gCols(8, 1fr, 40px)
+      grid-column: span 12
+      +gCols(12, 1fr, 40px)
 
     +adapt($bkp-desktop-hd)
       padding: 34px 0 126px
@@ -253,7 +250,7 @@
         order: 1
         grid-column: span 3
 
-      +adapt($bkp-desktop-hd)
+      +adapt($bkp-desktop-sd)
         grid-column: span 6
 
       &Logo
@@ -279,9 +276,6 @@
       +adapt($bkp-desktop-sd)
         grid-column: span 3
 
-      +adapt($bkp-desktop-hd)
-        grid-column: 7 / span 3
-
     .footer-follow
       order: 2
       margin-bottom: 42px
@@ -290,7 +284,7 @@
         grid-column: span 2
         margin-bottom: 0
 
-      +adapt($bkp-desktop-hd)
+      +adapt($bkp-desktop-sd)
         grid-column: span 3
 
     .footer-copyright,
