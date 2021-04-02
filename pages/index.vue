@@ -188,9 +188,19 @@
             desc: '<p>As a lot ot of humans around the globe during the 2020 pandemic + lockdown, I decided to improve my workspace and bring more life to my apartment.</p><p>With my loved one, Sabrina (<a href="https://sabrinanedjah.fr" target="_blank"  rel="noopener">go check her portfolio</a>), we chose plants from different places of the world and after running trials, we found out how to mix LEGOs and our green newcommers.</p>'
           }
         ],
+        showNavbar: true,
+        lastScrollPosition: 0,
         email: 'hello@yannglt.com',
         emailToast: null
       }
+    },
+
+    mounted () {
+      window.addEventListener('scroll', this.onScroll)
+    },
+
+    beforeDestroy () {
+      window.removeEventListener('scroll', this.onScroll)
     },
 
     methods: {
@@ -199,6 +209,21 @@
         this.emailToast = 'show'
 
         setTimeout(() => this.emailToast = null, 3000)
+      },
+
+      onScroll () {
+        const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+
+        if (currentScrollPosition < 0) {
+          return
+        }
+        // Stop executing this function if the difference between
+        // current scroll position and last scroll position is less than some offset
+        if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 24) {
+          return
+        }
+        this.showNavbar = currentScrollPosition < this.lastScrollPosition
+        this.lastScrollPosition = currentScrollPosition
       }
     },
 
