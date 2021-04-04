@@ -11,7 +11,7 @@
   export default {
     props: {
       href: { type: String, default: null },
-      variant: { type: String, default: '' },
+      variant: { type: String, default: '', required: 'true' },
       icon: { type: String }
     },
 
