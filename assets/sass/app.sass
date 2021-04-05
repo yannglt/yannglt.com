@@ -132,19 +132,19 @@ a.wip:hover
     @for $i from 1 through 8
       &:nth-child(#{$i})
         z-index: 0 - $i * 10
-        transform: translateY(-$space-24 + $i * $space-24)
+        transform: translateY(-$space-x + $i * $space-x)
 
   +adapt($bkp-tablet)
     @for $i from 1 through 8
       &:nth-child(#{$i})
         z-index: 0 - $i * 10
-        transform: translateY(-$space-48 + $i * $space-48)
+        transform: translateY(-$space-m + $i * $space-m)
 
   +adapt($bkp-desktop-sd)
     @for $i from 1 through 8
       &:nth-child(#{$i})
         z-index: 0 - $i * 10
-        transform: translateY(-$space-64 + $i * $space-64)
+        transform: translateY(-$space-l + $i * $space-l)
 
   &:nth-child(2)
     -webkit-text-stroke: 1px $oblivion-300
@@ -410,7 +410,7 @@ a.wip:hover
 
 .intro
   margin-top: calc(261px + 119px)
-  margin-bottom: $space-128
+  margin-bottom: $space-xxxl
 
   +adapt($bkp-tablet)
     margin-bottom: 80px
@@ -430,7 +430,7 @@ a.wip:hover
 
   &-subtitle
     color: $thunderstorm-500
-    margin-bottom: $space-16
+    margin-bottom: $space-xs
 
     +adapt($bkp-mobile)
       grid-column: span 2
@@ -451,7 +451,7 @@ a.wip:hover
         display: none
 
   &-title
-    margin-bottom: $space-32
+    margin-bottom: $space-s
 
     +adapt($bkp-mobile)
       grid-column: span 2
@@ -519,7 +519,7 @@ a.wip:hover
       grid-column: 9 / span 4
 
 .projects
-  margin-bottom: $space-200
+  margin-bottom: $space-xxxxl
 
   +adapt($bkp-tablet)
     margin-bottom: 80px
@@ -574,7 +574,7 @@ a.wip:hover
     left: 0%
     width: 100%
     height: 100%
-    padding: $space-48
+    padding: $space-m
 
     display: flex
     flex-direction: column
@@ -989,8 +989,8 @@ a.wip:hover
 .copyToast
   position: fixed
   width: 480px
-  top: $space-48
-  right: $space-48
+  top: $space-m
+  right: $space-m
   padding: 12px 24px
   display: flex
   flex-direction: row

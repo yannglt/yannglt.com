@@ -1,12 +1,12 @@
 .contact-page .contact
-  margin-top: $space-128
+  margin-top: 128px
 
   .container
     @extend .gridSystem
     align-items: flex-start
 
   .contact-content
-    margin-bottom: 128px
+    margin-bottom: $space-xxxl
 
     +adapt($bkp-mobile)
       grid-column: span 4
@@ -18,11 +18,11 @@
       grid-column: span 6
 
   .contact-heading
-    margin-bottom: 32px
+    margin-bottom: $space-s
 
     span
       display: block
-      margin-top: 32px
+      margin-top: $space-s
 
   .contact-links
     grid-column: 9 / span 4
@@ -45,7 +45,7 @@
       grid-column: 9 / span 4
 
     .link-purpose
-      margin-bottom: 4px
+      margin-bottom: $space-xxxxs
 
     a, button
       @extend .bold
@@ -53,7 +53,7 @@
 
       .icon
         color: $thunderstorm-500
-        padding-left: 4px
+        padding-left: $space-xxxxs
 
       &:hover
         cursor: pointer
@@ -62,13 +62,14 @@
         color: $oblivion-025
 
   .contact-link
-    padding: 24px 32px 28px 32px
+    padding: $space-x $space-s
+    padding-bottom: calc($space-x - 4px)
 
     &:first-of-type
       border-bottom: 2px solid $oblivion-500
 
   .redirects
-    padding: 64px 0 80px
+    padding: $space-l 0 $space-xxl
 
     grid-column: span 12
     @extend .gridSystem
@@ -81,17 +82,17 @@
     &-icon
       height: 80px
       width: 128px
-      margin-bottom: 24px
+      margin-bottom: $space-x
 
       background-size: 128px 80px
       background-repeat: no-repeat
       background-position: center center
 
     &-title
-      margin-bottom: 12px
+      margin-bottom: $space-xxs
 
     &-desc
-      margin-bottom: 16px
+      margin-bottom: $space-xs
 
     &.about .redirect-icon
       background-image: url("../../static/images/redirect-about.svg")
@@ -105,6 +106,6 @@
     .redirect-link .icon
       height: 12px
       width: 12px
-      padding-left: 4px
+      padding-left: $space-xxxxs
 
       color: $thunderstorm-500
