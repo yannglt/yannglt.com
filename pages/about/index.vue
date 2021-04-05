@@ -52,7 +52,8 @@
             <p>Also, I always try to find a great balance between following the choosen methodology and keeping velocity and efficiency through the entire journey.</p>
           </div>
           <div class="promise-ctas">
-            <a class="process">Discover my process (soon)</a>
+            <!-- <a class="process">Discover my process (soon)</a> -->
+            <SuperButton class="process" variant="secondary dark disabled">Discover my process</SuperButton>
             <a class="contact" href="/contact">Contact me<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#mail-20"></use></svg></a>
           </div>
         </div>

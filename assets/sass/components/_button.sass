@@ -51,10 +51,10 @@
     .label
       color: #ffffff
 
-    &:hover
+    &:not(.locked):hover
       border-color: $action-secondary-hover
 
-    &:active
+    &:not(.locked):active
       border-color: $action-secondary-active
 
     &.icon-only
@@ -144,7 +144,8 @@
         .label
           color: $oblivion-300
 
-  &.locked
+  &.locked:hover, &.disabled:hover
+    cursor: not-allowed
 
-    &:hover
-      cursor: not-allowed
+  &.disabled
+    opacity: 0.4

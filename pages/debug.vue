@@ -5,6 +5,7 @@
         <SuperButton href="/notes" variant="primary" icon="#arrow-forward-20">Get Started</SuperButton>
         <SuperButton href="/notes" variant="primary locked" icon="#forbidden-20">Work under NDA</SuperButton>
         <SuperButton href="/notes" variant="secondary dark">Get Started</SuperButton>
+        <SuperButton href="/notes" variant="secondary dark disabled" disabled>Get Started</SuperButton>
         <SuperButton href="/notes" variant="secondary dark icon-only" icon="#external-link-20"></SuperButton>
         <SuperButton href="/notes" variant="tertiary thunderstorm" icon="#arrow-forward-20">Get Started</SuperButton>
         <SuperButton href="/notes" variant="quaternary dark" icon="#arrow-forward-12">Get Started</SuperButton>
