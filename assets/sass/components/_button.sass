@@ -9,25 +9,25 @@
   *::selection
     background: transparent
 
-  &:not(&.icon-only) .icon
-    margin-left: 8px
-    margin-right: -4px
+  .icon
+    padding-left: 4px
+    // margin-right: -4px
 
   &:hover
     cursor: pointer
 
-  &.primary, &.secondary, &.tertiary, &.locked
-    border-radius: 4px
-
-  &.primary, &.tertiary, &.locked
+  &.primary, &.secondary, &.tertiary
     padding: 10px 20px
     border-radius: 4px
 
-    .label
-      color: #ffffff
+    &.disabled
+      opacity: 0.4
 
   &.primary
     background-color: $action-primary-default
+
+    .label
+      color: #ffffff
 
     .icon
       color: $maelstrom-100
@@ -51,10 +51,10 @@
     .label
       color: #ffffff
 
-    &:not(.locked):hover
+    &:not(.disabled):hover
       border-color: $action-secondary-hover
 
-    &:not(.locked):active
+    &:not(.disabled):active
       border-color: $action-secondary-active
 
     &.icon-only
@@ -115,7 +115,7 @@
         color: $maelstrom-700
 
   &.quaternary
-    padding: 4px 12px
+    padding: 4px 0
 
     .label
       @extend .caption
@@ -134,18 +134,13 @@
       .icon
         color: $thunderstorm-500
 
-      &:not(.locked):hover
+      &:not(.disabled):hover
 
         .label
           color: $thunderstorm-500
 
-      &.locked
-
-        .label
-          color: $oblivion-300
+    &.disabled .label
+      color: $oblivion-300
 
   &.locked:hover, &.disabled:hover
     cursor: not-allowed
-
-  &.disabled
-    opacity: 0.4

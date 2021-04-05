@@ -1,0 +1,470 @@
+.about-page
+  margin-top: $space-xxxxl
+
+  .moodboard
+    margin-bottom: $space-xxl
+
+    .container
+      @extend .gridSystem
+      min-height: 624px
+      border: 1px solid $oblivion-500
+
+      background-image: url("@/static/images/moodboard-grid.svg")
+      background-repeat: repeat
+      background-size: 104px 104px
+      background-position: top left
+
+    .left
+      position: relative
+      grid-column: span 5
+
+    .right
+      position: relative
+      grid-column: 8 / span 5
+
+    .atlas, .logo, .electricity-toolkit, .gt-america, .bluu-suuperstar
+      background-repeat: no-repeat
+      background-position: center center
+      transform-origin: top center
+
+    .atlas::after, .logo::after, .gt-america::after, .bluu-suuperstar::after, .pinned-top::before, .pinned-top::after, .pinned-bottom::before, .pinned-bottom::after
+        content: ''
+        position: absolute
+        height: 8px
+        width: 8px
+
+        border-radius: 8px
+
+    .atlas::after, .logo::after, .gt-america::after, .bluu-suuperstar::after
+      top: -5px
+      left: 50%
+      transform: translateX(-50%)
+
+    .atlas
+      position: absolute
+      top: 144px
+      left: 65px
+      height: 312px
+      width: 208px
+
+      background-color: $thunderstorm-500
+      transform: rotate3d(0, 0, 1, -7.5deg)
+
+      &::before
+        content: ''
+        position: absolute
+        height: 312px
+        width: 208px
+
+        background-color: $thunderstorm-900
+        mask-image: url("@/static/images/atlas.svg")
+        mask-size: 312px 312px
+        background-size: 312px 208px
+        background-position: left top
+
+      &::after
+        background-color: $thunderstorm-500
+        border: 1px solid $thunderstorm-900
+
+    .logo
+      position: absolute
+      top: 101px
+      left: 200px
+      height: 144px
+      width: 144px
+
+      background-color: #ffffff
+      background-image: url("@/static/images/logo.svg")
+      background-size: 144px 144px
+      transform: rotate3d(0, 0, 1, -15deg)
+
+      &::after
+        background-color: $oblivion-300
+        border: 1px solid $oblivion-700
+
+    .electricity-toolkit
+      position: absolute
+      top: 40px
+      right: 62px
+      height: 208px
+      width: 416px
+
+      border: 1px solid $oblivion-500
+      background-image: url("@/static/images/electricity-toolkit.svg")
+      background-size: 416px 208px
+      background-color: $oblivion-1100
+
+      .pinned-top, .pinned-bottom
+        width: 100%
+        height: 100%
+        position: absolute
+
+      .pinned-top::before, .pinned-top::after, .pinned-bottom::before, .pinned-bottom::after
+        background-color: $oblivion-500
+        border: 1px solid $oblivion-900
+
+      .pinned-top::before
+        top: -5px
+        left: -5px
+
+      .pinned-top::after
+        top: -5px
+        right: -5px
+
+      .pinned-bottom::before
+        bottom: -5px
+        left: -5px
+
+      .pinned-bottom::after
+        bottom: -5px
+        right: -5px
+
+    .bluu-suuperstar
+      position: absolute
+      top: 311px
+      right: 206px
+      height: 208px
+      width: 208px
+
+      background-color: $firework-500
+      background-image: url("@/static/images/bluu-suuperstar.svg")
+      background-size: 208px 208px
+      transform: rotate3d(0, 0, 1, 7.5deg)
+
+      &::after
+        background-color: $firework-500
+        border: 1px solid $firework-900
+
+    .gt-america
+      position: absolute
+      top: 350px
+      right: 102px
+      height: 208px
+      width: 208px
+
+      background-color: $maelstrom-500
+      background-image: url("@/static/images/gt-america.svg")
+      background-size: 208px 208px
+      transform: rotate3d(0, 0, 1, -7.5deg)
+
+      &::after
+        background-color: $maelstrom-500
+        border: 1px solid $maelstrom-900
+
+  .discover
+    margin-bottom: $space-xxxxl
+
+    .container
+      @extend .gridSystem
+
+    &-title
+      margin-bottom: $space-xxl
+      grid-column: 1 / span all
+
+    &-blocs
+      @extend .gridSystem
+      grid-column: 1 / span all
+
+    &-bloc
+      margin-bottom: 65px
+
+      +adapt($bkp-desktop-hd)
+        grid-column: span 4
+
+      .icon
+        margin-bottom: $space-xs
+        height: 80px
+        width: 128px
+
+        background-size: 128px 80px
+        background-repeat: no-repeat
+        background-position: center center
+
+      &.story .icon
+        background-image: url("@/static/images/discover-story.svg")
+
+      &.electricity .icon
+        background-image: url("@/static/images/discover-electricity.svg")
+
+      &.mood .icon
+        background-image: url("@/static/images/discover-moodboard.svg")
+
+      .title
+        margin-bottom: $space-xxs
+
+      .desc
+        margin-bottom: $space-xxs
+
+  .resume
+    margin-bottom: $space-xxxl
+
+    .container
+      @extend .gridSystem
+
+    .promise
+      grid-column: span 7
+
+      .caption
+        margin-bottom: $space-xs
+        color: $thunderstorm-500
+
+      .title
+        margin-bottom: $space-s
+
+      .desc
+        margin-bottom: $space-m
+        padding-right: 104px
+
+        p:first-of-type
+          margin-bottom: 32px
+
+      .ctas
+        display: flex
+        flex-direction: row
+
+        .process
+          margin-right: 20px
+
+        .contact
+          padding-right: 16px
+
+          background-color: $maelstrom-500
+
+    .experiences
+      margin-top: 56px
+      grid-column: 9 / span 4
+
+      .experience
+        position: relative
+
+        &:not(:first-of-type)::before
+          content: ''
+          position: absolute
+          top: 0px
+          left: -31px
+          height: 40px
+          width: 2px
+
+          background-color: $oblivion-300
+
+        &:not(:nth-last-of-type(2))::after
+          content: ''
+          position: absolute
+          top: 40px
+          left: -31px
+          height: calc(100%)
+          width: 2px
+
+          background-color: $oblivion-300
+
+        &:first-of-type .dot::after
+          content: ''
+          position: absolute
+          z-index: 50
+          top: 29px
+          left: -34px
+          height: 8px
+          width: 8px
+
+          border-radius: 8px
+          background-color: $oblivion-025
+
+        .dot
+          position: absolute
+          top: 0
+          left: 0
+
+          &::before
+            content: ''
+            position: absolute
+            z-index: 50
+            top: 22px
+            left: -41px
+            height: 18px
+            width: 18px
+
+            border: 2px solid $oblivion-300
+            border-radius: 18px
+            background-color: $oblivion-1100
+
+        .position
+          margin-bottom: $space-xxxxs
+
+        .duration
+          margin-bottom: $space-xxs
+
+        .desc
+          padding-bottom: $space-m
+
+          p:not(:last-of-type)
+            margin-bottom: $space-xs
+
+      .numbers
+        border: 1px solid $oblivion-500
+        border-radius: 8px
+
+        .clients, .projects
+          padding: $space-s
+          padding-top: $space-xs
+
+          .number
+            display: flex
+            flex-direction: row
+            align-items: flex-end
+
+          .desc
+
+            p ~ p
+              margin-top: $space-xs
+
+        .clients
+          border-bottom: 1px solid $oblivion-500
+
+          .desc
+            margin-bottom: $space-xxxs
+
+            p ~ p
+              margin-top: $space-xs
+
+        .projects
+          margin-bottom: 0
+
+          .number .icon
+            margin-left: $space-xxs
+            color: $thunderstorm-500
+
+            transform: translateY(-48px)
+
+  .personal
+    padding-top: $space-xxxl
+    padding-bottom: $space-xxxxl
+    position: relative
+    max-width: 100vw
+
+    background-color: #ffffff
+
+    &:before, &:after
+      content: ''
+      position: absolute
+      background-color: #ffffff
+      width: 32px
+      height: 100%
+      top: 0
+
+    &:before
+      left: -32px
+
+    &:after
+      right: -32px
+
+    +adapt($width-desktop-hd)
+      margin-left: calc(-32px)
+      margin-right: calc(-32px)
+
+      &:before
+        left: 0
+
+      &:after
+        right: 0
+
+    .container
+      @extend .gridSystem
+
+    &-photo
+      margin-bottom: $space-xs
+      grid-column: span 5
+      transform: translateY(-$space-xxs)
+
+      img
+        max-width: 100%
+        border-radius: 8px
+
+      .author
+        // font-size: 13px
+
+        a
+          @extend .bold
+          color: $oblivion-700
+          text-decoration: underline
+
+    &-content
+      grid-column: 7 / span 6
+
+    .caption
+      margin-bottom: $space-xxxs
+
+    .quote
+      margin-bottom: $space-s
+
+    p:not(:first-of-type)
+      margin-top: $space-s
+
+    a
+      margin-top: $space-xxxxs
+
+      &:not(:last-of-type)
+        margin-bottom: $space-xs
+
+  .thanks
+    position: relative
+    max-width: 100vw
+
+    background-color: $oblivion-050
+
+    &:before, &:after
+      content: ''
+      position: absolute
+      background-color: $oblivion-050
+      width: 32px
+      height: 100%
+      top: 0
+
+    &:before
+      left: -32px
+
+    &:after
+      right: -32px
+
+    +adapt($width-desktop-hd)
+      margin-left: calc(-32px)
+      margin-right: calc(-32px)
+
+      &:before
+        left: 0
+
+      &:after
+        right: 0
+
+    .container
+      padding: $space-xl 0
+      @extend .gridSystem
+
+    .thanks-website, .thanks-typefaces, .thanks-people
+      grid-column: span 4
+
+    .caption
+      margin-bottom: 7px
+      display: flex
+      flex-direction: row
+      align-items: flex-start
+      color: $oblivion-1100
+
+      .icon
+        padding-right: 4px
+        color: $maelstrom-500
+
+    .content
+
+      p:not(:last-of-type)
+        margin-bottom: 20px
+
+      a
+        @extend .bold
+        color: $oblivion-1100
+        text-decoration: underline
+
+        &:hover
+          color: $maelstrom-500
+
+        &:active
+          color: $maelstrom-500

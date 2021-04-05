@@ -3,13 +3,13 @@
     <div class="container gridSystem">
       <div class="buttons dark">
         <SuperButton href="/notes" variant="primary" icon="#arrow-forward-20">Get Started</SuperButton>
-        <SuperButton href="/notes" variant="primary locked" icon="#forbidden-20">Work under NDA</SuperButton>
+        <SuperButton variant="primary locked" icon="#forbidden-20">Work under NDA</SuperButton>
         <SuperButton href="/notes" variant="secondary dark">Get Started</SuperButton>
-        <SuperButton href="/notes" variant="secondary dark disabled" disabled>Get Started</SuperButton>
-        <SuperButton href="/notes" variant="secondary dark icon-only" icon="#external-link-20"></SuperButton>
-        <SuperButton href="/notes" variant="tertiary thunderstorm" icon="#arrow-forward-20">Get Started</SuperButton>
+        <!-- <SuperButton href="/notes" variant="secondary dark icon-only" icon="#external-link-20"></SuperButton> -->
+        <SuperButton variant="secondary dark disabled" disabled>Get Started</SuperButton>
+        <!-- <SuperButton href="/notes" variant="tertiary thunderstorm" icon="#arrow-forward-20">Get Started</SuperButton> -->
         <SuperButton href="/notes" variant="quaternary dark" icon="#arrow-forward-12">Get Started</SuperButton>
-        <SuperButton href="/notes" variant="quaternary dark locked">Get Started</SuperButton>
+        <SuperButton variant="quaternary dark locked">Get Started</SuperButton>
       </div>
       <div class="buttons light">
         <SuperButton href="/notes" variant="primary" icon="#arrow-forward-20">Get Started</SuperButton>
@@ -79,4 +79,5 @@
 
     .button:not(:last-of-type), .link:not(:last-of-type)
       margin-right: 24px
+
 </style>

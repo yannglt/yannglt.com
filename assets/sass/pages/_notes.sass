@@ -30,16 +30,6 @@
     padding-left: $space-m
     padding-bottom: $space-l
 
-    &:hover
-      cursor: pointer
-
-      .note-title
-        text-decoration: underline
-
-      .icon
-        opacity: 1
-        transform: translateX(0)
-
     &:not(:first-child)::before
       content: ''
       position: absolute
@@ -60,7 +50,17 @@
       left: 7px
       z-index: -5
 
-      background-color: $oblivion-500
+      background-color: $oblivion-500    
+
+    &:hover
+      cursor: pointer
+
+      .note-title
+        text-decoration: underline
+
+      .icon
+        opacity: 1
+        transform: translateX(0)
 
   .note-title
     margin-bottom: $space-xxxs
