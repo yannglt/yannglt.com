@@ -20,6 +20,20 @@ export default {
       lang: 'en'
     },
     title: 'Yann-Edern Gillet, Product Designer',
+    link: [
+      {
+        rel: 'shortcut icon',
+        href: 'https://crash.yannglt.com/images/favicon.ico',
+      },
+      {
+        rel: 'apple-touch-icon',
+        href: 'https://crash.yannglt.com/images/apple-touch-icon.png',
+      },
+      {
+        rel: 'icon',
+        href: 'https://crash.yannglt.com/images/icon.png',
+      }
+    ],
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
