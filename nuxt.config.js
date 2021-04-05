@@ -23,17 +23,51 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'description', content: 'Personal space on the Internets of Yann-Edern Gillet, Product Designer of things made of strategy, empathy and work precision. Here you will find soon a selection of my latest works and collaborations with startups and some friends, you will be also able to read more about my story, ask for freelance work, or just send me an invitation to grab a coffee together.' },
+      {
+        name: 'description',
+        content: 'Welcome to the personal Space on the Internets of Yann-Edern Gillet, a designer thinking, creating and breaking interfaces, products and systems with a passion for design operations'
+      },
+      {
+        name:  'og:title',
+        content:  'Yann-Edern Gillet, Product Designer',
+      },
+      {
+        name:  'og:image',
+        content:  'https://crash.yannglt.com/images/og-image.png',
+      },
+      {
+        name:  'og:url',
+        content:  'https://crash.yannglt.com',
+      },
+      {
+        name:  'og:description',
+        content:  'Welcome to the personal Space on the Internets of Yann-Edern Gillet, a designer thinking, creating and breaking interfaces, products and systems with a passion for design operations',
+      },
+      {
+        name:  'twitter:site',
+        content:  '@yannglt',
+      },
+      {
+        name:  'twitter:image',
+        content:  'https://crash.yannglt.com/images/og-image.png',
+      },
+      {
+        name:  'twitter:card',
+        content:  'summary_large_image',
+      },
+      {
+        name:  'twitter:title',
+        content:  'Yann-Edern Gillet, Product Designer',
+      },
+      {
+        name:  'twitter:description',
+        content:  'Welcome to the personal Space on the Internets of Yann-Edern Gillet, a designer thinking, creating and breaking interfaces, products and systems with a passion for design operations',
+      },
     ],
     script: [
 
     ]
   },
-
-  /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#fff' },
 
   /*
   ** Global CSS
@@ -54,10 +88,10 @@ export default {
   ],
 
   env: {
-   CONTENTFUL_SPACE: process.env.CONTENTFUL_SPACE,
-   CONTENTFUL_ACCESSTOKEN: process.env.CONTENTFUL_ACCESSTOKEN,
-   CONTENTFUL_ENVIRONMENT: process.env.CONTENTFUL_ENVIRONMENT
- },
+    CONTENTFUL_SPACE: process.env.CONTENTFUL_SPACE,
+    CONTENTFUL_ACCESSTOKEN: process.env.CONTENTFUL_ACCESSTOKEN,
+    CONTENTFUL_ENVIRONMENT: process.env.CONTENTFUL_ENVIRONMENT
+  },
 
   /*
   ** Nuxt.js modules
