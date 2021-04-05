@@ -22,7 +22,7 @@
             </div>
             <div class="project-links">
               <SuperButton v-if="!slide.nda" class="case-study" variant="primary" icon="#arrow-forward-20">Read case study</SuperButton>
-              <SuperButton v-if="slide.nda" variant="primary locked" icon="#forbidden-20">Work Under NDA</SuperButton>
+              <SuperButton v-if="slide.nda" class="nda" variant="primary locked" icon="#forbidden-20">Work Under NDA</SuperButton>
               <SuperButton v-if="slide.link" class="case-live" variant="secondary light icon-only" icon="#external-link-20"></SuperButton>
             </div>
           </div>
