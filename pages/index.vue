@@ -120,7 +120,7 @@
               <p>I hope you like what you find! I’m always happy to talk about design, its bridges with code and/or exchange ideas on why and how things should be done.</p>
               <SuperLink href="https://twitter.com/yannglt" target="_blank" variant="body light" icon="#arrow-forward-20">Shoot me a DM on Twitter</SuperLink>
               <p>Prefer the old fashion way ? You can just copy my email address (no mailto):</p>
-              <SuperLink @click.native="copyEmail" variant="body light" icon="#arrow-forward-20">Copy my email address hello@yannglt.com</SuperLink>
+              <SuperLink @click.native="copyEmail" variant="body light" icon="#copy-20">Copy my email address hello@yannglt.com</SuperLink>
             </div>
           </div>
         </div>
