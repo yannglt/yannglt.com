@@ -34,8 +34,8 @@
         <div class="progress-current" :style="'width: calc(' + (index + 1) / slidesCount * 100 + '%)'"></div>
       </div>
       <div class="current-navs">
-        <div class="current caption">00<span v-for="slide in slides" :class="{ activeNumber : slide.id == index }" class="slideNumber" :key="slide.id" :style="'bottom: calc(' + ((-slide.id + 1) * 50 - 50) + '%); transform: translateY(calc(' + (-index * 50) + '%))'">{{ slide.id + 1 }}</span>
-          <span class="total"> &nbsp;/ 00{{ slidesCount}}</span></div>
+        <div class="current caption">00<span v-for="slide in slides" :class="{ activeNumber : slide.id == index }" class="slideNumber caption" :key="slide.id" :style="'bottom: calc(' + ((-slide.id + 1) * 50 - 50) + '%); transform: translateY(calc(' + (-index * 50) + '%))'">{{ slide.id + 1 }}</span>
+          <span class="total caption"> &nbsp;/ 00{{ slidesCount}}</span></div>
         <div class="navs">
           <button class="next" :disabled="index == slidesCount - 1" @click="next"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></button>
           <button class="prev" :disabled="index == 0" @click="previous"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-backward-20"></use></svg></button>
