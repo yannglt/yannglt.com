@@ -135,9 +135,11 @@
 
     <section class="human">
       <div class="container">
-        <h2 class="humanTitle">Interfaces, products and systems are an important part of my life, but what about the human behind all of this?</h2>
-        <a href="/about" class="humanLink">Read more about me as a human<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></a>
-        <div class="humanLogo"></div>
+        <div class="human-intro">
+          <h2 class="human-intro-title heading-1 text-primary-dark">Interfaces, products and systems are an important part of my life, but what about the human behind all of this?</h2>
+          <SuperButton class="human-intro-link" href="/about" variant="tertiary thunderstorm" icon="#arrow-forward-20">Read more about me as a human</SuperButton>
+          <div class="human-intro-logo"></div>
+        </div>
         <div class="facts">
           <Fact v-for="fact in facts" :key="fact.id" :sub="fact.sub" :title="fact.title" :desc="fact.desc"></Fact>
         </div>
@@ -153,6 +155,7 @@
 
   import Navbar from '../components/Navbar.vue'
   import ProjectsCarousel from '../components/ProjectsCarousel.vue'
+  import SuperButton from '../components/SuperButton.vue'
   import SuperLink from '../components/SuperLink.vue'
   import Fact from '../components/Fact.vue'
   import CopyToast from '../components/CopyToast.vue'
@@ -231,6 +234,7 @@
     components: {
       Navbar,
       ProjectsCarousel,
+      SuperButton,
       SuperLink,
       Fact,
       CopyToast,

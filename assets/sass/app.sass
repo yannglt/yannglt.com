@@ -237,7 +237,7 @@ a.wip:hover
 
     height: 96px
     width: 96px
-    background-image: url("../../static/icons/logo-thunderstorm-96.svg")
+    background-image: url("@/static/icons/logo-thunderstorm-96.svg")
     background-repeat: no-repeat
     background-size: 96px 96px
     background-position: center
@@ -292,7 +292,7 @@ a.wip:hover
         position: absolute
         height: 240px
         width: 532px
-        background-image: url("../../static/images/intro.svg")
+        background-image: url("@/static/images/intro.svg")
         background-repeat: no-repeat
         background-size: 532px 240px
         background-position: center
@@ -768,7 +768,7 @@ a.wip:hover
     .atlas-bg
       position: absolute
       width: 100%
-      background-image: linear-gradient(rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.76)), url("../../static/images/atlas.svg")
+      background-image: linear-gradient(rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.76)), url("@/static/images/atlas.svg")
       background-repeat: repeat
       background-size: 600px 600px
       background-position: top
@@ -1011,8 +1011,8 @@ a.wip:hover
   +motion($time-medium, $weight-small, $speed-accelerated, transform)
 
 .manifesto-process
-  // background-image: url("../../static/images/process.svg")
-  background-image: url("../../static/images/process-wip.svg")
+  // background-image: url("@/static/images/process.svg")
+  background-image: url("@/static/images/process-wip.svg")
   background-repeat: no-repeat
 
   +adapt($bkp-mobile)
@@ -1123,90 +1123,39 @@ a.wip:hover
   .container
     @extend .gridSystem
 
-  &Title
-    z-index: 50
-    @extend .heading-1
-    color: #ffffff
-    text-align: center
-
-    +adapt($bkp-mobile)
-      grid-column: span 2
-
-    +adapt($bkp-tablet)
-      grid-column: span 8
-
-    +adapt($bkp-desktop-sd)
-      grid-column: 2 / span 8
-
-    +adapt($bkp-desktop-hd)
-      grid-column: 2 / span 10
-
-  &Link
-    z-index: 50
-    margin-top: 41px
-    justify-self: center
-    font-size: 16px
-    line-height: 24px
-
-    @extend .caption
+  &-intro
     display: flex
-    align-items: center
-    color: $thunderstorm-500
+    flex-direction: column
+    justify-content: center
+    z-index: 50
 
     +adapt($bkp-mobile)
       grid-column: span 2
-      flex-direction: column
+
+    +adapt($bkp-tablet)
+      grid-column: span 8
+
+    +adapt($bkp-desktop-sd)
+      grid-column: 2 / span 8
+
+    +adapt($bkp-desktop-hd)
+      grid-column: 2 / span 10
+
+    &-title
+      margin-bottom: $space-s
       text-align: center
-      margin-left: 64px
-      margin-right: 64px
 
-    +adapt($width-mobile)
-      flex-direction: row
-      margin-left: 0
-      margin-right: 0
-
-    +adapt($bkp-tablet)
-      grid-column: span 8
-
-    +adapt($bkp-desktop-sd)
-      grid-column: 2 / span 8
-
-    +adapt($bkp-desktop-hd)
-      grid-column: 2 / span 10
-
-    .icon
-      padding-left: 4px
-      color: $thunderstorm-700
-
-      +adapt($bkp-mobile)
-        margin-top: 8px
-
-      +adapt($width-mobile)
-        margin-top: 0
-
-  &Logo
-    justify-self: center
-    margin-top: 34px
-    height: 48px
-    width: 48px
-    border: 1px solid $oblivion-700
-    border-radius: 24px
-    background-image: url("../../static/icons/logo-white-24.svg")
-    background-repeat: no-repeat
-    background-size: 24px 24px
-    background-position: center
-
-    +adapt($bkp-mobile)
-      grid-column: span 2
-
-    +adapt($bkp-tablet)
-      grid-column: span 8
-
-    +adapt($bkp-desktop-sd)
-      grid-column: 2 / span 8
-
-    +adapt($bkp-desktop-hd)
-      grid-column: 2 / span 10
+    &-logo
+      align-self: center
+      margin-top: $space-s
+      height: 48px
+      width: 48px
+      border: 1px solid $oblivion-700
+      border-radius: 24px
+      background-image: url("@/static/icons/logo-white-24.svg")
+      background-repeat: no-repeat
+      background-size: 24px 24px
+      background-position: center
 
   .facts
     position: relative
@@ -1339,7 +1288,7 @@ a.wip:hover
     min-height: 624px
     border: 1px solid $oblivion-500
 
-    background-image: url("../../static/images/moodboard-grid.svg")
+    background-image: url("@/static/images/moodboard-grid.svg")
     background-repeat: repeat
     background-size: 104px 104px
     background-position: top left
@@ -1387,7 +1336,7 @@ a.wip:hover
       width: 208px
 
       background-color: $thunderstorm-900
-      mask-image: url("../../static/images/atlas.svg")
+      mask-image: url("@/static/images/atlas.svg")
       mask-size: 312px 312px
       background-size: 312px 208px
       background-position: left top
@@ -1404,7 +1353,7 @@ a.wip:hover
     width: 144px
 
     background-color: #ffffff
-    background-image: url("../../static/images/logo.svg")
+    background-image: url("@/static/images/logo.svg")
     background-size: 144px 144px
     transform: rotate3d(0, 0, 1, -15deg)
 
@@ -1420,7 +1369,7 @@ a.wip:hover
     width: 416px
 
     border: 1px solid $oblivion-500
-    background-image: url("../../static/images/electricity-toolkit.svg")
+    background-image: url("@/static/images/electricity-toolkit.svg")
     background-size: 416px 208px
     background-color: $oblivion-1100
 
@@ -1457,7 +1406,7 @@ a.wip:hover
     width: 208px
 
     background-color: $firework-500
-    background-image: url("../../static/images/bluu-suuperstar.svg")
+    background-image: url("@/static/images/bluu-suuperstar.svg")
     background-size: 208px 208px
     transform: rotate3d(0, 0, 1, 7.5deg)
 
@@ -1473,7 +1422,7 @@ a.wip:hover
     width: 208px
 
     background-color: $maelstrom-500
-    background-image: url("../../static/images/gt-america.svg")
+    background-image: url("@/static/images/gt-america.svg")
     background-size: 208px 208px
     transform: rotate3d(0, 0, 1, -7.5deg)
 
@@ -1494,7 +1443,7 @@ a.wip:hover
     height: 416px
     width: 520px
 
-    background-image: url('../../static/images/moodboard-test.jpg')
+    background-image: url('@/static/images/moodboard-test.jpg')
     background-size: cover
     background-position: center center
 
@@ -1598,13 +1547,13 @@ a.wip:hover
     background-position: center center
 
     &.story
-      background-image: url("../../static/images/discover-story.svg")
+      background-image: url("@/static/images/discover-story.svg")
 
     &.electricity
-      background-image: url("../../static/images/discover-electricity.svg")
+      background-image: url("@/static/images/discover-electricity.svg")
 
     &.mood
-      background-image: url("../../static/images/discover-moodboard.svg")
+      background-image: url("@/static/images/discover-moodboard.svg")
 
   &--title
     margin-bottom: 13px
