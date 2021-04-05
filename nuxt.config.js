@@ -25,7 +25,7 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         name: 'description',
-        content: 'Welcome to the personal Space on the Internets of Yann-Edern Gillet, a designer thinking, creating and breaking interfaces, products and systems with a passion for design operations'
+        content: 'Personal space of Yann-Edern Gillet, a designer thinking, creating and breaking interfaces, products and systems with a passion for design operations'
       },
       {
         name:  'og:title',
@@ -41,7 +41,7 @@ export default {
       },
       {
         name:  'og:description',
-        content:  'Welcome to the personal Space on the Internets of Yann-Edern Gillet, a designer thinking, creating and breaking interfaces, products and systems with a passion for design operations',
+        content:  'Personal space of Yann-Edern Gillet, a designer thinking, creating and breaking interfaces, products and systems with a passion for design operations',
       },
       {
         name:  'twitter:site',
@@ -61,7 +61,7 @@ export default {
       },
       {
         name:  'twitter:description',
-        content:  'Welcome to the personal Space on the Internets of Yann-Edern Gillet, a designer thinking, creating and breaking interfaces, products and systems with a passion for design operations',
+        content:  'Personal space of Yann-Edern Gillet, a designer thinking, creating and breaking interfaces, products and systems with a passion for design operations',
       },
     ],
     script: [
