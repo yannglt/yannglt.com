@@ -24,7 +24,6 @@
     border-radius: 4px
 
     .label
-      @extend .label
       color: #ffffff
 
   &.primary
@@ -44,7 +43,6 @@
     border: 2px solid $oblivion-300
 
     .label
-      @extend .label
       color: #ffffff
 
     &:hover
@@ -109,6 +107,31 @@
 
       .icon
         color: $maelstrom-700
+
+  &.quaternary
+    padding: 4px 12px
+
+    .label
+      @extend .caption
+      +motion($time-standard, $weight-small, $speed-standard, color)
+
+    .icon
+      height: 12px
+      width: 12px
+      margin-right: 0
+
+    &.dark
+
+      .label
+        color: #ffffff
+
+      .icon
+        color: $thunderstorm-500
+
+      &:hover
+
+        .label
+          color: $thunderstorm-500
 
   &.locked
     background-color: $action-locked-default

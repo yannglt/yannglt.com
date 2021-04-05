@@ -3,18 +3,19 @@
     <div class="container gridSystem">
       <div class="buttons dark">
         <SuperButton href="/notes" variant="primary" icon="#arrow-forward-20">Get Started</SuperButton>
+        <!-- <SuperButton href="/notes" variant="locked" icon="#forbidden-20">Work under NDA</SuperButton> -->
         <SuperButton href="/notes" variant="secondary dark">Get Started</SuperButton>
         <SuperButton href="/notes" variant="secondary dark icon-only" icon="#external-link-20"></SuperButton>
         <SuperButton href="/notes" variant="tertiary thunderstorm" icon="#arrow-forward-20">Get Started</SuperButton>
-        <SuperButton href="/notes" variant="locked" icon="#forbidden-20">Work under NDA</SuperButton>
+        <SuperButton href="/notes" variant="quaternary dark" icon="#arrow-forward-12">Get Started</SuperButton>
       </div>
       <div class="buttons light">
         <SuperButton href="/notes" variant="primary" icon="#arrow-forward-20">Get Started</SuperButton>
+        <!-- <SuperButton href="/notes" variant="locked" icon="#forbidden-20">Work under NDA</SuperButton> -->
         <SuperButton href="/notes" variant="secondary light">Get Started</SuperButton>
         <SuperButton href="/notes" variant="secondary light icon-only" icon="#external-link-20"></SuperButton>
         <SuperButton href="/notes" variant="tertiary maelstrom" icon="#arrow-forward-20">Get Started</SuperButton>
         <SuperButton href="/notes" variant="tertiary oblivion" icon="#arrow-forward-20">Get Started</SuperButton>
-        <SuperButton href="/notes" variant="locked" icon="#forbidden-20">Work under NDA</SuperButton>
       </div>
       <div class="links dark">
         <SuperLink href="/notes" variant="emphasis dark" icon="#arrow-forward-20">Read the code behind this website</SuperLink>
