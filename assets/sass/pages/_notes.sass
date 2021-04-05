@@ -1,6 +1,6 @@
 .notes-page .notes
-  margin-top: $space-128
-  margin-bottom: $space-128
+  margin-top: $space-xxxl
+  margin-bottom: $space-xxxl
 
   .container
     @extend .gridSystem
@@ -20,15 +20,15 @@
       grid-column: 4 / span 6
 
   .notes-intro
-    margin-bottom: $space-80
+    margin-bottom: $space-xxl
 
     &-title
-      margin-bottom: $space-16
+      margin-bottom: $space-xs
 
   .note
     position: relative
-    padding-left: $space-48
-    padding-bottom: $space-64
+    padding-left: $space-m
+    padding-bottom: $space-l
 
     &:hover
       cursor: pointer
@@ -63,7 +63,7 @@
       background-color: $oblivion-500
 
   .note-title
-    margin-bottom: $space-8
+    margin-bottom: $space-xxxs
     position: relative
 
   .note-title:not(:last-child)::before
@@ -71,7 +71,7 @@
       position: absolute
       height: calc(16px - 4px)
       width: calc(16px - 4px)
-      left: -$space-48
+      left: -$space-m
       top: calc(50% - 6px)
 
       border-radius: 8px
