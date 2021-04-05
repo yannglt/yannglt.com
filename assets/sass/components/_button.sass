@@ -38,6 +38,12 @@
     &:active
       background-color: $action-primary-active
 
+    &.locked
+      background-color: $action-locked-default
+
+      .icon
+        color: $oblivion-100
+
   &.secondary
     padding: 8px 18px
     border: 2px solid $oblivion-300
@@ -128,16 +134,17 @@
       .icon
         color: $thunderstorm-500
 
-      &:hover
+      &:not(.locked):hover
 
         .label
           color: $thunderstorm-500
 
-  &.locked
-    background-color: $action-locked-default
+      &.locked
 
-    .icon
-      color: $oblivion-100
+        .label
+          color: $oblivion-300
+
+  &.locked
 
     &:hover
       cursor: not-allowed
