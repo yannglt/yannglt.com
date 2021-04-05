@@ -23,15 +23,15 @@ export default {
     link: [
       {
         rel: 'shortcut icon',
-        href: 'https://crash.yannglt.com/images/favicon.ico',
+        href: 'https://yannglt.com/images/favicon.ico',
       },
       {
         rel: 'apple-touch-icon',
-        href: 'https://crash.yannglt.com/images/apple-touch-icon.png',
+        href: 'https://yannglt.com/images/apple-touch-icon.png',
       },
       {
         rel: 'icon',
-        href: 'https://crash.yannglt.com/images/icon.png',
+        href: 'https://yannglt.com/images/icon.png',
       }
     ],
     meta: [
@@ -47,11 +47,11 @@ export default {
       },
       {
         name:  'og:image',
-        content:  'https://crash.yannglt.com/images/og-image.png',
+        content:  'https://yannglt.com/images/og-image.png',
       },
       {
         name:  'og:url',
-        content:  'https://crash.yannglt.com',
+        content:  'https://yannglt.com',
       },
       {
         name:  'og:description',
@@ -63,7 +63,7 @@ export default {
       },
       {
         name:  'twitter:image',
-        content:  'https://crash.yannglt.com/images/og-image.png',
+        content:  'https://yannglt.com/images/og-image.png',
       },
       {
         name:  'twitter:card',
