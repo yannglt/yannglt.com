@@ -37,18 +37,17 @@
 
     border-top: 2px solid $oblivion-700
 
-    +adapt($bkp-mobile)
-      grid-column: span 2
-
     +adapt($bkp-tablet)
-      grid-column: 2 / span 6
+      grid-column: 1 / span 6
       padding-top: 69px
       margin-bottom: 115px
 
     +adapt($bkp-desktop-sd)
-      grid-column: span 12
       padding-top: 93px
       margin-bottom: 108px
+
+    +adapt($bkp-desktop-hd)
+      grid-column: 1 / span 12
 
     &Title
       @extend .heading-2
@@ -81,10 +80,13 @@
 
       span
         +adapt($bkp-tablet)
-          grid-column: span 6
+          grid-column: 1 / span 6
+
+        +adapt($bkp-desktop-hd)
+          grid-column: 1 / span 12
 
       +adapt($bkp-tablet)
-        +gCols(6, 1fr, 32px)
+        +gCols(6, 1fr, 40px)
 
       +adapt($bkp-desktop-sd)
         display: flex
@@ -180,10 +182,13 @@
 
       +adapt($bkp-tablet)
         width: auto
-        grid-column: span 6
+        grid-column: 1 / span 6
 
       +adapt($bkp-desktop-sd)
         margin-top: 32px
+
+      +adapt($bkp-desktop-hd)
+        grid-column: 1 / span 12
 
       .icon
         padding-left: 8px
@@ -223,21 +228,20 @@
 
     +adapt($bkp-mobile)
       padding: 34px 0 108px
-      grid-column: span 2
 
     +adapt($bkp-tablet)
       padding: 34px 0 86px
-      grid-column: span 8
-      +gCols(8, 1fr, 32px)
+      grid-column: 1 / span 6
+      +gCols(6, 1fr, 40px)
 
     +adapt($bkp-desktop-sd)
       padding: 34px 0 114px
-      grid-column: span 12
-      +gCols(12, 1fr, 40px)
+      grid-column: 1 / span 6
+      +gCols(6, 1fr, 40px)
 
     +adapt($bkp-desktop-hd)
       padding: 34px 0 126px
-      grid-column: span 12
+      grid-column: 1 / span 12
       +gCols(12, 1fr, 40px)
 
     .footer-copyright
@@ -248,10 +252,10 @@
 
       +adapt($bkp-tablet)
         order: 1
-        grid-column: span 3
+        grid-column: 1 / span 2
 
-      +adapt($bkp-desktop-sd)
-        grid-column: span 6
+      +adapt($bkp-desktop-hd)
+        grid-column: 1 / span 6
 
       &Logo
         margin-top: 34px
@@ -270,22 +274,22 @@
 
       +adapt($bkp-tablet)
         order: 2
-        grid-column: span 3
+        grid-column: 3 / span 2
         margin-bottom: 0
 
-      +adapt($bkp-desktop-sd)
-        grid-column: span 3
+      +adapt($bkp-desktop-hd)
+        grid-column: 7 / span 3
 
     .footer-follow
       order: 2
       margin-bottom: 42px
 
       +adapt($bkp-tablet)
-        grid-column: span 2
+        grid-column: 5 / span 2
         margin-bottom: 0
 
-      +adapt($bkp-desktop-sd)
-        grid-column: span 3
+      +adapt($bkp-desktop-hd)
+        grid-column: 10 / span 2
 
     .footer-copyright,
     .footer-explore,
