@@ -1,56 +1,45 @@
 .notes-page .notes
-  margin-top: $space-xxxxl
+  // Inital spacing + navbar height
+  margin-top: calc(#{$space-xxl} + 96px)
   margin-bottom: $space-xxxl
+
+  +adapt($bkp-desktop-hd)
+    margin-top: calc(#{$space-xxxl} + 96px)
 
   .container
     @extend .gridSystem
 
   .notes-intro, .notes-list
 
-    +adapt($bkp-mobile)
-      grid-column: span 2
-
-    +adapt($bkp-tablet)
-      grid-column: 2 / span 6
-
-    +adapt($bkp-desktop-sd)
-      grid-column: 3 / span 6
-
     +adapt($bkp-desktop-hd)
       grid-column: 4 / span 6
 
   .notes-intro
-    margin-bottom: $space-xxl
+    margin-bottom: $space-l
+
+    +adapt($bkp-desktop-sd)
+      margin-bottom: $space-xxl
 
     &-title
       margin-bottom: $space-xs
 
   .note
     position: relative
-    padding-left: $space-m
+    // Inital margin - body padding
+    padding-left: calc(#{$space-xl} - #{$space-s})
     padding-bottom: $space-l
 
-    &:not(:first-child)::before
-      content: ''
-      position: absolute
-      height: 20%
-      width: 2px
-      top: 0
-      left: 7px
-      z-index: -5
+    &:first-of-type .note-title::before
+      top: 50%
+      height: calc(50% + 8px)
 
-      background-color: $oblivion-500
+    &:last-of-type
 
-    &:not(:last-child)::after
-      content: ''
-      position: absolute
-      height: calc(128px + 32px)
-      width: 2px
-      top: 48px
-      left: 7px
-      z-index: -5
+      .note-title::before
+        height: 50%
 
-      background-color: $oblivion-500    
+      .note-date::before
+        height: 0
 
     &:hover
       cursor: pointer
@@ -66,17 +55,33 @@
     margin-bottom: $space-xxxs
     position: relative
 
-  .note-title:not(:last-child)::before
+    &::before, &::after
       content: ''
       position: absolute
-      height: calc(16px - 4px)
-      width: calc(16px - 4px)
-      left: -$space-m
-      top: calc(50% - 6px)
+
+    &::before
+      top: 0
+      // Inital margin - circle diameter - stroke-width
+      left: calc(-#{$space-s} - 8px - 1px)
+      // Total height + margin-bottom
+      height: calc(100% + 8px)
+      width: 2px
+      z-index: -5
+
+      background-color: $oblivion-500
+
+    &::after
+      height: 16px
+      width: 16px
+      top: 50%
+      left: calc((#{$space-xl} - #{$space-s}) * -1)
+      box-sizing: border-box
 
       border-radius: 8px
       border: 2px solid $oblivion-500
       background-color: $oblivion-1100
+
+      transform: translateY(-50%)
 
   .icon
     padding-left: 8px
@@ -86,3 +91,19 @@
     opacity: 0
     transform: translateX(-8px)
     +motion($time-quick, $weight-small, $speed-standard, transform, opacity)
+
+  .note-date
+    position: relative
+
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      // Inital margin - circle diameter - stroke-width
+      left: calc(-#{$space-s} - 8px - 1px)
+      // Total height + margin-bottom
+      height: calc(100% + #{$space-l})
+      width: 2px
+      z-index: -5
+
+      background-color: $oblivion-500
