@@ -1,45 +1,35 @@
 .contact-page .contact
-  margin-top: $space-xxxxl
+  // Inital spacing + navbar height
+  margin-top: calc(#{$space-xxl} + 96px)
 
   .container
     @extend .gridSystem
     align-items: flex-start
 
   .contact-content
-    margin-bottom: $space-xxxl
+    margin-bottom: $space-l
 
-    +adapt($bkp-mobile)
-      grid-column: span 4
+    +adapt($bkp-desktop-hd)
+      margin-bottom: $space-xxxl
+
+  .contact-content, .contact-links, .redirects
 
     +adapt($bkp-tablet)
-      grid-column: span 4
-
-    +adapt($bkp-desktop-sd)
-      grid-column: span 6
+      grid-column: 1 / span 6
 
   .contact-heading
     margin-bottom: $space-s
 
     span
       display: block
-      margin-top: $space-s
+      margin-top: $space-m
 
   .contact-links
-    grid-column: 9 / span 4
-
+    margin-bottom: $space-xxl
     border: 2px solid $oblivion-500
     border-radius: 8px
 
     transform: translateY(8px)
-
-    +adapt($bkp-mobile)
-      grid-column: span 4
-
-    +adapt($bkp-tablet)
-      grid-column: span 4
-
-    +adapt($bkp-desktop-sd)
-      // grid-column: span 6
 
     +adapt($bkp-desktop-hd)
       grid-column: 9 / span 4
@@ -52,27 +42,58 @@
       border-bottom: 2px solid $oblivion-500
 
   .redirects
-    padding: $space-l 0 $space-xxl
-
-    grid-column: span 12
     @extend .gridSystem
-
+    padding: $space-xl 0 $space-xxl
     border-top: 2px solid $oblivion-700
 
+    +adapt($bkp-desktop-hd)
+      grid-column: span 12
+
   .redirect
-    grid-column: span 4
+    @extend .gridSystem
+    grid-column: span 6
+
+    +adapt($bkp-desktop-hd)
+      grid-template-columns: none
+      grid-column: span 4
+
+    &:not(:last-of-type)
+      margin-bottom: $space-xxl
+
+      +adapt($bkp-desktop-hd)
+        margin-bottom: 0
 
     &-icon
       height: 80px
       width: 128px
-      margin-bottom: $space-xs
+      margin-bottom: $space-s
 
       background-size: 128px 80px
       background-repeat: no-repeat
       background-position: center center
 
+      +adapt($bkp-tablet)
+        margin: 0 auto
+        margin-top: 20px
+        margin-bottom: $space-s
+        grid-column: 1 / span 2
+
+      +adapt($bkp-desktop-hd)
+        margin: 0
+        grid-column: none
+
+    &-content
+      +adapt($bkp-tablet)
+        grid-column: 3 / span 4
+
+      +adapt($bkp-desktop-sd)
+        grid-column: 3 / span 3
+
+      +adapt($bkp-desktop-hd)
+        grid-column: none
+
     &-title
-      margin-bottom: $space-xxs
+      margin-bottom: $space-xxxs
 
     &-desc
       margin-bottom: $space-xs

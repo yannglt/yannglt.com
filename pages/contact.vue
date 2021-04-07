@@ -25,21 +25,27 @@
         <div class="redirects">
           <div class="redirect about">
             <div class="redirect-icon"></div>
-            <h2 class="redirect-title heading-2 text-secondary-dark">About</h2>
-            <p class="redirect-desc text-quaternary-dark">Find here my inspirations, current and past experiences, facts about me and things I like to do after work hours.</p>
-            <SuperButton href="/about" class="redirect-link" variant="quaternary dark" icon="#arrow-forward-12">Know more about me</SuperButton>
+            <div class="redirect-content">
+              <h2 class="redirect-title heading-2 text-secondary-dark">About</h2>
+              <p class="redirect-desc text-quaternary-dark">Find here my inspirations, current and past experiences, facts about me and things I like to do after work hours.</p>
+              <SuperButton href="/about" class="redirect-link" variant="quaternary dark" icon="#arrow-forward-12">Know more about me</SuperButton>
+            </div>
           </div>
           <div class="redirect notes">
             <div class="redirect-icon"></div>
-            <h2 class="redirect-title heading-2 text-secondary-dark">Notes</h2>
-            <p class="redirect-desc text-quaternary-dark">I share my thoughts about design operations and bridges between design and code. Also kind of a public reflection journal.</p>
-            <SuperButton href="/notes" class="redirect-link" variant="quaternary dark" icon="#arrow-forward-12">Read my notes</SuperButton>
+            <div class="redirect-content">
+              <h2 class="redirect-title heading-2 text-secondary-dark">Notes</h2>
+              <p class="redirect-desc text-quaternary-dark">I share my thoughts about design operations and bridges between design and code. Also kind of a public reflection journal.</p>
+              <SuperButton href="/notes" class="redirect-link" variant="quaternary dark" icon="#arrow-forward-12">Read my notes</SuperButton>
+            </div>
           </div>
           <div class="redirect process">
             <div class="redirect-icon"></div>
-            <h2 class="redirect-title heading-2 text-secondary-dark">Process</h2>
-            <p class="redirect-desc text-quaternary-dark">I try to find a great balance between following the choosen methodology and keeping velocity and efficiency through the entire journey</p>
-            <SuperButton class="redirect-link" variant="quaternary dark disabled">Coming soon</SuperButton>
+            <div class="redirect-content">
+              <h2 class="redirect-title heading-2 text-secondary-dark">Process</h2>
+              <p class="redirect-desc text-quaternary-dark">I try to find a great balance between following the choosen methodology and keeping velocity and efficiency through the entire journey</p>
+              <SuperButton class="redirect-link" variant="quaternary dark disabled">Coming soon</SuperButton>
+            </div>
           </div>
         </div>
       </div>
