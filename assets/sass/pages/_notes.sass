@@ -11,6 +11,12 @@
 
   .notes-intro, .notes-list
 
+    +adapt($bkp-tablet)
+      grid-column: 1 / span 5
+
+    +adapt($bkp-desktop-sd)
+      grid-column: 2 / span 4
+
     +adapt($bkp-desktop-hd)
       grid-column: 4 / span 6
 
@@ -40,6 +46,9 @@
 
       .note-date::before
         height: 0
+
+    +adapt($bkp-desktop-sd)
+      padding-left: $space-l
 
     &:hover
       cursor: pointer
@@ -83,6 +92,14 @@
 
       transform: translateY(-50%)
 
+    +adapt($bkp-desktop-sd)
+
+      &::before
+        left: calc(-#{$space-m} - 8px - 1px)
+
+      &::after
+        left: calc(#{$space-l} * -1)
+
   .icon
     padding-left: 8px
 
@@ -107,3 +124,8 @@
       z-index: -5
 
       background-color: $oblivion-500
+
+    +adapt($bkp-desktop-sd)
+
+      &::before
+        left: calc(-#{$space-m} - 8px - 1px)
