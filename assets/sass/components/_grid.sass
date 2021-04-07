@@ -3,40 +3,30 @@ body
   max-width: 100vw
   overflow-x: hidden
 
-  padding-left: calc(max(19px, 8vw))
-  padding-right: calc(max(19px, 8vw))
+  padding-left: 16px
+  padding-right: 16px
 
   +adapt($bkp-mobile)
-    padding-left: calc(clamp(27px, 6.64vw, 32px))
-    padding-right: calc(clamp(27px, 6.64vw, 32px))
+    padding-left: 24px
+    padding-right: 24px
 
   +adapt($bkp-tablet)
-    padding-left: 32px
-    padding-right: 32px
+    padding-left: 68px
+    padding-right: 68px
 
   +adapt($bkp-desktop-sd)
-    padding-left: 32px
-    padding-right: 32px
+    padding-left: 76px
+    padding-right: 76px
 
   +adapt($bkp-desktop-hd)
-    padding-left: calc(min(32px, 116px))
-    padding-right: calc(min(32px, 116px))
+    padding-left: calc(min(76px, 116px))
+    padding-right: calc(min(76px, 116px))
 
 .gridSystem
-  margin: 0 auto
-  max-width: $bkp-desktop-hd
 
-  // Grid used for mobiles
-  +adapt($bkp-mobile)
-    +gCols(2, 1fr, 32px)
-
-  // Grid used for portrait tablets
+  // Grid used for tablets and standard-definition desktops
   +adapt($bkp-tablet)
-    +gCols(8, 1fr, 32px)
-
-  // Grid used for standard-definition desktops and landscape tablets
-  +adapt($bkp-desktop-sd)
-    +gCols(10, 1fr, 40px)
+    +gCols(6, 1fr, 40px)
 
   // Grid used for high-definition desktops
   +adapt($bkp-desktop-hd)
