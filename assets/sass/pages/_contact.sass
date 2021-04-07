@@ -58,7 +58,10 @@
       grid-column: span 4
 
     &:not(:last-of-type)
-      margin-bottom: $space-xxl
+      margin-bottom: $space-xxxl
+
+      +adapt($bkp-tablet)
+        margin-bottom: $space-xl
 
       +adapt($bkp-desktop-hd)
         margin-bottom: 0
@@ -66,6 +69,7 @@
     &-icon
       height: 80px
       width: 128px
+      margin: 0 auto
       margin-bottom: $space-s
 
       background-size: 128px 80px
@@ -84,7 +88,10 @@
         grid-column: none
 
     &-content
+      text-align: center
+
       +adapt($bkp-tablet)
+        text-align: left
         grid-column: 3 / span 4
 
       +adapt($bkp-desktop-sd)
