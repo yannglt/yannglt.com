@@ -5,7 +5,7 @@
       <div class="container">
         <div class="notes-intro">
           <h1 class="notes-intro-title heading-1 text-primary-dark">Notes</h1>
-          <p class="notes-intro-desc text-quaternary-dark">Find here all my writing notes, essays, blog posts, call it how you want haha. Topics cover design operations and bridges between design and code. I may use this space also like a journal, we will see.</p>
+          <p class="notes-intro-desc body text-quaternary-dark">Find here all my writing notes, essays, blog posts, call it how you want haha. Topics cover design operations and bridges between design and code. I may use this space also like a journal, we will see.</p>
         </div>
         <div class="notes-list">
           <article v-for="note in notes" :key="note.fields.slug" class="note">

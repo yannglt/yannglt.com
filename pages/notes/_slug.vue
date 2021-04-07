@@ -7,7 +7,7 @@
         <div class="note-content">
           <h1 class="note-title heading-1 text-primary-dark">{{ note.fields.title }}</h1>
           <p class="note-date caption text-tertiary-dark">Published on {{ getHumanDate(note.fields.publishDate) }}</p>
-          <div class="note-body" v-html="$md.render(note.fields.body)"></div>
+          <div class="note-body body" v-html="$md.render(note.fields.body)"></div>
         </div>
         <div class="note-end">
           <div class="note-end-img"></div>

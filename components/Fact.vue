@@ -2,7 +2,7 @@
   <div class="fact">
     <p class="factSub">{{ sub }}</p>
     <p class="factTitle">{{ title }}</p>
-    <div class="factDesc" v-html="desc"></div>
+    <div class="factDesc body" v-html="desc"></div>
   </div>
 </template>
 
@@ -13,7 +13,7 @@
       title: { type: String, default: '', required: true },
       desc: { type: String, default: '', required: true }
     },
-    
+
     data: function () {
       return { }
     }

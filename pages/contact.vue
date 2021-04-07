@@ -27,7 +27,7 @@
             <div class="redirect-icon"></div>
             <div class="redirect-content">
               <h2 class="redirect-title heading-2 text-secondary-dark">About</h2>
-              <p class="redirect-desc text-quaternary-dark">Find here my inspirations, current and past experiences, facts about me and things I like to do after work hours.</p>
+              <p class="redirect-desc body text-quaternary-dark">Find here my inspirations, current and past experiences, facts about me and things I like to do after work hours.</p>
               <SuperButton href="/about" class="redirect-link" variant="quaternary dark" icon="#arrow-forward-12">Know more about me</SuperButton>
             </div>
           </div>
@@ -35,7 +35,7 @@
             <div class="redirect-icon"></div>
             <div class="redirect-content">
               <h2 class="redirect-title heading-2 text-secondary-dark">Notes</h2>
-              <p class="redirect-desc text-quaternary-dark">I share my thoughts about design operations and bridges between design and code. Also kind of a public reflection journal.</p>
+              <p class="redirect-desc body text-quaternary-dark">I share my thoughts about design operations and bridges between design and code. Also kind of a public reflection journal.</p>
               <SuperButton href="/notes" class="redirect-link" variant="quaternary dark" icon="#arrow-forward-12">Read my notes</SuperButton>
             </div>
           </div>
@@ -43,7 +43,7 @@
             <div class="redirect-icon"></div>
             <div class="redirect-content">
               <h2 class="redirect-title heading-2 text-secondary-dark">Process</h2>
-              <p class="redirect-desc text-quaternary-dark">I try to find a great balance between following the choosen methodology and keeping velocity and efficiency through the entire journey</p>
+              <p class="redirect-desc body text-quaternary-dark">I try to find a great balance between following the choosen methodology and keeping velocity and efficiency through the entire journey</p>
               <SuperButton class="redirect-link" variant="quaternary dark disabled">Coming soon</SuperButton>
             </div>
           </div>

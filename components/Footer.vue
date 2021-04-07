@@ -4,7 +4,7 @@
     <div class="container">
       <div class="club">
         <p class="clubTitle">Join the club, <span class="line-breaker"><br /></span>get (ir)regular updates</p>
-        <p class="clubDesc">From now, I will try to work with the garage door up and we will see where it<span class="line-breaker"><br /></span> brings us. New posts and updates on this space + maybe some surprises...</p>
+        <p class="clubDesc body">From now, I will try to work with the garage door up and we will see where it<span class="line-breaker"><br /></span> brings us. New posts and updates on this space + maybe some surprises...</p>
 
         <ValidationObserver v-slot="{ invalid }" ref="form">
 
@@ -47,15 +47,15 @@
           <ul class="footer-exploreLinks">
             <!-- <li><a href="/works">Discover my work</a></li>
             <li><a href="/process">Learn about my process</a></li> -->
-            <li><a href="/about">Know more about me</a></li>
-            <li><a href="/contact">Get in touch</a></li>
+            <li><a href="/about" class="body">Know more about me</a></li>
+            <li><a href="/contact" class="body">Get in touch</a></li>
           </ul>
         </div>
         <div class="footer-follow">
           <p class="footer-followTitle">Follow my work</p>
           <ul class="footer-followLinks">
-            <li><a href="https://twitter.com/yannglt">Thoughts on Twitter</a></li>
-            <li><a href="https://dribbble.com/yannglt">WIPs on Dribbble</a></li>
+            <li><a href="https://twitter.com/yannglt" class="body">Thoughts on Twitter</a></li>
+            <li><a href="https://dribbble.com/yannglt" class="body">WIPs on Dribbble</a></li>
             <!-- <li><a href="/feed">RSS feed</a></li> -->
           </ul>
         </div>
@@ -85,7 +85,7 @@
       ValidationObserver,
       ValidationProvider
     },
-    
+
     methods: {
       encode(data) {
         return Object.keys(data)

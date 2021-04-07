@@ -100,12 +100,12 @@
             <div class="current-position">
               <p class="tag">Current position</p>
               <p class="title">Product Designer, Source</p>
-              <p class="description">Design company providing value through design solutions, technical expertise and financial support</p>
+              <p class="description body">Design company providing value through design solutions, technical expertise and financial support</p>
             </div>
             <div class="passion">
               <p class="tag">With a passion for</p>
               <p class="title">Design Operations </p>
-              <p class="description">Wrote a research paper on design systems and their impacts on product teams and end users in 2018</p>
+              <p class="description body">Wrote a research paper on design systems and their impacts on product teams and end users in 2018</p>
             </div>
           </div>
           <div class="manifesto-hello">
@@ -113,7 +113,7 @@
               <p>hello</p>
               <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#entry-20"></use></svg>
             </div>
-            <div class="content">
+            <div class="content body">
               <p>Pallet Town and New-York. Pikachu and Spider-Man. A yellow flash on a dark background. Movement, people and energy. All my life, I’ve been drawing inspiration from cities and electrical networks. Today, I deeply believe that great work stems from a solid plan, a clean architecture and appropriate tools.</p>
               <p>I want to create for the makers. From the first Internet stranger who helped me building my Cydia theme to all the great designers I’ve yet to meet, my goal is to give others the means to reach theirs. I know aestheticism is a consequence of mastery. Design is a craft and studying the method behind the methods is what drives me. I’ve learnt that listening is the key to understanding ; and understanding is the first step to solve any problem. I try to work both hard and smart, not losing myself in the process. Loved ones, mentors, clients and obviously, users, anchor me in reality. I mock my kind, to keep things in perspective, and I look up to many. Always hungry, always foolish.</p>
               <p>This personal space is a reflection of who I am and where I’m trying to head as a Product Designer. It comes from years of wondering and wandering. I’m happy I waited as much as I did though, it helped me grow and build the set of principles I now want to stand atop.</p>
