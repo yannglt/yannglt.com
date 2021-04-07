@@ -19,7 +19,7 @@
     transform: translate3d(-50%, -100%, 0)
 
 .navbar-content
-  margin: 0 auto
+  margin: 0 $space-s
   padding: $space-s 0
   max-width: $bkp-desktop-hd
 
@@ -29,6 +29,15 @@
   align-items: top
 
   box-shadow: 0 1px 0 0 $oblivion-700
+
+  +adapt($bkp-tablet)
+    margin: 0 68px
+
+  +adapt($bkp-desktop-sd)
+    margin: 0 76px
+
+  +adapt($bkp-desktop-hd)
+    margin: 0 auto
 
   .index
     display: flex
