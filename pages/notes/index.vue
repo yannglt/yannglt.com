@@ -1,6 +1,5 @@
 <template lang="html">
   <div class="notes-page">
-    <Navbar></Navbar>
     <section class="notes">
       <div class="container">
         <div class="notes-intro">
@@ -24,8 +23,6 @@
 
 <script>
   import moment from 'moment'
-
-  import Navbar from '@/components/Navbar.vue'
 
   export default {
     head () {
@@ -51,10 +48,6 @@
       notes() {
         return this.$store.state.notes;
       }
-    },
-
-    components: {
-      Navbar
     }
   }
 </script>

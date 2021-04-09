@@ -11,8 +11,6 @@
       <copyToast v-if="emailToast == 'show'"></copyToast>
     </transition>
 
-    <Navbar :class="{ 'navbar-hidden': !showNavbar }"></Navbar>
-
     <section class="tldr">
       <div class="container">
         <div class="welcome-repeat">
@@ -151,12 +149,11 @@
 <script>
   import gsap from 'gsap'
 
-  import Navbar from '../components/Navbar.vue'
-  import ProjectsCarousel from '../components/ProjectsCarousel.vue'
-  import SuperButton from '../components/SuperButton.vue'
-  import SuperLink from '../components/SuperLink.vue'
-  import Fact from '../components/Fact.vue'
-  import CopyToast from '../components/CopyToast.vue'
+  import ProjectsCarousel from '@/components/ProjectsCarousel.vue'
+  import SuperButton from '@/components/SuperButton.vue'
+  import SuperLink from '@/components/SuperLink.vue'
+  import Fact from '@/components/Fact.vue'
+  import CopyToast from '@/components/CopyToast.vue'
 
   export default {
     head () {
@@ -196,40 +193,16 @@
       }
     },
 
-    mounted () {
-      window.addEventListener('scroll', this.onScroll)
-    },
-
-    beforeDestroy () {
-      window.removeEventListener('scroll', this.onScroll)
-    },
-
     methods: {
       copyEmail: function () {
         this.$copyText(this.email)
         this.emailToast = 'show'
 
         setTimeout(() => this.emailToast = null, 3000)
-      },
-
-      onScroll () {
-        const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
-
-        if (currentScrollPosition < 0) {
-          return
-        }
-        // Stop executing this function if the difference between
-        // current scroll position and last scroll position is less than some offset
-        if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 24) {
-          return
-        }
-        this.showNavbar = currentScrollPosition < this.lastScrollPosition
-        this.lastScrollPosition = currentScrollPosition
       }
     },
 
     components: {
-      Navbar,
       ProjectsCarousel,
       SuperButton,
       SuperLink,

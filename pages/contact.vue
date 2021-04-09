@@ -1,6 +1,5 @@
 <template lang="html">
   <div class="contact-page">
-    <Navbar></Navbar>
 
     <transition name="slide">
       <copyToast v-if="emailToast == 'show'"></copyToast>
@@ -54,7 +53,6 @@
 </template>
 
 <script>
-  import Navbar from '@/components/Navbar.vue'
   import SuperButton from '@/components/SuperButton.vue'
   import SuperLink from '@/components/SuperLink.vue'
   import CopyToast from '@/components/CopyToast.vue'
@@ -85,7 +83,6 @@
     },
 
     components: {
-      Navbar,
       SuperButton,
       SuperLink,
       CopyToast

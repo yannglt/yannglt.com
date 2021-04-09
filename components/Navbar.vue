@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="navbar">
+  <div class="navbar" :class="{ 'navbar-hidden': !showNavbar }">
     <div class="container">
       <div class="navbar-content">
         <div class="index">
@@ -25,9 +25,41 @@
 </template>
 
 <script>
+
   export default {
-    data: function () {
-      return {}
+
+    data() {
+      return {
+        showNavbar: true,
+        lastScrollPosition: 0
+      }
+    },
+
+    mounted () {
+      window.addEventListener('scroll', this.onScroll)
+    },
+
+    beforeDestroy () {
+      window.removeEventListener('scroll', this.onScroll)
+    },
+
+    methods: {
+
+      onScroll () {
+        const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+
+        if (currentScrollPosition < 0) {
+          return
+        }
+        // Stop executing this function if the difference between
+        // current scroll position and last scroll position is less than some offset
+        if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 16) {
+          return
+        }
+        this.showNavbar = currentScrollPosition < this.lastScrollPosition
+        this.lastScrollPosition = currentScrollPosition
+      }
     }
   }
+
 </script>

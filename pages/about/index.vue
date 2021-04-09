@@ -1,6 +1,5 @@
 <template lang="html">
   <div class="about-page">
-    <Navbar></Navbar>
     <section class="moodboard">
       <div class="container">
         <div class="left">
@@ -140,7 +139,6 @@
 </template>
 
 <script>
-  import Navbar from '@/components/Navbar.vue'
   import SuperButton from '@/components/SuperButton.vue'
   import SuperLink from '@/components/SuperLink.vue'
 
@@ -188,7 +186,6 @@
     },
 
     components: {
-      Navbar,
       SuperButton,
       SuperLink
     }

@@ -1,6 +1,5 @@
 <template>
   <div class="note-page">
-    <Navbar></Navbar>
     <section class="note">
       <div class="container">
         <nuxt-link class="notes-back caption text-quaternary-dark" exact to="/notes/"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-backward-20"></use></svg>Notes</nuxt-link>
@@ -21,8 +20,6 @@
 
 <script>
   import moment from 'moment'
-
-  import Navbar from '@/components/Navbar.vue'
 
   export default {
     head() {
@@ -50,10 +47,6 @@
         )
         return note[0]
       }
-    },
-
-    components: {
-      Navbar
     }
   }
 </script>
