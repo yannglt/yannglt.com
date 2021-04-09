@@ -20,24 +20,24 @@
 
     <section class="discover">
       <div class="container">
-        <h1 class="discover-title display-2 text-primary-dark">Hi! Hope you enjoyed your travel in my personal space so far, here are some ways to learn more about me:</h1>
+        <h1 class="discover-title display-2 text-primary-dark">Hope you enjoyed your travel in my personal space so far, here are some ways to learn more about me:</h1>
         <div class="discover-blocs">
           <div class="discover-bloc story">
             <div class="icon"></div>
             <p class="title heading-2 text-secondary-dark">Story</p>
-            <p class="desc text-quaternary-dark">Some time have passed between playing with my  first small bricks of color and becoming a Product Designer, I wanted to share anecdotes and funny stories you may find interesting.</p>
+            <p class="desc body text-quaternary-dark">Some time have passed between playing with my  first small bricks of color and becoming a Product Designer, I wanted to share anecdotes and funny stories you may find interesting.</p>
             <SuperButton class="cta" variant="quaternary dark disabled">Coming soon</SuperButton>
           </div>
           <div class="discover-bloc electricity">
             <div class="icon"></div>
             <p class="title heading-2 text-secondary-dark">Electricity</p>
-            <p class="desc text-quaternary-dark">Since my first portfolio on October 2016, I began building my universe around one thing that kept my attention since I was a child: cities and their energy, using the symbols of light in physics and flash.</p>
+            <p class="desc body text-quaternary-dark">Since my first portfolio on October 2016, I began building my universe around one thing that kept my attention since I was a child: cities and their energy, using the symbols of light in physics and flash.</p>
             <SuperButton class="cta" variant="quaternary dark disabled">Coming soon</SuperButton>
           </div>
           <div class="discover-bloc mood">
             <div class="icon"></div>
             <p class="title heading-2 text-secondary-dark">Moodboard</p>
-            <p class="desc text-quaternary-dark">Maybe the more visual way to dive into my universe, you may find superabundance of references of color palettes inspired by Piet Mondrian, typography compositions and physics symbols.</p>
+            <p class="desc body text-quaternary-dark">Maybe the more visual way to dive into my universe, you may find superabundance of references of color palettes inspired by Piet Mondrian, typography compositions and physics symbols.</p>
             <SuperButton class="cta" variant="quaternary dark disabled">Coming soon</SuperButton>
           </div>
         </div>
@@ -60,10 +60,9 @@
         </div>
         <div class="experiences">
           <div v-for="experience in experiences" :key="experience.id" class="experience">
-            <div class="dot"></div>
             <p class="position heading-3 text-secondary-dark">{{ experience.company }}, {{ experience.position }}</p>
             <p class="duration caption text-quaternary-dark">{{ experience.start }} - {{ experience.end }} ({{experience.duration}})</p>
-            <div class="desc body text-tertiary-dark" v-html="experience.desc"></div>
+            <div class="desc text-tertiary-dark" v-html="experience.desc"></div>
           </div>
           <div class="numbers">
             <div class="clients">
