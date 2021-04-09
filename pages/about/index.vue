@@ -23,21 +23,27 @@
         <div class="discover-blocs">
           <div class="discover-bloc story">
             <div class="icon"></div>
-            <p class="title heading-2 text-secondary-dark">Story</p>
-            <p class="desc body text-quaternary-dark">Some time have passed between playing with my  first small bricks of color and becoming a Product Designer, I wanted to share anecdotes and funny stories you may find interesting.</p>
-            <SuperButton class="cta" variant="quaternary dark disabled">Coming soon</SuperButton>
+            <div class="discover-bloc-content">
+              <p class="title heading-2 text-secondary-dark">Story</p>
+              <p class="desc body text-quaternary-dark">Some time have passed between playing with my  first small bricks of color and becoming a Product Designer, I wanted to share anecdotes and funny stories you may find interesting.</p>
+              <SuperButton class="cta" variant="quaternary dark disabled">Coming soon</SuperButton>
+            </div>
           </div>
           <div class="discover-bloc electricity">
             <div class="icon"></div>
-            <p class="title heading-2 text-secondary-dark">Electricity</p>
-            <p class="desc body text-quaternary-dark">Since my first portfolio on October 2016, I began building my universe around one thing that kept my attention since I was a child: cities and their energy, using the symbols of light in physics and flash.</p>
-            <SuperButton class="cta" variant="quaternary dark disabled">Coming soon</SuperButton>
+            <div class="discover-bloc-content">
+              <p class="title heading-2 text-secondary-dark">Electricity</p>
+              <p class="desc body text-quaternary-dark">Since my first portfolio on October 2016, I began building my universe around one thing that kept my attention since I was a child: cities and their energy, using the symbols of light in physics and flash.</p>
+              <SuperButton class="cta" variant="quaternary dark disabled">Coming soon</SuperButton>
+            </div>
           </div>
           <div class="discover-bloc mood">
             <div class="icon"></div>
-            <p class="title heading-2 text-secondary-dark">Moodboard</p>
-            <p class="desc body text-quaternary-dark">Maybe the more visual way to dive into my universe, you may find superabundance of references of color palettes inspired by Piet Mondrian, typography compositions and physics symbols.</p>
-            <SuperButton class="cta" variant="quaternary dark disabled">Coming soon</SuperButton>
+            <div class="discover-bloc-content">
+              <p class="title heading-2 text-secondary-dark">Moodboard</p>
+              <p class="desc body text-quaternary-dark">Maybe the more visual way to dive into my universe, you may find superabundance of references of color palettes inspired by Piet Mondrian, typography compositions and physics symbols.</p>
+              <SuperButton class="cta" variant="quaternary dark disabled">Coming soon</SuperButton>
+            </div>
           </div>
         </div>
       </div>
@@ -128,7 +134,7 @@
           </div>
         </div>
         <div class="thanks-bloc people">
-          <div class="caption"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#entry-20"></use></svg>A big S/O to this awesome people</div>
+          <div class="caption"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#entry-20"></use></svg>A big S/O to them</div>
           <div class="content body text-secondary-light">
             <p>My partner in life <a href="">Sabrina Nedjah</a> and my brother <a href="">Hassan Boujnkih</a> for their support these last years. <a href="">Gabriel Bacave</a> for its help on writing my manifesto. </p>
           </div>

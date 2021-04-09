@@ -209,10 +209,21 @@
       grid-column: 1 / span all
 
     &-bloc
-      margin-bottom: $space-xxl
+      @extend .gridSystem
+      grid-column: span 6
 
       +adapt($bkp-desktop-hd)
+        grid-template-columns: none
         grid-column: span 4
+
+      &:not(:last-of-type)
+        margin-bottom: $space-xxxl
+
+        +adapt($bkp-tablet)
+          margin-bottom: $space-xl
+
+        +adapt($bkp-desktop-hd)
+          margin-bottom: 0
 
       .icon
         margin-bottom: $space-xs
@@ -223,6 +234,17 @@
         background-repeat: no-repeat
         background-position: center center
 
+        +adapt($bkp-tablet)
+          margin: 0 auto
+          margin-top: 20px
+          margin-bottom: $space-s
+          grid-column: 1 / span 2
+
+        +adapt($bkp-desktop-hd)
+          margin: 0
+          margin-bottom: $space-s
+          grid-column: none
+
       &.story .icon
         background-image: url("@/static/images/discover-story.svg")
 
@@ -231,6 +253,17 @@
 
       &.mood .icon
         background-image: url("@/static/images/discover-moodboard.svg")
+
+      &-content
+
+        +adapt($bkp-tablet)
+          grid-column: 3 / span 4
+
+        +adapt($bkp-desktop-sd)
+          grid-column: 3 / span 3
+
+        +adapt($bkp-desktop-hd)
+          grid-column: none
 
       .title
         margin-bottom: $space-xxs
@@ -246,6 +279,12 @@
 
     .promise
 
+      +adapt($bkp-tablet)
+        grid-column: 1 / span 6
+
+      +adapt($bkp-desktop-sd)
+        grid-column: 1 / span 5
+
       +adapt($bkp-desktop-hd)
         grid-column: span 7
 
@@ -259,6 +298,9 @@
       .desc
         margin-bottom: $space-l
 
+        +adapt($bkp-desktop-sd)
+          padding-right: 152px
+
         +adapt($bkp-desktop-hd)
           padding-right: 104px
 
@@ -268,20 +310,33 @@
       .ctas
         display: flex
         flex-direction: column-reverse
-        // flex-direction: row
+
+        +adapt($bkp-tablet)
+          flex-direction: row
 
         .process
-          // margin-right: 20px
+
+          +adapt($bkp-tablet)
+            margin-right: $space-s
 
         .contact
           margin-bottom: $space-s
-
           background-color: $maelstrom-500
+
+          +adapt($bkp-tablet)
+            margin-bottom: 0
 
     .experiences
       margin-top: $space-xxxl
-      // margin-top: 56px
-      grid-column: 9 / span 4
+
+      +adapt($bkp-tablet)
+        grid-column: 1 / span 6
+
+      +adapt($bkp-desktop-sd)
+        grid-column: 1 / span 4
+
+      +adapt($bkp-desktop-hd)
+        grid-column: 9 / span 4
 
       .experience
         position: relative
@@ -309,8 +364,6 @@
 
         .clients, .projects
           padding: $space-xs 40px $space-m 40px
-          // padding: $space-s
-          padding-top: $space-xs
 
           .number
             display: flex
@@ -346,7 +399,6 @@
             transform: translateY(-48px)
 
   .personal
-    // padding-top: $space-xxxl
     padding-top: $space-l
     padding-bottom: $space-xxl
     position: relative
@@ -354,32 +406,30 @@
 
     background-color: #ffffff
 
+    +adapt($bkp-tablet)
+      padding-top: $space-xl
+      padding-bottom: $space-xxxl
+
+    +adapt($bkp-desktop-sd)
+      padding-top: $space-xxl
+
     &:before, &:after
       content: ''
       position: absolute
       background-color: #ffffff
-      width: 32px
+      width: 116px
       height: 100%
       top: 0
 
     &:before
-      left: -32px
+      left: -116px
 
     &:after
-      right: -32px
-
-    +adapt($bkp-tablet)
-      padding-bottom: $space-xxxl
+      right: -116px
 
     +adapt($width-desktop-hd)
-      margin-left: calc(-32px)
-      margin-right: calc(-32px)
-
-      &:before
-        left: 0
-
-      &:after
-        right: 0
+      margin-left: calc(-116px)
+      margin-right: calc(-116px)
 
     .container
       @extend .gridSystem
@@ -397,15 +447,18 @@
         max-width: 100%
         border-radius: 8px
 
-      .author
-        // font-size: 13px
-
         a
           @extend .bold
           color: $oblivion-700
           text-decoration: underline
 
     &-content
+
+      +adapt($bkp-tablet)
+        grid-column: 1 / span 6
+
+      +adapt($bkp-desktop-sd)
+        grid-column: 1 / span 5
 
       +adapt($bkp-desktop-hd)
         grid-column: 7 / span 6
@@ -431,6 +484,7 @@
 
   .thanks
     position: relative
+    position: relative
     max-width: 100vw
 
     background-color: $oblivion-050
@@ -439,41 +493,47 @@
       content: ''
       position: absolute
       background-color: $oblivion-050
-      width: 32px
+      width: 116px
       height: 100%
       top: 0
 
     &:before
-      left: -32px
+      left: -116px
 
     &:after
-      right: -32px
+      right: -116px
 
     +adapt($width-desktop-hd)
-      margin-left: calc(-32px)
-      margin-right: calc(-32px)
-
-      &:before
-        left: 0
-
-      &:after
-        right: 0
+      margin-left: calc(-116px)
+      margin-right: calc(-116px)
 
     .container
       padding: $space-l 0
       @extend .gridSystem
+      align-items: flex-start
 
       +adapt($bkp-tablet)
-        padding: $space-xl 0
+        padding: $space-xl 0 $space-xxl
 
     .thanks-bloc
-      grid-column: span 4
+      @extend .gridSystem
 
       &:not(:last-of-type)
         margin-bottom: $space-l
 
+      +adapt($bkp-tablet)
+        grid-column: span 6
+
+        &:not(:last-of-type)
+          margin-bottom: $space-xl
+
       +adapt($bkp-desktop-hd)
-        margin-bottom: 0
+        grid-template-columns: none
+        column-gap: 0
+        grid-column: span 4
+
+        &:not(:last-of-type)
+          margin-bottom: 0
 
     .caption
       margin-bottom: 7px
@@ -482,11 +542,28 @@
       align-items: flex-start
       color: $oblivion-1100
 
+      +adapt($bkp-tablet)
+        grid-column: 1 / span 2
+        transform: translateY(4px)
+
+      +adapt($bkp-desktop-hd)
+        grid-column: none
+        transform: translateY(0)
+
       .icon
         padding-right: 4px
         color: $maelstrom-500
 
     .content
+
+      +adapt($bkp-tablet)
+        grid-column: 3 / span 4
+
+      +adapt($bkp-desktop-sd)
+        grid-column: 3 / span 3
+
+      +adapt($bkp-desktop-hd)
+        grid-column: none
 
       p:not(:last-of-type)
         margin-bottom: 20px
