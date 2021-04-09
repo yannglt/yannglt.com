@@ -50,16 +50,14 @@
         </div>
       </div>
     </section>
-    <Footer></Footer>
   </div>
 </template>
 
 <script>
-  import Navbar from '../components/Navbar.vue'
-  import SuperButton from '../components/SuperButton.vue'
-  import SuperLink from '../components/SuperLink.vue'
-  import CopyToast from '../components/CopyToast.vue'
-  import Footer from '../components/Footer.vue'
+  import Navbar from '@/components/Navbar.vue'
+  import SuperButton from '@/components/SuperButton.vue'
+  import SuperLink from '@/components/SuperLink.vue'
+  import CopyToast from '@/components/CopyToast.vue'
 
   export default {
     head () {
@@ -90,8 +88,7 @@
       Navbar,
       SuperButton,
       SuperLink,
-      CopyToast,
-      Footer
+      CopyToast
     }
   }
 </script>

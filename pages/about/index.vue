@@ -136,15 +136,13 @@
         </div>
       </div>
     </section>
-    <Footer></Footer>
   </div>
 </template>
 
 <script>
-  import Navbar from '../../components/Navbar.vue'
-  import SuperButton from '../../components/SuperButton.vue'
-  import SuperLink from '../../components/SuperLink.vue'
-  import Footer from '../../components/Footer.vue'
+  import Navbar from '@/components/Navbar.vue'
+  import SuperButton from '@/components/SuperButton.vue'
+  import SuperLink from '@/components/SuperLink.vue'
 
   export default {
     head () {
@@ -192,8 +190,7 @@
     components: {
       Navbar,
       SuperButton,
-      SuperLink,
-      Footer
+      SuperLink
     }
   }
 </script>

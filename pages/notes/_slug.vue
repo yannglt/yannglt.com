@@ -16,15 +16,13 @@
         </div>
       </div>
     </section>
-    <Footer></Footer>
   </div>
 </template>
 
 <script>
   import moment from 'moment'
 
-  import Navbar from '../../components/Navbar.vue'
-  import Footer from '../../components/Footer.vue'
+  import Navbar from '@/components/Navbar.vue'
 
   export default {
     head() {
@@ -55,8 +53,7 @@
     },
 
     components: {
-      Navbar,
-      Footer
+      Navbar
     }
   }
 </script>

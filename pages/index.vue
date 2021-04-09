@@ -145,8 +145,6 @@
         </div>
       </div>
     </section>
-
-    <Footer></Footer>
   </div>
 </template>
 
@@ -159,7 +157,6 @@
   import SuperLink from '../components/SuperLink.vue'
   import Fact from '../components/Fact.vue'
   import CopyToast from '../components/CopyToast.vue'
-  import Footer from '../components/Footer.vue'
 
   export default {
     head () {
@@ -237,8 +234,7 @@
       SuperButton,
       SuperLink,
       Fact,
-      CopyToast,
-      Footer
+      CopyToast
     }
   }
 
