@@ -7,19 +7,19 @@
     content: ''
     position: absolute
     background-color: $oblivion-1100
-    width: 32px
+    width: 24px
     height: 100%
     top: 0
 
   &:before
-    left: -32px
+    left: -24px
 
   &:after
-    right: -32px
+    right: -24px
 
   +adapt($width-desktop-hd)
-    margin-left: calc(-32px)
-    margin-right: calc(-32px)
+    margin-left: calc(-24px)
+    margin-right: calc(-24px)
 
     &:before
       left: 0
@@ -33,7 +33,7 @@
   .club
     text-align: center
     padding-top: 64px
-    margin-bottom: 68px
+    margin-bottom: $space-xxl
 
     border-top: 2px solid $oblivion-700
 
@@ -50,9 +50,12 @@
       grid-column: 1 / span 12
 
     &Title
-      @extend .heading-2
-      margin-bottom: 13px
-      color: $oblivion-025
+      margin-bottom: $space-xs
+      padding-top: 1px
+      padding-bottom: 3px
+
+      font-size: 31px
+      line-height: 40px
 
       .line-breaker
 
@@ -63,9 +66,7 @@
           display: none
 
     &Desc
-      color: $oblivion-300
-      line-height: 24px
-      margin-bottom: 37px
+      margin-bottom: $space-l
 
       .line-breaker
 
@@ -100,7 +101,7 @@
 
     .clubFormFirstname,
     .clubFormEmail
-      margin-bottom: 24px
+      margin-bottom: $space-m
       position: relative
 
       &.is-valid input
@@ -223,24 +224,18 @@
   .footer-links
     display: flex
     flex-direction: column
-    padding: 34px 0 112px
+    padding: $space-m 0 $space-xxxl
     border-top: 2px solid $oblivion-700
 
-    +adapt($bkp-mobile)
-      padding: 34px 0 108px
-
     +adapt($bkp-tablet)
-      padding: 34px 0 86px
       grid-column: 1 / span 6
       +gCols(6, 1fr, 40px)
 
     +adapt($bkp-desktop-sd)
-      padding: 34px 0 114px
       grid-column: 1 / span 6
       +gCols(6, 1fr, 40px)
 
     +adapt($bkp-desktop-hd)
-      padding: 34px 0 126px
       grid-column: 1 / span 12
       +gCols(12, 1fr, 40px)
 
@@ -270,7 +265,7 @@
 
     .footer-explore
       order: 1
-      margin-bottom: 42px
+      margin-bottom: $space-l
 
       +adapt($bkp-tablet)
         order: 2
@@ -282,7 +277,7 @@
 
     .footer-follow
       order: 2
-      margin-bottom: 42px
+      margin-bottom: $space-l
 
       +adapt($bkp-tablet)
         grid-column: 5 / span 2
@@ -298,7 +293,7 @@
       &Title
         @extend .caption
         color: $oblivion-025
-        margin-bottom: 7px
+        margin-bottom: $space-xxxs
 
       li
         margin-bottom: 4px
