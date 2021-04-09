@@ -114,21 +114,21 @@
 
     <section class="thanks">
       <div class="container">
-        <div class="thanks-website">
+        <div class="thanks-bloc website">
           <div class="caption"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#entry-20"></use></svg>This website</div>
           <div class="content body text-secondary-light">
             <p>Born inside Sketch in 2019 and raised inside Figma in 2020/2021. Design tokens pushed by <a href="">Specify</a>.</p>
             <p>Built on Nuxt and Vue with GreenSock libraries for animations. Hosted by GitHub and distributed by Netflify and Amazon Web Services.</p>
           </div>
         </div>
-        <div class="thanks-typefaces">
+        <div class="thanks-bloc typefaces">
           <div class="caption"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#entry-20"></use></svg>Typefaces</div>
           <div class="content body text-secondary-light">
             <p>Headlines are set in Bluu Suuperstar, designed by Jean-Baptiste Morizot and redrew in 2017 for french type design company <a href="">Black Foundry</a>.</p>
             <p>Copy is set in GT America, designed by Noël Leu with Seb McLauchlan for <a href="">Grilli Type</a>.</p>
           </div>
         </div>
-        <div class="thanks-people">
+        <div class="thanks-bloc people">
           <div class="caption"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#entry-20"></use></svg>A big S/O to this awesome people</div>
           <div class="content body text-secondary-light">
             <p>My partner in life <a href="">Sabrina Nedjah</a> and my brother <a href="">Hassan Boujnkih</a> for their support these last years. <a href="">Gabriel Bacave</a> for its help on writing my manifesto. </p>

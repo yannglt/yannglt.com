@@ -2,6 +2,10 @@
   @media screen and (min-width: $width)
     @content
 
+@mixin adapt-reverse($width)
+  @media screen and (max-width: $width)
+    @content
+
 @mixin gCols($columns-nb, $columns-width, $gutter-width)
   display: grid
   grid-template-columns: repeat($columns-nb, $columns-width)
