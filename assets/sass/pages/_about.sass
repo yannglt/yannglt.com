@@ -9,11 +9,11 @@
       margin-bottom: $space-l
       height: 512px
 
-      // background-image: url("@/static/images/moodboard-grid.svg")
-      background-repeat: repeat
-      background-size: 104px 104px
-      background-position: top left
       border: 1px solid $oblivion-700
+      background-image: url("@/static/images/moodboard-grid-mobile.svg")
+      // background-repeat: repeat
+      // background-size: 104px 104px
+      background-position: top left
 
       +adapt($bkp-tablet)
         margin-bottom: $space-xxl
@@ -24,6 +24,11 @@
 
       +adapt($bkp-desktop-hd)
         height: 624px
+
+        background-image: url("@/static/images/moodboard-grid.svg")
+        background-repeat: repeat
+        background-size: 104px 104px
+        background-position: top left
 
     .left
       position: relative
@@ -53,7 +58,7 @@
 
     .atlas
       position: absolute
-      top: 128px
+      top: 112px
       // top: 144px
       left: 44%
       // left: 65px
@@ -82,7 +87,7 @@
 
     .logo
       position: absolute
-      top: 48px
+      top: 28px
       // top: 101px
       left: 56%
       height: 144px
