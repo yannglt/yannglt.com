@@ -21,7 +21,7 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "contentful": "^8.2.0",
     "dotenv": "^8.2.0",
-    "eslint": "^7.21.0",
+    "eslint": "^7.24.0",
     "eslint-plugin-vue": "^7.7.0",
     "gsap": "^3.6.0",
     "imports-loader": "^1.2.0",
