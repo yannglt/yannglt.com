@@ -78,11 +78,11 @@
       </div>
     </section>
 
-    <section class="projects">
+    <!-- <section class="projects">
       <div class="container">
         <ProjectsCarousel />
       </div>
-    </section>
+    </section> -->
 
     <section class="manifesto">
       <div class="container">
