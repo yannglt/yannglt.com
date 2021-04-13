@@ -29,13 +29,18 @@ a.wip:hover
   cursor: not-allowed
 
 .new-space
-  margin: 0 calc(max(-19px, -8vw))
+  margin: 0 calc(max(-24px, -8vw))
   padding: 12px 19px
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
   display: flex
   flex-direction: column
   justify-content: center
   align-items: flex-end
   background-color: $maelstrom-500
+  z-index: 512
 
   +motion($time-quick, $weight-medium, $speed-standard, background-color)
 

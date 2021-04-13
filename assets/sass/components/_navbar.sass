@@ -4,7 +4,7 @@
   top: 0
   left: 50%
   position: fixed
-  z-index: 500
+  z-index: 404
 
   background-color: $oblivion-1100
   transform: translate3d(-50%, 0, 0)
@@ -17,6 +17,12 @@
 
   &.navbar-hidden
     transform: translate3d(-50%, -100%, 0)
+
+  &.homepage
+    transform: translate3d(-50%, 48px, 0)
+
+    &.navbar-hidden
+      transform: translate3d(-50%, -100%, 0)
 
 .navbar-content
   margin: 0 $space-s
@@ -34,7 +40,7 @@
     position: absolute
     width: 100%
     height: 1px
-    bottom: 0
+    bottom: 1px
     left: 0
     right: 0
 
@@ -107,7 +113,7 @@
           content: ''
           position: absolute
           left: 50%
-          bottom: -40px
+          bottom: -39px
           height: 1px
           width: calc(100% + #{$space-xxxs} * 2)
           z-index: 5
@@ -118,16 +124,6 @@
 
       &:hover
         color: $oblivion-025
-
-      &.wip::after
-        content: ''
-        position: absolute
-        top: 50%
-        left: 50%
-        height: 1px
-        width: 72%
-        transform: translate(-50%, -50%)
-        background-color: $oblivion-500
 
     &:last-of-type a
       margin-right: $space-xxxs
