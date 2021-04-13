@@ -15,7 +15,7 @@
           <ul>
             <!-- <li><NuxtLink class="wip caption" to="">Process</NuxtLink></li> -->
             <li><NuxtLink class="caption" to="/about">About</NuxtLink></li>
-            <li><NuxtLink class="caption" to="/notes">Notes</NuxtLink></li>
+            <li><NuxtLink class="caption" to="/notes">Notebook</NuxtLink></li>
             <li><NuxtLink class="caption" to="/contact">Contact</NuxtLink></li>
           </ul>
         </div>
