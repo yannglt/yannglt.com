@@ -3,7 +3,7 @@
     <section class="notes">
       <div class="container">
         <div class="notes-intro">
-          <h1 class="notes-intro-title heading-1 text-primary-dark">Notes</h1>
+          <h1 class="notes-intro-title heading-1 text-primary-dark">Notebook</h1>
           <p class="notes-intro-desc body text-quaternary-dark">Find here all my writing notes, essays, blog posts, call it how you want haha. Topics cover design operations and bridges between design and code. I may use this space also like a journal, we will see.</p>
         </div>
         <div class="notes-list">

@@ -33,7 +33,7 @@
           <div class="redirect notes">
             <div class="redirect-icon"></div>
             <div class="redirect-content">
-              <h2 class="redirect-title heading-2 text-secondary-dark">Notes</h2>
+              <h2 class="redirect-title heading-2 text-secondary-dark">Notebook</h2>
               <p class="redirect-desc body text-quaternary-dark">I share my thoughts about design operations and bridges between design and code. Also kind of a public reflection journal.</p>
               <SuperButton href="/notes" class="redirect-link" variant="quaternary dark" icon="#arrow-forward-12">Read my notes</SuperButton>
             </div>
