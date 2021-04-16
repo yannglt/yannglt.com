@@ -67,7 +67,7 @@
           <div v-for="experience in experiences" :key="experience.id" class="experience">
             <p class="position heading-3 text-secondary-dark">{{ experience.company }}, {{ experience.position }}</p>
             <p class="duration caption text-quaternary-dark">{{ experience.start }} - {{ experience.end }} ({{experience.duration}})</p>
-            <div class="desc text-tertiary-dark" v-html="experience.desc"></div>
+            <div class="desc body text-tertiary-dark" v-html="experience.desc"></div>
           </div>
           <div class="numbers">
             <div class="clients">

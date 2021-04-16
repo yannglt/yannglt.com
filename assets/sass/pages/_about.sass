@@ -328,7 +328,7 @@
             margin-bottom: 0
 
     .experiences
-      margin-top: $space-xxxl
+      margin-top: calc(#{$space-xl - 8px})
 
       +adapt($bkp-tablet)
         grid-column: 1 / span 6
@@ -341,13 +341,60 @@
 
       .experience
         position: relative
-        padding-left: 40px
+        margin-left: 48px
 
-        &:last-of-type .desc
-          padding-bottom: 0
+        +adapt($bkp-desktop-hd)
+          margin-left: 0
+
+        &:nth-child(1) .position::before
+          height: 0
+
+        &:nth-child(3)
+
+          &::before
+            height: 0
+
+          .desc
+            padding: 0
+
+        &::before
+          content: ''
+          position: absolute
+          top: 26px
+          left: calc(-#{$space-m} - 9px)
+          height: calc(100% - 26px)
+          width: 2px
+          z-index: -5
+
+          background-color: $oblivion-700
 
         .position
           margin-bottom: $space-xxxxs
+          position: relative
+
+          &::before, &::after
+            content: ''
+            position: absolute
+
+          &::before
+            top: 0
+            left: calc(-#{$space-m} - 9px)
+            height: 26px
+            width: 2px
+            z-index: -5
+
+            background-color: $oblivion-700
+
+          &::after
+            height: 16px
+            width: 16px
+            top: calc(26px - 2px)
+            left: calc((#{$space-s} + #{$space-s}) * -1)
+            box-sizing: border-box
+
+            border-radius: 8px
+            border: 2px solid $oblivion-700
+            background-color: $oblivion-1100
 
         .duration
           margin-bottom: $space-xxs
@@ -359,12 +406,15 @@
             margin-bottom: $space-xs
 
       .numbers
-        margin-top: $space-xxl
-        border: 1px solid $oblivion-700
+        margin-top: $space-xl
+        border: 2px solid $oblivion-700
         border-radius: 8px
 
         .clients, .projects
-          padding: $space-xs 40px $space-m 40px
+          padding: $space-xs $space-l $space-m $space-l
+
+          +adapt($bkp-desktop-hd)
+            padding: $space-xs $space-m $space-m $space-m
 
           .number
             display: flex
@@ -382,7 +432,7 @@
               margin-top: $space-xs
 
         .clients
-          border-bottom: 1px solid $oblivion-700
+          border-bottom: 2px solid $oblivion-700
 
           .desc
             margin-bottom: $space-xxxs
