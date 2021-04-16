@@ -214,6 +214,7 @@
 
       +adapt($bkp-desktop-hd)
         grid-template-columns: none
+        column-gap: 0
         grid-column: span 4
 
       &:not(:last-of-type)
@@ -427,16 +428,11 @@
     &:after
       right: -116px
 
-    +adapt($width-desktop-hd)
-      margin-left: calc(-116px)
-      margin-right: calc(-116px)
-
     .container
       @extend .gridSystem
 
     &-photo
       display: none
-      margin-bottom: $space-xs
       grid-column: span 5
       transform: translateY(-$space-xxs)
 
@@ -446,11 +442,6 @@
       img
         max-width: 100%
         border-radius: 8px
-
-        a
-          @extend .bold
-          color: $oblivion-700
-          text-decoration: underline
 
     &-content
 

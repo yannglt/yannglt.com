@@ -95,7 +95,7 @@
             <source type="image/jpeg" srcset="@/static/images/yannglt.jpg">
             <img src="@/static/images/yannglt.jpg" alt="">
           </picture>
-          <p class="body author text-tertiary-light">Photography taken by <a href="" target="_blank">Sabrina Nedjah</a></p>
+          <p class="author body text-tertiary-light">Photography taken by <SuperLink href="" variant="body light">Sabrina Nedjah</SuperLink></p>
         </div>
         <div class="personal-content">
           <p class="caption text-tertiary-light">About me as a human</p>
