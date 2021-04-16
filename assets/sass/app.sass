@@ -103,22 +103,17 @@ a.wip:hover
     margin: 0 -32px
 
 .tldr
-  margin-top: 148px
+  // Inital spacing + navbar height + info banner
+  margin-top: calc(#{$space-xxl} + 96px + 48px)
+  // margin-left: -24px
+  // margin-right: -24px
   position: relative
-  margin-left: -19px
-  margin-right: -19px
-
-  +adapt($bkp-mobile)
-    margin-left: -27px
-    margin-right: -27px
 
   +adapt($bkp-tablet)
-    margin-top: 184px
-    margin-left: -32px
-    margin-right: -32px
-
-  +adapt($bkp-desktop-sd)
-    margin-top: 172px
+    // Inital spacing + navbar height + info banner
+    margin-top: calc(#{$space-xxl} + 96px + 24px)
+    // margin-left: -32px
+    // margin-right: -32px
 
   .welcome-repeat
     text-align: center
