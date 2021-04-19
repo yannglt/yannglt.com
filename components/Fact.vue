@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="fact">
-    <p class="factSub">{{ sub }}</p>
-    <p class="factTitle">{{ title }}</p>
-    <div class="factDesc body" v-html="desc"></div>
+    <p class="subtitle caption text-tertiary-dark">{{ sub }}</p>
+    <p class="title heading-3 text-secondary-dark">{{ title }}</p>
+    <div class="body text-quaternary-dark" v-html="desc"></div>
   </div>
 </template>
 

@@ -27,26 +27,26 @@
           <p class="etiquette-title">intro<span class="add-oo">oo</span></p>
           <div class="etiquette-properties">
             <div class="etiquette-property">
-              <p class="etiquette-propertyName">Identity</p>
-              <p class="etiquette-propertyValue">Yann-Edern Gillet</p>
+              <p class="name caption">Identity</p>
+              <p class="value heading-3 text-primary-light">Yann-Edern Gillet</p>
             </div>
             <div class="etiquette-property">
-              <p class="etiquette-propertyName">Current position</p>
-              <p class="etiquette-propertyValue">Digital Product Designer, Source</p>
+              <p class="name caption">Current position</p>
+              <p class="value heading-3 text-primary-light">Digital Product Designer, Source</p>
             </div>
             <div class="etiquette-property">
-              <p class="etiquette-propertyName">Passion</p>
-              <p class="etiquette-propertyValue">Design Operations</p>
+              <p class="name caption">Passion</p>
+              <p class="value heading-3 text-primary-light">Design Operations</p>
             </div>
             <div class="etiquette-property">
-              <p class="etiquette-propertyName">Location</p>
-              <p class="etiquette-propertyValue">Paris, France</p>
+              <p class="name caption">Location</p>
+              <p class="value heading-3 text-primary-light">Paris, France</p>
             </div>
           </div>
-          <div class="etiquette-logo"></div>
-          <p class="etiquette-subtitle">danger</p>
-          <p class="etiquette-desc">May present some work under NDA. <br>Just kidding, relax. Open headspace.</p>
-          <p class="etiquette-annotation">LF-11235813-21345892-150242392</p>
+          <div class="logo"></div>
+          <p class="subtitle display-3 text-primary-light">danger</p>
+          <p class="desc caption text-primary-light">May present some work under NDA. <br>Just kidding, relax. Open headspace.</p>
+          <p class="annotation secret text-primary-light">LF-11235813-21345892-150242392</p>
         </div>
       </div>
       <div class="etiquette-electricity">
@@ -64,7 +64,7 @@
         <p class="intro-subtitle caption">Welcome to my space <span class="line-breaker"><br /></span>on the Internets</p>
         <h1 class="intro-title heading-1 text-primary-dark">I think, create and break interfaces, products and systems with a passion for design operations.</h1>
         <p class="intro-desc emphasis text-secondary-dark">Find here an overview of my latest works and collaborations with startups and companies, you will be also able to read more about my story and ask for help on your idea/problem.</p>
-        <ul class="intro-links emphasis text-secondary-dark">
+        <!-- <ul class="intro-links emphasis text-secondary-dark">
           <li>
             <a href="https://twitter.com/yannglt" title="" target="_blank"  rel="noopener"><span class="intro-linkPrefix">Thoughts on </span>Twitter<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#external-link-20"></use></svg></a>
           </li>
@@ -74,7 +74,15 @@
           <li>
             <a href="https://www.instagram.com/ynngllt/" title="" target="_blank"  rel="noopener"><span class="intro-linkPrefix">Journey on </span>Instagram<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#external-link-20"></use></svg></a>
           </li>
-        </ul>
+        </ul> -->
+      </div>
+    </section>
+
+    <section class="portfolio-request">
+      <div class="container">
+        <h2 class="title heading-2 text-secondary-dark">Portfolio only available upon request</h2>
+        <p class="desc body text-quaternary-dark">My design projects are waiting to be shown, feel free to send a request (and its context) and will reply as fast as I can. <span class="line-breaker"><br><br></span><SuperLink href="https://twitter.com/yannglt" target="_blank "variant="body dark">DMs on Twitter</SuperLink> are open but if you prefer emails, I got you covered (no mailto):</p>
+        <SuperButton @click.native="copyEmail" class="cta" variant="primary" icon="#copy-20">Copy my email address</SuperButton>
       </div>
     </section>
 
@@ -88,37 +96,37 @@
       <div class="container">
         <div class="atlas-bg"></div>
         <div class="subwrapper">
-          <p class="subtitle">Personal manifesto<span>and short introduction</span></p>
-          <h2>Who am I, what kind of stuff I do & above all, why?</h2>
+          <p class="subtitle secret text-primary-light">Personal manifesto<span class="text-tertiary-light">and short introduction</span></p>
+          <h2 class="display-2 text-primary-light">Who am I, what kind of stuff I do & above all, why?</h2>
           <div class="manifesto-tldr">
             <div class="entry">
-              <p>tl;dr</p>
               <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#entry-20"></use></svg>
+              <p class="caption">tl;dr</p>
             </div>
             <div class="current-position">
-              <p class="tag">Current position</p>
-              <p class="title">Product Designer, Source</p>
-              <p class="description body">Design company providing value through design solutions, technical expertise and financial support</p>
+              <p class="caption">Current position</p>
+              <p class="title heading-3">Product Designer, Source</p>
+              <p class="description body text-secondary-light">Design company providing value through design solutions, technical expertise and financial support</p>
             </div>
             <div class="passion">
-              <p class="tag">With a passion for</p>
-              <p class="title">Design Operations </p>
-              <p class="description body">Wrote a research paper on design systems and their impacts on product teams and end users in 2018</p>
+              <p class="caption">With a passion for</p>
+              <p class="title heading-3">Design Operations </p>
+              <p class="description body text-secondary-light">Wrote a research paper on design systems and their impacts on product teams and end users in 2018</p>
             </div>
           </div>
           <div class="manifesto-hello">
             <div class="entry">
-              <p>hello</p>
               <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#entry-20"></use></svg>
+              <p class="caption">hello</p>
             </div>
-            <div class="content body">
+            <div class="content body-long">
               <p>Pallet Town and New-York. Pikachu and Spider-Man. A yellow flash on a dark background. Movement, people and energy. All my life, I’ve been drawing inspiration from cities and electrical networks. Today, I deeply believe that great work stems from a solid plan, a clean architecture and appropriate tools.</p>
               <p>I want to create for the makers. From the first Internet stranger who helped me building my Cydia theme to all the great designers I’ve yet to meet, my goal is to give others the means to reach theirs. I know aestheticism is a consequence of mastery. Design is a craft and studying the method behind the methods is what drives me. I’ve learnt that listening is the key to understanding ; and understanding is the first step to solve any problem. I try to work both hard and smart, not losing myself in the process. Loved ones, mentors, clients and obviously, users, anchor me in reality. I mock my kind, to keep things in perspective, and I look up to many. Always hungry, always foolish.</p>
               <p>This personal space is a reflection of who I am and where I’m trying to head as a Product Designer. It comes from years of wondering and wandering. I’m happy I waited as much as I did though, it helped me grow and build the set of principles I now want to stand atop.</p>
               <p>I hope you like what you find! I’m always happy to talk about design, its bridges with code and/or exchange ideas on why and how things should be done.</p>
               <SuperLink href="https://twitter.com/yannglt" target="_blank" variant="body light" icon="#arrow-forward-20">Shoot me a DM on Twitter</SuperLink>
               <p>Prefer the old fashion way ? You can just copy my email address (no mailto):</p>
-              <SuperLink @click.native="copyEmail" variant="body light" icon="#copy-20">Copy my email address hello@yannglt.com</SuperLink>
+              <SuperLink @click.native="copyEmail" variant="body light" icon="#copy-20">Copy my email address</SuperLink>
             </div>
           </div>
         </div>
@@ -134,8 +142,9 @@
     <section class="human">
       <div class="container">
         <div class="human-intro">
-          <h2 class="human-intro-title heading-1 text-primary-dark">Interfaces, products and systems are an important part of my life, but what about the human behind all of this?</h2>
-          <SuperButton class="human-intro-link" href="/about" variant="tertiary thunderstorm" icon="#arrow-forward-20">Read more about me as a human</SuperButton>
+          <!-- <h2 class="human-intro-title heading-1 text-primary-dark">Interfaces, products and systems are an important part of my life, but what about the human behind all of this?</h2> -->
+          <h2 class="human-intro-title heading-1 text-primary-dark">What about the human behind all of this?</h2>
+          <SuperButton class="human-intro-link" href="/about" variant="tertiary thunderstorm" icon="#arrow-forward-20">Read more about me</SuperButton>
           <div class="human-intro-logo"></div>
         </div>
         <div class="facts">

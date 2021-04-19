@@ -6,7 +6,7 @@
   *::selection
     background: transparent
 
-  p
+  span
     @extend .bold
     text-decoration: underline
     +motion($time-standard, $weight-small, $speed-standard, color)
@@ -30,35 +30,35 @@
 
   &.dark
 
-    p
+    span
       color: #ffffff
 
     .icon
       color: $thunderstorm-500
 
-    &:hover p
+    &:hover span
       color: $thunderstorm-500
 
-    &:active p
+    &:active span
       color: $thunderstorm-600
 
   &.light
 
-    p
+    span
       color: #000000
 
     .icon
       color: $maelstrom-500
 
-    &:hover p
+    &:hover span
       color: $maelstrom-600
 
-    &:active p
+    &:active span
       color: $maelstrom-700
 
   &.info
 
-    p
+    span
       color: #ffffff
 
     .icon

@@ -175,29 +175,27 @@ a.wip:hover
 
 .etiquette
   margin: 0 auto
-  padding: 16px
-
+  max-width: calc(360px - 24px)
+  padding: $space-xs
   position: relative
-  background-color: $thunderstorm-500
 
-  +adapt($bkp-mobile)
-    max-width: calc(360px - 19px)
-    transform: translateY(261px)
+  background-color: $thunderstorm-500
+  transform: translateY(272px)
 
   +adapt($width-mobile)
     max-width: 360px
 
   +adapt($bkp-tablet)
-    transform: translateY(92px)
+    transform: translateY(96px)
 
   +adapt($bkp-desktop-sd)
-    transform: translateY(120px)
+    transform: translateY(176px)
 
   +adapt($bkp-desktop-hd)
     max-width: 376px
 
   &-title
-    padding: 17px 0 23px 0
+    padding: $space-xs
 
     @extend .display-3
     color: $thunderstorm-500
@@ -211,28 +209,21 @@ a.wip:hover
         display: inline
 
   &-properties
-    margin-top: 1px
-    margin-bottom: 31px
+    margin-top: $space-xs
 
   &-property
-    margin-top: 14px
-    padding-bottom: 15px
+    padding-top: $space-xs
+    padding-bottom: $space-xs
 
     border-bottom: 1px solid $thunderstorm-700
 
-    &Name
-      margin-bottom: 2px
+  .name
+    color: $thunderstorm-900
 
-      @extend .caption
-      color: $thunderstorm-900
-
-    &Value
-      @extend .heading-3
-      color: $oblivion-1100
-
-  &-logo
+  .logo
     margin: 0 auto
-    margin-bottom: 29px
+    margin-top: $space-l
+    margin-bottom: $space-m
 
     height: 96px
     width: 96px
@@ -241,27 +232,18 @@ a.wip:hover
     background-size: 96px 96px
     background-position: center
 
-  &-subtitle
-    margin-bottom: 10px
-
-    @extend .display-3
-    color: $oblivion-1100
+  .subtitle, .desc, .annotation
     text-align: center
 
-  &-desc
-    margin-bottom: 33px
+  .subtitle
+    margin-bottom: $space-xs
 
-    @extend .caption
-    text-align: center
+  .desc
+    margin-bottom: $space-m
     letter-spacing: 0
 
-  &-annotation
-    margin-bottom: 20px
-
-    font-family: gt-america-mono-medium
-    font-size: 10px
-    line-height: 24px
-    text-align: center
+  .annotation
+    margin-bottom: $space-m
 
   &-electricity
     position: relative
@@ -408,8 +390,8 @@ a.wip:hover
             background-color: $oblivion-500
 
 .intro
-  margin-top: calc(261px + 119px)
-  margin-bottom: $space-xxxl
+  margin-top: calc(261px + #{$space-xxxl})
+  margin-bottom: $space-l
 
   +adapt($bkp-tablet)
     margin-bottom: 80px
@@ -420,7 +402,7 @@ a.wip:hover
     margin-top: calc(120px + 191px)
 
   +adapt($bkp-desktop-hd)
-    margin-bottom: 132px
+    margin-bottom: $space-xxl
     margin-top: calc(120px + 243px)
     // 120px = etiquette initial translateY
 
@@ -430,9 +412,6 @@ a.wip:hover
   &-subtitle
     color: $thunderstorm-500
     margin-bottom: $space-xs
-
-    +adapt($bkp-mobile)
-      grid-column: span 2
 
     +adapt($bkp-tablet)
       grid-column: 2 / span 6
@@ -450,10 +429,7 @@ a.wip:hover
         display: none
 
   &-title
-    margin-bottom: $space-s
-
-    +adapt($bkp-mobile)
-      grid-column: span 2
+    margin-bottom: $space-m
 
     +adapt($bkp-tablet)
       grid-column: 2 / span 6
@@ -465,8 +441,6 @@ a.wip:hover
       grid-column: 2 / span 10
 
   &-desc
-    +adapt($bkp-mobile)
-      grid-column: span 2
 
     +adapt($bkp-tablet)
       grid-column: 2 / span 6
@@ -744,8 +718,51 @@ a.wip:hover
       .prev
         margin-right: 16px
 
+.portfolio-request
+  margin: 0 auto
+  max-width: 1208px
+  margin-bottom: $space-xxxl
+  padding: $space-m
+
+  background-color: $oblivion-900
+  border: 2px dashed $maelstrom-500
+  border-radius: 8px
+
+  +adapt($bkp-tablet)
+    padding: $space-l
+
+  +adapt($bkp-desktop-sd)
+    padding: $space-xl
+
+  +adapt($bkp-desktop-hd)
+    margin-bottom: $space-xxxxl
+    padding: 104px
+
+
+  .container
+    margin-left: 0
+
+    +adapt($bkp-desktop-sd)
+      max-width: 584px
+
+  .title
+    margin-bottom: $space-xxxs
+
+    +adapt($bkp-desktop-sd)
+      margin-bottom: $space-xs
+
+  .desc
+    margin-bottom: $space-s
+
+    +adapt($bkp-desktop-sd)
+      margin-bottom: $space-m
+
+  .line-breaker
+
+    +adapt($bkp-tablet)
+      display: none
+
 .manifesto
-  margin: 0 -19px
   max-width: $bkp-desktop-hd
   background-color: #ffffff
   overflow: hidden
@@ -767,13 +784,10 @@ a.wip:hover
     .atlas-bg
       position: absolute
       width: 100%
-      background-image: linear-gradient(rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.76)), url("@/static/images/atlas.svg")
+      // background-image: linear-gradient(rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.76)), url("@/static/images/atlas.svg")
       background-repeat: repeat
       background-size: 600px 600px
       background-position: top
-
-      +adapt($bkp-mobile)
-        height: 396px
 
       +adapt($bkp-tablet)
         height: 516px
@@ -794,7 +808,7 @@ a.wip:hover
 
   .subwrapper
     z-index: 5
-    padding: 0 32px
+    padding: 0 $space-s
 
     +adapt($bkp-mobile)
       // margin-bottom: 96px
@@ -818,10 +832,7 @@ a.wip:hover
       grid-column: 3 / span 8
 
   .subtitle
-    @extend .caption
-    padding: 4px 0
-    font-size: 10px
-    letter-spacing: 0
+    padding: $space-xxxs 0
 
     border-top: 4px solid $oblivion-1100
     border-bottom: 1px solid $oblivion-1100
@@ -843,18 +854,11 @@ a.wip:hover
       color: $oblivion-400
 
   h2
-    @extend .display-2
-    color: $oblivion-1100
     text-decoration: underline
-
-    +adapt($bkp-mobile)
-      margin-bottom: 32px
+    margin-bottom: $space-l
 
     +adapt($bkp-tablet)
-      margin-bottom: 53px
-
-    +adapt($bkp-desktop-sd)
-      margin-bottom: 74px
+      margin-bottom: -$space-xl
 
   .manifesto-tldr,
   .manifesto-hello
@@ -868,51 +872,27 @@ a.wip:hover
       +gCols(8, 1fr, 40px)
 
     .entry
-      @extend .caption
       grid-column: span 2
+      margin-bottom: $space-xs
+      display: flex
+      flex-direction: row
+      align-items: flex-start
 
       +adapt($bkp-tablet)
         grid-column: span 1
-        display: flex
         flex-direction: column
-        align-items: center
 
       .icon
-        display: none
-
-        +adapt($bkp-tablet)
-          display: block
-
-      p
-        margin-bottom: 5px
-
-    .tag
-      @extend .caption
-      margin-bottom: 6px
+        margin-right: $space-xxxxs
 
     .title
-      @extend .heading-3
-      margin-bottom: 5px
-
-    .description
-      line-height: 24px
+      margin-bottom: $space-xxxxs
 
   .manifesto-tldr
-    +adapt($bkp-mobile)
-      margin-bottom: 37px
-
-    +adapt($bkp-tablet)
-      margin-bottom: 54px
-
-    +adapt($bkp-desktop-sd)
-      margin-bottom: 70px
+    margin-bottom: $space-l
 
     .entry
       color: $firework-500
-      margin-bottom: 8px
-
-      +adapt($bkp-tablet)
-        margin-bottom: 0
 
       .icon
         color: $firework-700
@@ -920,19 +900,14 @@ a.wip:hover
   .manifesto-hello
 
     .entry
+      // margin-bottom: $space-xxxs
       color: $maelstrom-500
-      margin-bottom: 9px
-
-      +adapt($bkp-tablet)
-        margin-bottom: 0
 
       .icon
         color: $maelstrom-700
 
-        transform: translateY(3px)
-
   .current-position
-    margin-bottom: 33px
+    margin-bottom: $space-m
 
     +adapt($bkp-tablet)
       grid-column: span 4
@@ -966,7 +941,9 @@ a.wip:hover
 .copyToast
   position: fixed
   width: 480px
-  top: $space-m
+  // Initial space + Info banner
+  // top: calc(#{$space-m} + 48px)
+  bottom: $space-m
   right: $space-m
   padding: 12px 24px
   display: flex
@@ -1013,11 +990,8 @@ a.wip:hover
   // background-image: url("@/static/images/process.svg")
   background-image: url("@/static/images/process-wip.svg")
   background-repeat: no-repeat
-
-  +adapt($bkp-mobile)
-    grid-column: span 2
-    padding: 0 32px
-    background-position: center 0
+  background-position-x: center
+  background-position-y: -$space-xxxxl
 
   +adapt($bkp-tablet)
     +gCols(8, 1fr, 32px)
@@ -1036,8 +1010,8 @@ a.wip:hover
     background-position: center -80px
 
   &-content
-    // padding-bottom: 242px
-    padding-bottom: 372px
+    padding-bottom: $space-xxxxl
+    // padding-bottom: 372px
 
   //   +adapt($bkp-tablet)
   //     max-width: 520px
@@ -1129,9 +1103,6 @@ a.wip:hover
     align-items: center
     z-index: 50
 
-    +adapt($bkp-mobile)
-      grid-column: span 2
-
     +adapt($bkp-tablet)
       grid-column: span 8
 
@@ -1142,12 +1113,12 @@ a.wip:hover
       grid-column: 2 / span 10
 
     &-title
-      margin-bottom: $space-s
+      margin-bottom: $space-m
       text-align: center
 
     &-logo
       align-self: center
-      margin-top: $space-s
+      margin-top: $space-m
       height: 48px
       width: 48px
       border: 1px solid $oblivion-700
@@ -1159,7 +1130,6 @@ a.wip:hover
 
   .facts
     position: relative
-    grid-column: span 2
 
     +adapt($bkp-tablet)
       grid-column: span 8
@@ -1185,35 +1155,21 @@ a.wip:hover
     box-shadow: 0px 16px 80px 0px rgba(0, 0, 0, 0.8)
     +motion($time-standard, $weight-xlarge, $speed-emphasized, transform, border-radius)
 
-    &Sub
-      @extend .caption
-      color: $oblivion-100
+    .subtitle
       +motion($time-quick, $weight-small, $speed-standard, color)
 
-    &Title
-      margin-top: 4px
-      margin-bottom: 7px
-      @extend .heading-3
-      color: $oblivion-025
-      line-height: 28px
+    .title
+      margin-top: $space-xxxxs
+      margin-bottom: $space-xs
 
-    &Desc
-      color: $oblivion-300
+    .desc
       +motion($time-quick, $weight-small, $speed-standard, color)
 
       p
         margin-bottom: 16px
-        line-height: 24px
 
         &:last-of-type
           margin-bottom: 0
-
-      a
-        color: $oblivion-100
-        text-decoration: underline
-
-        &:hover
-          color: pink
 
     &:nth-child(1)
       top: 40px
