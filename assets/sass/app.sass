@@ -113,6 +113,9 @@ a.wip:hover
     margin-left: -116px
     margin-right: -116px
 
+  +adapt($bkp-desktop-sd)
+    margin-top: calc(#{$space-xxxl} + 96px + 24px)
+
   .welcome-repeat
     text-align: center
 
@@ -186,10 +189,7 @@ a.wip:hover
     max-width: 360px
 
   +adapt($bkp-tablet)
-    transform: translateY(96px)
-
-  +adapt($bkp-desktop-sd)
-    transform: translateY(176px)
+    transform: translateY($space-xxxl)
 
   +adapt($bkp-desktop-hd)
     max-width: 376px
@@ -243,7 +243,7 @@ a.wip:hover
     letter-spacing: 0
 
   .annotation
-    margin-bottom: $space-m
+    margin-bottom: $space-xs
 
   &-electricity
     position: relative
@@ -440,7 +440,11 @@ a.wip:hover
       grid-column: span 6
 
     +adapt($bkp-desktop-sd)
-      grid-column: 2 / span 6
+      grid-column: span 6
+      margin-right: 304px
+
+    +adapt($bkp-desktop-hd)
+      margin-right: 0
 
   // &-links
   //   margin-top: 32px
@@ -484,6 +488,7 @@ a.wip:hover
   //
   //   +adapt($bkp-desktop-hd)
   //     grid-column: 9 / span 4
+
 
 .projects
   margin-bottom: $space-xxxxl
@@ -805,6 +810,10 @@ a.wip:hover
       padding: $space-xl $space-xl 0
       grid-column: span 6
 
+    +adapt($bkp-desktop-sd)
+      padding: 80px 152px 0
+      grid-column: span 6
+
   .subtitle
     margin-bottom: $space-m
     padding: $space-xxxs 0
@@ -817,6 +826,7 @@ a.wip:hover
 
     +adapt($bkp-desktop-sd)
       margin-bottom: $space-xl
+      grid-column: span 6
 
     span
       margin-left: 4px
@@ -832,11 +842,11 @@ a.wip:hover
   .manifesto-tldr,
   .manifesto-hello
 
-    +adapt($bkp-desktop-sd)
-      +gCols(8, 1fr, 40px)
-
-    +adapt($bkp-desktop-hd)
-      +gCols(8, 1fr, 40px)
+    // +adapt($bkp-desktop-sd)
+    //   +gCols(6, 1fr, 40px)
+    //
+    // +adapt($bkp-desktop-hd)
+    //   +gCols(6, 1fr, 40px)
 
     .entry
       grid-column: span 2
@@ -845,7 +855,7 @@ a.wip:hover
       flex-direction: row
       align-items: flex-start
 
-      +adapt($bkp-desktop-sd)
+      +adapt($bkp-desktop-hd)
         grid-column: span 1
         flex-direction: column
 
@@ -1061,11 +1071,8 @@ a.wip:hover
     align-items: center
     z-index: 50
 
-    +adapt($bkp-tablet)
-      grid-column: span 8
-
     +adapt($bkp-desktop-sd)
-      grid-column: 2 / span 8
+      grid-column: span 6
 
     +adapt($bkp-desktop-hd)
       grid-column: 2 / span 10
@@ -1090,11 +1097,10 @@ a.wip:hover
     position: relative
 
     +adapt($bkp-tablet)
-      grid-column: span 8
       transform: translateY(calc(80px))
 
     +adapt($bkp-desktop-sd)
-      grid-column: span 10
+      grid-column: span 6
       transform: translateY(calc(-64px))
 
     +adapt($bkp-desktop-hd)
@@ -1138,6 +1144,14 @@ a.wip:hover
         top: 0
         left: 0
 
+      +adapt($bkp-desktop-sd)
+        top: -24px
+        left: -48px
+
+      +adapt($bkp-desktop-hd)
+        top: 0
+        left: 0
+
     &:nth-child(2)
       top: 264px
       right: -112px
@@ -1150,7 +1164,7 @@ a.wip:hover
 
       +adapt($bkp-desktop-sd)
         top: calc(64px + 24px)
-        right: 0
+        right: -32px
 
       +adapt($bkp-desktop-hd)
         top: calc(56px + 40px)

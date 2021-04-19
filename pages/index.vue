@@ -63,7 +63,7 @@
       <div class="container">
         <p class="intro-subtitle caption">Welcome to my space <span class="line-breaker"><br /></span>on the Internets</p>
         <h1 class="intro-title heading-1 text-primary-dark">I think, create and break interfaces, products and systems with a strong focus on design operations.</h1>
-        <p class="intro-desc emphasis text-secondary-dark">Find here an overview of my latest works and collaborations with startups and companies, you will be also able to read more about my story and ask for help on your idea/problem.</p>
+        <p class="intro-desc emphasis text-secondary-dark">This personal space aims to showcase how I think and work and become a place where I can share my thoughts and my journey as a product designer in this industry.</p>
         <!-- <ul class="intro-links emphasis text-secondary-dark">
           <li>
             <a href="https://twitter.com/yannglt" title="" target="_blank"  rel="noopener"><span class="intro-linkPrefix">Thoughts on </span>Twitter<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#external-link-20"></use></svg></a>
@@ -142,8 +142,8 @@
     <section class="human">
       <div class="container">
         <div class="human-intro">
-          <!-- <h2 class="human-intro-title heading-1 text-primary-dark">Interfaces, products and systems are an important part of my life, but what about the human behind all of this?</h2> -->
-          <h2 class="human-intro-title heading-1 text-primary-dark">What about the human behind all of this?</h2>
+          <h2 class="human-intro-title heading-1 text-primary-dark">Interfaces, products and systems are an important part of my life, but what about the human behind all of this?</h2>
+          <!-- <h2 class="human-intro-title heading-1 text-primary-dark">What about the human behind all of this?</h2> -->
           <SuperButton class="human-intro-link" href="/about" variant="tertiary thunderstorm" icon="#arrow-forward-20">Read more about me</SuperButton>
           <div class="human-intro-logo"></div>
         </div>
