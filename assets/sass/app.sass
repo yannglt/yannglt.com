@@ -414,10 +414,7 @@ a.wip:hover
     margin-bottom: $space-xs
 
     +adapt($bkp-tablet)
-      grid-column: 2 / span 6
-
-    +adapt($bkp-desktop-sd)
-      grid-column: 2 / span 8
+      grid-column: span 6
 
     +adapt($bkp-desktop-hd)
       grid-column: 2 / span 10
@@ -432,10 +429,7 @@ a.wip:hover
     margin-bottom: $space-m
 
     +adapt($bkp-tablet)
-      grid-column: 2 / span 6
-
-    +adapt($bkp-desktop-sd)
-      grid-column: 2 / span 8
+      grid-column: span 6
 
     +adapt($bkp-desktop-hd)
       grid-column: 2 / span 10
@@ -443,53 +437,53 @@ a.wip:hover
   &-desc
 
     +adapt($bkp-tablet)
-      grid-column: 2 / span 6
+      grid-column: span 6
 
     +adapt($bkp-desktop-sd)
       grid-column: 2 / span 6
 
-  &-links
-    margin-top: 32px
-    position: relative
-    display: flex
-    flex-direction: column
-    grid-column: span 2
-
-    li
-      display: inline-flex
-      position: relative
-
-    &-linkPrefix
-      display: none
-
-      +adapt($bkp-desktop-hd)
-        display: inline
-
-    .icon
-      padding-left: 4px
-
-      color: $oblivion-300
-
-      +motion($time-quick, $weight-small, $speed-standard, color)
-
-    +adapt($bkp-tablet)
-      grid-column: 2 / span 6
-      flex-direction: row
-
-      li:not(:last-of-type)
-        margin-right: 48px
-        margin-bottom: 0
-
-    +adapt($bkp-desktop-sd)
-      display: inline
-      grid-column: span 2
-      margin-top: 0
-
-      li:not(:last-of-type)
-        margin-right: 0
-
-    +adapt($bkp-desktop-hd)
-      grid-column: 9 / span 4
+  // &-links
+  //   margin-top: 32px
+  //   position: relative
+  //   display: flex
+  //   flex-direction: column
+  //   grid-column: span 2
+  //
+  //   li
+  //     display: inline-flex
+  //     position: relative
+  //
+  //   &-linkPrefix
+  //     display: none
+  //
+  //     +adapt($bkp-desktop-hd)
+  //       display: inline
+  //
+  //   .icon
+  //     padding-left: 4px
+  //
+  //     color: $oblivion-300
+  //
+  //     +motion($time-quick, $weight-small, $speed-standard, color)
+  //
+  //   +adapt($bkp-tablet)
+  //     grid-column: 2 / span 6
+  //     flex-direction: row
+  //
+  //     li:not(:last-of-type)
+  //       margin-right: 48px
+  //       margin-bottom: 0
+  //
+  //   +adapt($bkp-desktop-sd)
+  //     display: inline
+  //     grid-column: span 2
+  //     margin-top: 0
+  //
+  //     li:not(:last-of-type)
+  //       margin-right: 0
+  //
+  //   +adapt($bkp-desktop-hd)
+  //     grid-column: 9 / span 4
 
 .projects
   margin-bottom: $space-xxxxl
@@ -774,9 +768,6 @@ a.wip:hover
   -webkit-transform: translate3d(0, 0, 0)
   -moz-transform: translate3d(0, 0, 0)
 
-  +adapt($bkp-tablet)
-    margin: 0 auto
-
   .container
     @extend .gridSystem
     position: relative
@@ -808,46 +799,24 @@ a.wip:hover
 
   .subwrapper
     z-index: 5
-    padding: 0 $space-s
-
-    +adapt($bkp-mobile)
-      // margin-bottom: 96px
-      padding-top: 32px
-      grid-column: span 2
+    padding: $space-s $space-s 0
 
     +adapt($bkp-tablet)
-      // margin-bottom: 84px
-      padding: 0
-      padding-top: 92px
-      grid-column: 2 / span 6
-
-    +adapt($bkp-desktop-sd)
-      // margin-bottom: 153px
-      padding-top: 100px
-      grid-column: 2 / span 8
-
-    +adapt($bkp-desktop-hd)
-      // margin-bottom: 137px
-      padding-top: 168px
-      grid-column: 3 / span 8
+      padding: $space-xl $space-xl 0
+      grid-column: span 6
 
   .subtitle
+    margin-bottom: $space-m
     padding: $space-xxxs 0
 
     border-top: 4px solid $oblivion-1100
     border-bottom: 1px solid $oblivion-1100
 
-    +adapt($bkp-mobile)
-      margin-bottom: 30px
-
     +adapt($bkp-tablet)
-      margin-bottom: 41px
+      margin-bottom: $space-l
 
     +adapt($bkp-desktop-sd)
-      margin-bottom: 48px
-
-    +adapt($bkp-desktop-hd)
-      margin-bottom: 52px
+      margin-bottom: $space-xl
 
     span
       margin-left: 4px
@@ -858,12 +827,10 @@ a.wip:hover
     margin-bottom: $space-l
 
     +adapt($bkp-tablet)
-      margin-bottom: -$space-xl
+      margin-bottom: $space-xl
 
   .manifesto-tldr,
   .manifesto-hello
-    +adapt($bkp-tablet)
-      +gCols(6, 1fr, 32px)
 
     +adapt($bkp-desktop-sd)
       +gCols(8, 1fr, 40px)
@@ -878,7 +845,7 @@ a.wip:hover
       flex-direction: row
       align-items: flex-start
 
-      +adapt($bkp-tablet)
+      +adapt($bkp-desktop-sd)
         grid-column: span 1
         flex-direction: column
 
@@ -891,6 +858,10 @@ a.wip:hover
   .manifesto-tldr
     margin-bottom: $space-l
 
+    +adapt($bkp-tablet)
+      margin-bottom: $space-xl
+      max-width: 408px
+
     .entry
       color: $firework-500
 
@@ -900,7 +871,6 @@ a.wip:hover
   .manifesto-hello
 
     .entry
-      // margin-bottom: $space-xxxs
       color: $maelstrom-500
 
       .icon
@@ -909,25 +879,14 @@ a.wip:hover
   .current-position
     margin-bottom: $space-m
 
-    +adapt($bkp-tablet)
-      grid-column: span 4
-      margin-bottom: 0
-
     +adapt($bkp-desktop-sd)
       grid-column: span 3
 
   .passion
-    +adapt($bkp-tablet)
-      margin-top: 33px
-      grid-column: 2 / span 4
-
     +adapt($bkp-desktop-sd)
-      margin-top: 0
       grid-column: span 3
 
   .content
-    +adapt($bkp-tablet)
-      grid-column: span 5
 
     +adapt($bkp-desktop-sd)
       grid-column: span 6
@@ -994,24 +953,22 @@ a.wip:hover
   background-position-y: -$space-xxxxl
 
   +adapt($bkp-tablet)
-    +gCols(8, 1fr, 32px)
-    grid-column: span 8
-    padding: 0
-    background-position: center 23px
+    grid-column: span 6
+    background-position-y: -$space-xxxl
 
   +adapt($bkp-desktop-sd)
-    +gCols(10, 1fr, 40px)
-    grid-column: span 10
-    background-position: center -15px
 
   +adapt($bkp-desktop-hd)
-    +gCols(12, 1fr, 40px)
     grid-column: span 12
-    background-position: center -80px
 
   &-content
     padding-bottom: $space-xxxxl
-    // padding-bottom: 372px
+
+    +adapt($bkp-tablet)
+      padding-bottom: 324px
+
+    +adapt($bkp-desktop-hd)
+      padding-bottom: 372px
 
   //   +adapt($bkp-tablet)
   //     max-width: 520px
@@ -1076,6 +1033,7 @@ a.wip:hover
   //     padding-left: 4px
   //
   //     +motion($time-quick, $weight-small, $speed-standard, transform)
+
 
 .human
   margin-top: 83px

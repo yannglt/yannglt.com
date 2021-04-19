@@ -62,7 +62,7 @@
     <section class="intro">
       <div class="container">
         <p class="intro-subtitle caption">Welcome to my space <span class="line-breaker"><br /></span>on the Internets</p>
-        <h1 class="intro-title heading-1 text-primary-dark">I think, create and break interfaces, products and systems with a passion for design operations.</h1>
+        <h1 class="intro-title heading-1 text-primary-dark">I think, create and break interfaces, products and systems with a strong focus on design operations.</h1>
         <p class="intro-desc emphasis text-secondary-dark">Find here an overview of my latest works and collaborations with startups and companies, you will be also able to read more about my story and ask for help on your idea/problem.</p>
         <!-- <ul class="intro-links emphasis text-secondary-dark">
           <li>
@@ -125,7 +125,7 @@
               <p>This personal space is a reflection of who I am and where I’m trying to head as a Product Designer. It comes from years of wondering and wandering. I’m happy I waited as much as I did though, it helped me grow and build the set of principles I now want to stand atop.</p>
               <p>I hope you like what you find! I’m always happy to talk about design, its bridges with code and/or exchange ideas on why and how things should be done.</p>
               <SuperLink href="https://twitter.com/yannglt" target="_blank" variant="body light" icon="#arrow-forward-20">Shoot me a DM on Twitter</SuperLink>
-              <p>Prefer the old fashion way ? You can just copy my email address (no mailto):</p>
+              <p>Prefer the old fashion way ? Copy my email address (no mailto):</p>
               <SuperLink @click.native="copyEmail" variant="body light" icon="#copy-20">Copy my email address</SuperLink>
             </div>
           </div>
