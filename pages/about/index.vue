@@ -194,6 +194,22 @@
     components: {
       SuperButton,
       SuperLink
+    },
+
+    mounted() {
+      const windowWidth = window.innerWidth
+
+      if(windowWidth < 1208) { return false } else {
+        const promiseTimeline = gsap.timeline({
+          scrollTrigger: {
+            // markers: true,
+            trigger: ".promise",
+            pin: true,
+            start: "top +116px",
+            end: "1454px center",
+          }
+        })
+      }
     }
   }
 </script>
