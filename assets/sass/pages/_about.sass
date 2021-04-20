@@ -12,19 +12,21 @@
 
       border: 1px solid $oblivion-700
       background-image: url("@/static/images/moodboard-grid-mobile.svg")
-      // background-repeat: repeat
-      // background-size: 104px 104px
       background-position: top left
 
       +adapt($bkp-tablet)
         margin-bottom: $space-xxl
         height: 624px
 
+        background-image: url("@/static/images/moodboard-grid.svg")
+        background-repeat: repeat
+        background-size: 104px 104px
+
       +adapt($bkp-desktop-sd)
         height: 568px
 
       +adapt($bkp-desktop-hd)
-        height: 624px
+        height: 664px
 
         background-image: url("@/static/images/moodboard-grid.svg")
         background-repeat: repeat
@@ -33,11 +35,21 @@
 
     .left
       position: relative
-      grid-column: span 5
+
+      +adapt($bkp-tablet)
+        grid-column: span 3
+
+      +adapt($bkp-desktop-hd)
+        grid-column: span 5
 
     .right
       position: relative
-      grid-column: 8 / span 5
+
+      +adapt($bkp-tablet)
+        grid-column: span 3
+
+      +adapt($bkp-desktop-hd)
+        grid-column: 8 / span 5
 
     .atlas, .logo, .electricity-toolkit, .gt-america, .bluu-suuperstar
       background-repeat: no-repeat
@@ -60,14 +72,11 @@
     .atlas
       position: absolute
       top: 112px
-      // top: 144px
       left: 44%
-      // left: 65px
       height: 312px
       width: 208px
 
       background-color: $thunderstorm-500
-      // transform: rotate3d(0, 0, 1, -7.5deg)
       transform: rotate3d(0, 0, 1, -7.5deg) translate3d(-50%, 0, 0)
 
       &::before
@@ -86,10 +95,20 @@
         background-color: $thunderstorm-500
         border: 1px solid $thunderstorm-900
 
+      +adapt($bkp-tablet)
+        top: 110px
+        left: 28px
+        transform: rotate3d(0, 0, 1, -7.5deg)
+
+      +adapt($bkp-desktop-sd)
+        top: 144px
+
+      +adapt($bkp-desktop-hd)
+        left: 65px
+
     .logo
       position: absolute
       top: 28px
-      // top: 101px
       left: 56%
       height: 144px
       width: 144px
@@ -97,12 +116,25 @@
       background-color: #ffffff
       background-image: url("@/static/images/logo.svg")
       background-size: 144px 144px
-      // transform: rotate3d(0, 0, 1, -15deg)
       transform: rotate3d(0, 0, 1, -15deg) translate3d(-50%, 0, 0)
 
       &::after
         background-color: $oblivion-300
         border: 1px solid $oblivion-700
+
+      +adapt($bkp-tablet)
+        top: 69px
+        left: 100px
+        transform: rotate3d(0, 0, 1, -15deg)
+
+      +adapt($bkp-desktop-sd)
+        top: 102px
+        left: 135px
+        transform: rotate3d(0, 0, 1, -15deg)
+
+      +adapt($bkp-desktop-hd)
+        top: 101px
+        left: 136px
 
     .electricity-toolkit
       display: none
@@ -148,8 +180,6 @@
     .bluu-suuperstar
       display: none
       position: absolute
-      top: 311px
-      right: 206px
       height: 208px
       width: 208px
 
@@ -164,12 +194,20 @@
 
       +adapt($bkp-tablet)
         display: block
+        top: 183px
+        right: 50px
+
+      +adapt($bkp-desktop-sd)
+        top: 112px
+        right: 178px
+
+      +adapt($bkp-desktop-hd)
+        top: 311px
+        right: 206px
 
     .gt-america
       display: none
       position: absolute
-      top: 350px
-      right: 102px
       height: 208px
       width: 208px
 
@@ -184,6 +222,16 @@
 
       +adapt($bkp-tablet)
         display: block
+        top: 335px
+        right: -5px
+
+      +adapt($bkp-desktop-sd)
+        top: 262px
+        right: 34px
+
+      +adapt($bkp-desktop-hd)
+        top: 350px
+        right: 102px
 
   .discover
     margin-bottom: $space-xxxl
