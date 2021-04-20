@@ -156,8 +156,6 @@
 </template>
 
 <script>
-  import gsap from 'gsap'
-
   import ProjectsCarousel from '@/components/ProjectsCarousel.vue'
   import SuperButton from '@/components/SuperButton.vue'
   import SuperLink from '@/components/SuperLink.vue'
