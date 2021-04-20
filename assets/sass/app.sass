@@ -852,8 +852,8 @@ a.wip:hover
     // +adapt($bkp-desktop-sd)
     //   +gCols(6, 1fr, 40px)
     //
-    // +adapt($bkp-desktop-hd)
-    //   +gCols(6, 1fr, 40px)
+    +adapt($bkp-desktop-hd)
+      align-items: flex-start
 
     .entry
       grid-column: span 2
@@ -863,14 +863,22 @@ a.wip:hover
       align-items: flex-start
 
       +adapt($bkp-desktop-hd)
+        margin: 0 auto
         grid-column: span 1
-        flex-direction: column
+        flex-direction: column-reverse
+        justify-content: center
 
       .icon
         margin-right: $space-xxxxs
 
+        +adapt($bkp-desktop-hd)
+          margin: 0 auto
+          // margin-right: 0
+
     .title
-      margin-bottom: $space-xxxxs
+
+      +adapt($bkp-desktop-hd)
+        margin-bottom: $space-xxxxs
 
   .manifesto-tldr
     margin-bottom: $space-l
@@ -882,6 +890,9 @@ a.wip:hover
     +adapt($bkp-desktop-sd)
       +gCols(2, 1fr , 40px)
       max-width: 100%
+
+    +adapt($bkp-desktop-hd)
+      +gCols(8, 1fr , 40px)
 
     .entry
       color: $firework-500
@@ -900,7 +911,13 @@ a.wip:hover
       +adapt($bkp-desktop-sd)
         grid-column: span 1
 
+      +adapt($bkp-desktop-hd)
+        grid-column: span 3
+
   .manifesto-hello
+
+    +adapt($bkp-desktop-hd)
+      +gCols(8, 1fr , 40px)
 
     .entry
       color: $maelstrom-500
@@ -911,7 +928,7 @@ a.wip:hover
 
   .content
 
-    +adapt($bkp-desktop-sd)
+    +adapt($bkp-desktop-hd)
       grid-column: span 6
 
     p
