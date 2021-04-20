@@ -111,7 +111,7 @@
             <div class="passion">
               <p class="caption">With a passion for</p>
               <p class="title heading-3">Design Operations </p>
-              <p class="description body text-secondary-light">Wrote a research paper on design systems and their impacts on product teams and end users in 2018</p>
+              <p class="description body text-secondary-light">Wrote a research paper on design systems and their impacts on product teams and end users</p>
             </div>
           </div>
           <div class="manifesto-hello">

@@ -432,7 +432,7 @@ a.wip:hover
       grid-column: span 6
 
     +adapt($bkp-desktop-hd)
-      grid-column: 2 / span 10
+      grid-column: 2 / span 9
 
   &-desc
 
@@ -445,6 +445,7 @@ a.wip:hover
 
     +adapt($bkp-desktop-hd)
       margin-right: 0
+      grid-column: 2 / span 6
 
   // &-links
   //   margin-top: 32px
@@ -488,7 +489,6 @@ a.wip:hover
   //
   //   +adapt($bkp-desktop-hd)
   //     grid-column: 9 / span 4
-
 
 .projects
   margin-bottom: $space-xxxxl
@@ -814,6 +814,13 @@ a.wip:hover
       padding: 80px 152px 0
       grid-column: span 6
 
+    +adapt($bkp-desktop-hd)
+      margin: 0 auto
+      padding: 0
+      padding-top: $space-xxxl
+      max-width: 792px
+      grid-column: span 12
+
   .subtitle
     margin-bottom: $space-m
     padding: $space-xxxs 0
@@ -872,11 +879,26 @@ a.wip:hover
       margin-bottom: $space-xl
       max-width: 408px
 
+    +adapt($bkp-desktop-sd)
+      +gCols(2, 1fr , 40px)
+      max-width: 100%
+
     .entry
       color: $firework-500
 
       .icon
         color: $firework-700
+
+    .current-position
+      margin-bottom: $space-m
+
+      +adapt($bkp-desktop-sd)
+        margin-bottom: 0
+
+    .current-position, .passion
+
+      +adapt($bkp-desktop-sd)
+        grid-column: span 1
 
   .manifesto-hello
 
@@ -886,15 +908,6 @@ a.wip:hover
       .icon
         color: $maelstrom-700
 
-  .current-position
-    margin-bottom: $space-m
-
-    +adapt($bkp-desktop-sd)
-      grid-column: span 3
-
-  .passion
-    +adapt($bkp-desktop-sd)
-      grid-column: span 3
 
   .content
 
