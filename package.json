@@ -23,6 +23,7 @@
     "dotenv": "^8.2.0",
     "eslint": "^7.21.0",
     "eslint-plugin-vue": "^7.7.0",
+    "gsap": "^3.6.1",
     "imports-loader": "^1.2.0",
     "moment": "^2.29.1",
     "node-sass": "^4.14.1",

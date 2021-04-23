@@ -2,7 +2,34 @@
   <div class="about-page">
     <section class="moodboard">
       <div class="container">
-        <div class="left">
+        <div class="vertical-lines">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div class="horizontal-lines">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <!-- <div class="left">
           <div class="atlas"></div>
           <div class="logo"></div>
         </div>
@@ -13,7 +40,7 @@
           </div>
           <div class="gt-america"></div>
           <div class="bluu-suuperstar"></div>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -145,6 +172,11 @@
 </template>
 
 <script>
+  import gsap from 'gsap'
+  import ScrollTrigger from 'gsap/ScrollTrigger'
+  import TweenLite from '@/vendor/gsap/TweenLite';
+  import CustomEase from '@/vendor/gsap/CustomEase';
+
   import SuperButton from '@/components/SuperButton.vue'
   import SuperLink from '@/components/SuperLink.vue'
 
@@ -197,16 +229,72 @@
     },
 
     mounted() {
+      gsap.registerPlugin(ScrollTrigger)
+      gsap.registerPlugin(TweenLite)
+      gsap.registerPlugin(CustomEase)
+
       const windowWidth = window.innerWidth
+
+      const moodboardVerticalLines = document.querySelectorAll('.vertical-lines .line')
+      const moodboardHorizontalLines = document.querySelectorAll('.horizontal-lines .line')
+
+      const discoverTitle = document.querySelector('.discover-title')
+      const discoverTitleSplitted = Splitting({ target: discoverTitle, by: 'lines' })
+      const discoverBlocs = document.querySelectorAll('.discover-bloc')
+
+      const moodboardTimeline = gsap.timeline()
+      const discoverTimeline = gsap.timeline()
+
+      CustomEase.create('standard', '0.4, 0.0, 0.2, 1')
+      CustomEase.create('emphasized', '0.2, 0.0, 0.2, 1')
+      CustomEase.create('decelerated', '0.0, 0.0, 0.2, 1')
+      CustomEase.create('accelerated', '0.4, 0.0, 1, 1')
+
+      moodboardVerticalLines.forEach((line, index) => {
+        moodboardTimeline.from(line, {
+          duration: (0.120 * 2 + 0.120 * 11) - 0.120 * index,
+          transform: 'translateX(-50%) scaleY(0)',
+          ease: 'emphasized',
+          delay: 0.120,
+          clearProps: 'all'
+        }, 'lines')
+      })
+
+      moodboardHorizontalLines.forEach((line, index) => {
+        moodboardTimeline.from(line, {
+          duration: 0.120 + 0.120 * index,
+          transform: 'scaleX(0)',
+          ease: 'emphasized',
+          delay: 0.120,
+          clearProps: 'all'
+        }, 'lines')
+      })
+
+      moodboardTimeline.pause()
+
+      discoverTitleSplitted[0].lines.forEach((line, index) => {
+        discoverTimeline.from(line, {
+          duration: 0.5 + 0.5 * index / 4,
+          transform: 'translateY(512px)',
+          ease: 'emphasized'
+        }, 'line')
+      })
+
+      discoverTimeline.pause()
+
+      document.querySelector('.about-page').onclick = function() {
+        moodboardTimeline.restart()
+        discoverTimeline.restart()
+      }
 
       if(windowWidth < 1208) { return false } else {
         const promiseTimeline = gsap.timeline({
           scrollTrigger: {
             // markers: true,
-            trigger: ".promise",
+            trigger: '.promise',
             pin: true,
-            start: "top +116px",
-            end: "1454px center",
+            start: 'top +116px',
+            end: '1454px center',
           }
         })
       }

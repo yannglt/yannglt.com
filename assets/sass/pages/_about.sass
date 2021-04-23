@@ -5,22 +5,17 @@
   .moodboard
 
     .container
-      @extend .gridSystem
       margin-bottom: $space-l
       height: 512px
       box-sizing: border-box
+      position: relative
 
-      border: 1px solid $oblivion-700
-      background-image: url("@/static/images/moodboard-grid-mobile.svg")
-      background-position: top left
+      outline: 2px solid $oblivion-700
+      outline-offset: -1px
 
       +adapt($bkp-tablet)
         margin-bottom: $space-xxl
         height: 624px
-
-        background-image: url("@/static/images/moodboard-grid.svg")
-        background-repeat: repeat
-        background-size: 104px 104px
 
       +adapt($bkp-desktop-sd)
         height: 568px
@@ -28,210 +23,336 @@
       +adapt($bkp-desktop-hd)
         height: 664px
 
-        background-image: url("@/static/images/moodboard-grid.svg")
-        background-repeat: repeat
-        background-size: 104px 104px
-        background-position: top left
+    .vertical-lines
+      height: 100%
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
 
-    .left
-      position: relative
-
-      +adapt($bkp-tablet)
-        grid-column: span 3
-
-      +adapt($bkp-desktop-hd)
-        grid-column: span 5
-
-    .right
-      position: relative
-
-      +adapt($bkp-tablet)
-        grid-column: span 3
-
-      +adapt($bkp-desktop-hd)
-        grid-column: 8 / span 5
-
-    .atlas, .logo, .electricity-toolkit, .gt-america, .bluu-suuperstar
-      background-repeat: no-repeat
-      background-position: center center
-      transform-origin: top center
-
-    .atlas::after, .logo::after, .gt-america::after, .bluu-suuperstar::after, .pinned-top::before, .pinned-top::after, .pinned-bottom::before, .pinned-bottom::after
-        content: ''
+      .line
         position: absolute
-        height: 8px
-        width: 8px
-
-        border-radius: 8px
-
-    .atlas::after, .logo::after, .gt-america::after, .bluu-suuperstar::after
-      top: -5px
-      left: 50%
-      transform: translateX(-50%)
-
-    .atlas
-      position: absolute
-      top: 112px
-      left: 44%
-      height: 312px
-      width: 208px
-
-      background-color: $thunderstorm-500
-      transform: rotate3d(0, 0, 1, -7.5deg) translate3d(-50%, 0, 0)
-
-      &::before
-        content: ''
-        position: absolute
-        height: 312px
-        width: 208px
-
-        background-color: $thunderstorm-900
-        mask-image: url("@/static/images/atlas.svg")
-        mask-size: 312px 312px
-        background-size: 312px 208px
-        background-position: left top
-
-      &::after
-        background-color: $thunderstorm-500
-        border: 1px solid $thunderstorm-900
-
-      +adapt($bkp-tablet)
-        top: 110px
-        left: 28px
-        transform: rotate3d(0, 0, 1, -7.5deg)
-
-      +adapt($bkp-desktop-sd)
-        top: 144px
-
-      +adapt($bkp-desktop-hd)
-        left: 65px
-
-    .logo
-      position: absolute
-      top: 28px
-      left: 56%
-      height: 144px
-      width: 144px
-
-      background-color: #ffffff
-      background-image: url("@/static/images/logo.svg")
-      background-size: 144px 144px
-      transform: rotate3d(0, 0, 1, -15deg) translate3d(-50%, 0, 0)
-
-      &::after
-        background-color: $oblivion-300
-        border: 1px solid $oblivion-700
-
-      +adapt($bkp-tablet)
-        top: 69px
-        left: 100px
-        transform: rotate3d(0, 0, 1, -15deg)
-
-      +adapt($bkp-desktop-sd)
-        top: 102px
-        left: 135px
-        transform: rotate3d(0, 0, 1, -15deg)
-
-      +adapt($bkp-desktop-hd)
-        top: 101px
-        left: 136px
-
-    .electricity-toolkit
-      display: none
-      position: absolute
-      top: 40px
-      right: 62px
-      height: 208px
-      width: 416px
-
-      border: 1px solid $oblivion-500
-      background-image: url("@/static/images/electricity-toolkit.svg")
-      background-size: 416px 208px
-      background-color: $oblivion-1100
-
-      +adapt($bkp-desktop-hd)
-        display: block
-
-      .pinned-top, .pinned-bottom
-        width: 100%
         height: 100%
+        left: 50%
+
+        border-left: 1px solid $oblivion-700
+        border-right: 1px solid $oblivion-700
+        transform: translateX(-50%)
+        transform-origin: center bottom
+
+        &:nth-of-type(1)
+          width: calc(1080px - 2px)
+
+        &:nth-of-type(2)
+          width: calc(1000px - 2px)
+
+        &:nth-of-type(3)
+          width: calc(872px - 2px)
+
+        &:nth-of-type(4)
+          width: calc(792px - 2px)
+
+        &:nth-of-type(5)
+          width: calc(664px - 2px)
+
+        &:nth-of-type(6)
+          width: calc(584px - 2px)
+
+        &:nth-of-type(7)
+          width: calc(456px - 2px)
+
+        &:nth-of-type(8)
+          width: calc(376px - 2px)
+
+        &:nth-of-type(9)
+          width: calc(248px - 2px)
+
+        &:nth-of-type(10)
+          width: calc(168px - 2px)
+
+        &:nth-of-type(11)
+          width: calc(40px - 2px)
+
+    .horizontal-lines
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+
+      .line
         position: absolute
+        width: 100%
+        height: 1px
+        background-color: $oblivion-700
 
-      .pinned-top::before, .pinned-top::after, .pinned-bottom::before, .pinned-bottom::after
-        background-color: $oblivion-500
-        border: 1px solid $oblivion-900
+        &:nth-of-type(1)
+          top: 624px
 
-      .pinned-top::before
-        top: -5px
-        left: -5px
+        &:nth-of-type(2)
+          top: 560px
 
-      .pinned-top::after
-        top: -5px
-        right: -5px
+        &:nth-of-type(3)
+          top: 520px
 
-      .pinned-bottom::before
-        bottom: -5px
-        left: -5px
+        &:nth-of-type(4)
+          top: 456px
 
-      .pinned-bottom::after
-        bottom: -5px
-        right: -5px
+        &:nth-of-type(5)
+          top: 416px
 
-    .bluu-suuperstar
-      display: none
-      position: absolute
-      height: 208px
-      width: 208px
+        &:nth-of-type(6)
+          top: 352px
 
-      background-color: $firework-500
-      background-image: url("@/static/images/bluu-suuperstar.svg")
-      background-size: 208px 208px
-      transform: rotate3d(0, 0, 1, 7.5deg)
+        &:nth-of-type(7)
+          top: 312px
 
-      &::after
-        background-color: $firework-500
-        border: 1px solid $firework-900
+        &:nth-of-type(8)
+          top: 248px
 
-      +adapt($bkp-tablet)
-        display: block
-        top: 183px
-        right: 50px
+        &:nth-of-type(9)
+          top: 208px
 
-      +adapt($bkp-desktop-sd)
-        top: 112px
-        right: 178px
+        &:nth-of-type(10)
+          top: 144px
 
-      +adapt($bkp-desktop-hd)
-        top: 311px
-        right: 206px
+        &:nth-of-type(11)
+          top: 104px
 
-    .gt-america
-      display: none
-      position: absolute
-      height: 208px
-      width: 208px
+        &:nth-of-type(12)
+          top: 40px
 
-      background-color: $maelstrom-500
-      background-image: url("@/static/images/gt-america.svg")
-      background-size: 208px 208px
-      transform: rotate3d(0, 0, 1, -7.5deg)
-
-      &::after
-        background-color: $maelstrom-500
-        border: 1px solid $maelstrom-900
-
-      +adapt($bkp-tablet)
-        display: block
-        top: 335px
-        right: -5px
-
-      +adapt($bkp-desktop-sd)
-        top: 262px
-        right: 34px
-
-      +adapt($bkp-desktop-hd)
-        top: 350px
-        right: 102px
+    // .container
+    //   @extend .gridSystem
+    //   margin-bottom: $space-l
+    //   height: 512px
+    //   box-sizing: border-box
+    //
+    //   border: 1px solid $oblivion-700
+    //   background-image: url("@/static/images/moodboard-grid-mobile.svg")
+    //   background-position: top left
+    //
+    //   +adapt($bkp-tablet)
+    //     margin-bottom: $space-xxl
+    //     height: 624px
+    //
+    //     background-image: url("@/static/images/moodboard-grid.svg")
+    //     background-repeat: repeat
+    //     background-size: 104px 104px
+    //
+    //   +adapt($bkp-desktop-sd)
+    //     height: 568px
+    //
+    //   +adapt($bkp-desktop-hd)
+    //     height: 664px
+    //
+    //     background-image: url("@/static/images/moodboard-grid.svg")
+    //     background-repeat: repeat
+    //     background-size: 104px 104px
+    //     background-position: top left
+    //
+    // .left
+    //   position: relative
+    //
+    //   +adapt($bkp-tablet)
+    //     grid-column: span 3
+    //
+    //   +adapt($bkp-desktop-hd)
+    //     grid-column: span 5
+    //
+    // .right
+    //   position: relative
+    //
+    //   +adapt($bkp-tablet)
+    //     grid-column: span 3
+    //
+    //   +adapt($bkp-desktop-hd)
+    //     grid-column: 8 / span 5
+    //
+    // .atlas, .logo, .electricity-toolkit, .gt-america, .bluu-suuperstar
+    //   background-repeat: no-repeat
+    //   background-position: center center
+    //   transform-origin: top center
+    //
+    // .atlas::after, .logo::after, .gt-america::after, .bluu-suuperstar::after, .pinned-top::before, .pinned-top::after, .pinned-bottom::before, .pinned-bottom::after
+    //     content: ''
+    //     position: absolute
+    //     height: 8px
+    //     width: 8px
+    //
+    //     border-radius: 8px
+    //
+    // .atlas::after, .logo::after, .gt-america::after, .bluu-suuperstar::after
+    //   top: -5px
+    //   left: 50%
+    //   transform: translateX(-50%)
+    //
+    // .atlas
+    //   position: absolute
+    //   top: 112px
+    //   left: 44%
+    //   height: 312px
+    //   width: 208px
+    //
+    //   background-color: $thunderstorm-500
+    //   transform: rotate3d(0, 0, 1, -7.5deg) translate3d(-50%, 0, 0)
+    //
+    //   &::before
+    //     content: ''
+    //     position: absolute
+    //     height: 312px
+    //     width: 208px
+    //
+    //     background-color: $thunderstorm-900
+    //     mask-image: url("@/static/images/atlas.svg")
+    //     mask-size: 312px 312px
+    //     background-size: 312px 208px
+    //     background-position: left top
+    //
+    //   &::after
+    //     background-color: $thunderstorm-500
+    //     border: 1px solid $thunderstorm-900
+    //
+    //   +adapt($bkp-tablet)
+    //     top: 110px
+    //     left: 28px
+    //     transform: rotate3d(0, 0, 1, -7.5deg)
+    //
+    //   +adapt($bkp-desktop-sd)
+    //     top: 144px
+    //
+    //   +adapt($bkp-desktop-hd)
+    //     left: 65px
+    //
+    // .logo
+    //   position: absolute
+    //   top: 28px
+    //   left: 56%
+    //   height: 144px
+    //   width: 144px
+    //
+    //   background-color: #ffffff
+    //   background-image: url("@/static/images/logo.svg")
+    //   background-size: 144px 144px
+    //   transform: rotate3d(0, 0, 1, -15deg) translate3d(-50%, 0, 0)
+    //
+    //   &::after
+    //     background-color: $oblivion-300
+    //     border: 1px solid $oblivion-700
+    //
+    //   +adapt($bkp-tablet)
+    //     top: 69px
+    //     left: 100px
+    //     transform: rotate3d(0, 0, 1, -15deg)
+    //
+    //   +adapt($bkp-desktop-sd)
+    //     top: 102px
+    //     left: 135px
+    //     transform: rotate3d(0, 0, 1, -15deg)
+    //
+    //   +adapt($bkp-desktop-hd)
+    //     top: 101px
+    //     left: 136px
+    //
+    // .electricity-toolkit
+    //   display: none
+    //   position: absolute
+    //   top: 40px
+    //   right: 62px
+    //   height: 208px
+    //   width: 416px
+    //
+    //   border: 1px solid $oblivion-500
+    //   background-image: url("@/static/images/electricity-toolkit.svg")
+    //   background-size: 416px 208px
+    //   background-color: $oblivion-1100
+    //
+    //   +adapt($bkp-desktop-hd)
+    //     display: block
+    //
+    //   .pinned-top, .pinned-bottom
+    //     width: 100%
+    //     height: 100%
+    //     position: absolute
+    //
+    //   .pinned-top::before, .pinned-top::after, .pinned-bottom::before, .pinned-bottom::after
+    //     background-color: $oblivion-500
+    //     border: 1px solid $oblivion-900
+    //
+    //   .pinned-top::before
+    //     top: -5px
+    //     left: -5px
+    //
+    //   .pinned-top::after
+    //     top: -5px
+    //     right: -5px
+    //
+    //   .pinned-bottom::before
+    //     bottom: -5px
+    //     left: -5px
+    //
+    //   .pinned-bottom::after
+    //     bottom: -5px
+    //     right: -5px
+    //
+    // .bluu-suuperstar
+    //   display: none
+    //   position: absolute
+    //   height: 208px
+    //   width: 208px
+    //
+    //   background-color: $firework-500
+    //   background-image: url("@/static/images/bluu-suuperstar.svg")
+    //   background-size: 208px 208px
+    //   transform: rotate3d(0, 0, 1, 7.5deg)
+    //
+    //   &::after
+    //     background-color: $firework-500
+    //     border: 1px solid $firework-900
+    //
+    //   +adapt($bkp-tablet)
+    //     display: block
+    //     top: 183px
+    //     right: 50px
+    //
+    //   +adapt($bkp-desktop-sd)
+    //     top: 112px
+    //     right: 178px
+    //
+    //   +adapt($bkp-desktop-hd)
+    //     top: 311px
+    //     right: 206px
+    //
+    // .gt-america
+    //   display: none
+    //   position: absolute
+    //   height: 208px
+    //   width: 208px
+    //
+    //   background-color: $maelstrom-500
+    //   background-image: url("@/static/images/gt-america.svg")
+    //   background-size: 208px 208px
+    //   transform: rotate3d(0, 0, 1, -7.5deg)
+    //
+    //   &::after
+    //     background-color: $maelstrom-500
+    //     border: 1px solid $maelstrom-900
+    //
+    //   +adapt($bkp-tablet)
+    //     display: block
+    //     top: 335px
+    //     right: -5px
+    //
+    //   +adapt($bkp-desktop-sd)
+    //     top: 262px
+    //     right: 34px
+    //
+    //   +adapt($bkp-desktop-hd)
+    //     top: 350px
+    //     right: 102px
 
   .discover
     margin-bottom: $space-xxxl

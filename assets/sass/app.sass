@@ -1,6 +1,7 @@
 // IMPORTS
 @import 'utils/reset'
 @import 'utils/mixins'
+@import 'utils/splitting'
 
 @import 'atoms/shades'
 @import 'atoms/typefaces'
@@ -193,6 +194,9 @@ a.wip:hover
 
   +adapt($bkp-desktop-hd)
     max-width: 376px
+
+    // GSAP tests
+    // transform: translateY(calc(#{$space-xxxl} + 100vh))
 
   &-title
     padding: $space-xs

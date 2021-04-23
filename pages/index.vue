@@ -209,6 +209,23 @@
       }
     },
 
+    mounted() {
+      // gsap.defaults({
+      //   overwrite: 'auto',
+      //   clearProps: 'all'
+      // })
+
+      // const etiquette = document.querySelector('.etiquette')
+      // const tldrTimeline = gsap.timeline()
+      //
+      // tldrTimeline.from(etiquette, 2, { transform: 'translateY(512px)', clearProps: 'all' })
+      // tldrTimeline.pause()
+      //
+      // document.querySelector('.tldr .container').onclick = function(){
+      //   tldrTimeline.restart()
+      // }
+    },
+
     components: {
       ProjectsCarousel,
       SuperButton,
