@@ -29,18 +29,16 @@
           <div class="line"></div>
           <div class="line"></div>
         </div>
-        <!-- <div class="left">
-          <div class="atlas"></div>
-          <div class="logo"></div>
+        <div class="atlas">
+          <div class="image"></div>
         </div>
-        <div class="right">
-          <div class="electricity-toolkit">
-            <div class="pinned-top"></div>
-            <div class="pinned-bottom"></div>
-          </div>
-          <div class="gt-america"></div>
-          <div class="bluu-suuperstar"></div>
-        </div> -->
+        <!-- <div class="logo"></div>
+        <div class="electricity-toolkit">
+          <div class="pinned-top"></div>
+          <div class="pinned-bottom"></div>
+        </div>
+        <div class="gt-america"></div>
+        <div class="bluu-suuperstar"></div> -->
       </div>
     </section>
 
@@ -173,6 +171,7 @@
 
 <script>
   import gsap from 'gsap'
+  import CSSRulePlugin from 'gsap/CSSRulePlugin'
   import ScrollTrigger from 'gsap/ScrollTrigger'
   import TweenLite from '@/vendor/gsap/TweenLite';
   import CustomEase from '@/vendor/gsap/CustomEase';
@@ -229,6 +228,7 @@
     },
 
     mounted() {
+      gsap.registerPlugin(CSSRulePlugin)
       gsap.registerPlugin(ScrollTrigger)
       gsap.registerPlugin(TweenLite)
       gsap.registerPlugin(CustomEase)
@@ -250,6 +250,13 @@
       CustomEase.create('decelerated', '0.0, 0.0, 0.2, 1')
       CustomEase.create('accelerated', '0.4, 0.0, 1, 1')
 
+      moodboardTimeline.from('.moodboard', {
+        duration: 0.720,
+        transform: 'scaleY(2)',
+        y: '120vh',
+        ease: 'emphasized'
+      })
+
       moodboardVerticalLines.forEach((line, index) => {
         moodboardTimeline.from(line, {
           duration: (0.120 * 2 + 0.120 * 11) - 0.120 * index,
@@ -257,7 +264,7 @@
           ease: 'emphasized',
           delay: 0.120,
           clearProps: 'all'
-        }, 'lines')
+        }, 'ver-lines')
       })
 
       moodboardHorizontalLines.forEach((line, index) => {
@@ -267,8 +274,25 @@
           ease: 'emphasized',
           delay: 0.120,
           clearProps: 'all'
-        }, 'lines')
+        }, 'ver-lines+=0.240')
       })
+
+      moodboardTimeline.from('.moodboard .atlas', {
+        duration: 0.240,
+        transform: 'rotate3d(0, 0, 1, -7.5deg) scaleY(0)',
+        ease: 'emphasized'
+      }, 'ver-lines+=0.480')
+
+      moodboardTimeline.from('.moodboard .atlas .image', {
+        duration: 0.240,
+        opacity: '0',
+        ease: 'emphasized',
+        delay: 0.120
+      }, 'ver-lines+=0.720')
+
+      // moodboardTimeline.from('.moodboard .logo', {
+      //
+      // })
 
       moodboardTimeline.pause()
 
@@ -277,7 +301,7 @@
           duration: 0.5 + 0.5 * index / 4,
           transform: 'translateY(512px)',
           ease: 'emphasized'
-        }, 'line')
+        }, '0.480')
       })
 
       discoverTimeline.pause()
