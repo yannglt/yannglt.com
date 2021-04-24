@@ -381,11 +381,21 @@
 
     &-title
       margin-bottom: $space-xxl
-      grid-column: 1 / span all
+
+      +adapt($bkp-tablet)
+        grid-column: span 6
+
+      +adapt($bkp-desktop-hd)
+        grid-column: span 12
 
     &-blocs
       @extend .gridSystem
-      grid-column: 1 / span all
+
+      +adapt($bkp-tablet)
+        grid-column: span 6
+
+      +adapt($bkp-desktop-hd)
+        grid-column: span 12
 
     &-bloc
       @extend .gridSystem
