@@ -1,6 +1,6 @@
 <template lang="html">
   <component :is="'a'" :href="href" :class="variant" class="link" >
-    <span v-if="this.$slots.default" class="body"><slot/></span>
+    <span v-if="this.$slots.default"><slot/></span>
     <svg v-if="icon" class="icon" aria-hidden="true" focusable="false">
       <use :xlink:href="require('@/static/icons/sprite.svg')+icon"></use>
     </svg>
