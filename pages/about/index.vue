@@ -98,7 +98,7 @@
             <p>Also, I always try to find a great balance between following the choosen methodology and keeping velocity and efficiency through the entire journey.</p>
           </div>
           <div class="ctas">
-            <SuperButton class="process" variant="secondary dark disabled">Discover my process</SuperButton>
+            <SuperButton class="process" variant="secondary dark disabled">Discover my process (soon)</SuperButton>
             <SuperButton href="/contact" class="contact" variant="primary dark" icon="#mail-20">Contact me</SuperButton>
           </div>
         </div>
