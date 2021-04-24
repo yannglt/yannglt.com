@@ -350,7 +350,7 @@
             trigger: '.promise',
             pin: true,
             start: 'top +116px',
-            end: '1454px center',
+            end: '1200px center',
           }
         })
       }
