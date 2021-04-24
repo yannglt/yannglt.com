@@ -81,7 +81,7 @@
     <section class="portfolio-request">
       <div class="container">
         <h2 class="title heading-2 text-secondary-dark">Portfolio only available upon request</h2>
-        <p class="desc body text-quaternary-dark">My design projects are waiting to be shown, feel free to send a request (and its context) and will reply as fast as I can. <span class="line-breaker"><br><br></span><SuperLink href="https://twitter.com/yannglt" target="_blank "variant="body dark">DMs on Twitter</SuperLink> are open but if you prefer emails, I got you covered (no mailto):</p>
+        <p class="desc body text-quaternary-dark">My design projects are waiting to be shown, feel free to send a request (and its context) and I will reply as fast as I can. <span class="line-breaker"><br><br></span><SuperLink href="https://twitter.com/yannglt" target="_blank "variant="body dark">DMs on Twitter</SuperLink> are open but if you prefer emails, I got you covered (no mailto):</p>
         <SuperButton @click.native="copyEmail" class="cta" variant="primary" icon="#copy-20">Copy my email address</SuperButton>
       </div>
     </section>

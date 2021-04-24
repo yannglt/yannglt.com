@@ -29,16 +29,30 @@
           <div class="line"></div>
           <div class="line"></div>
         </div>
-        <div class="atlas">
+        <div class="poster atlas">
+          <div class="skeleton"></div>
           <div class="image"></div>
+          <div class="fill"></div>
         </div>
-        <!-- <div class="logo"></div>
-        <div class="electricity-toolkit">
+        <div class="poster logo">
+          <div class="skeleton"></div>
+          <div class="image"></div>
+          <div class="fill"></div>
+        </div>
+        <!-- <div class="electricity-toolkit">
           <div class="pinned-top"></div>
           <div class="pinned-bottom"></div>
+        </div> -->
+        <div class="poster gt-america">
+          <div class="skeleton"></div>
+          <div class="image"></div>
+          <div class="fill"></div>
         </div>
-        <div class="gt-america"></div>
-        <div class="bluu-suuperstar"></div> -->
+        <div class="poster bluu-suuperstar">
+          <div class="skeleton"></div>
+          <div class="image"></div>
+          <div class="fill"></div>
+        </div>
       </div>
     </section>
 
@@ -245,16 +259,17 @@
       const moodboardTimeline = gsap.timeline()
       const discoverTimeline = gsap.timeline()
 
-      CustomEase.create('standard', '0.4, 0.0, 0.2, 1')
+      // CustomEase.create('standard', '0.4, 0.0, 0.2, 1')
       CustomEase.create('emphasized', '0.2, 0.0, 0.2, 1')
-      CustomEase.create('decelerated', '0.0, 0.0, 0.2, 1')
-      CustomEase.create('accelerated', '0.4, 0.0, 1, 1')
+      // CustomEase.create('decelerated', '0.0, 0.0, 0.2, 1')
+      // CustomEase.create('accelerated', '0.4, 0.0, 1, 1')
 
       moodboardTimeline.from('.moodboard', {
         duration: 0.720,
         transform: 'scaleY(2)',
         y: '120vh',
-        ease: 'emphasized'
+        ease: 'emphasized',
+        clearProps: 'all'
       })
 
       moodboardVerticalLines.forEach((line, index) => {
@@ -264,7 +279,7 @@
           ease: 'emphasized',
           delay: 0.120,
           clearProps: 'all'
-        }, 'ver-lines')
+        }, 'vertical-lines')
       })
 
       moodboardHorizontalLines.forEach((line, index) => {
@@ -273,28 +288,42 @@
           transform: 'scaleX(0)',
           ease: 'emphasized',
           delay: 0.120,
-          clearProps: 'all'
-        }, 'ver-lines+=0.240')
+          clearProps: 'all',
+          onComplete: postersGoActive
+        }, 'vertical-lines+=0.480')
       })
 
-      moodboardTimeline.from('.moodboard .atlas', {
-        duration: 0.240,
-        transform: 'rotate3d(0, 0, 1, -7.5deg) scaleY(0)',
-        ease: 'emphasized'
-      }, 'ver-lines+=0.480')
+      document.querySelectorAll('.moodboard .fill').forEach((posterFill, index) => {
+        moodboardTimeline.from(posterFill, {
+          duration: 0.240,
+          transform: 'scaleY(0)',
+          ease: 'emphasized',
+          delay: 0.240 * index,
+          clearProps: 'all'
+        }, 'vertical-lines+=1.600')
+      })
 
-      moodboardTimeline.from('.moodboard .atlas .image', {
-        duration: 0.240,
-        opacity: '0',
-        ease: 'emphasized',
-        delay: 0.120
-      }, 'ver-lines+=0.720')
+      document.querySelectorAll('.moodboard .image').forEach((posterImage, index) => {
+        moodboardTimeline.from(posterImage, {
+          duration: 0.240,
+          opacity: 0,
+          ease: 'emphasized',
+          delay: 0.240 * index,
+          clearProps: 'all'
+        }, 'vertical-lines+=1.840')
+      })
 
-      // moodboardTimeline.from('.moodboard .logo', {
-      //
-      // })
+      function postersGoActive() {
+        document.querySelectorAll('.poster').forEach((poster, index) => {
+          setTimeout(function() {
+            poster.classList.add('active')
+          }, 240 * index)
+        })
+      }
 
       moodboardTimeline.pause()
+      moodboardTimeline.addLabel('poster-fill', 3)
+      moodboardTimeline.addLabel('poster-image', '3.240')
 
       discoverTitleSplitted[0].lines.forEach((line, index) => {
         discoverTimeline.from(line, {
@@ -307,6 +336,9 @@
       discoverTimeline.pause()
 
       document.querySelector('.about-page').onclick = function() {
+        document.querySelectorAll('.poster').forEach((poster) => {
+          poster.classList.remove('active')
+        })
         moodboardTimeline.restart()
         discoverTimeline.restart()
       }
