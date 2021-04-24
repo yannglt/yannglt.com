@@ -48,6 +48,7 @@
             <!-- <li><a href="/works">Discover my work</a></li>
             <li><a href="/process">Learn about my process</a></li> -->
             <li><a href="/about" class="body">Know more about me</a></li>
+            <li><a href="/notes" class="body">Read my notes</a></li>
             <li><a href="/contact" class="body">Get in touch</a></li>
           </ul>
         </div>
