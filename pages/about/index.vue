@@ -94,7 +94,7 @@
           <p class="caption">How and Where I work(ed)</p>
           <h2 class="title heading-1 text-primary-dark">I make and verify hypothesis by creating and breaking solutions again and again until reaching users’ delight and company’s vision.</h2>
           <div class="desc emphasis text-tertiary-dark">
-            <p>Started from the bottom the original problem(s) and make sure we try to tackle the correct one(s) is essential to make sure we provide efficient solutions to users and businesses.</p>
+            <p>Started from <span class="drake">the bottom </span>the original problem(s) and make sure we try to tackle the correct one(s) is essential to make sure we provide efficient solutions to users and businesses.</p>
             <p>Also, I always try to find a great balance between following the choosen methodology and keeping velocity and efficiency through the entire journey.</p>
           </div>
           <div class="ctas">
