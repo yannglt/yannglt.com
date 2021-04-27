@@ -190,13 +190,13 @@ a.wip:hover
     max-width: 360px
 
   +adapt($bkp-tablet)
+    transform: translateY(96px)
+
+  +adapt($bkp-desktop-sd)
     transform: translateY($space-xxxl)
 
   +adapt($bkp-desktop-hd)
     max-width: 376px
-
-    // GSAP tests
-    // transform: translateY(calc(#{$space-xxxl} + 100vh))
 
   &-title
     padding: $space-xs
@@ -258,15 +258,15 @@ a.wip:hover
     z-index: -50
 
     +adapt($bkp-mobile)
-      transform: translateX(-50%) translateY(calc(-1 * (240px + 236px + 4px - 261px)))
+      transform: translateX(-50%) translateY(calc(-1 * (240px + 232px + 4px - 272px)))
 
     +adapt($bkp-tablet)
-      transform: translateX(-50%) translateY(calc(-1 * (240px + 236px + 4px - 92px)))
+      transform: translateX(-50%) translateY(calc(-1 * (240px + 232px + 4px - 96px)))
 
     +adapt($bkp-desktop-sd)
-      transform: translateX(-50%) translateY(calc(-1 * (240px + 236px + 4px - 120px)))
+      transform: translateX(-50%) translateY(calc(-1 * (240px + 232px + 4px - #{$space-xxxl})))
       // 240px = illustration height
-      // 236px = translateY from etiquette bottom
+      // 232px = translateY from etiquette bottom
       // 4px = electricityLink's height
       // 120px = etiquette inital translateY
 
@@ -394,21 +394,17 @@ a.wip:hover
             background-color: $oblivion-500
 
 .intro
-  margin-top: calc(261px + #{$space-xxxl})
+  margin-top: calc(272px + #{$space-xxxl})
   margin-bottom: $space-l
 
   +adapt($bkp-tablet)
-    margin-bottom: 80px
-    margin-top: calc(92px + 195px)
+    margin-bottom: $space-xxl
+    margin-top: calc(96px + #{$space-xxxxl})
 
   +adapt($bkp-desktop-sd)
-    margin-bottom: 76px
-    margin-top: calc(120px + 191px)
-
-  +adapt($bkp-desktop-hd)
-    margin-bottom: $space-xxl
-    margin-top: calc(120px + 243px)
-    // 120px = etiquette initial translateY
+    margin-bottom: $space-xxxl
+    margin-top: calc(#{$space-xxxl} + #{$space-xxxxl})
+    // margin-top calc first value = etiquette initial translateY
 
   .container
     @extend .gridSystem
