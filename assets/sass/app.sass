@@ -946,45 +946,61 @@ a.wip:hover
 
 .copyToast
   position: fixed
-  width: 480px
-  // Initial space + Info banner
-  // top: calc(#{$space-m} + 48px)
-  bottom: $space-m
-  right: $space-m
-  padding: 12px 24px
+  width: calc(100vw - #{$space-m})
+  top: $space-xs
+  right: 50%
+  padding: $space-s
   display: flex
-  flex-direction: row
+  flex-direction: column
   align-items: center
+  text-align: center
 
   background-color: $maelstrom-500
   border-radius: 8px
 
+  transform: translateX(50%)
   z-index: 999
 
-  .icon--container
+  +adapt($bkp-tablet)
+    padding: $space-xxs $space-s
+    top: $space-m
+    right: $space-m
+    width: 480px
+    flex-direction: row
+    text-align: left
+
+    transform: translateX(0)
+
+  .icon-container
+    margin-bottom: $space-xs
     height: 32px
     width: 32px
     display: flex
     justify-content: center
     align-items: center
-    margin-right: 16px
 
     background-color: $maelstrom-100
     border-radius: 16px
 
-    .icon
-      color: $maelstrom-500
+    +adapt($bkp-tablet)
+      margin-bottom: 0
+      margin-right: 16px
+      flex-direction: row
 
-  .toast
+  .icon
+    color: $maelstrom-500
 
-    &--title
-      @extend .bold
-      color: #ffffff
-      line-height: 28px
+  .title
+    @extend .bold
+    color: #ffffff
 
-    &--desc
-      color: $maelstrom-100
-      line-height: 28px
+  .desc
+    color: $maelstrom-100    
+
+    .line-breaker
+
+      +adapt($bkp-tablet)
+        display: none
 
 .slide-enter, .slide-leave-to
   transform: translateX(calc(100% + 48px))
