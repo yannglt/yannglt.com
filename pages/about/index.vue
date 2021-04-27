@@ -173,9 +173,9 @@
           </div>
         </div>
         <div class="thanks-bloc people">
-          <div class="caption"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#entry-20"></use></svg>A big S/O to them</div>
+          <div class="caption"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#entry-20"></use></svg>A special S/O to:</div>
           <div class="content body text-secondary-light">
-            <p>My partner in life <a href="">Sabrina Nedjah</a> and my brother <a href="">Hassan Boujnkih</a> for their support these last years. <a href="">Gabriel Bacave</a> for its help on writing my manifesto. </p>
+            <p>My partner in life <a href="">Sabrina Nedjah</a> and my brother <a href="">Hassan Boujnikh</a> for their support these last years. <a href="">Gabriel Bacave</a> for its help on writing my manifesto. </p>
           </div>
         </div>
       </div>
