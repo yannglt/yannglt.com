@@ -784,23 +784,26 @@ a.wip:hover
 
     .atlas-bg
       position: absolute
+      height: 256px
       width: 100%
-      // background-image: linear-gradient(rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.76)), url("@/static/images/atlas.svg")
+      background-image: linear-gradient(rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.76)), url("@/static/images/atlas.svg")
       background-repeat: repeat
-      background-size: 600px 600px
+      background-size: 384px 384px
       background-position: top
 
+      z-index: -5
+
       +adapt($bkp-tablet)
-        height: 516px
+        height: 384px
 
       +adapt($bkp-desktop-sd)
-        height: 612px
+        height: 512px
 
       +adapt($bkp-desktop-hd)
-        height: 684px
+        height: 640px
 
       &::after
-        content: ""
+        content: ''
         position: absolute
         width: 100%
         height: 100%
