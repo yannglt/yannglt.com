@@ -1,11 +1,8 @@
 <template lang="html">
   <div id="app">
-    <div class="new-space">
-      <a href="/notes/an-introduction-to-my-new-personal-space-on-the-internets" title="">Welcome on my new space on the Internets.<span class="line-breaker"><br></span><span class="link">Learn more about this new version<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></span></a>
+    <div class="new-space container">
+      <a href="/notes/an-introduction-to-my-new-personal-space-on-the-internets" title="" class="body">Welcome on my new space on the Internets.<span class="line-breaker"><br></span><span class="link">Learn more about this new version<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></span></a>
     </div>
-    <!-- <div class="under-construction">
-      <a href="#" title="">New space on the Internets under construction.<span class="line-breaker"><br></span></a>
-    </div> -->
 
     <transition name="slide">
       <copyToast v-if="emailToast == 'show'"></copyToast>

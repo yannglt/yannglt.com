@@ -30,12 +30,11 @@ a.wip:hover
   cursor: not-allowed
 
 .new-space
-  margin: 0 calc(max(-24px, -8vw))
-  padding: 12px 19px
   position: fixed
   top: 0
   left: 0
   right: 0
+  padding: 8px 0 12px
   display: flex
   flex-direction: column
   justify-content: center
@@ -44,6 +43,20 @@ a.wip:hover
   z-index: 512
 
   +motion($time-quick, $weight-medium, $speed-standard, background-color)
+
+  &:before, &:after
+    content: ''
+    position: absolute
+    background-color: $maelstrom-500
+    width: 116px
+    height: 100%
+    top: 0
+
+  &:before
+    left: -116px
+
+  &:after
+    right: -116px
 
   @extend .bold
   color: #ffffff
@@ -55,18 +68,12 @@ a.wip:hover
   &:active
     background-color: $maelstrom-600
 
-  +adapt($bkp-mobile)
-    margin: 0 -27px
-    margin: 0 -32px
-
-  +adapt($bkp-tablet)
-    margin: 0 -32px
-
   .line-breaker
     +adapt($bkp-tablet)
       display: none
 
   a
+    @extend .bold
     width: 100%
 
   .link
@@ -78,30 +85,6 @@ a.wip:hover
   .icon
     padding-left: 4px
     color: $maelstrom-100
-
-.under-construction
-  margin: 0 calc(max(-19px, -8vw))
-  padding: 12px 19px
-  display: flex
-  flex-direction: column
-  justify-content: center
-
-  @extend .bold
-  color: #000000
-  text-align: center
-  background-color: $thunderstorm-500
-
-  +motion($time-quick, $weight-medium, $speed-standard, background-color)
-
-  &:hover
-    cursor: pointer
-
-  +adapt($bkp-mobile)
-    margin: 0 -27px
-    margin: 0 -32px
-
-  +adapt($bkp-tablet)
-    margin: 0 -32px
 
 .tldr
   // Inital spacing + navbar height + info banner
@@ -995,7 +978,7 @@ a.wip:hover
     color: #ffffff
 
   .desc
-    color: $maelstrom-100    
+    color: $maelstrom-100
 
     .line-breaker
 
