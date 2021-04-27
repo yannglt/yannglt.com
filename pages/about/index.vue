@@ -112,10 +112,10 @@
             <div class="clients">
               <p class="number display-2 text-primary-dark">8</p>
               <div class="desc body text-quaternary-dark">
-                <p>industries where my expertise was involved by clients and brought to users: cinema, bank, finance, 3D softwares, blockchain, food, institutions and initiatives.</p>
+                <p>industries where I had the chance to help users and companies with Source: cinema, bank, finance, institutions, initiatives, branded content and 3D softwares.</p>
                 <p>Clients include:</p>
               </div>
-              <p class="list emphasis text-tertiary-dark">Dassault Systèmes, Warner Bros., Abu Dhabi, BPCE, BNP Paribas, Banque Populaire, TON Labs, Indépendants.co and more</p>
+              <p class="list emphasis text-tertiary-dark">Dassault Systèmes, Abu Dhabi, Warner Bros., Indépendants.co, Getfluence, Banque Populaire, BPCE, BNP Paribas and more</p>
             </div>
             <div class="projects">
               <p class="number display-2 text-primary-dark">25<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#add-20"></use></svg></p>
