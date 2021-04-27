@@ -134,17 +134,17 @@
             <source type="image/jpeg" srcset="@/static/images/yannglt.jpg">
             <img src="@/static/images/yannglt.jpg" alt="">
           </picture>
-          <p class="author body text-tertiary-light">Photography taken by <SuperLink href="" variant="body light">Sabrina Nedjah</SuperLink></p>
+          <p class="author body text-tertiary-light">Photography taken by <SuperLink href="https://twitter.com/sabrinandjh" target="_blank" variant="body light">Sabrina Nedjah</SuperLink></p>
         </div>
         <div class="personal-content">
           <p class="caption text-tertiary-light">About me as a human</p>
           <h2 class="quote heading-2 text-primary-secondary-light">“I believe in the process but even more in the connections we  build and strenghten along the way between companies, teams and end-users, all as humans.”</h2>
           <div class="emphasis">
             <p>My name is Yann-Edern Gillet. I’m a French designer living in Paris, France. My main area of focus today is on systems, digital products and interfaces. Still interested about my work?</p>
-            <SuperLink href="" target="_blank" variant="emphasis light" icon="#arrow-forward-20">Shoot me a DM on Twitter</SuperLink>
+            <SuperLink href="https://twitter.com/yannglt" target="_blank" variant="emphasis light" icon="#arrow-forward-20">Shoot me a DM on Twitter</SuperLink>
             <p>But let’s forget work for two seconds. In my spare time I still spend a lot of time on screens but more as a front-end engineer.</p>
             <p>I love learning new things, especially with SASS, Nuxt and GSAP. More recently I’m learning the craft of icon design (yup, the ones you saw earlier are born on my computer). I like the idea of crafting myself every pixel of my creations, both in design and code, like this portfolio.</p>
-            <SuperLink href="" target="_blank" variant="emphasis light" icon="#arrow-forward-20">Read the code behind this website</SuperLink>
+            <SuperLink href="https://github.com/yannglt/yannglt.com" target="_blank" variant="emphasis light" icon="#arrow-forward-20">Read the code behind this website</SuperLink>
             <p>When my hands are not on my mechanical keyboard, I enjoy taking care of my plants, cook/ try some italian recipes with my girlfriend and building LEGO sets.</p>
             <p>And when my hands are not building things, I dive into others designers’ and developers’ work, thanks to Standards Manual, Increment by Stripe and Offscreen Magazine.</p>
             <p>With this COVID—19/20/21 crisis + global lockdown, I spent a lof of time improving my workspace and discovered my self quite a passion for that, as many others designers for sure haha. Interested in learning more about my setup ?</p>
@@ -161,21 +161,21 @@
         <div class="thanks-bloc website">
           <div class="caption"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#entry-20"></use></svg>This website</div>
           <div class="content body text-secondary-light">
-            <p>Born inside Sketch in 2019 and raised inside Figma in 2020/2021. Design tokens pushed by <a href="">Specify</a>.</p>
+            <p>Born inside Sketch in 2019 and raised inside Figma in 2020/2021. Design tokens pushed by <a href="https://specifyapp.com" target="_blank">Specify</a>.</p>
             <p>Built on Nuxt and Vue with GreenSock libraries for animations. Hosted by GitHub and distributed by Netflify and Amazon Web Services.</p>
           </div>
         </div>
         <div class="thanks-bloc typefaces">
           <div class="caption"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#entry-20"></use></svg>Typefaces</div>
           <div class="content body text-secondary-light">
-            <p>Headlines are set in Bluu Suuperstar, designed by Jean-Baptiste Morizot and redrew in 2017 for french type design company <a href="">Black Foundry</a>.</p>
-            <p>Copy is set in GT America, designed by Noël Leu with Seb McLauchlan for <a href="">Grilli Type</a>.</p>
+            <p>Headlines are set in Bluu Suuperstar, designed by Jean-Baptiste Morizot and redrew in 2017 for french type design company <a href="https://black-foundry.com" target="_blank">Black Foundry</a>.</p>
+            <p>Copy is set in GT America, designed by Noël Leu with Seb McLauchlan for <a href="https://www.grillitype.com" target="_blank">Grilli Type</a>.</p>
           </div>
         </div>
         <div class="thanks-bloc people">
           <div class="caption"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#entry-20"></use></svg>A special S/O to:</div>
           <div class="content body text-secondary-light">
-            <p>My partner in life <a href="">Sabrina Nedjah</a> and my brother <a href="">Hassan Boujnikh</a> for their support these last years. <a href="">Gabriel Bacave</a> for its help on writing my manifesto. </p>
+            <p>My partner in life <a href="https://twitter.com/sabrinandjh" target="_blank">Sabrina Nedjah</a> and my brother <a href="https://twitter.com/hassanboujnikh" target="_blank">Hassan Boujnikh</a> for their support these last years. <a href="https://linkedin.com/in/gabrielbacave" target="_blank">Gabriel Bacave</a> for its help on writing my manifesto. </p>
           </div>
         </div>
       </div>

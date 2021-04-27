@@ -55,8 +55,8 @@
         <div class="footer-follow">
           <p class="footer-followTitle">Follow my work</p>
           <ul class="footer-followLinks">
-            <li><a href="https://twitter.com/yannglt" class="body">Thoughts on Twitter</a></li>
-            <li><a href="https://dribbble.com/yannglt" class="body">WIPs on Dribbble</a></li>
+            <li><a href="https://twitter.com/yannglt" target="_blank" class="body">Thoughts on Twitter</a></li>
+            <li><a href="https://dribbble.com/yannglt" target="_blank" class="body">WIPs on Dribbble</a></li>
             <!-- <li><a href="/feed">RSS feed</a></li> -->
           </ul>
         </div>
