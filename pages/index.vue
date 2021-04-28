@@ -313,9 +313,9 @@
       }
 
       // ANIMATION DEBUGGOR
-      document.querySelector('.tldr').onclick = function(){
-        tldrTimeline.restart()
-      }
+      // document.querySelector('.tldr').onclick = function(){
+      //   tldrTimeline.restart()
+      // }
     },
 
     components: {
