@@ -253,10 +253,8 @@ a.wip:hover
       // 4px = electricityLink's height
       // 120px = etiquette inital translateY
 
-    &:before, &:after
-
+    &Diagram
       +adapt($bkp-tablet)
-        content: ""
         position: absolute
         height: 240px
         width: 532px
@@ -267,7 +265,8 @@ a.wip:hover
 
         z-index: -10
 
-    &:before
+    &Diagram.left
+
       +adapt($bkp-tablet)
         left: 50%
         transform: translateX(calc(-100% - 360px / 2)) scaleX(-1)
@@ -281,7 +280,8 @@ a.wip:hover
         transform: scaleX(-1) translateX(calc(100% + (1680px - 532px - 532px)/2))
         // electricity illustration full translation + electricityLink at 1680px / 2
 
-    &:after
+    &Diagram.right
+
       +adapt($bkp-tablet)
         right: 50%
         transform: translateX(calc(100% + 360px / 2))

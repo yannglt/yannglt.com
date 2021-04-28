@@ -49,12 +49,14 @@
         </div>
       </div>
       <div class="etiquette-electricity">
+        <div class="etiquette-electricityDiagram left"></div>
         <div class="etiquette-electricityLink"></div>
         <div class="etiquette-electricityExtension"></div>
         <div class="etiquette-electricityExtension"></div>
         <div class="etiquette-electricityExtension"></div>
         <div class="etiquette-electricityExtension"></div>
         <div class="etiquette-electricityExtension"></div>
+        <div class="etiquette-electricityDiagram right"></div>
       </div>
     </section>
 
@@ -155,6 +157,12 @@
 </template>
 
 <script>
+  import gsap from 'gsap'
+  import CSSRulePlugin from 'gsap/CSSRulePlugin'
+  import ScrollTrigger from 'gsap/ScrollTrigger'
+  import TweenLite from '@/vendor/gsap/TweenLite'
+  import CustomEase from '@/vendor/gsap/CustomEase'
+
   import ProjectsCarousel from '@/components/ProjectsCarousel.vue'
   import SuperButton from '@/components/SuperButton.vue'
   import SuperLink from '@/components/SuperLink.vue'
@@ -209,18 +217,95 @@
     },
 
     mounted() {
-      // gsap.defaults({
-      //   overwrite: 'auto',
-      //   clearProps: 'all'
-      // })
+      gsap.registerPlugin(CSSRulePlugin)
+      gsap.registerPlugin(ScrollTrigger)
+      gsap.registerPlugin(TweenLite)
+      gsap.registerPlugin(CustomEase)
 
-      // const etiquette = document.querySelector('.etiquette')
-      // const tldrTimeline = gsap.timeline()
-      //
-      // tldrTimeline.from(etiquette, 2, { transform: 'translateY(512px)', clearProps: 'all' })
-      // tldrTimeline.pause()
-      //
-      // document.querySelector('.tldr .container').onclick = function(){
+      const windowWidth = window.innerWidth
+
+      const etiquette = document.querySelector('.etiquette')
+      const welcomeRepeat = document.querySelectorAll('.welcome-repeat')
+      const welcomeRepeatWords = document.querySelectorAll('.welcome-repeat p')
+      const welcomeRepeatSplitted = Splitting({ target: welcomeRepeatWords, by: 'chars' })
+      const electricityLink = document.querySelector('.etiquette-electricityLink')
+      const electricityDiagramLeft = document.querySelector('.etiquette-electricityDiagram.left')
+      const electricityDiagramRight = document.querySelector('.etiquette-electricityDiagram.right')
+
+      const tldrTimeline = gsap.timeline()
+
+      if(windowWidth < 1208) { return false } else {
+
+        CustomEase.create('emphasized', '0.2, 0.0, 0.2, 1')
+        CustomEase.create('other', '0.8, 0, 0.8, 1')
+
+        tldrTimeline.from(welcomeRepeat, {
+          duration: 0.480,
+          opacity: 0,
+          clearProps: 'all'
+        }, 0)
+
+        welcomeRepeatSplitted.forEach((word, index) => {
+
+          let shift = window.innerHeight / 2 - 48 - 96 - 204 - 64 * index
+          // Middle of the window, minus info banner and navbar, minus element height, minus shift per index
+
+          word.chars.forEach((char, index) => {
+            tldrTimeline.from(char, {
+              duration: 0.480,
+              delay: 0.04 * index,
+              ease: 'other',
+              y: shift,
+              clearProps: 'all'
+            }, 'char')
+          }, 0)
+        })
+
+        tldrTimeline.from(etiquette, {
+          duration: 0.480,
+          transform: 'translateY(100vh)',
+          clearProps: 'all'
+        }, 0.720)
+
+        tldrTimeline.from(electricityLink, {
+          duration: 0.240,
+          transform: 'translate(-50%, calc((240px / 2) + 62px)) scaleX(0)',
+          clearProps: 'all'
+        }, 'electricityDiagrams')
+
+        tldrTimeline.from(electricityDiagramLeft, {
+          duration: 0.480,
+          transform: 'translateX(-120vw) scaleX(-1)',
+          clearProps: 'all'
+        }, 'electricityDiagrams')
+
+        tldrTimeline.from(electricityDiagramRight, {
+          duration: 0.480,
+          transform: 'translateX(120vw)',
+          clearProps: 'all'
+        }, 'electricityDiagrams')
+
+        tldrTimeline.from('.new-space', {
+          duration: 0.240,
+          y: -48,
+          clearProps: 'all'
+        }, 'top-elements')
+
+        tldrTimeline.from('.navbar', {
+          duration: 0.240,
+          y: -96,
+          clearProps: 'all'
+        }, 'top-elements')
+
+        tldrTimeline.pause()
+        tldrTimeline.addLabel('electricityDiagrams', 0.720)
+        tldrTimeline.addLabel('top-elements', 0.960)
+
+        tldrTimeline.play()
+      }
+
+      // ANIMATION DEBUGGOR
+      // document.querySelector('.tldr').onclick = function(){
       //   tldrTimeline.restart()
       // }
     },

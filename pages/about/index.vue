@@ -187,8 +187,8 @@
   import gsap from 'gsap'
   import CSSRulePlugin from 'gsap/CSSRulePlugin'
   import ScrollTrigger from 'gsap/ScrollTrigger'
-  import TweenLite from '@/vendor/gsap/TweenLite';
-  import CustomEase from '@/vendor/gsap/CustomEase';
+  import TweenLite from '@/vendor/gsap/TweenLite'
+  import CustomEase from '@/vendor/gsap/CustomEase'
 
   import SuperButton from '@/components/SuperButton.vue'
   import SuperLink from '@/components/SuperLink.vue'
