@@ -3,13 +3,13 @@
     <div class="container">
       <div class="navbar-content">
         <div class="index">
-          <a href="/" class="index-link">
+          <NuxtLink to="/" class="index-link">
             <div class="index-logo"></div>
             <div class="index-me">
               <p class="index-name caption">Yann-Edern Gillet</p>
               <p class="index-subtitle secret">Personal space</p>
             </div>
-          </a>
+          </NuxtLink>
         </div>
         <div class="links">
           <ul>

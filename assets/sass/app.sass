@@ -985,11 +985,17 @@ a.wip:hover
       +adapt($bkp-tablet)
         display: none
 
+.slide-enter-active, .slide-leave-active
+  +motion($time-medium, $weight-small, $speed-accelerated, transform)
+
 .slide-enter, .slide-leave-to
   transform: translateX(calc(100% + 48px))
 
-.slide-enter-active, .slide-leave-active
-  +motion($time-medium, $weight-small, $speed-accelerated, transform)
+.page-enter-active, .page-leave-active
+  +motion($time-standard, $weight-xlarge, $speed-standard, opacity)
+
+.page-enter, .page-leave-active
+  opacity: 0
 
 .manifesto-process
   // background-image: url("@/static/images/process.svg")
