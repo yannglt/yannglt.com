@@ -28,10 +28,15 @@
     margin-bottom: $space-m
 
   .contact-starters li
-    list-style-type: '—  '
+    list-style-type: none
     list-style-position: inside
-    text-indent: -28px
-    padding-left: 28px
+    padding-left: 24px
+    position: relative
+
+    &::before
+      content: '—'
+      position: absolute
+      text-indent: -24px
 
   .contact-links
     margin-bottom: $space-xxl
