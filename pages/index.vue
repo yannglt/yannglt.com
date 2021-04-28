@@ -247,8 +247,16 @@
 
         welcomeRepeatSplitted.forEach((word, index) => {
 
-          let shift = window.innerHeight / 2 - 48 - 96 - 204 - 64 * index
-          // Middle of the window, minus info banner and navbar, minus element height, minus shift per index
+          let shift
+
+          if(window.innerHeight > 1208) {
+            shift = window.innerHeight / 2 - 48 - 96 - 204 / 2 - 64 * index
+            // Middle of the window, minus info banner and navbar, minus element height, minus shift per index
+          }
+          else {
+            shift = 1208
+          }
+
 
           word.chars.forEach((char, index) => {
             tldrTimeline.from(char, {
@@ -305,9 +313,9 @@
       }
 
       // ANIMATION DEBUGGOR
-      // document.querySelector('.tldr').onclick = function(){
-      //   tldrTimeline.restart()
-      // }
+      document.querySelector('.tldr').onclick = function(){
+        tldrTimeline.restart()
+      }
     },
 
     components: {
