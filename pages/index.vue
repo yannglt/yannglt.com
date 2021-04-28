@@ -141,7 +141,7 @@
     <section class="human">
       <div class="container">
         <div class="human-intro">
-          <h2 class="human-intro-title heading-1 text-primary-dark">Interfaces, products and systems are an important part of my life, but what about the human behind all of this?</h2>
+          <h2 class="human-intro-title heading-1 text-primary-dark">Words are cool and everything but what about taking a deep dive into my universe?</h2>
           <!-- <h2 class="human-intro-title heading-1 text-primary-dark">What about the human behind all of this?</h2> -->
           <SuperButton class="human-intro-link" href="/about" variant="tertiary thunderstorm" icon="#arrow-forward-20">Read more about me</SuperButton>
           <div class="human-intro-logo"></div>
