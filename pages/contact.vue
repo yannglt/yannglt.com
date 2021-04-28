@@ -8,8 +8,13 @@
     <section class="contact">
       <div class="container">
         <div class="contact-content">
-          <h1 class="contact-heading heading-1 text-primary-dark">Humans deserves great experiences and design is boring without partners.<span>Let’s team up and launch some rockets and/or products together.</span></h1>
-          <p class="contact-desc emphasis text-tertiary-dark">Designing interfaces, products and systems can be as tough as finding the dream team of makers. I provide design-on-demand services to help you reaching your vision and users’ delight.</p>
+          <h1 class="contact-heading heading-1 text-primary-dark">Humans deserves great experiences and design is boring without partners.</h1>
+          <p class="contact-desc emphasis text-tertiary-dark">Does it resonate with you? Let’s have a discussion or even launch some rockets and/or products together! Here are some conversation starters if, like me, you never know how to start:</p>
+          <ul class="contact-starters emphasis text-tertiary-dark">
+            <li>Bonjour, what about design tokens and color modes?</li>
+            <li>Hello there, love this brutalist serif typeface, how did you hear of Black Foundry’s work?</li>
+            <li>What’s up? You mentioned Hip-Hop music, what’s your opinion on Kid Cudi’s MOTM 3?</li>
+          </ul>
         </div>
         <div class="contact-links">
           <div class="contact-link">
