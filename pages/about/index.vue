@@ -335,13 +335,14 @@
 
       discoverTimeline.pause()
 
-      document.querySelector('.about-page').onclick = function() {
-        document.querySelectorAll('.poster').forEach((poster) => {
-          poster.classList.remove('active')
-        })
-        moodboardTimeline.restart()
-        discoverTimeline.restart()
-      }
+      // ANIMATION DEBUGGOR
+      // document.querySelector('.about-page').onclick = function() {
+      //   document.querySelectorAll('.poster').forEach((poster) => {
+      //     poster.classList.remove('active')
+      //   })
+      //   moodboardTimeline.restart()
+      //   discoverTimeline.restart()
+      // }
 
       if(windowWidth < 1208) { return false } else {
         const promiseTimeline = gsap.timeline({
@@ -350,10 +351,14 @@
             trigger: '.promise',
             pin: true,
             start: 'top +116px',
-            end: '1200px center',
+            // 1510px (total experiences bloc height - 116px + 56x inital margin top)
+            end: '1450px center',
           }
         })
       }
+
+      moodboardTimeline.play()
+      discoverTimeline.play()
     }
   }
 </script>
