@@ -2,13 +2,13 @@ import client from "~/plugins/contentful";
 
 export const state = () => ({
   notes: null
-});
+})
 
 export const mutations = {
   updatePosts: (state, notes) => {
-    state.notes = notes;
+    state.notes = notes
   }
-};
+}
 
 export const actions = {
   async getPosts({ commit }) {
@@ -22,4 +22,4 @@ export const actions = {
       console.error(err);
     }
   }
-};
+}

@@ -38,15 +38,15 @@
       }
     },
 
-    methods: {
-      getHumanDate : function (date) {
-        return moment(date, 'YYYY-MM-DD').format('MMM DD, YYYY');
-      }
-    },
-
     computed: {
       notes() {
         return this.$store.state.notes;
+      }
+    },
+
+    methods: {
+      getHumanDate : function (date) {
+        return moment(date, 'YYYY-MM-DD').format('MMM DD, YYYY');
       }
     }
   }

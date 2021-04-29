@@ -1,5 +1,9 @@
 <template lang="html">
-  <div class="navbar" :class="{ 'navbar-hidden': !showNavbar, 'homepage': $nuxt.$route.path == '/' }">
+  <div class="navbar" :class="{
+    'homepage': $nuxt.$route.path == '/',
+    'homepage-hidden': !homeAnimationDone,
+    'navbar-hidden': !showNavbar
+    }">
     <div class="container">
       <div class="navbar-content">
         <div class="index">
@@ -31,12 +35,18 @@
     data() {
       return {
         showNavbar: true,
+        homeAnimationDone: false,
         lastScrollPosition: 0
       }
     },
 
     mounted() {
       window.addEventListener('scroll', this.onScroll)
+
+      setTimeout(
+        _ => this.homeAnimationDone = true,
+        1000
+      )
     },
 
     beforeDestroy() {

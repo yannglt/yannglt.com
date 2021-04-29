@@ -259,10 +259,7 @@
       const moodboardTimeline = gsap.timeline()
       const discoverTimeline = gsap.timeline()
 
-      // CustomEase.create('standard', '0.4, 0.0, 0.2, 1')
       CustomEase.create('emphasized', '0.2, 0.0, 0.2, 1')
-      // CustomEase.create('decelerated', '0.0, 0.0, 0.2, 1')
-      // CustomEase.create('accelerated', '0.4, 0.0, 1, 1')
 
       moodboardTimeline.from('.moodboard', {
         duration: 0.720,

@@ -1,5 +1,6 @@
 <template lang="html">
   <div id="app">
+    <div class="gsap-debug-screen"></div>
     <div class="new-space">
       <div class="container">
         <nuxt-link to="/notes/an-introduction-to-my-new-personal-space-on-the-internets" title="" class="body">Welcome on my new space on the Internets.<span class="line-breaker"><br></span><span class="link">Learn more about this new version<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></span></nuxt-link>
@@ -157,6 +158,8 @@
 </template>
 
 <script>
+  import { mapActions } from 'vuex'
+
   import gsap from 'gsap'
   import CSSRulePlugin from 'gsap/CSSRulePlugin'
   import ScrollTrigger from 'gsap/ScrollTrigger'
@@ -239,11 +242,17 @@
         CustomEase.create('emphasized', '0.2, 0.0, 0.2, 1')
         CustomEase.create('other', '0.8, 0, 0.8, 1')
 
+        tldrTimeline.to('.gsap-debug-screen', {
+          duration: 0.240,
+          opacity: 0,
+          onComplete: killGSAPDebugScreen
+        }, 0)
+
         tldrTimeline.from(welcomeRepeat, {
           duration: 0.480,
           opacity: 0,
           clearProps: 'all'
-        }, 0)
+        }, 0.240)
 
         welcomeRepeatSplitted.forEach((word, index) => {
 
@@ -257,7 +266,6 @@
             shift = 1208
           }
 
-
           word.chars.forEach((char, index) => {
             tldrTimeline.from(char, {
               duration: 0.480,
@@ -266,14 +274,14 @@
               y: shift,
               clearProps: 'all'
             }, 'char')
-          }, 0)
+          }, 0.240)
         })
 
         tldrTimeline.from(etiquette, {
           duration: 0.480,
           transform: 'translateY(100vh)',
           clearProps: 'all'
-        }, 0.720)
+        }, 0.960)
 
         tldrTimeline.from(electricityLink, {
           duration: 0.240,
@@ -306,10 +314,14 @@
         }, 'top-elements')
 
         tldrTimeline.pause()
-        tldrTimeline.addLabel('electricityDiagrams', 0.720)
-        tldrTimeline.addLabel('top-elements', 0.960)
+        tldrTimeline.addLabel('electricityDiagrams', 0.960)
+        tldrTimeline.addLabel('top-elements', 1.200)
 
         tldrTimeline.progress(0).play()
+      }
+
+      function killGSAPDebugScreen() {
+        document.querySelector('.gsap-debug-screen').remove()
       }
 
       // ANIMATION DEBUGGOR
