@@ -234,6 +234,7 @@
       const electricityLink = document.querySelector('.etiquette-electricityLink')
       const electricityDiagramLeft = document.querySelector('.etiquette-electricityDiagram.left')
       const electricityDiagramRight = document.querySelector('.etiquette-electricityDiagram.right')
+      const electricityExtensions = document.querySelectorAll('.etiquette-electricityExtension')
 
       const tldrTimeline = gsap.timeline()
 
@@ -284,22 +285,32 @@
         }, 0.960)
 
         tldrTimeline.from(electricityLink, {
-          duration: 0.240,
+          duration: 0.120,
           transform: 'translate(-50%, calc((240px / 2) + 62px)) scaleX(0)',
           clearProps: 'all'
         }, 'electricityDiagrams')
 
         tldrTimeline.from(electricityDiagramLeft, {
           duration: 0.480,
-          transform: 'translateX(-120vw) scaleX(-1)',
+          // transform: 'translateX(-70vw) scaleX(-1)',
+          left: -532,
           clearProps: 'all'
-        }, 'electricityDiagrams')
+        }, 'electricityDiagrams+=0.240')
 
         tldrTimeline.from(electricityDiagramRight, {
           duration: 0.480,
-          transform: 'translateX(120vw)',
+          // transform: 'translateX(70vw)',
+          right: -532,
           clearProps: 'all'
-        }, 'electricityDiagrams')
+        }, 'electricityDiagrams+=0.240')
+
+        electricityExtensions.forEach((extension, index) => {
+          tldrTimeline.from(extension, {
+            duration: 0.480,
+            transform: 'translateY(214px) scaleX(1.8)',
+            clearProps: 'all'
+          }, 'electricityDiagrams+=0.240')
+        })
 
         tldrTimeline.from('.new-space', {
           duration: 0.240,
