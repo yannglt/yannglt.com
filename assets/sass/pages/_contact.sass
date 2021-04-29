@@ -45,15 +45,31 @@
 
     transform: translateY(8px)
 
+    +adapt($bkp-desktop-sd)
+      display: flex
+      flex-direction: row
+
     +adapt($bkp-desktop-hd)
+      display: block
       grid-column: 9 / span 4
 
   .contact-link
     padding: $space-s $space-m
     padding-bottom: 20px
 
+    +adapt($bkp-desktop-sd)
+      flex-grow: 2
+
     &:first-of-type
       border-bottom: 2px solid $oblivion-700
+
+      +adapt($bkp-desktop-sd)
+        border-bottom: none
+        border-right: 2px solid $oblivion-700
+
+      +adapt($bkp-desktop-hd)
+        border-right: none
+        border-bottom: 2px solid $oblivion-700
 
   .redirects
     @extend .gridSystem
