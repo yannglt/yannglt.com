@@ -241,7 +241,7 @@
       if(windowWidth < 1208) { return false } else {
 
         CustomEase.create('emphasized', '0.2, 0.0, 0.2, 1')
-        CustomEase.create('other', '0.8, 0, 0.8, 1')
+        CustomEase.create('emphasized-echo', '0.8, 0, 0.8, 1')
 
         tldrTimeline.to('.gsap-debug-screen', {
           duration: 0.240,
@@ -271,7 +271,7 @@
             tldrTimeline.from(char, {
               duration: 0.480,
               delay: 0.04 * index,
-              ease: 'other',
+              ease: 'emphasized-echo',
               y: shift,
               clearProps: 'all'
             }, 'char')
