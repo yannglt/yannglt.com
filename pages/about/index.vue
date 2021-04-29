@@ -39,10 +39,13 @@
           <div class="image"></div>
           <div class="fill"></div>
         </div>
-        <!-- <div class="electricity-toolkit">
-          <div class="pinned-top"></div>
-          <div class="pinned-bottom"></div>
-        </div> -->
+        <div class="poster electricity-toolkit">
+          <div class="skeleton"></div>
+          <div class="image"></div>
+          <div class="fill"></div>
+          <!-- <div class="pinned-top"></div>
+          <div class="pinned-bottom"></div> -->
+        </div>
         <div class="poster gt-america">
           <div class="skeleton"></div>
           <div class="image"></div>
@@ -259,89 +262,81 @@
       const moodboardTimeline = gsap.timeline()
       const discoverTimeline = gsap.timeline()
 
-      CustomEase.create('emphasized', '0.2, 0.0, 0.2, 1')
-
-      moodboardTimeline.from('.moodboard', {
-        duration: 0.720,
-        transform: 'scaleY(2)',
-        y: '120vh',
-        ease: 'emphasized',
-        clearProps: 'all'
-      })
-
-      moodboardVerticalLines.forEach((line, index) => {
-        moodboardTimeline.from(line, {
-          duration: (0.120 * 2 + 0.120 * 11) - 0.120 * index,
-          transform: 'translateX(-50%) scaleY(0)',
-          ease: 'emphasized',
-          delay: 0.120,
-          clearProps: 'all'
-        }, 'vertical-lines')
-      })
-
-      moodboardHorizontalLines.forEach((line, index) => {
-        moodboardTimeline.from(line, {
-          duration: 0.120 + 0.120 * index,
-          transform: 'scaleX(0)',
-          ease: 'emphasized',
-          delay: 0.120,
-          clearProps: 'all',
-          onComplete: postersGoActive
-        }, 'vertical-lines+=0.480')
-      })
-
-      document.querySelectorAll('.moodboard .fill').forEach((posterFill, index) => {
-        moodboardTimeline.from(posterFill, {
-          duration: 0.240,
-          transform: 'scaleY(0)',
-          ease: 'emphasized',
-          delay: 0.240 * index,
-          clearProps: 'all'
-        }, 'vertical-lines+=1.600')
-      })
-
-      document.querySelectorAll('.moodboard .image').forEach((posterImage, index) => {
-        moodboardTimeline.from(posterImage, {
-          duration: 0.240,
-          opacity: 0,
-          ease: 'emphasized',
-          delay: 0.240 * index,
-          clearProps: 'all'
-        }, 'vertical-lines+=1.840')
-      })
-
-      function postersGoActive() {
-        document.querySelectorAll('.poster').forEach((poster, index) => {
-          setTimeout(function() {
-            poster.classList.add('active')
-          }, 240 * index)
-        })
-      }
-
-      moodboardTimeline.pause()
-      moodboardTimeline.addLabel('poster-fill', 3)
-      moodboardTimeline.addLabel('poster-image', '3.240')
-
-      discoverTitleSplitted[0].lines.forEach((line, index) => {
-        discoverTimeline.from(line, {
-          duration: 0.5 + 0.5 * index / 4,
-          transform: 'translateY(512px)',
-          ease: 'emphasized'
-        }, '0.480')
-      })
-
-      discoverTimeline.pause()
-
-      // ANIMATION DEBUGGOR
-      // document.querySelector('.about-page').onclick = function() {
-      //   document.querySelectorAll('.poster').forEach((poster) => {
-      //     poster.classList.remove('active')
-      //   })
-      //   moodboardTimeline.restart()
-      //   discoverTimeline.restart()
-      // }
-
       if(windowWidth < 1208) { return false } else {
+
+        CustomEase.create('emphasized', '0.2, 0.0, 0.2, 1')
+
+        moodboardTimeline.from('.moodboard', {
+          duration: 0.720,
+          transform: 'scaleY(2)',
+          y: '120vh',
+          ease: 'emphasized',
+          clearProps: 'all'
+        })
+
+        moodboardVerticalLines.forEach((line, index) => {
+          moodboardTimeline.from(line, {
+            duration: (0.120 * 2 + 0.120 * 11) - 0.120 * index,
+            transform: 'translateX(-50%) scaleY(0)',
+            ease: 'emphasized',
+            delay: 0.120,
+            clearProps: 'all'
+          }, 'vertical-lines')
+        })
+
+        moodboardHorizontalLines.forEach((line, index) => {
+          moodboardTimeline.from(line, {
+            duration: 0.120 + 0.120 * index,
+            transform: 'scaleX(0)',
+            ease: 'emphasized',
+            delay: 0.120,
+            clearProps: 'all',
+            onComplete: postersGoActive
+          }, 'vertical-lines+=0.480')
+        })
+
+        document.querySelectorAll('.moodboard .fill').forEach((posterFill, index) => {
+          moodboardTimeline.from(posterFill, {
+            duration: 0.240,
+            transform: 'scaleY(0)',
+            ease: 'emphasized',
+            delay: 0.240 * index,
+            clearProps: 'all'
+          }, 'vertical-lines+=1.600')
+        })
+
+        document.querySelectorAll('.moodboard .image').forEach((posterImage, index) => {
+          moodboardTimeline.from(posterImage, {
+            duration: 0.240,
+            opacity: 0,
+            ease: 'emphasized',
+            delay: 0.240 * index,
+            clearProps: 'all'
+          }, 'vertical-lines+=1.840')
+        })
+
+        function postersGoActive() {
+          document.querySelectorAll('.poster').forEach((poster, index) => {
+            setTimeout(function() {
+              poster.classList.add('active')
+            }, 240 * index)
+          })
+        }
+
+        moodboardTimeline.pause()
+        moodboardTimeline.addLabel('poster-fill', 3)
+        moodboardTimeline.addLabel('poster-image', '3.240')
+
+        discoverTitleSplitted[0].lines.forEach((line, index) => {
+          discoverTimeline.from(line, {
+            duration: 0.5 + 0.5 * index / 4,
+            transform: 'translateY(512px)',
+            ease: 'emphasized'
+          }, '0.480')
+        })
+
+        discoverTimeline.pause()
+
         const promiseTimeline = gsap.timeline({
           scrollTrigger: {
             // markers: true,
@@ -352,10 +347,19 @@
             end: '1450px center',
           }
         })
+
+        moodboardTimeline.progress(0).play()
+        discoverTimeline.progress(0).play()  
       }
 
-      moodboardTimeline.progress(0).play()
-      discoverTimeline.progress(0).play()
+      // ANIMATION DEBUGGOR
+      // document.querySelector('.about-page').onclick = function() {
+      //   document.querySelectorAll('.poster').forEach((poster) => {
+      //     poster.classList.remove('active')
+      //   })
+      //   moodboardTimeline.restart()
+      //   discoverTimeline.restart()
+      // }
     }
   }
 </script>
