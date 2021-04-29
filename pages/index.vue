@@ -309,7 +309,7 @@
         tldrTimeline.addLabel('electricityDiagrams', 0.720)
         tldrTimeline.addLabel('top-elements', 0.960)
 
-        tldrTimeline.play()
+        tldrTimeline.progress(0).play()
       }
 
       // ANIMATION DEBUGGOR

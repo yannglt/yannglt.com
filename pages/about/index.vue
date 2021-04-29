@@ -357,8 +357,8 @@
         })
       }
 
-      moodboardTimeline.play()
-      discoverTimeline.play()
+      moodboardTimeline.progress(0).play()
+      discoverTimeline.progress(0).play()
     }
   }
 </script>
