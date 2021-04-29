@@ -1,6 +1,9 @@
 .about-page
   // Inital spacing + navbar height
-  margin-top: calc(#{$space-xl} + 96px)
+  margin-top: calc(#{$space-s} + 96px)
+
+  +adapt($bkp-tablet)
+    margin-top: calc(#{$space-xl} + 96px)
 
   .moodboard
 
@@ -80,11 +83,19 @@
         &:nth-of-type(7)
           display: none
 
+          +adapt($bkp-tablet)
+            display: block
+            width: calc(184px - 2px)
+
           +adapt($bkp-desktop-hd)
             width: calc(456px - 2px)
 
         &:nth-of-type(8)
           display: none
+
+          +adapt($bkp-tablet)
+            display: block
+            width: calc(40px - 2px)
 
           +adapt($bkp-desktop-hd)
             width: calc(376px - 2px)
@@ -92,17 +103,26 @@
         &:nth-of-type(9)
           width: calc(100% - 48px * 3 - 2px)
 
+          +adapt($bkp-tablet)
+            width: calc(264px - 2px)
+
           +adapt($bkp-desktop-hd)
             width: calc(248px - 2px)
 
         &:nth-of-type(10)
           width: calc(100% - 48px * 2 - 2px)
 
+          +adapt($bkp-tablet)
+            width: calc(408px - 2px)
+
           +adapt($bkp-desktop-hd)
             width: calc(168px - 2px)
 
         &:nth-of-type(11)
           width: calc(100% - 48px - 2px)
+
+          +adapt($bkp-tablet)
+            width: calc(488px - 2px)
 
           +adapt($bkp-desktop-hd)
             width: calc(40px - 2px)
@@ -148,6 +168,7 @@
 
           +adapt($bkp-tablet)
             display: block
+            top: 560px
 
           +adapt($bkp-desktop-sd)
             display: none
@@ -161,6 +182,7 @@
 
           +adapt($bkp-tablet)
             display: block
+            top: 520px
 
         &:nth-of-type(5)
           top: 416px
@@ -168,6 +190,7 @@
 
           +adapt($bkp-tablet)
             display: block
+            top: 448px
 
         &:nth-of-type(6)
           top: 352px
@@ -175,11 +198,13 @@
 
           +adapt($bkp-tablet)
             display: block
+            top: 408px
 
         &:nth-of-type(7)
           top: 488px
 
           +adapt($bkp-tablet)
+            top: 336px
 
           +adapt($bkp-desktop-sd)
 
