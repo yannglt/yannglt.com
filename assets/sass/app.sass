@@ -325,62 +325,45 @@
         transform: translateY(214px)
         // 214px = match electricty illustration endings
 
-      &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6)
+        &::before, &::after
+          content: ''
+          position: absolute
+          height: 4px
+          width: calc((100vw - 532px - 532px - (1680px - 532px - 532px))/2)
 
-        +adapt(1680px)
+          z-index: -5
 
-          &:before, &:after
-            content: ''
-            position: absolute
-            height: 4px
-            width: calc((100vw - 532px - 532px - (1680px - 532px - 532px))/2)
+        &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), 
 
-            z-index: -5
-
-          &:before
+          &::before
             left: 0
 
-          &:after
+          &::after
             right: 0
 
-      &:nth-child(2)
-
-        &:before, &:after
-
-          +adapt(1680px)
+        &:nth-child(3), &:nth-child(6)
+          &::before, &::after
             background-color: $oblivion-700
+
+        &:nth-child(4), &:nth-child(5), &:nth-child(7)
+          &::before, &::after
+            background-color: $oblivion-500
+
+        &:nth-child(3)
+          &::before, &::after
             transform: translateY(-192px)
 
-      &:nth-child(3)
-
-        &:before, &:after
-
-          +adapt(1680px)
-            background-color: $oblivion-500
+        &:nth-child(4)
+          &::before, &::after
             transform: translateY(-160px)
 
-      &:nth-child(4)
-
-        &:before, &:after
-
-          +adapt(1680px)
-            background-color: $oblivion-500
+        &:nth-child(5)
+          &::before, &::after
             transform: translateY(-64px)
 
-      &:nth-child(5)
-
-        &:before, &:after
-
-          +adapt(1680px)
-            background-color: $oblivion-700
+        &:nth-child(6)
+          &::before, &::after
             transform: translateY(-32px)
-
-      &:nth-child(6)
-
-        &:before, &:after
-
-          +adapt(1680px)
-            background-color: $oblivion-500
 
 .intro
   margin-top: calc(272px + #{$space-xxxl})
