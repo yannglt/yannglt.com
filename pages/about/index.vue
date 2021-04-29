@@ -349,7 +349,7 @@
         })
 
         moodboardTimeline.progress(0).play()
-        discoverTimeline.progress(0).play()  
+        discoverTimeline.progress(0).play()
       }
 
       // ANIMATION DEBUGGOR

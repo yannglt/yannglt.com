@@ -42,37 +42,70 @@
         transform-origin: center bottom
 
         &:nth-of-type(1)
-          width: calc(1080px - 2px)
+          display: none
+
+          +adapt($bkp-desktop-hd)
+            width: calc(1080px - 2px)
 
         &:nth-of-type(2)
-          width: calc(1000px - 2px)
+          display: none
+
+          +adapt($bkp-desktop-hd)
+            width: calc(1000px - 2px)
 
         &:nth-of-type(3)
-          width: calc(872px - 2px)
+          display: none
+
+          +adapt($bkp-desktop-hd)
+            width: calc(872px - 2px)
 
         &:nth-of-type(4)
-          width: calc(792px - 2px)
+          display: none
+
+          +adapt($bkp-desktop-hd)
+            width: calc(792px - 2px)
 
         &:nth-of-type(5)
-          width: calc(664px - 2px)
+          display: none
+
+          +adapt($bkp-desktop-hd)
+            width: calc(664px - 2px)
 
         &:nth-of-type(6)
-          width: calc(584px - 2px)
+          display: none
+
+          +adapt($bkp-desktop-hd)
+            width: calc(584px - 2px)
 
         &:nth-of-type(7)
-          width: calc(456px - 2px)
+          display: none
+
+          +adapt($bkp-desktop-hd)
+            width: calc(456px - 2px)
 
         &:nth-of-type(8)
-          width: calc(376px - 2px)
+          display: none
+
+          +adapt($bkp-desktop-hd)
+            width: calc(376px - 2px)
 
         &:nth-of-type(9)
-          width: calc(248px - 2px)
+          width: calc(100% - 48px * 3 - 2px)
+
+          +adapt($bkp-desktop-hd)
+            width: calc(248px - 2px)
 
         &:nth-of-type(10)
-          width: calc(168px - 2px)
+          width: calc(100% - 48px * 2 - 2px)
+
+          +adapt($bkp-desktop-hd)
+            width: calc(168px - 2px)
 
         &:nth-of-type(11)
-          width: calc(40px - 2px)
+          width: calc(100% - 48px - 2px)
+
+          +adapt($bkp-desktop-hd)
+            width: calc(40px - 2px)
 
     .horizontal-lines
       width: 100%
@@ -91,39 +124,127 @@
 
         &:nth-of-type(1)
           top: 624px
+          display: none
+
+        +adapt($bkp-desktop-hd)
+          display: block
 
         &:nth-of-type(2)
           top: 560px
+          display: none
+
+          +adapt($bkp-tablet)
+            display: block
+
+          +adapt($bkp-desktop-sd)
+            display: none
+
+          +adapt($bkp-desktop-hd)
+            display: block
 
         &:nth-of-type(3)
           top: 520px
+          display: none
+
+          +adapt($bkp-tablet)
+            display: block
+
+          +adapt($bkp-desktop-sd)
+            display: none
+
+          +adapt($bkp-desktop-hd)
+            display: block
 
         &:nth-of-type(4)
           top: 456px
+          display: none
+
+          +adapt($bkp-tablet)
+            display: block
 
         &:nth-of-type(5)
           top: 416px
+          display: none
+
+          +adapt($bkp-tablet)
+            display: block
 
         &:nth-of-type(6)
           top: 352px
+          display: none
+
+          +adapt($bkp-tablet)
+            display: block
 
         &:nth-of-type(7)
-          top: 312px
+          top: 488px
+
+          +adapt($bkp-tablet)
+
+          +adapt($bkp-desktop-sd)
+
+          +adapt($bkp-desktop-hd)
+            top: 312px
 
         &:nth-of-type(8)
-          top: 248px
+          top: 464px
+
+          +adapt($bkp-tablet)
+            top: 296px
+
+          +adapt($bkp-desktop-sd)
+
+          +adapt($bkp-desktop-hd)
+            top: 248px
 
         &:nth-of-type(9)
-          top: 208px
+          top: 440px
+
+          +adapt($bkp-tablet)
+            top: 224px
+
+          +adapt($bkp-desktop-sd)
+            top: 304px
+
+          +adapt($bkp-desktop-hd)
+            top: 208px
 
         &:nth-of-type(10)
-          top: 144px
+          top: 72px
+
+          +adapt($bkp-tablet)
+            top: 184px
+
+          +adapt($bkp-desktop-sd)
+            top: 264px
+
+          +adapt($bkp-desktop-hd)
+            top: 144px
 
         &:nth-of-type(11)
-          top: 104px
+          top: 48px
+
+          +adapt($bkp-tablet)
+            top: 112px
+
+          +adapt($bkp-desktop-sd)
+            top: 152px
+
+          +adapt($bkp-desktop-hd)
+            top: 104px
 
         &:nth-of-type(12)
-          top: 40px
+          top: 24px
+
+          +adapt($bkp-tablet)
+            top: 72px
+
+          +adapt($bkp-desktop-sd)
+            top: 112px
+
+          +adapt($bkp-desktop-hd)
+            top: 40px
+
 
     .atlas, .logo, .electricity-toolkit, .gt-america, .bluu-suuperstar
       background-repeat: no-repeat
@@ -284,30 +405,30 @@
         background-image: url("@/static/images/electricity-toolkit.svg")
         background-size: 416px 208px
 
-    //   .pinned-top, .pinned-bottom
-    //     width: 100%
-    //     height: 100%
-    //     position: absolute
-    //
-    //   .pinned-top::before, .pinned-top::after, .pinned-bottom::before, .pinned-bottom::after
-    //     background-color: $oblivion-500
-    //     border: 1px solid $oblivion-900
-    //
-    //   .pinned-top::before
-    //     top: -5px
-    //     left: -5px
-    //
-    //   .pinned-top::after
-    //     top: -5px
-    //     right: -5px
-    //
-    //   .pinned-bottom::before
-    //     bottom: -5px
-    //     left: -5px
-    //
-    //   .pinned-bottom::after
-    //     bottom: -5px
-    //     right: -5px
+      .pinned-top, .pinned-bottom
+        width: 100%
+        height: 100%
+        position: absolute
+
+      .pinned-top::before, .pinned-top::after, .pinned-bottom::before, .pinned-bottom::after
+        background-color: $oblivion-500
+        border: 1px solid $oblivion-900
+
+      .pinned-top::before
+        top: -5px
+        left: -5px
+
+      .pinned-top::after
+        top: -5px
+        right: -5px
+
+      .pinned-bottom::before
+        bottom: -5px
+        left: -5px
+
+      .pinned-bottom::after
+        bottom: -5px
+        right: -5px
 
     .bluu-suuperstar
       display: none
