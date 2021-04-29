@@ -11,7 +11,7 @@
         <div class="note-end">
           <div class="note-end-img"></div>
           <div class="note-end-title heading-2 text-secondary-dark">Hope you liked what you read!</div>
-          <div class="note-end-desc text-quaternary-dark">Thank you for your time to read this blog post, let me know what you thought about it on <a href="https://twitter.com/yannglt">Twitter</a> or join the club to know when a new post is published!</div>
+          <div class="note-end-desc text-quaternary-dark">Thank you for your time to read this blog post, let me know what you thought about it on <SuperLink href="https://twitter.com/yannglt" target="_blank" variant="body dark">Twitter</SuperLink> or join the club to know when a new post is published!</div>
         </div>
       </div>
     </section>
@@ -20,6 +20,8 @@
 
 <script>
   import moment from 'moment'
+
+  import SuperLink from '@/components/SuperLink.vue'
 
   export default {
     head() {
@@ -47,6 +49,10 @@
         )
         return note[0]
       }
+    },
+
+    components: {
+      SuperLink
     }
   }
 </script>
