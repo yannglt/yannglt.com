@@ -265,22 +265,25 @@
         top: 101px
         left: 136px
 
-    // .electricity-toolkit
-    //   display: none
-    //   position: absolute
-    //   top: 40px
-    //   right: 62px
-    //   height: 208px
-    //   width: 416px
-    //
-    //   border: 1px solid $oblivion-500
-    //   background-image: url("@/static/images/electricity-toolkit.svg")
-    //   background-size: 416px 208px
-    //   background-color: $oblivion-1100
-    //
-    //   +adapt($bkp-desktop-hd)
-    //     display: block
-    //
+    .electricity-toolkit
+      display: none
+      position: absolute
+      top: 40px
+      right: 64px
+      height: 208px
+      width: 416px
+
+      +adapt($bkp-desktop-hd)
+        display: block
+
+      .fill
+        border: 1px solid $oblivion-500
+        background-color: $oblivion-1100
+
+      .image
+        background-image: url("@/static/images/electricity-toolkit.svg")
+        background-size: 416px 208px
+
     //   .pinned-top, .pinned-bottom
     //     width: 100%
     //     height: 100%
