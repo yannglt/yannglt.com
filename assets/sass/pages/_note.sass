@@ -17,13 +17,23 @@
     +adapt($bkp-desktop-hd)
       grid-column: 4 / span 6
 
-  .notes-back
-    display: inline-flex
-    align-items: center
+  .notes-back.dark
     margin-bottom: $space-m
+    flex-direction: row-reverse
+    justify-content: flex-end
+
+    &:hover
+
+      .label
+        color: $oblivion-100
+
+    .label
+      color: $oblivion-300
 
     .icon
+      padding-left: 0
       padding-right: 8px
+      color: $oblivion-500
 
   .note-title
     margin-bottom: $space-xs

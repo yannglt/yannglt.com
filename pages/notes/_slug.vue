@@ -2,7 +2,8 @@
   <div class="note-page">
     <section class="note">
       <div class="container">
-        <nuxt-link class="notes-back caption text-quaternary-dark" exact to="/notes/"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-backward-20"></use></svg>Notes</nuxt-link>
+        <!-- <nuxt-link class="notes-back caption text-quaternary-dark" exact to="/notes/"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-backward-20"></use></svg>Notes</nuxt-link> -->
+        <SuperButton class="notes-back " variant="quaternary dark" icon="#arrow-backward-12" href="/notes">Notes</SuperButton>
         <div class="note-content">
           <h1 class="note-title heading-1 text-primary-dark">{{ note.fields.title }}</h1>
           <p class="note-date caption text-tertiary-dark">Published on {{ getHumanDate(note.fields.publishDate) }}</p>
@@ -21,6 +22,7 @@
 <script>
   import moment from 'moment'
 
+  import SuperButton from '@/components/SuperButton.vue'
   import SuperLink from '@/components/SuperLink.vue'
 
   export default {
@@ -52,6 +54,7 @@
     },
 
     components: {
+      SuperButton,
       SuperLink
     }
   }
