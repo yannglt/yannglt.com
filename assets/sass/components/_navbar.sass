@@ -23,9 +23,10 @@
 
     +adapt($bkp-tablet)
       transform: translate3d(-50%, 48px, 0)
-    
+
     &.homepage-hidden
-      transform: translate3d(-50%, -100%, 0)
+      +adapt($bkp-desktop-hd)
+        transform: translate3d(-50%, -100%, 0)
 
     &.navbar-hidden
       transform: translate3d(-50%, -100%, 0)
