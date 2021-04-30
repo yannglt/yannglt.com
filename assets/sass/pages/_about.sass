@@ -48,36 +48,42 @@
           display: none
 
           +adapt($bkp-desktop-hd)
+            display: block
             width: calc(1080px - 2px)
 
         &:nth-of-type(2)
           display: none
 
           +adapt($bkp-desktop-hd)
+            display: block
             width: calc(1000px - 2px)
 
         &:nth-of-type(3)
           display: none
 
           +adapt($bkp-desktop-hd)
+            display: block
             width: calc(872px - 2px)
 
         &:nth-of-type(4)
           display: none
 
           +adapt($bkp-desktop-hd)
+            display: block
             width: calc(792px - 2px)
 
         &:nth-of-type(5)
           display: none
 
           +adapt($bkp-desktop-hd)
+            display: block
             width: calc(664px - 2px)
 
         &:nth-of-type(6)
           display: none
 
           +adapt($bkp-desktop-hd)
+            display: block
             width: calc(584px - 2px)
 
         &:nth-of-type(7)
@@ -86,6 +92,9 @@
           +adapt($bkp-tablet)
             display: block
             width: calc(184px - 2px)
+
+          +adapt($bkp-desktop-sd)
+            width: calc(648px - 2px)
 
           +adapt($bkp-desktop-hd)
             width: calc(456px - 2px)
@@ -97,6 +106,9 @@
             display: block
             width: calc(40px - 2px)
 
+          +adapt($bkp-desktop-sd)
+            width: calc(568px - 2px)
+
           +adapt($bkp-desktop-hd)
             width: calc(376px - 2px)
 
@@ -105,6 +117,9 @@
 
           +adapt($bkp-tablet)
             width: calc(264px - 2px)
+
+          +adapt($bkp-desktop-sd)
+            width: calc(344px - 2px)
 
           +adapt($bkp-desktop-hd)
             width: calc(248px - 2px)
@@ -115,6 +130,9 @@
           +adapt($bkp-tablet)
             width: calc(408px - 2px)
 
+          +adapt($bkp-desktop-sd)
+            width: calc(264px - 2px)
+
           +adapt($bkp-desktop-hd)
             width: calc(168px - 2px)
 
@@ -124,7 +142,7 @@
           +adapt($bkp-tablet)
             width: calc(488px - 2px)
 
-          +adapt($bkp-desktop-hd)
+          +adapt($bkp-desktop-sd)
             width: calc(40px - 2px)
 
     .horizontal-lines
@@ -143,15 +161,15 @@
         background-color: $oblivion-700
 
         &:nth-of-type(1)
-          top: 624px
           display: none
+          top: 624px
 
-        +adapt($bkp-desktop-hd)
-          display: block
+          +adapt($bkp-desktop-hd)
+            display: block
 
         &:nth-of-type(2)
-          top: 560px
           display: none
+          top: 560px
 
           +adapt($bkp-tablet)
             display: block
@@ -163,7 +181,6 @@
             display: block
 
         &:nth-of-type(3)
-          top: 520px
           display: none
 
           +adapt($bkp-tablet)
@@ -175,30 +192,52 @@
 
           +adapt($bkp-desktop-hd)
             display: block
+            top: 520px
 
         &:nth-of-type(4)
-          top: 456px
           display: none
+          top: 456px
 
           +adapt($bkp-tablet)
             display: block
             top: 520px
 
+          +adapt($bkp-desktop-sd)
+            display: none
+
+          +adapt($bkp-desktop-hd)
+            display: block
+            top: 456px
+
         &:nth-of-type(5)
-          top: 416px
           display: none
+          top: 416px
 
           +adapt($bkp-tablet)
             display: block
             top: 448px
 
+          +adapt($bkp-desktop-sd)
+            display: none
+
+          +adapt($bkp-desktop-hd)
+            display: block
+            top: 416px
+
         &:nth-of-type(6)
-          top: 352px
           display: none
+          top: 352px
 
           +adapt($bkp-tablet)
             display: block
             top: 408px
+
+          +adapt($bkp-desktop-sd)
+            display: none
+
+          +adapt($bkp-desktop-hd)
+            display: block
+            top: 352px
 
         &:nth-of-type(7)
           top: 488px
@@ -207,6 +246,7 @@
             top: 336px
 
           +adapt($bkp-desktop-sd)
+            top: 456px
 
           +adapt($bkp-desktop-hd)
             top: 312px
@@ -218,6 +258,7 @@
             top: 296px
 
           +adapt($bkp-desktop-sd)
+            top: 416px
 
           +adapt($bkp-desktop-hd)
             top: 248px
@@ -269,7 +310,6 @@
 
           +adapt($bkp-desktop-hd)
             top: 40px
-
 
     .atlas, .logo, .electricity-toolkit, .gt-america, .bluu-suuperstar
       background-repeat: no-repeat
