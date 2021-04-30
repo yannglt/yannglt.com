@@ -27,6 +27,7 @@
 @import 'pages/contact'
 
 .gsap-debug-screen
+  display: none
   position: fixed
   top: 0
   left: 0
@@ -35,6 +36,9 @@
   background-color: $oblivion-1100
 
   z-index: 999999
+
+  +adapt($bkp-desktop-hd)
+    display: block
 
 .new-space
   position: fixed
@@ -333,7 +337,7 @@
 
           z-index: -5
 
-        &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), 
+        &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7),
 
           &::before
             left: 0
