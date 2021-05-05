@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="about-page">
+    <div class="gsap-debug-screen"></div>
     <section class="moodboard">
       <div class="container">
         <div class="vertical-lines">
@@ -265,13 +266,19 @@
 
         CustomEase.create('emphasized', '0.2, 0.0, 0.2, 1')
 
+        moodboardTimeline.to('.gsap-debug-screen', {
+          duration: 0.240,
+          opacity: 0,
+          onComplete: killGSAPDebugScreen
+        })
+
         moodboardTimeline.from('.moodboard', {
           duration: 0.720,
           transform: 'scaleY(2)',
           y: '120vh',
           ease: 'emphasized',
           clearProps: 'all'
-        })
+        }, 0.240)
 
         moodboardVerticalLines.forEach((line, index) => {
           moodboardTimeline.from(line, {
@@ -331,7 +338,7 @@
             duration: 0.5 + 0.5 * index / 4,
             transform: 'translateY(512px)',
             ease: 'emphasized'
-          }, '0.480')
+          }, 0.720)
         })
 
         discoverTimeline.pause()
@@ -349,6 +356,10 @@
 
         moodboardTimeline.progress(0).play()
         discoverTimeline.progress(0).play()
+      }
+
+      function killGSAPDebugScreen() {
+        document.querySelector('.gsap-debug-screen').remove()
       }
 
       // ANIMATION DEBUGGOR
