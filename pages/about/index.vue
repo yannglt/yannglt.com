@@ -178,7 +178,7 @@
         <div class="thanks-bloc people">
           <div class="caption"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#entry-20"></use></svg>A special S/O to:</div>
           <div class="content body text-secondary-light">
-            <p>My partner in life <a href="https://twitter.com/sabrinandjh" target="_blank">Sabrina Nedjah</a> and my brother <a href="https://twitter.com/hassanboujnikh" target="_blank">Hassan Boujnikh</a> for their support these last years. <a href="https://linkedin.com/in/gabrielbacave" target="_blank">Gabriel Bacave</a> for its help on writing my manifesto. </p>
+            <p>My partner in life <a href="https://twitter.com/sabrinandjh" target="_blank">Sabrina Nedjah</a> and my brother <a href="https://twitter.com/hassanboujnikh" target="_blank">Hassan Boujnikh</a> for their support these last years. <a href="https://linkedin.com/in/gabrielbacave" target="_blank">Gabriel Bacave</a> for his help on writing my manifesto. </p>
           </div>
         </div>
       </div>
