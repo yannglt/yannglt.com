@@ -113,7 +113,7 @@
             <div class="passion">
               <p class="caption">With a passion for</p>
               <p class="title heading-3">Design Operations </p>
-              <p class="description body text-secondary-light">Wrote a research paper on design systems and their impacts on product teams and end users</p>
+              <p class="description body text-secondary-light">I believe in the process but even more in the humans connections made along the way</p>
             </div>
           </div>
           <div class="manifesto-hello">
@@ -122,8 +122,8 @@
               <p class="caption">hello</p>
             </div>
             <div class="content body-long">
-              <p>Pallet Town and New-York. Pikachu and Spider-Man. A yellow flash on a dark background. Movement, people and energy. All my life, I’ve been drawing inspiration from cities and electrical networks. Today, I deeply believe that great work stems from a solid plan, a clean architecture and appropriate tools.</p>
-              <p>I want to create for the makers. From the first Internet stranger who helped me building my Cydia theme to all the great designers I’ve yet to meet, my goal is to give others the means to reach theirs. I know aestheticism is a consequence of mastery. Design is a craft and studying the method behind the methods is what drives me. I’ve learnt that listening is the key to understanding ; and understanding is the first step to solve any problem. I try to work both hard and smart, not losing myself in the process. Loved ones, mentors, clients and obviously, users, anchor me in reality. I mock my kind, to keep things in perspective, and I look up to many. Always hungry, always foolish.</p>
+              <p>Pallet Town and New-York. Spider-Man's dark backgrounds and Pikachu’s yellow flash.  Movement, people and energy. All my life, I’ve been drawing inspiration from cities and electrical networks. Today, I deeply believe that great work stems from a solid plan, a clean architecture and efficient teams.</p>
+              <p>I want to create for the makers. From the Internet stranger with whom I built my first Cydia theme to all the great designers I’ve yet to meet, my goal is to give others the means to reach theirs. I know aestheticism is a consequence of mastery. Design is a craft and studying the method behind the methods is what drives me. I’ve learnt that listening is the key to understanding ; and understanding is the first step to solve any problem. Always hungry, always foolish: I try to work both hard and smart, not losing myself in the process. Loved ones, mentors, clients and users, anchor me in reality. I enjoy mocking those I look up to as well ; as a reminder of not taking myself too seriously.</p>
               <p>This personal space is a reflection of who I am and where I’m trying to head as a Product Designer. It comes from years of wondering and wandering. I’m happy I waited as much as I did though, it helped me grow and build the set of principles I now want to stand atop.</p>
               <p>I hope you like what you find! I’m always happy to talk about design, its bridges with code and/or exchange ideas on why and how things should be done.</p>
               <SuperLink href="https://twitter.com/yannglt" target="_blank" variant="body light" icon="#arrow-forward-20">Shoot me a DM on Twitter</SuperLink>

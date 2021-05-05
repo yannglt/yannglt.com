@@ -145,8 +145,7 @@
           <div class="emphasis">
             <p>My name is Yann-Edern Gillet. I’m a French designer living in Paris, France. My main area of focus today is on systems, digital products and interfaces. DMs are opened!</p>
             <SuperLink href="https://twitter.com/yannglt" target="_blank" variant="emphasis light" icon="#arrow-forward-20">Shoot me a DM on Twitter</SuperLink>
-            <p>But let’s forget work for two seconds. In my spare time I still spend a lot of time on screens but more as a front-end engineer.</p>
-            <p>I love learning new things, especially with Vue, Nuxt and GSAP. More recently I’m learning the craft of icon design (yup, the ones you saw earlier are born on my computer). I like the idea of crafting myself every pixel of my creations, both in design and code, like this portfolio.</p>
+            <p>In my spare time I still spend a lot of time on screens, but more as a front-end engineer. I love learning new things, especially with Vue, Nuxt and GSAP. More recently I’m learning the craft of icon design (yup, the ones you saw earlier are born on my computer). I like the idea of crafting myself every pixel of my creations, both in design and code, like this portfolio.</p>
             <SuperLink href="https://github.com/yannglt/yannglt.com" target="_blank" variant="emphasis light" icon="#arrow-forward-20">Read the code behind this website</SuperLink>
             <p>When my hands are not on my mechanical keyboard, I enjoy taking care of my plants, cook/ try some italian recipes with my girlfriend and building LEGO sets.</p>
             <p>And when my hands are not building things, I dive into work of others designers and developers, thanks to Standards Manual, Increment by Stripe and Offscreen Magazine.</p>

@@ -4,7 +4,7 @@
     <div class="container">
       <div class="club">
         <p class="clubTitle heading-2 text-primary-dark">Join the club, <span class="line-breaker"><br /></span>get (ir)regular updates</p>
-        <p class="clubDesc body text-quaternary-dark">From now, I will try to work with the garage door up and we will see where it <span class="line-breaker"><br /></span>brings us. New posts & updates on this space + maybe some surprises...</p>
+        <p class="clubDesc body text-quaternary-dark">From now on, I will try to work with the garage door up and we will see where it <span class="line-breaker"><br /></span>brings us. New posts & updates on this space + maybe some surprises...</p>
 
         <ValidationObserver v-slot="{ invalid }" ref="form">
 
