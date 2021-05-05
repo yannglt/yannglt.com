@@ -3,7 +3,7 @@
     <div class="gsap-debug-screen"></div>
     <div class="new-space">
       <div class="container">
-        <nuxt-link to="/notes/an-introduction-to-my-new-personal-space-on-the-internets" title="" class="body">Welcome on my new space on the Internets.<span class="line-breaker"><br></span><span class="link">Learn more about this new version<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></span></nuxt-link>
+        <nuxt-link to="notes/lets-open-the-garage-door" title="" class="body">Welcome on my new space on the Internets.<span class="line-breaker"><br></span><span class="link">Learn more about this new version<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></span></nuxt-link>
       </div>
     </div>
 

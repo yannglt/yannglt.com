@@ -32,7 +32,8 @@
   .note
     position: relative
     // Inital margin - body padding
-    padding-left: calc(#{$space-xl} - #{$space-s})
+    // Only one note at the moment, uncomment when publishing the second article
+    // padding-left: calc(#{$space-xl} - #{$space-s})
     padding-bottom: $space-l
 
     &:first-of-type .note-title::before
@@ -48,25 +49,26 @@
         height: 0
 
     +adapt($bkp-desktop-sd)
-      padding-left: $space-l
+      // Only one note at the moment, uncomment when publishing the second article:
+      // padding-left: $space-l
+
+  .note-title
+    margin-bottom: $space-xxxs
+    position: relative
+    // Only one note at the moment, pass this property to hover when publishing the second article:
+    text-decoration: underline
 
     &:hover
       cursor: pointer
-
-      .note-title
-        text-decoration: underline
 
       .icon
         opacity: 1
         transform: translateX(0)
 
-  .note-title
-    margin-bottom: $space-xxxs
-    position: relative
-
-    &::before, &::after
-      content: ''
-      position: absolute
+    // Only one note at the moment, uncomment when publishing the second article
+    // &::before, &::after
+    //   content: ''
+    //   position: absolute
 
     &::before
       top: 0
