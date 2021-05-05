@@ -149,11 +149,11 @@
             <p>In my spare time I still spend a lot of time on screens, but more as a front-end engineer. I love learning new things, especially with Vue, Nuxt and GSAP. More recently I’m learning the craft of icon design (yup, the ones you saw earlier are born on my computer). I like the idea of crafting myself every pixel of my creations, both in design and code, like this portfolio.</p>
             <SuperLink href="https://github.com/yannglt/yannglt.com" target="_blank" variant="emphasis light" icon="#arrow-forward-20">Read the code behind this website</SuperLink>
             <p>When my hands are not on my mechanical keyboard, I enjoy taking care of my plants, cook/ try some italian recipes with my girlfriend and building LEGO sets.</p>
-            <p>To relax, I dive into work of others designers and developers, thanks to Standards Manual, Increment by Stripe and Offscreen Magazine.</p>
+            <p>To relax, I dive into work of others designers and developers, thanks to Standards Manual, Increment and Offscreen.</p>
             <!-- <p>With this COVID—19/20/21 crisis + global lockdown, I spent a lot of time improving my workspace and discovered myself quite a passion for that (how original). Interested in learning more about my setup ?</p>
             <SuperLink href="" target="_blank" variant="emphasis light" icon="#arrow-forward-20">Discover what it looks like</SuperLink> -->
             <p>I’m also a huge fan of Hip-Hop culture and music. Even if I listen to a lot of US / UK rappers, french rap is deeply anchored in my head + easier to understand as a french person of course. I created playlists for each of my mood, feel free to give it a try!</p>
-            <SuperLink href="" target="_blank" variant="emphasis light" icon="#arrow-forward-20">Listen to my current playlist</SuperLink>
+            <SuperLink href="https://open.spotify.com/playlist/1WjBzk8cP7bhZ6QoForRWa" target="_blank" variant="emphasis light" icon="#arrow-forward-20">Listen to my current playlist</SuperLink>
           </div>
         </div>
       </div>
@@ -349,8 +349,8 @@
             trigger: '.promise',
             pin: true,
             start: 'top +116px',
-            // 1510px (total experiences bloc height - 116px + 56x inital margin top)
-            end: '1450px center',
+            // 1510px (total experiences bloc height + 56x inital margin top)
+            end: '1334px center',
           }
         })
 
