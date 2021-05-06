@@ -35,7 +35,7 @@
               <p class="value heading-3 text-primary-light">Digital Product Designer, Source</p>
             </div>
             <div class="etiquette-property">
-              <p class="name caption">Passion</p>
+              <p class="name caption">Focus</p>
               <p class="value heading-3 text-primary-light">Design Operations</p>
             </div>
             <div class="etiquette-property">
