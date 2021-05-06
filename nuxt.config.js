@@ -55,7 +55,7 @@ export default {
       },
       {
         name:  'og:description',
-        content:  'Personal space of Yann-Edern Gillet, a designer thinking, creating and breaking interfaces, products and systems with a passion for design operations',
+        content:  'Personal space of Yann-Edern Gillet, a designer thinking, creating and breaking interfaces, products and systems with a focus on design operations',
       },
       {
         name:  'twitter:site',
@@ -75,7 +75,7 @@ export default {
       },
       {
         name:  'twitter:description',
-        content:  'Personal space of Yann-Edern Gillet, a designer thinking, creating and breaking interfaces, products and systems with a passion for design operations',
+        content:  'Personal space of Yann-Edern Gillet, a designer thinking, creating and breaking interfaces, products and systems with a focus on design operations',
       },
     ],
     script: [
