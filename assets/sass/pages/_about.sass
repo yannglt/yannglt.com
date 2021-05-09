@@ -857,6 +857,7 @@
       width: 116px
       height: 100%
       top: 0
+      z-index: -5
 
     &:before
       left: -116px
@@ -890,24 +891,96 @@
       +adapt($bkp-desktop-hd)
         grid-column: 7 / span 6
 
-    .caption
-      margin-bottom: $space-xxxs
+      .caption
+        margin-bottom: $space-xxxs
 
-    .quote
-      margin-bottom: $space-m
+      .quote
+        margin-bottom: $space-m
 
-      font-size: 31px
-      line-height: 40px
-      letter-spacing: -1px
+        font-size: 31px
+        line-height: 40px
+        letter-spacing: -1px
 
-    p:not(:first-of-type)
-      margin-top: $space-m
+      p:not(:first-of-type)
+        margin-top: $space-m
 
-    a
-      margin-top: $space-xxxxs
+      a
+        margin-top: $space-xxxxs
 
-      &:not(:last-of-type)
-        margin-bottom: $space-xs
+        &:not(:last-of-type)
+          margin-bottom: $space-xs
+
+  .facts
+    margin-top: $space-xxxxl
+
+    +adapt($bkp-tablet)
+      grid-column: span 6
+
+    +adapt($bkp-desktop-hd)
+      grid-column: span 12
+
+    .facts-intro
+      margin-bottom: 40px
+      padding-bottom: 32px
+
+      border-bottom: 2px solid $oblivion-050
+
+      .title
+        margin-bottom: 8px
+
+      .desc-action
+        display: flex
+        flex-direction: column
+
+        +adapt($bkp-desktop-sd)
+          flex-direction: row
+          align-items: flex-start
+          justify-content: space-between
+
+      .desc
+        width: 100%
+        margin-bottom: 24px
+
+        +adapt($bkp-desktop-sd)
+          margin-bottom: 0
+          width: 60%
+
+        +adapt($bkp-desktop-hd)
+          width: calc(50% - 20px)
+
+      .button
+        flex-grow: 2
+
+        +adapt($bkp-desktop-sd)
+          flex-grow: 0
+
+    .facts-wrapper
+      @extend .gridSystem
+      align-items: flex-start
+
+    .column
+
+      &:not(:first-child)
+        display: none
+
+      +adapt($bkp-tablet)
+        grid-column: span 3
+
+        &:not(:first-child)
+          display: block
+
+        &:last-child
+          display: none
+
+      +adapt($bkp-desktop-hd)
+        grid-column: span 4
+
+        &:last-child
+          display: block
+
+    .fact
+      width: 100%
+      margin-bottom: 40px
 
   .thanks
     position: relative

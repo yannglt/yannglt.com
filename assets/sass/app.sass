@@ -16,6 +16,7 @@
 @import 'components/button'
 @import 'components/link'
 @import 'components/navbar'
+@import 'components/fact'
 @import 'components/clubmodal'
 @import 'components/footer'
 
@@ -1081,22 +1082,12 @@
   //
   //     +motion($time-quick, $weight-small, $speed-standard, transform)
 
-
 .human
-  margin-top: 83px
-  margin-bottom: 940px
-
-  +adapt($bkp-tablet)
-    margin-top: 84px
-    margin-bottom: 816px
-
-  +adapt($bkp-desktop-sd)
-    margin-top: 100px
-    margin-bottom: 772px
+  margin-top: $space-xxl
+  margin-bottom: 672px
 
   +adapt($bkp-desktop-hd)
-    margin-top: 167px
-    margin-bottom: 820px
+    margin-top: $space-xxxl
 
   .container
     @extend .gridSystem
@@ -1123,7 +1114,7 @@
       margin-top: $space-m
       height: 48px
       width: 48px
-      border: 1px solid $oblivion-700
+      border: 2px solid $oblivion-700
       border-radius: 24px
       background-image: url("@/static/icons/logo-white-24.svg")
       background-repeat: no-repeat
@@ -1134,117 +1125,42 @@
     position: relative
 
     +adapt($bkp-tablet)
-      transform: translateY(calc(80px))
+      grid-column: span 6
 
     +adapt($bkp-desktop-sd)
       grid-column: span 6
-      transform: translateY(calc(-64px))
 
     +adapt($bkp-desktop-hd)
       grid-column: 2 / span 10
-      transform: translateY(calc(-12px - 56px))
 
-  .fact
-    position: absolute
-    width: 480px
-    padding: 51px 52px
+    .fact
+      width: 416px
+      position: absolute
+      top: 0
 
-    border: 1px solid $oblivion-700
-    border-radius: 8px
-    background-color: $oblivion-1100
+      &.collapsed .desc
+        max-height: 256px
 
-    box-shadow: 0px 16px 80px 0px rgba(0, 0, 0, 0.8)
-    +motion($time-standard, $weight-xlarge, $speed-emphasized, transform, border-radius)
+      .content::after
+        display: none
 
-    .subtitle
-      +motion($time-quick, $weight-small, $speed-standard, color)
+      .action
+        display: none
 
-    .title
-      margin-top: $space-xxxxs
-      margin-bottom: $space-xs
+      &:nth-child(1)
+        left: calc(104px - 20px)
+        transform-origin: top right
+        transform: rotate3d(0, 0, 1, -15deg) translate3d(-64px, -64px, 0)
 
-    .desc
-      +motion($time-quick, $weight-small, $speed-standard, color)
+      &:nth-child(2)
+        right: calc(104px - 20px)
+        transform-origin: top left
+        transform: rotate3d(0, 0, 1, 15deg) translate3d(64px, -32px, 0)
 
-      p
-        margin-bottom: 16px
-
-        &:last-of-type
-          margin-bottom: 0
-
-    &:nth-child(1)
-      top: 40px
-      left: -16px
-      transform: rotate(-15deg)
-
-      +adapt($bkp-tablet)
-        top: 0
-        left: 0
-
-      +adapt($bkp-desktop-sd)
-        top: -24px
-        left: -48px
-
-      +adapt($bkp-desktop-hd)
-        top: 0
-        left: 0
-
-    &:nth-child(2)
-      top: 264px
-      right: -112px
-      transform: rotate(15deg)
-
-      +adapt($bkp-tablet)
-        top: calc(80px)
-        right: 0
-        transform: rotate(15deg)
-
-      +adapt($bkp-desktop-sd)
-        top: calc(64px + 24px)
-        right: -32px
-
-      +adapt($bkp-desktop-hd)
-        top: calc(56px + 40px)
-        right: -16px
-
-    &:nth-child(3)
-      top: calc(208px + 240px)
-      left: calc(50% + 24px)
-      transform: translateX(-50%) rotate(-7.5deg)
-
-      +adapt($bkp-tablet)
-        top: calc(160px + 80px)
-        left: calc(50% + 16px)
-        transform: translateX(-50%) rotate(-7.5deg)
-
-      +adapt($bkp-desktop-sd)
-        top: calc(208px + 32px)
-
-      +adapt($bkp-desktop-hd)
-        top: calc(208px + 56px)
-
-
-    // Disabled for the moment, uncomment after allow expanding/collapsing notes
-    // &:hover
-    //   border: 1px solid $oblivion-300
-    //   cursor: pointer
-    //
-    //   .factSub
-    //     color: $thunderstorm-500
-    //
-    //   .factDesc
-    //     color: $oblivion-100
-    //
-    // $move: 16px
-    //
-    // &:nth-child(1):hover
-    //   transform: rotate(-15deg) translate(-$move, -$move)
-    //
-    // &:nth-child(2):hover
-    //   transform: rotate(15deg) translate($move, -$move)
-    //
-    // &:nth-child(3):hover
-    //   transform: translate(-50%, -$move) rotate(-7.5deg)
+      &:nth-child(3)
+        left: 50%
+        transform-origin: top center
+        transform: rotate3d(0, 0, 1, -7.5deg) translate3d(calc(-50% - 16px), 128px, 0)
 
 .moodboard.full
 

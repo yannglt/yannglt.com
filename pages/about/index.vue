@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="about-page">
     <div class="gsap-debug-screen"></div>
+
     <section class="moodboard">
       <div class="container">
         <div class="vertical-lines">
@@ -156,6 +157,21 @@
             <SuperLink href="https://open.spotify.com/playlist/1WjBzk8cP7bhZ6QoForRWa" target="_blank" variant="emphasis light" icon="#arrow-forward-20">Listen to my current playlist</SuperLink>
           </div>
         </div>
+        <div class="facts">
+          <div class="facts-intro">
+            <h2 class="title heading-2 text-secondary-light">Quick facts</h2>
+            <div class="desc-action">
+              <p class="desc body text-tertiary-light">Here are some anecdotes and quick facts about my debuts and my current life, both as a human and a product designer.</p>
+              <SuperButton v-if="factsCollapsed" @click.native="expandAllFacts" variant="primary">Expand all facts</SuperButton>
+              <SuperButton v-else @click.native="collapseAllFacts" variant="primary">Collapse all facts</SuperButton>
+            </div>
+          </div>
+          <div class="facts-wrapper">
+            <div class="column" v-for="column in columns">
+              <Fact v-for="fact in column.facts" ref="fact" :key="fact.id" variant="light" :sub="fact.sub" :title="fact.title" :desc="fact.desc"></Fact>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -195,6 +211,7 @@
 
   import SuperButton from '@/components/SuperButton.vue'
   import SuperLink from '@/components/SuperLink.vue'
+  import Fact from '@/components/Fact.vue'
 
   export default {
     head () {
@@ -205,7 +222,7 @@
       }
     },
 
-    data: function () {
+    data() {
       return {
         experiences: [
           {
@@ -235,13 +252,101 @@
             end: 'Nov 2018',
             duration: '1.5 year',
           },
-        ]
+        ],
+        columns: [
+          {
+            key: 'one-two-three',
+            facts: [
+              {
+                id: '1',
+                sub: 'Quick fact #1',
+                title: 'Started practicing visual design with  themes for jailbreaked iPhones at 11 years old',
+                desc: '<p>And it was a real mess at first, as I didn’t know anything about icons or interface design. But with time and practice, I felt in love with all the possibilities Cydia (more or less an AppStore for jailbreaked iPhones) offers for designers and developers as me.</p>'
+              },
+              {
+                id: '2',
+                sub: 'Quick fact #3',
+                title: 'Never stopped playing with LEGO',
+                desc: '<p>In fact, I continue to play while being in high-school, in university and then college, from City, Star Wars or Mars series to my</p>'
+              },
+              {
+                id: '3',
+                sub: 'Quick fact #2',
+                title: 'Dad of 9 healthy plants',
+                desc: '<p>As a lot ot of humans around the globe during the 2020 pandemic + lockdown</p>'
+              }
+            ]
+          },
+          {
+            key: 'four-five-six',
+            facts: [
+              {
+                id: '4',
+                sub: 'Quick fact #3',
+                title: 'Dad of 9 healthy plants',
+                desc: '<p>As a lot ot of humans around the globe during the 2020 pandemic + lockdown</p>'
+              },
+              {
+                id: '5',
+                sub: 'Quick fact #1',
+                title: 'Started practicing visual design with  themes for jailbreaked iPhones at 11 years old',
+                desc: '<p>And it was a real mess at first, as I didn’t know anything about icons or interface design. But with time and practice, I felt in love with all the possibilities Cydia (more or less an AppStore for jailbreaked iPhones) offers for designers and developers as me.</p>'
+              },
+              {
+                id: '6',
+                sub: 'Quick fact #5',
+                title: 'Never stopped playing with LEGO',
+                desc: '<p>In fact, I continue to play while being in high-school, in university and then college, from City, Star Wars or Mars series to my</p>'
+              }
+            ]
+          },
+          {
+            key: 'seven-height-nine',
+            facts: [
+              {
+                id: '7',
+                sub: 'Quick fact #5',
+                title: 'Never stopped playing with LEGO',
+                desc: '<p>In fact, I continue to play while being in high-school, in university and then college, from City, Star Wars or Mars series to my</p>'
+              },
+              {
+                id: '8',
+                sub: 'Quick fact #3',
+                title: 'Dad of 9 healthy plants',
+                desc: '<p>As a lot ot of humans around the globe during the 2020 pandemic + lockdown</p>'
+              },
+              {
+                id: '9',
+                sub: 'Quick fact #1',
+                title: 'Started practicing visual design with  themes for jailbreaked iPhones at 11 years old',
+                desc: '<p>And it was a real mess at first, as I didn’t know anything about icons or interface design. But with time and practice, I felt in love with all the possibilities Cydia (more or less an AppStore for jailbreaked iPhones) offers for designers and developers as me.</p>'
+              }
+            ]
+          }
+        ],
+        factsCollapsed: true
+      }
+    },
+
+    methods: {
+      collapseAllFacts: function() {
+        this.$refs.fact.forEach((fact) => {
+          fact.collapseFact()
+          this.factsCollapsed = !this.factsCollapsed
+        })
+      },
+      expandAllFacts: function() {
+        this.$refs.fact.forEach((fact) => {
+          fact.expandFact()
+          this.factsCollapsed = !this.factsCollapsed
+        })
       }
     },
 
     components: {
       SuperButton,
-      SuperLink
+      SuperLink,
+      Fact
     },
 
     mounted() {
