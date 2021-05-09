@@ -1099,7 +1099,7 @@
     align-items: center
     z-index: 50
 
-    +adapt($bkp-desktop-sd)
+    +adapt($bkp-tablet)
       grid-column: span 6
 
     +adapt($bkp-desktop-hd)
@@ -1141,26 +1141,23 @@
       &.collapsed .desc
         max-height: 256px
 
-      .content::after
-        display: none
-
       .action
         display: none
 
       &:nth-child(1)
-        left: calc(104px - 20px)
-        transform-origin: top right
-        transform: rotate3d(0, 0, 1, -15deg) translate3d(-64px, -64px, 0)
+        left: 50%
+        transform-origin: top center
+        transform: rotate3d(0, 0, 1, -15deg) translate3d(calc(-100% - 48px), -128px, 0)
 
       &:nth-child(2)
-        right: calc(104px - 20px)
-        transform-origin: top left
-        transform: rotate3d(0, 0, 1, 15deg) translate3d(64px, -32px, 0)
+        right: 50%
+        transform-origin: top center
+        transform: rotate3d(0, 0, 1, 15deg) translate3d(calc(100% + 48px), -80px, 0)
 
       &:nth-child(3)
         left: 50%
         transform-origin: top center
-        transform: rotate3d(0, 0, 1, -7.5deg) translate3d(calc(-50% - 16px), 128px, 0)
+        transform: rotate3d(0, 0, 1, -7.5deg) translate3d(calc(-50% - 24px), 128px, 0)
 
 .moodboard.full
 
