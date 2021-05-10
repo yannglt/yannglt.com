@@ -20,7 +20,7 @@
     "@nuxtjs/markdownit": "^2.0.0",
     "@nuxtjs/style-resources": "^1.0.0",
     "contentful": "^8.3.4",
-    "dotenv": "^8.5.1",
+    "dotenv": "^9.0.1",
     "eslint": "^7.21.0",
     "eslint-plugin-vue": "^7.9.0",
     "gsap": "^3.6.1",
