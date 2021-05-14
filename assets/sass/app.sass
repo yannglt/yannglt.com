@@ -1108,7 +1108,7 @@
     align-items: center
     z-index: 50
 
-    +adapt($bkp-desktop-sd)
+    +adapt($bkp-tablet)
       grid-column: span 6
 
     +adapt($bkp-desktop-hd)
@@ -1134,10 +1134,10 @@
     position: relative
 
     +adapt($bkp-tablet)
+      grid-column: span 6
       transform: translateY(calc(80px))
 
     +adapt($bkp-desktop-sd)
-      grid-column: span 6
       transform: translateY(calc(-64px))
 
     +adapt($bkp-desktop-hd)
@@ -1163,7 +1163,7 @@
       margin-top: $space-xxxxs
       margin-bottom: $space-xs
 
-    .desc
+    .body
       +motion($time-quick, $weight-small, $speed-standard, color)
 
       p
@@ -1171,6 +1171,12 @@
 
         &:last-of-type
           margin-bottom: 0
+
+      a
+        color: $thunderstorm-500
+
+        &:hover
+          text-decoration: underline
 
     &:nth-child(1)
       top: 40px
