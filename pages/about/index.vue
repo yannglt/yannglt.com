@@ -252,7 +252,7 @@
             facts: [
               {
                 id: '1',
-                title: 'Started practicing visual design with  themes for jailbreaked iPhones at 11 years old',
+                title: 'Started practicing visual design with  themes for jailbreaked iPhones at 11',
                 desc: '<p>And it was a real mess at first, as I didn’t know anything about icons or interface design. But with time and practice, I felt in love with all the possibilities Cydia (more or less an AppStore for jailbreaked iPhones) offers for designers and developers as me.</p><p>I started my journey with Photofiltre Studio X, then downloaded a hacked version of Photoshop CS5 to be able to follow the community tutorials on masking, shadows and other effects...</p><p>As I was too young to have a PayPal account, I had to ask my mother to create one to publish my first paid theme on this hidden marketplace.</p>'
               },
               {
