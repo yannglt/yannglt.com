@@ -168,7 +168,7 @@
           </div>
           <div class="facts-wrapper">
             <div class="column" v-for="column in columns">
-              <Fact v-for="fact in column.facts" ref="fact" :key="fact.id" variant="light" :sub="fact.sub" :title="fact.title" :desc="fact.desc"></Fact>
+              <Fact v-for="fact in column.facts" ref="fact" :key="fact.id" variant="light" :id="fact.id" :title="fact.title" :desc="fact.desc"></Fact>
             </div>
           </div>
         </div>
@@ -255,71 +255,77 @@
         ],
         columns: [
           {
-            key: 'one-two-three',
+            key: 'one-four-seven-ten',
             facts: [
               {
                 id: '1',
-                sub: 'Quick fact #1',
                 title: 'Started practicing visual design with  themes for jailbreaked iPhones at 11 years old',
-                desc: '<p>And it was a real mess at first, as I didn’t know anything about icons or interface design. But with time and practice, I felt in love with all the possibilities Cydia (more or less an AppStore for jailbreaked iPhones) offers for designers and developers as me.</p>'
+                desc: '<p>And it was a real mess at first, as I didn’t know anything about icons or interface design. But with time and practice, I felt in love with all the possibilities Cydia (more or less an AppStore for jailbreaked iPhones) offers for designers and developers as me.</p><p>I started my journey with Photofiltre Studio X, then downloaded a hacked version of Photoshop CS5 to be able to follow the community tutorials on masking, shadows and other effects...</p><p>As I was too young to have a PayPal account, I had to ask my mother to create one to publish my first paid theme on this hidden marketplace.</p>'
               },
               {
-                id: '2',
-                sub: 'Quick fact #3',
-                title: 'Never stopped playing with LEGO',
-                desc: '<p>In fact, I continue to play while being in high-school, in university and then college, from City, Star Wars or Mars series to my</p>'
+                id: '4',
+                title: 'Hip-Hop listener',
+                desc: '<p>My favorite french rappers are: Alpha Wann, Népal, Nekfeu, Fixpen Sill, Josman and Triplego. And for the U.S., I enjoy listening to Kid Cudi, ScHoolboy-Q, Kendrick Lamar, Mobb Deep and Joey Bada$$ songs.</p><p>I would love to know what\'s your favorite ones and discover new bangers or artists, let me know on Twitter!</p>'
               },
               {
-                id: '3',
-                sub: 'Quick fact #2',
-                title: 'Dad of 9 healthy plants',
-                desc: '<p>As a lot ot of humans around the globe during the 2020 pandemic + lockdown</p>'
+                id: '7',
+                title: 'Big fan of David Fincher\'s work',
+                desc: '<p>I watch and rewatch again and again a lot of his movies, especially Fight Club (one of my favorite), The Social Network, and House of Cards. Among all the commonalities of his works, what I particularly appreciate is his talent for telling a story, very often tinged with drama and crime.</p><p>From a more technical point of view, I appreciate his control of his scenes, his deep sense of detail, and his compositional choices in every movie.</p>'
+              },
+              {
+                id: '10',
+                title: 'Learned perspective while drawing NYC’skyscrapers from Spider-Man movies at 8',
+                desc: '<p>New York City landscape was ideal to learn how to draw realistic lines while imagining new stories for this superhero.</p><p>As these skyscrapers tend to be very repetitive, I often only draw the last five floors and use the remaining space of my A4 sheet for a pose of Spider-Man.</p>'
               }
             ]
           },
           {
-            key: 'four-five-six',
+            key: 'two-five-eight-eleven',
             facts: [
               {
-                id: '4',
-                sub: 'Quick fact #3',
-                title: 'Dad of 9 healthy plants',
-                desc: '<p>As a lot ot of humans around the globe during the 2020 pandemic + lockdown</p>'
+                id: '2',
+                title: 'Never stopped playing with LEGO bricks',
+                desc: '<p>In fact, I continue to play while being in high-school, in university and then college, from City, Star Wars or Mars series to my current Architecture collection, these little bricks help me to stay away from the screen every once in a while.</p><p>I’m not a huge collector anymore but I’m still obsessed with certain pieces and I’m always trying to find good excuses to buy some kits.</p>'
               },
               {
                 id: '5',
-                sub: 'Quick fact #1',
-                title: 'Started practicing visual design with  themes for jailbreaked iPhones at 11 years old',
-                desc: '<p>And it was a real mess at first, as I didn’t know anything about icons or interface design. But with time and practice, I felt in love with all the possibilities Cydia (more or less an AppStore for jailbreaked iPhones) offers for designers and developers as me.</p>'
+                title: 'Started code with .ini plugins for Windows Vista',
+                desc: '<p>After falling in love with the Apple ecosystem with my first iPod, I searched for a way to mimic OS X Lion\'s appearance with the dock, clean desktop, top status bar, and everything.</p><p>A way to achieve that on my PC was to "Universal Theme Patcher", download some plugins, and tadaaa, here we are a customOS X on my old Vista machine.</p>'
               },
               {
-                id: '6',
-                sub: 'Quick fact #5',
-                title: 'Never stopped playing with LEGO',
-                desc: '<p>In fact, I continue to play while being in high-school, in university and then college, from City, Star Wars or Mars series to my</p>'
+                id: '8',
+                title: 'Wrote an essay on design systems in 2018 during my 4th year of study',
+                desc: '<p>During 6 months, I had the chance to interview Brad Frost, Koen Bok, Valentin Chrétien as well as designers at Source and dig in design systems and their impacts, on product teams and end-users.</p><p>Since then, I developed a strong interest for design operations, systems and APIs, inspired by the work of Benjamin Wilkins, Diana Mounter, Dan Eden, Matthew Ström, Nathan Curtis, Louis Chenais, Yesenia Perez-Cruz and Josh Mateo.</p>'
+              },
+              {
+                id: '11',
+                title: 'Learned to draw while reproducing 156 first Pokémons',
+                desc: '<p>When I was a kid, around 7 or 8yo, and get my first cartridge of Pokémon Yellow with my best friend Pikachu, my father taught me how to draw. I remember to hang each new design on the kitchen wall and plan our next drawing session.</p><p>Discovering and learning each evolution stage of these adorable monsters was one of my first obsessions, like many others kids for sure. </p>'
               }
             ]
           },
           {
-            key: 'seven-height-nine',
+            key: 'three-six-nine-twelve',
             facts: [
               {
-                id: '7',
-                sub: 'Quick fact #5',
-                title: 'Never stopped playing with LEGO',
-                desc: '<p>In fact, I continue to play while being in high-school, in university and then college, from City, Star Wars or Mars series to my</p>'
+                id: '3',
+                title: 'Dad of 9 healthy plants',
+                desc: '<p>As a lot ot of humans around the globe during the 2020 pandemic + lockdown, I decided to improve my workspace and bring more life to my apartment.</p><p>With my loved one, Sabrina (go check her portfolio), we chose plants from different places of the world and after running trials, we found out how to mix LEGOs and our green newcommers.</p>'
               },
               {
-                id: '8',
-                sub: 'Quick fact #3',
-                title: 'Dad of 9 healthy plants',
-                desc: '<p>As a lot ot of humans around the globe during the 2020 pandemic + lockdown</p>'
+                id: '6',
+                title: 'Rachet & Clank saga big fan',
+                desc: '<p>I started playing this awesome game on my PlayStation 2 with Deadlocked opus. I kept following this saga along the years and console generations.</p><p>I am more than excited for the Rift Apart opus and can\'t wait to try PS5 new features with ray-tracing, adaptative triggers and haptic feedback. And of course, beat again Dr. Nefarious!</p>'
               },
               {
                 id: '9',
-                sub: 'Quick fact #1',
-                title: 'Started practicing visual design with  themes for jailbreaked iPhones at 11 years old',
-                desc: '<p>And it was a real mess at first, as I didn’t know anything about icons or interface design. But with time and practice, I felt in love with all the possibilities Cydia (more or less an AppStore for jailbreaked iPhones) offers for designers and developers as me.</p>'
+                title: 'Learn about the real order of Star Wars movies 3 years after watching the ninth on',
+                desc: '<p>Shaaame, I know. For a very long time, I thought Episodes I, II, and III were logically the first ones that were out and never understood why Episodes IV, V, and VI were so different visually.</p><p>It was only after a conversation with my loved one about our favorite characters that I checked for the first time the release date of these movies and understood.</p>'
+              },
+              {
+                id: '12',
+                title: 'Learned code with Python Turtle at 16',
+                desc: '<p>Yeap and that was a mess at first. Even if programming with this module was a good idea as visual plays a key role in understanding loops, variables, etc.</p><p>For my end-of-the-year project, we try to recreate the famous Breakout game with my team. We started from zero and even designing bricks in pixel art on GIMP.</p>'
               }
             ]
           }
@@ -332,13 +338,13 @@
       collapseAllFacts: function() {
         this.$refs.fact.forEach((fact) => {
           fact.collapseFact()
-          this.factsCollapsed = !this.factsCollapsed
+          this.factsCollapsed = true
         })
       },
       expandAllFacts: function() {
         this.$refs.fact.forEach((fact) => {
           fact.expandFact()
-          this.factsCollapsed = !this.factsCollapsed
+          this.factsCollapsed = false
         })
       }
     },

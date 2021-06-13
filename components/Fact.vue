@@ -1,7 +1,7 @@
 <template lang="html">
   <div :class="[ collapsed ? 'collapsed' : 'expanded', variant ]" class="fact">
     <div class="content">
-      <p class="subtitle caption":class="'text-tertiary-' + variant">{{ sub }}</p>
+      <p class="subtitle caption":class="'text-tertiary-' + variant">Quick fact #{{ id }}</p>
       <p class="title heading-3":class="'text-secondary-' + variant">{{ title }}</p>
       <div class="desc body" :class="'text-quaternary-' + variant" v-html="desc"></div>
     </div>
@@ -24,7 +24,7 @@
 
     props: {
       variant: { type: String, default: '', required: 'true' },
-      sub: { type: String, default: '', required: true },
+      id: { type: String, default: 0, required: 'true' },
       title: { type: String, default: '', required: true },
       desc: { type: String, default: '', required: true }
     },
