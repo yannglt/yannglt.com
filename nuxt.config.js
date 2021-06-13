@@ -110,7 +110,7 @@ export default {
   /*
   ** Nuxt.js modules
   */
-  modules: [ '@nuxtjs/axios', '@nuxtjs/markdownit' ],
+  modules: [ '@nuxtjs/axios', '@nuxtjs/markdownit', '@nuxtjs/sitemap' ],
 
   markdownit: {
     injected: true

@@ -24,7 +24,7 @@
 
     props: {
       variant: { type: String, default: '', required: 'true' },
-      id: { type: String, default: 0, required: 'true' },
+      id: { type: String, default: '' },
       title: { type: String, default: '', required: true },
       desc: { type: String, default: '', required: true }
     },
