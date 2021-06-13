@@ -1,9 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg">
   <symbol id="arrow-forward-20" viewBox="0 0 20 20">
-    <path d="M10.0007 3.33337L8.82565 4.50837L13.4756 9.16671H3.33398V10.8334H13.4756L8.82565 15.4917L10.0007 16.6667L16.6673 10L10.0007 3.33337Z"/>
-  </symbol>
-  <symbol id="arrow-forward-20" viewBox="0 0 20 20">
     <path d="M10 3.58569L16.4142 9.99991L10 16.4141L8.58579 14.9999L12.5858 10.9999H3V8.99991H12.5858L8.58579 4.99991L10 3.58569Z"/>
+  </symbol>
+  <symbol id="chevron-up-20" viewBox="0 0 20 20">
+    <path d="M10.0002 6.58578L15.4144 12L14.0002 13.4142L10.0002 9.41421L6.00015 13.4142L4.58594 12L10.0002 6.58578Z"/>
+  </symbol>
+  <symbol id="chevron-down-20" viewBox="0 0 20 20">
+    <path d="M6.00015 6.58578L10.0002 10.5858L14.0002 6.58578L15.4144 8L10.0002 13.4142L4.58594 8L6.00015 6.58578Z"/>
+  </symbol>
+  <symbol id="chevron-left-20" viewBox="0 0 20 20">
+    <path d="M13.4144 6L9.41436 10L13.4144 14L12.0002 15.4142L6.58594 10L12.0002 4.58578L13.4144 6Z"/>
+  </symbol>
+  <symbol id="chevron-right-20" viewBox="0 0 20 20">
+    <path d="M8.00015 4.58578L13.4144 10L8.00015 15.4142L6.58594 14L10.5859 10L6.58594 6L8.00015 4.58578Z"/>
   </symbol>
   <symbol id="arrow-forward-12" viewBox="0 0 12 12">
     <path d="M6.0005 0.585449L11.4147 5.99966L6.0005 11.4139L4.58628 9.99966L7.58628 6.99966H1V4.99966H7.58628L4.58628 1.99966L6.0005 0.585449Z"/>
@@ -30,6 +39,9 @@
   <symbol id="add-20" viewBox="0 0 20 20">
     <path d="M11 3V17H9V3H11Z"/>
     <path d="M3 9V11H17V9H3Z"/>
+  </symbol>
+  <symbol id="minus-20" viewBox="0 0 20 20">
+    <path d="M3 9H17V11H3V9Z"/>
   </symbol>
   <symbol id="mail-20" viewBox="0 0 20 20">
     <path d="M2 4H18V16H2V4ZM5.70326 6L10 9.68292L14.2967 6H5.70326ZM16 7.17422L10 12.3171L4 7.17422V14H16V7.17422Z"/>

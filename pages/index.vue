@@ -150,7 +150,7 @@
           <div class="human-intro-logo"></div>
         </div>
         <div class="facts">
-          <Fact v-for="fact in facts" :key="fact.id" :sub="fact.sub" :title="fact.title" :desc="fact.desc"></Fact>
+          <Fact v-for="fact in facts" :key="fact.id" variant="dark" :sub="fact.sub" :title="fact.title" :desc="fact.desc"></Fact>
         </div>
       </div>
     </section>
@@ -173,13 +173,6 @@
   import CopyToast from '@/components/CopyToast.vue'
 
   export default {
-    head () {
-      return {
-        meta: [
-          { hid: 'robots', name: 'robots', content: 'noindex, nofollow' }
-        ]
-      }
-    },
 
     data() {
       return {
@@ -187,14 +180,14 @@
           {
             id: '0',
             sub: 'Quick fact #1',
-            title: 'Started practicing visual design at 11 with themes for jailbreaked iPhones',
-            desc: '<p>And it was a real mess at first, as I didn’t know anything about icons or interface design. But with time and practice, I felt in love with all the possibilities Cydia (more or less an AppStore for jailbreaked iPhones) offers for designers and developers as me.</p><p>I started my journey with Photofiltre Studio X, then downloaded a hacked version of Photoshop CS5 to be able to follow the community tutorials on masking, shadows and other effects...</p><p>As I was too young to have a PayPal account, I had to ask my mother to create one to publish my first paid theme on this hidden marketplace.</p>'
+            title: 'Started practicing visual design with  themes for jailbreaked iPhones at 11 years old',
+            desc: '<p>And it was a real mess at first, as I didn’t know anything about icons or interface design. But with time and practice, I felt in love with all the possibilities Cydia (more or less an AppStore for jailbreaked iPhones) offers for designers and developers as me.</p>'
           },
           {
             id: '1',
             sub: 'Quick fact #3',
             title: 'Never stopped playing with LEGO',
-            desc: '<p>In fact, I continue to play while being in high-school, in university and then college, from City, Star Wars or Mars series to my current Architecture collection, these little bricks help me to stay away from the screen every once in a while.</p><p>I’m not a huge collector anymore but I’m still obsessed with certain pieces and I’m always trying to find good excuses to buy some.</p>'
+            desc: '<p>In fact, I continue to play while being in high-school, in university and then college, from City, Star Wars or Mars series to my current Architecture collection, these little bricks help me to stay away from the screen every once in a while.</p>'
           },
           {
             id: '2',

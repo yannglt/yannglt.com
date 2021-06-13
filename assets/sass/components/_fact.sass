@@ -1,0 +1,111 @@
+.fact
+  width: 376px
+  border-radius: 8px
+
+  .content
+    padding: 32px
+    position: relative
+
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 1px
+      height: 128px
+      width: calc(100% - 2px)
+      border-bottom-left-radius: 8px
+      border-bottom-right-radius: 8px
+
+      +motion($time-quick, $weight-small, $speed-standard, opacity)
+
+  .title
+    margin-bottom: $space-xxxs
+
+  .desc
+    +motion($time-medium, $weight-medium, $speed-standard, max-height)
+
+    p:not(:last-of-type)
+      margin-bottom: 16px
+
+  .action
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 2px 0 $space-xxxxs
+
+    .button
+      flex-grow: 2
+      border-radius: 0
+
+      .label, .icon
+        +motion($time-standard, $weight-small, $speed-standard, color)
+
+      &:hover, &:active
+        background: transparent
+
+.fact.dark
+  background-color: $oblivion-1100
+  outline: 2px solid $oblivion-700
+
+  .content::after
+    background: linear-gradient(to top, rgba($oblivion-1100,1) 24%, rgba($oblivion-1100,0))
+
+  .action
+    border-top: 2px solid $oblivion-700
+
+    .label
+      color: $oblivion-100
+
+    .icon
+      color: $oblivion-300
+
+    &:hover
+
+      .label
+        color: $thunderstorm-500
+
+      .icon
+        color: $thunderstorm-700
+
+.fact.light
+  outline: 2px solid $oblivion-050
+
+  .content::after
+    background: linear-gradient(to top, rgba(#ffffff,1) 24%, rgba(#ffffff,0))
+
+  .subtitle
+    color: $maelstrom-500
+
+  .action
+    border-top: 2px solid $oblivion-050
+
+    .label
+      color: $oblivion-500
+
+    .icon
+      color: $oblivion-700
+
+    &:hover
+
+      .label
+        color: $maelstrom-500
+
+      .icon
+        color: $maelstrom-700
+
+.fact.collapsed
+
+  .desc
+    max-height: calc(24px * 4)
+    overflow: hidden
+
+.fact.expanded
+
+  .content
+
+    &::after
+      opacity: 0
+
+  .desc
+    max-height: 440px
+    overflow: hidden

@@ -110,7 +110,19 @@ export default {
   /*
   ** Nuxt.js modules
   */
-  modules: [ '@nuxtjs/axios', '@nuxtjs/markdownit' ],
+  modules: [ '@nuxtjs/axios', '@nuxtjs/markdownit', '@nuxtjs/sitemap' ],
+
+  sitemap: {
+    hostname: 'https://yannglt.com',
+    gzip: true,
+    routes: [
+      '/',
+      '/about',
+      '/about/moodboard',
+      'notes',
+      'contact'
+    ]
+  },
 
   markdownit: {
     injected: true
