@@ -173,13 +173,6 @@
   import CopyToast from '@/components/CopyToast.vue'
 
   export default {
-    head () {
-      return {
-        meta: [
-          { hid: 'robots', name: 'robots', content: 'noindex, nofollow' }
-        ]
-      }
-    },
 
     data() {
       return {
