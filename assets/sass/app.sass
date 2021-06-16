@@ -1126,78 +1126,17 @@
 
     +adapt($bkp-tablet)
       grid-column: span 6
-      transform: translateY(calc(80px))
 
     +adapt($bkp-desktop-sd)
-      transform: translateY(calc(-64px))
+      grid-column: span 6
 
     +adapt($bkp-desktop-hd)
       grid-column: 2 / span 10
 
-    box-shadow: 0px 16px 80px 0px rgba(0, 0, 0, 0.8)
-    +motion($time-standard, $weight-xlarge, $speed-emphasized, transform, border-radius)
-
-    .subtitle
-      +motion($time-quick, $weight-small, $speed-standard, color)
-
-    .title
-      margin-top: $space-xxxxs
-      margin-bottom: $space-xs
-
-    .body
-      +motion($time-quick, $weight-small, $speed-standard, color)
-
-      p
-        margin-bottom: 16px
-
-        &:last-of-type
-          margin-bottom: 0
-
-      a
-        color: $thunderstorm-500
-
-        &:hover
-          text-decoration: underline
-
-    &:nth-child(1)
-      top: 40px
-      left: -16px
-      transform: rotate(-15deg)
-
-      +adapt($bkp-tablet)
-        top: 0
-        left: 0
-
-      +adapt($bkp-desktop-sd)
-        top: -24px
-        left: -48px
-
-      +adapt($bkp-desktop-hd)
-        top: 0
-        left: 0
-
-    &:nth-child(2)
-      top: 264px
-      right: -112px
-      transform: rotate(15deg)
-
-      +adapt($bkp-tablet)
-        top: calc(80px)
-        right: 0
-        transform: rotate(15deg)
-
-      +adapt($bkp-desktop-sd)
-        top: calc(64px + 24px)
-        right: -32px
-
-      +adapt($bkp-desktop-hd)
-        top: calc(56px + 40px)
-        right: -16px
-
-    &:nth-child(3)
-      top: calc(208px + 240px)
-      left: calc(50% + 24px)
-      transform: translateX(-50%) rotate(-7.5deg)
+    .fact
+      width: 416px
+      position: absolute
+      top: 0
 
       .action
         display: none
@@ -1220,68 +1159,68 @@
         transform-origin: top center
         transform: rotate3d(0, 0, 1, -7.5deg) translate3d(calc(-50% - 24px), 128px, 0)
 
-.moodboard.full
-
-  .container
-    height: 1872px
-    position: relative
-
-  .image
-    position: absolute
-    top: 40px
-    left: 64px
-    height: 416px
-    width: 520px
-
-    background-image: url('@/static/images/moodboard-test.jpg')
-    background-size: cover
-    background-position: center center
-
-    &.is-resizing
-
-      &::before, .anchor
-        outline: 2px solid $thunderstorm-500
-
-    &.is-rotating
-
-      &::before, .anchor
-        outline: 2px solid $firework-500
-
-    &::before
-      content: ''
-      position: absolute
-      top: 50%
-      left: 50%
-      height: calc(100% - 2px)
-      width: calc(100% - 2px)
-
-      outline: 2px solid $oblivion-100
-      transform: translate(-50%, -50%)
-
-    .anchor
-      position: absolute
-      height: 8px
-      width: 8px
-
-      background-color: $oblivion-1100
-      outline: 2px solid $oblivion-100
-
-      &.ne
-        top: -4px
-        right: -4px
-        cursor: ne-resize
-
-      &.nw
-        top: -4px
-        left: -4px
-        cursor: nw-resize
-
-      &.se
-        bottom: -4px
-        right: -4px
-        cursor: se-resize
-
-      &.sw
-        bottom: -4px
-        left: -4px
-        cursor: sw-resize
+// .moodboard.full
+//
+//   .container
+//     height: 1872px
+//     position: relative
+//
+//   .image
+//     position: absolute
+//     top: 40px
+//     left: 64px
+//     height: 416px
+//     width: 520px
+//
+//     background-image: url('@/static/images/moodboard-test.jpg')
+//     background-size: cover
+//     background-position: center center
+//
+//     &.is-resizing
+//
+//       &::before, .anchor
+//         outline: 2px solid $thunderstorm-500
+//
+//     &.is-rotating
+//
+//       &::before, .anchor
+//         outline: 2px solid $firework-500
+//
+//     &::before
+//       content: ''
+//       position: absolute
+//       top: 50%
+//       left: 50%
+//       height: calc(100% - 2px)
+//       width: calc(100% - 2px)
+//
+//       outline: 2px solid $oblivion-100
+//       transform: translate(-50%, -50%)
+//
+//     .anchor
+//       position: absolute
+//       height: 8px
+//       width: 8px
+//
+//       background-color: $oblivion-1100
+//       outline: 2px solid $oblivion-100
+//
+//       &.ne
+//         top: -4px
+//         right: -4px
+//         cursor: ne-resize
+//
+//       &.nw
+//         top: -4px
+//         left: -4px
+//         cursor: nw-resize
+//
+//       &.se
+//         bottom: -4px
+//         right: -4px
+//         cursor: se-resize
+//
+//       &.sw
+//         bottom: -4px
+//         left: -4px
+//         cursor: sw-resize
