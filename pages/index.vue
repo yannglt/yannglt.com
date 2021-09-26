@@ -1,9 +1,9 @@
 <template lang="html">
   <div id="app">
     <div class="gsap-debug-screen"></div>
-    <div class="new-space">
+    <div class="news-banner">
       <div class="container">
-        <nuxt-link to="notes/lets-open-the-garage-door" title="" class="body">Welcome on my new space on the Internets.<span class="line-breaker"><br></span><span class="link">Learn more about this new version<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></span></nuxt-link>
+        <nuxt-link to="notes/a-new-adventure-at-specify" title="" class="body">Now Product Designet at Specify.<span class="line-breaker"><br></span><span class="link">Learn more about my career update<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></span></nuxt-link>
       </div>
     </div>
 
@@ -32,7 +32,7 @@
             </div>
             <div class="etiquette-property">
               <p class="name caption">Current position</p>
-              <p class="value heading-3 text-primary-light">Digital Product Designer, Source</p>
+              <p class="value heading-3 text-primary-light">Product Designer, Specify</p>
             </div>
             <div class="etiquette-property">
               <p class="name caption">Focus</p>
@@ -107,8 +107,8 @@
             </div>
             <div class="current-position">
               <p class="caption">Current position</p>
-              <p class="title heading-3">Product Designer, Source</p>
-              <p class="description body text-secondary-light">Design company providing value through design solutions, technical expertise and financial support</p>
+              <p class="title heading-3">Product Designer, Specify</p>
+              <p class="description body text-secondary-light">Design Data Platform collecting, storing and distributing design tokens and assets — automatically</p>
             </div>
             <div class="passion">
               <p class="caption">With a passion for</p>
@@ -305,7 +305,7 @@
           }, 'electricityDiagrams+=0.240')
         })
 
-        tldrTimeline.from('.new-space', {
+        tldrTimeline.from('.news-banner', {
           duration: 0.240,
           y: -48,
           clearProps: 'all'

@@ -728,6 +728,7 @@
       .experience
         position: relative
         margin-left: 48px
+        padding-bottom: $space-l
 
         +adapt($bkp-desktop-hd)
           margin-left: 0
@@ -735,7 +736,7 @@
         &:nth-child(1) .position::before
           height: 0
 
-        &:nth-child(3)
+        &:nth-child(4)
 
           &::before
             height: 0
@@ -786,10 +787,12 @@
           margin-bottom: $space-xxs
 
         .desc
-          padding-bottom: $space-l
 
           p:not(:last-of-type)
             margin-bottom: $space-xs
+
+        .link
+          margin-top: $space-xs
 
       .numbers
         margin-top: $space-xl

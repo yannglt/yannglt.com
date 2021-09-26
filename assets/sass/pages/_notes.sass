@@ -1,10 +1,11 @@
 .notes-page .notes
   // Inital spacing + navbar height
   margin-top: calc(#{$space-xxl} + 96px)
-  margin-bottom: $space-xxxl
+  margin-bottom: calc(#{$space-xxxl} - #{$space-l})
 
   +adapt($bkp-desktop-hd)
     margin-top: calc(#{$space-xxxl} + 96px)
+    margin-bottom: calc(#{$space-xxxxl} - #{$space-xl})
 
   .container
     @extend .gridSystem
@@ -48,27 +49,30 @@
       .note-date::before
         height: 0
 
-    +adapt($bkp-desktop-sd)
+    +adapt($bkp-mobile)
+      padding-left: $space-m
+
+    +adapt($bkp-tablet)
       // Only one note at the moment, uncomment when publishing the second article:
-      // padding-left: $space-l
+      padding-left: $space-l
 
   .note-title
     margin-bottom: $space-xxxs
     position: relative
     // Only one note at the moment, pass this property to hover when publishing the second article:
-    text-decoration: underline
 
     &:hover
       cursor: pointer
+      text-decoration: underline
 
       .icon
         opacity: 1
         transform: translateX(0)
 
     // Only one note at the moment, uncomment when publishing the second article
-    // &::before, &::after
-    //   content: ''
-    //   position: absolute
+    &::before, &::after
+      content: ''
+      position: absolute
 
     &::before
       top: 0

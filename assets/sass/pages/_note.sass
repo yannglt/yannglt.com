@@ -61,18 +61,29 @@
     h2
       @extend .heading-2
       @extend .text-secondary-dark
-      margin-top: $space-m
-      margin-bottom: $space-xs
+      margin-top: $space-xl
+      margin-bottom: $space-xxxs
 
     h3
       @extend .heading-3
       @extend .text-secondary-dark
-      margin-top: $space-m
-      margin-bottom: $space-xxs
+      margin-top: $space-xl
+      margin-bottom: $space-xxxxs
 
+    figure
+      margin-bottom: $space-xl
+      @extend .text-quaternary-dark
+    
     img
       max-width: 100%
-      margin-bottom: $space-xl
+      margin-bottom: $space-xs
+      border-radius: 4px
+      border: 4px solid $oblivion-1100
+      outline: 2px solid $oblivion-700
+
+    ficaption
+      caption-side: bottom-outside
+      display: table-caption
 
   .note-end
     display: flex

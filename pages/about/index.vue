@@ -97,7 +97,7 @@
       <div class="container">
         <div class="promise">
           <p class="caption">How and Where I work(ed)</p>
-          <h2 class="title heading-1 text-primary-dark">I make and verify hypothesis by creating and breaking solutions again and again until reaching users’ delight and company’s vision.</h2>
+          <h2 class="title heading-1 text-primary-dark">I make and verify hypothesis by creating and breaking solutions until reaching users’ delight and company’s vision.</h2>
           <div class="desc emphasis text-tertiary-dark">
             <p>Started from <span class="drake">the bottom </span>the original problem(s) and make sure we try to tackle the correct one(s) is essential to make sure we provide efficient solutions to users and businesses.</p>
             <p>Also, I always try to find a great balance between following the choosen methodology and keeping velocity and efficiency through the entire journey.</p>
@@ -112,6 +112,7 @@
             <p class="position heading-3 text-secondary-dark">{{ experience.company }}, {{ experience.position }}</p>
             <p class="duration caption text-quaternary-dark">{{ experience.start }} - {{ experience.end }} ({{experience.duration}})</p>
             <div class="desc body text-tertiary-dark" v-html="experience.desc"></div>
+            <SuperLink v-if="experience.link" :href="'/notes/' + experience.link" variant="body dark" icon="#arrow-forward-20" class="link">{{ experience.linkTitle }}</SuperLink>
           </div>
           <div class="numbers">
             <div class="clients">
@@ -220,15 +221,26 @@
         experiences: [
           {
             id: '0',
-            company: 'Source',
+            company: 'Specify',
             position: 'Product Designer',
-            desc: '<p>Source exists to help its clients and partners to fight against preconceptions, thanks to a rational and user-centered approach. We tailor sleek and efficient solutions to suit user and business needs.</p><p>I work closely with multiple industry-related startups and companies, by doing user research, workshops around brand vision and strategy, setting up experience maps and user journeys, to building high-fidelity prototypes and developed solutions.</p><p>6-month internship, 1 year apprenticeship and full-time employee since January 2019.</p>',
-            start: 'Jul 2018',
+            desc: '<p>Specify is a Design Data Platform, helping teams unify their brand identity by collecting, storing, transforming and distributing design tokens and assets — automatically.</p>',
+            start: 'Sept 2021',
             end: 'Now',
-            duration: '3 years',
+            duration: '1 month',
+            link: 'a-new-adventure-at-specify',
+            linkTitle: 'Read more about my new adventure',
           },
           {
             id: '1',
+            company: 'Source',
+            position: 'Product Designer',
+            desc: '<p>Source exists to help its clients and partners to fight against preconceptions, thanks to a rational and user-centered approach.</p><p>I worked closely with multiple industry-related startups and companies, by doing user research, workshops around brand vision and strategy, setting up experience maps and user journeys, to building high-fidelity prototypes and developed solutions.</p><p>6-month internship, 1 year apprenticeship and full-time employee from January 2019 to August 2021.</p>',
+            start: 'Jul 2018',
+            end: 'Aug 2021',
+            duration: '3.2 years',
+          },
+          {
+            id: '2',
             company: 'Freelance',
             position: 'Product Designer',
             desc: '<p>I am providing value to early and mid-stage companies through product & brand design services and design system expertise.</p>',
@@ -237,7 +249,7 @@
             duration: '3.5 years',
           },
           {
-            id: '2',
+            id: '3',
             company: 'Synerg\' hetic',
             position: 'Design Consultant',
             desc: '<p>I implemented design methodologies to the global positioning of the Junior Company while working closely with startups around minimum viable products and ideation workshops.</p>',
@@ -288,7 +300,7 @@
               {
                 id: '8',
                 title: 'Wrote an essay on design systems in 2018 during my 4th year of study',
-                desc: '<p>During 6 months, I had the chance to interview Brad Frost, Koen Bok, Valentin Chrétien as well as designers at Source and dig in design systems and their impacts, on product teams and end-users.</p><p>Since then, I developed a strong interest for design operations, systems and APIs, inspired by the work of Benjamin Wilkins, Diana Mounter, Dan Eden, Matthew Ström, Nathan Curtis, Louis Chenais, Yesenia Perez-Cruz and Josh Mateo.</p>'
+                desc: '<p>During 6 months, I had the chance to interview Brad Frost, Koen Bok, Valentin Chrétien as well as designers at Source and dig in design systems and their impacts, on product teams and end-users.</p><p>Since then, I developed a strong interest for design operations, systems and APIs, inspired by the work of Benjamin Wilkins, Diana Mounter, Dan Eden, Matthew Ström, Jina Anne, Nathan Curtis, Tatiana Mac, Louis Chenais, Yesenia Perez-Cruz, and Josh Mateo.</p>'
               },
               {
                 id: '11',
@@ -452,7 +464,7 @@
             // markers: true,
             trigger: '.promise',
             pin: true,
-            start: 'top +116px',
+            start: 'top +64px',
             // 1510px (total experiences bloc height + 56x inital margin top)
             end: '1334px center',
           }

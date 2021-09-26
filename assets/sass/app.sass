@@ -41,7 +41,7 @@
   +adapt($bkp-desktop-hd)
     display: block
 
-.new-space
+.news-banner
   position: fixed
   top: 0
   left: 0
@@ -51,7 +51,9 @@
   flex-direction: column
   justify-content: center
   align-items: flex-end
-  background-color: $maelstrom-500
+  // background-color: $maelstrom-500
+  // Special background-color for Specify job update
+  background-color: #624DE3
   z-index: 512
 
   +motion($time-quick, $weight-medium, $speed-standard, background-color)
@@ -59,7 +61,9 @@
   &:before, &:after
     content: ''
     position: absolute
-    background-color: $maelstrom-500
+    // background-color: $maelstrom-500
+    // Special background-color for Specify job update
+    background-color: #624DE3
     width: 116px
     height: 100%
     top: 0
@@ -76,7 +80,8 @@
 
   &:hover
     cursor: pointer
-    background-color: $maelstrom-600
+    // background-color: $maelstrom-600
+    background-color: #4938C3
 
   .line-breaker
     +adapt($bkp-tablet)
@@ -95,7 +100,9 @@
 
   .icon
     padding-left: 4px
-    color: $maelstrom-100
+    // color: $maelstrom-100
+    // Special background-color for Specify job update
+    color: #AB9FF4
 
 .tldr
   // Inital spacing + navbar height + info banner
@@ -338,7 +345,7 @@
 
           z-index: -5
 
-        &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7),
+        &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7)
 
           &::before
             left: 0

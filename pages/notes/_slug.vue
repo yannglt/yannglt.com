@@ -39,8 +39,34 @@
     },
 
     methods: {
-      getHumanDate : function (date) {
+      getHumanDate: function(date) {
         return moment(date, 'YYYY-MM-DD').format('MMMM DD, YYYY');
+      },
+
+      createFigure: function() {
+        if(!document.querySelector('img')){
+          return
+        } else {
+          let target = document.querySelector('img').parentNode
+          let imgSrc = document.querySelector('img').src
+          let imgAlt = document.querySelector('img').alt
+          let newFigure = document.createElement('figure')
+          newFigure.innerHTML = '<img src="' + imgSrc + '" alt="' + imgAlt + '"/>' + '<figcaption>' + imgAlt + '</figcaption>'
+          target.before(newFigure)
+          target.remove()
+
+          // let targets = document.querySelectorAll('img')
+
+          // targets.forEach((target, i) => {
+          //   let targetElement = target[i].parentNode
+          //   let imgSrc = target[i].src
+          //   let imgAlt = target[i].alt
+          //   let newFigure = document.createElement('figure')
+          //   newFigure.innerHTML = '<img src="' + imgSrc + '" alt="' + imgAlt + '"/>' + '<figcaption>' + imgAlt + '</figcaption>'
+          //   targetElement.before(newFigure)
+          //   targetElement.remove()
+          // })
+        }
       }
     },
 
@@ -51,6 +77,10 @@
         )
         return note[0]
       }
+    },
+
+    mounted: function() {
+      this.createFigure()
     },
 
     components: {

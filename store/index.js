@@ -15,7 +15,8 @@ export const actions = {
     try {
       if (!client) return;
       const response = await client.getEntries({
-        content_type: "note"
+        content_type: 'note',
+        order: '-fields.publishDate',
       });
       if (response.items.length > 0) commit("updatePosts", response.items);
     } catch (err) {
