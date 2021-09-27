@@ -3,7 +3,7 @@
     <div class="gsap-debug-screen"></div>
     <div class="news-banner">
       <div class="container">
-        <nuxt-link to="notes/a-new-adventure-at-specify" title="" class="body">Now Product Designet at Specify.<span class="line-breaker"><br></span><span class="link">Learn more about my career update<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></span></nuxt-link>
+        <nuxt-link to="notes/a-new-adventure-at-specify" title="" class="body">Now Product Designer at Specify.<span class="line-breaker"><br></span><span class="link">Learn more about my career update<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></span></nuxt-link>
       </div>
     </div>
 
