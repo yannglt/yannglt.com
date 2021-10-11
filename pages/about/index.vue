@@ -66,7 +66,7 @@
         <h1 class="discover-title display-2 text-primary-dark">Hope you enjoyed your travel in my personal space so far, here are some ways to learn more about me:</h1>
         <div class="discover-blocs">
           <div class="discover-bloc story">
-            <div class="icon"></div>
+            <div class="illustration"></div>
             <div class="discover-bloc-content">
               <p class="title heading-2 text-secondary-dark">Story</p>
               <p class="desc body text-quaternary-dark">Some time have passed between playing with my  first small bricks of color and becoming a Product Designer, I wanted to share anecdotes and funny stories you may find interesting.</p>
@@ -74,7 +74,7 @@
             </div>
           </div>
           <div class="discover-bloc electricity">
-            <div class="icon"></div>
+            <div class="illustration"></div>
             <div class="discover-bloc-content">
               <p class="title heading-2 text-secondary-dark">Electricity</p>
               <p class="desc body text-quaternary-dark">Since my first portfolio on October 2016, I began building my universe around one thing that kept my attention since I was a child: cities and their energy, using the symbols of light in physics and flash.</p>
@@ -82,11 +82,11 @@
             </div>
           </div>
           <div class="discover-bloc mood">
-            <div class="icon"></div>
+            <div class="illustration"></div>
             <div class="discover-bloc-content">
               <p class="title heading-2 text-secondary-dark">Moodboard</p>
               <p class="desc body text-quaternary-dark">Maybe the more visual way to dive into my universe, you may find superabundance of references of color palettes inspired by Piet Mondrian, typography compositions and physics symbols.</p>
-              <SuperButton class="cta" variant="quaternary dark disabled">Coming soon</SuperButton>
+              <SuperButton href="/about/moodboard" class="cta" variant="quaternary dark" icon="#arrow-forward-12">Dive into my inspirations</SuperButton>
             </div>
           </div>
         </div>
