@@ -12,11 +12,12 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.1",
-    "nuxt": "^2.15.2",
+    "nuxt": "^2.13.3",
+    "vue-gtag": "^1.16.1",
     "vue-server-renderer": "^2.6.11"
   },
   "devDependencies": {
-    "@nuxtjs/markdownit": "^2.0.0",
+    "@nuxtjs/markdownit": "^0.0.2",
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/style-resources": "^1.0.0",
     "contentful": "^8.3.5",
@@ -28,7 +29,7 @@
     "moment": "^2.29.1",
     "nodemon": "^2.0.7",
     "sass": "^1.39.2",
-    "sass-loader": "^10.0.3",
+    "sass-loader": "^12.6.0",
     "vee-validate": "^3.4.5",
     "vue-clipboard2": "^0.3.1"
   }

@@ -94,7 +94,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~plugins/ga.js', mode: 'client' },
+    { src: '~plugins/vue-gtag.js', mode: 'client' },
     { src: '~/plugins/vee-validate.js' },
     { src: '~/plugins/contentful.js' },
     { src: '~/plugins/posts.js' },
