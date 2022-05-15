@@ -1,11 +1,11 @@
 <template lang="html">
   <div id="app">
     <div class="gsap-debug-screen"></div>
-    <div class="news-banner">
+    <!-- <div class="news-banner">
       <div class="container">
         <nuxt-link to="notes/a-new-adventure-at-specify" title="" class="body">Now Product Designer at Specify.<span class="line-breaker"><br></span><span class="link">Learn more about my career update<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="@/static/icons/sprite.svg#arrow-forward-20"></use></svg></span></nuxt-link>
       </div>
-    </div>
+    </div> -->
 
     <transition name="slide">
       <copyToast v-if="emailToast == 'show'"></copyToast>
@@ -83,7 +83,7 @@
     <section class="portfolio-request">
       <div class="container">
         <h2 class="title heading-2 text-secondary-dark">Portfolio only available upon request</h2>
-        <p class="desc body text-quaternary-dark">My design projects are waiting to be shown, feel free to send a request (and its context) and I will reply as fast as I can. <span class="line-breaker"><br><br></span><SuperLink href="https://twitter.com/yannglt" target="_blank "variant="body dark">DMs on Twitter</SuperLink> are open but if you prefer emails, I got you covered (no mailto):</p>
+        <p class="desc body text-quaternary-dark">My design projects are waiting to be shown, feel free to send a request (and its context) and I will reply as fast as I can. <span class="line-breaker"><br><br></span><SuperLink href="https://twitter.com/yannglt" target="_blank" variant="body dark">DMs on Twitter</SuperLink> are open but if you prefer emails, I got you covered (no mailto):</p>
         <SuperButton @click.native="copyEmail" class="cta" variant="primary" icon="#copy-20">Copy my email address</SuperButton>
       </div>
     </section>
@@ -305,11 +305,13 @@
           }, 'electricityDiagrams+=0.240')
         })
 
-        tldrTimeline.from('.news-banner', {
-          duration: 0.240,
-          y: -48,
-          clearProps: 'all'
-        }, 'top-elements')
+        if(document.querySelector('.news-banner')) {
+          tldrTimeline.from('.news-banner', {
+            duration: 0.240,
+            y: -48,
+            clearProps: 'all'
+          }, 'top-elements')
+        }
 
         tldrTimeline.from('.navbar', {
           duration: 0.240,
