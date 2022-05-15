@@ -226,7 +226,7 @@
             desc: '<p>Specify is a Design Data Platform, helping teams unify their brand identity by collecting, storing, transforming and distributing design tokens and assets — automatically.</p>',
             start: 'Sept 2021',
             end: 'Now',
-            duration: '1 month',
+            duration: '9 months',
             link: 'a-new-adventure-at-specify',
             linkTitle: 'Read more about my new adventure',
           },
