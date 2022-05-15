@@ -325,7 +325,7 @@
               },
               {
                 id: '9',
-                title: 'Learn about the real order of Star Wars movies 3 years after watching the ninth on',
+                title: 'Learn about the real order of Star Wars movies 3 years after watching the ninth one',
                 desc: '<p>Shaaame, I know. For a very long time, I thought Episodes I, II, and III were logically the first ones that were out and never understood why Episodes IV, V, and VI were so different visually.</p><p>It was only after a conversation with my loved one about our favorite characters that I checked for the first time the release date of these movies and understood.</p>'
               },
               {
