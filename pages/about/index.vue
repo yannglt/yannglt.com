@@ -66,7 +66,7 @@
         <h1 class="discover-title display-2 text-primary-dark">Hope you enjoyed your travel in my personal space so far, here are some ways to learn more about me:</h1>
         <div class="discover-blocs">
           <div class="discover-bloc story">
-            <div class="icon"></div>
+            <div class="illustration"></div>
             <div class="discover-bloc-content">
               <p class="title heading-2 text-secondary-dark">Story</p>
               <p class="desc body text-quaternary-dark">Some time have passed between playing with my  first small bricks of color and becoming a Product Designer, I wanted to share anecdotes and funny stories you may find interesting.</p>
@@ -74,7 +74,7 @@
             </div>
           </div>
           <div class="discover-bloc electricity">
-            <div class="icon"></div>
+            <div class="illustration"></div>
             <div class="discover-bloc-content">
               <p class="title heading-2 text-secondary-dark">Electricity</p>
               <p class="desc body text-quaternary-dark">Since my first portfolio on October 2016, I began building my universe around one thing that kept my attention since I was a child: cities and their energy, using the symbols of light in physics and flash.</p>
@@ -82,11 +82,11 @@
             </div>
           </div>
           <div class="discover-bloc mood">
-            <div class="icon"></div>
+            <div class="illustration"></div>
             <div class="discover-bloc-content">
               <p class="title heading-2 text-secondary-dark">Moodboard</p>
               <p class="desc body text-quaternary-dark">Maybe the more visual way to dive into my universe, you may find superabundance of references of color palettes inspired by Piet Mondrian, typography compositions and physics symbols.</p>
-              <SuperButton class="cta" variant="quaternary dark disabled">Coming soon</SuperButton>
+              <SuperButton href="/about/moodboard" class="cta" variant="quaternary dark" icon="#arrow-forward-12">Dive into my inspirations</SuperButton>
             </div>
           </div>
         </div>
@@ -110,7 +110,7 @@
         <div class="experiences">
           <div v-for="experience in experiences" :key="experience.id" class="experience">
             <p class="position heading-3 text-secondary-dark">{{ experience.company }}, {{ experience.position }}</p>
-            <p class="duration caption text-quaternary-dark">{{ experience.start }} - {{ experience.end }} ({{experience.duration}})</p>
+            <p class="duration caption text-quaternary-dark">{{ startDate(experience.id) }} - {{ endDate(experience.id) }} ({{ duration(experience.id) }})</p>
             <div class="desc body text-tertiary-dark" v-html="experience.desc"></div>
             <SuperLink v-if="experience.link" :href="'/notes/' + experience.link" variant="body dark" icon="#arrow-forward-20" class="link">{{ experience.linkTitle }}</SuperLink>
           </div>
@@ -204,6 +204,7 @@
 </template>
 
 <script>
+  import moment from 'moment'
   import gsap from 'gsap'
   import CSSRulePlugin from 'gsap/CSSRulePlugin'
   import ScrollTrigger from 'gsap/ScrollTrigger'
@@ -220,42 +221,42 @@
       return {
         experiences: [
           {
-            id: '0',
+            id: 0,
             company: 'Specify',
             position: 'Product Designer',
             desc: '<p>Specify is a Design Data Platform, helping teams unify their brand identity by collecting, storing, transforming and distributing design tokens and assets — automatically.</p>',
-            start: 'Sept 2021',
-            end: 'Now',
-            duration: '4 months',
+            startDate: '09/06/2021',
+            endDate: 'Now',
+            duration: '',
             link: 'a-new-adventure-at-specify',
             linkTitle: 'Read more about my new adventure',
           },
           {
-            id: '1',
+            id: 1,
             company: 'Source',
             position: 'Product Designer',
             desc: '<p>Source exists to help its clients and partners to fight against preconceptions, thanks to a rational and user-centered approach.</p><p>I worked closely with multiple industry-related startups and companies, by doing user research, workshops around brand vision and strategy, setting up experience maps and user journeys, to building high-fidelity prototypes and developed solutions.</p><p>6-month internship, 1 year apprenticeship and full-time employee from January 2019 to August 2021.</p>',
-            start: 'Jul 2018',
-            end: 'Aug 2021',
-            duration: '3.2 years',
+            startDate: '07/02/2018',
+            endDate: '08/27/2021',
+            duration: '',
           },
           {
-            id: '2',
+            id: 2,
             company: 'Freelance',
             position: 'Product Designer',
             desc: '<p>I am providing value to early and mid-stage companies through product & brand design services and design system expertise.</p>',
-            start: 'Jan 2018',
-            end: 'Now',
-            duration: '3.5 years',
+            startDate: '01/01/2018',
+            endDate: 'Now',
+            duration: '',
           },
           {
-            id: '3',
+            id: 3,
             company: 'Synerg\' hetic',
             position: 'Design Consultant',
             desc: '<p>I implemented design methodologies to the global positioning of the Junior Company while working closely with startups around minimum viable products and ideation workshops.</p>',
-            start: 'May 2018',
-            end: 'Nov 2018',
-            duration: '1.5 year',
+            startDate: '05/01/2017',
+            endDate: '11/30/2018',
+            duration: '',
           },
         ],
         columns: [
@@ -346,11 +347,45 @@
           this.factsCollapsed = true
         })
       },
+      
       expandAllFacts: function() {
         this.$refs.fact.forEach((fact) => {
           fact.expandFact()
           this.factsCollapsed = false
         })
+      },
+
+      startDate: function(id) {
+        return moment(this.experiences[id].startDate).format('MMMM, YYYY')
+      },
+
+      endDate: function(id) {
+        if (this.experiences[id].endDate != "Now") { 
+          return moment(this.experiences[id].endDate).format('MMMM, YYYY') 
+        } else {
+          return "Now"
+        }
+      },
+
+      duration: function(id) {
+        let duration
+
+        if (this.experiences[id].endDate != "Now") {
+          duration = moment(this.experiences[id].endDate).diff(this.experiences[id].startDate, 'years', true).toFixed(1)
+        } else {
+          duration = moment().diff(this.experiences[id].startDate, 'years', true).toFixed(1)
+        }
+
+        if (duration > 2) {
+          return duration + " years"
+
+        } else if (duration > 1){
+          return duration + " year"
+
+        } else {
+          return Math.round(duration * 12) + " months"
+
+        }
       }
     },
 

@@ -604,7 +604,7 @@
         +adapt($bkp-desktop-hd)
           margin-bottom: 0
 
-      .icon
+      .illustration
         margin-bottom: $space-xs
         height: 80px
         width: 128px
@@ -624,13 +624,13 @@
           margin-bottom: $space-s
           grid-column: none
 
-      &.story .icon
+      &.story .illustration
         background-image: url("@/static/images/discover-story.svg")
 
-      &.electricity .icon
+      &.electricity .illustration
         background-image: url("@/static/images/discover-electricity.svg")
 
-      &.mood .icon
+      &.mood .illustration
         background-image: url("@/static/images/discover-moodboard.svg")
 
       &-content
@@ -1088,3 +1088,191 @@
   100%
     height: 100%
     transform: scale3d(1, 1, 1)
+
+#moodboard
+  // Inital spacing + navbar height
+  margin-top: calc(#{$space-xxl} + 96px)
+  margin-bottom: calc(#{$space-xxxl} - #{$space-l})
+
+  +adapt($bkp-desktop-hd)
+    margin-top: calc(#{$space-xxxl} + 96px)
+    margin-bottom: calc(#{$space-xxxxl} - #{$space-xl})
+
+  .container
+    @extend .gridSystem
+
+  .playground-instructions
+    @extend .gridSystem
+    grid-column: span 12
+    align-items: end
+
+    +adapt($bkp-desktop-sd)
+
+  .playground-intro
+    margin-bottom: $space-m
+
+    +adapt($bkp-tablet)
+      grid-column: span 4
+
+    +adapt($bkp-desktop-sd)
+      margin-bottom: 0
+      grid-column: span 3
+
+    +adapt($bkp-desktop-hd)
+      grid-column: span 6
+
+    .title
+      margin-bottom: $space-xs
+
+  .playground-actions
+    display: flex
+    flex-direction: column-reverse
+    flex-grow: 2
+    justify-content: flex-end
+    gap: 16px
+
+    +adapt($bkp-tablet)
+      grid-column: span 6
+
+    +adapt($bkp-desktop-sd)
+      grid-column: span 3
+      margin-bottom: 2px
+      flex-direction: row
+      flex-grow: 1
+
+    +adapt($bkp-desktop-hd)
+      grid-column: span 6
+
+  .playground-commands
+    margin-top: 32px
+    margin-bottom: 32px
+    padding-top: $space-xs
+    padding-bottom: $space-xs
+    display: flex
+    gap: 32px
+
+    border-top: 2px solid $oblivion-700
+    border-bottom: 2px solid $oblivion-700
+
+    +adapt($bkp-tablet)
+      grid-column: span 6
+
+    +adapt($bkp-desktop-hd)
+      grid-column: 1 / span 12
+
+    .command
+      display: flex
+      align-items: center
+
+      &.move .icon
+        color: $maelstrom-500
+
+      &.scale .icon
+        color: $thunderstorm-500
+
+      &.resize .icon
+        color: $firework-500
+
+      .icon
+        padding-right: 8px
+
+      span
+        padding-left: 8px
+
+  .playground
+    position: relative
+    height: 1440px
+    wdith: 100%
+    grid-column: 1 / span 12
+    overflow: hidden
+
+    outline: 2px solid $oblivion-700
+    outline-offset: -1px
+
+  .inspiration
+    position: absolute
+    display: block
+    top: 24px
+    left: 24px
+    width: 200px
+    z-index: 0
+
+    +adapt($bkp-desktop-sd)
+      width: 312px
+
+    perspective: 1000
+    -webkit-transform-style: preserve-3d
+    -webkit-backface-visibility: hidden
+    -moz-backface-visibility: hidden
+    -ms-backface-visibility: hidden
+    
+    // will-change: transform
+    // transition: transform 100ms
+    user-select: none
+
+    img
+      max-width: 100%
+      vertical-align: middle
+      outline: 8px solid $oblivion-1100
+      outline-offset: -8px
+      user-select: none
+
+    &:hover
+      cursor: move
+
+      &::before, .anchor
+        outline: 2px solid $oblivion-200
+
+    &.is-moving
+
+      &::before, .anchor
+        outline: 2px solid $maelstrom-500
+
+    &.is-scaling
+
+      &::before, .anchor
+        outline: 2px solid $thunderstorm-500
+
+    &.is-rotating
+
+      &::before, .anchor
+        outline: 2px solid $firework-500
+
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      height: calc(100% - 2px)
+      width: calc(100% - 2px)
+
+      outline: 2px solid $oblivion-300
+      transform: translate(-50%, -50%)
+
+    .anchor
+      position: absolute
+      height: 4px
+      width: 4px
+
+      background-color: $oblivion-1100
+      outline: 2px solid $oblivion-300
+
+      &.ne
+        top: -2px
+        right: -2px
+        // cursor: ne-resize
+
+      &.nw
+        top: -2px
+        left: -2px
+        // cursor: nw-resize
+
+      &.se
+        bottom: -2px
+        right: -2px
+        // cursor: se-resize
+
+      &.sw
+        bottom: -2px
+        left: -2px
+        // cursor: sw-resize

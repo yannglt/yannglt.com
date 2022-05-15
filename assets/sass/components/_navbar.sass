@@ -18,18 +18,20 @@
   &.navbar-hidden
     transform: translate3d(-50%, -100%, 0)
 
-  &.homepage
-    transform: translate3d(-50%, 72px, 0)
+  // Activate only if a news banner exists
 
-    +adapt($bkp-tablet)
-      transform: translate3d(-50%, 48px, 0)
+  // &.homepage
+  //   transform: translate3d(-50%, 72px, 0)
 
-    &.homepage-hidden
-      +adapt($bkp-desktop-hd)
-        transform: translate3d(-50%, -100%, 0)
+  //   +adapt($bkp-tablet)
+  //     transform: translate3d(-50%, 48px, 0)
 
-    &.navbar-hidden
-      transform: translate3d(-50%, -100%, 0)
+  //   &.homepage-hidden
+  //     +adapt($bkp-desktop-hd)
+  //       transform: translate3d(-50%, -100%, 0)
+
+  //   &.navbar-hidden
+  //     transform: translate3d(-50%, -100%, 0)
 
 .navbar-content
   margin: 0 $space-s
