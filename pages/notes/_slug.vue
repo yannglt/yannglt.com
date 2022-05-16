@@ -69,6 +69,10 @@
         }
       },
 
+      toSlug: function(string) {
+        return string.replace(/([a-z])([A-Z])/g, "$1-$2").replace(/[\s_]+/g, '-').toLowerCase()
+      },
+
       createTableOfContents: function() {
         let tableOfContents = ''
         let currentHeadingLevel = ''
@@ -82,7 +86,7 @@
               if (currentHeadingLevel === 'H3') {
                 tableOfContents += '</ul>'
               }
-              tableOfContents += '<li class="h2">' + heading.innerText + '</li>'
+              tableOfContents += '<li class="h2"><a href="#' + this.toSlug(heading.innerText) +'">' + heading.innerText + '</a></li>'
 
               currentHeadingLevel = 'H2'
             } 
