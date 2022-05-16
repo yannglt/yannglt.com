@@ -95,10 +95,12 @@
               if (currentHeadingLevel === 'H2') {
                 tableOfContents += '<ul>'
               }
-              tableOfContents += '<li class="h3"><span>└</span>' + heading.innerText + '</li>'
+              tableOfContents += '<li class="h3"><span>└</span><a href="#' + this.toSlug(heading.innerText) +'">' + heading.innerText + '</a></li>'
 
               currentHeadingLevel = 'H3'
             }
+
+            heading.setAttribute('id', this.toSlug(heading.innerText))
           });
 
           tableOfContents += '</ul>'

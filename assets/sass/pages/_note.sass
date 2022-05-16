@@ -1,3 +1,6 @@
+html
+  scroll-behavior: smooth
+  
 .note-page .note
   // Inital spacing + navbar height
   margin-top: calc(#{$space-xxl} + 96px)
@@ -106,6 +109,10 @@
       @extend .text-secondary-dark
       margin-top: $space-xl
       margin-bottom: $space-xxxxs
+
+    h2, h3
+      scroll-padding-top: 10vh
+      scroll-snap-align: start
 
     figure
       margin-bottom: $space-xl
