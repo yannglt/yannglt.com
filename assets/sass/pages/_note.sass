@@ -11,21 +11,28 @@ html
 
   .notes-back, .note-content, .note-end
 
-    // +adapt($bkp-tablet)
-    //   grid-column: 1 / span 6
+    +adapt($bkp-tablet)
+      grid-column: 1 / span 6
 
-    // +adapt($bkp-desktop-sd)
-    //   grid-column: 2 / span 4
+    +adapt($bkp-desktop-sd)
+      grid-column: 2 / span 4
 
-    // +adapt($bkp-desktop-hd)
-    //   grid-column: 4 / span 6
+    +adapt($bkp-desktop-hd)
+      grid-column: 4 / span 6
 
-  .note-table-of-contents
-    margin-top: 84px
-    grid-row: 1 / span 1
-    grid-column: 10 / span 3
-    font-size: 14px
-    line-height: 24px
+  // .note-table-of-contents-wrapper
+    // margin-top: 84px
+    // grid-row: 1 / span 1
+    // grid-column: 10 / span 3
+    // min-height: calc(100% - 84px)
+
+  // .note-table-of-contents
+    // font-size: 14px
+    // line-height: 24px
+
+    // position: -webkit-sticky
+    // position: sticky
+    // top: 80px
 
     li.h2
       @extend .bold
@@ -42,9 +49,6 @@ html
 
     li.h2:not(:first-child)
       margin-top: 32px
-
-  .note-content
-    grid-column: 2 / span 7
 
   .note-end
 

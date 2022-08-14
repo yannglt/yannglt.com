@@ -2,8 +2,10 @@
   <div class="note-page">
     <section class="note">
       <div class="container">
-        <!-- <SuperButton class="notes-back " variant="quaternary dark" icon="#arrow-backward-12" href="/notes">Notes</SuperButton> -->
-        <div class="note-table-of-contents" style="color: white"></div>
+        <!-- <SuperButton class="notes-back" variant="quaternary dark" icon="#arrow-backward-12" href="/notes">Notes</SuperButton> -->
+        <!-- <div class="note-table-of-contents-wrapper">
+          <div class="note-table-of-contents" style="color: white"></div>
+        </div> -->
         <div class="note-content">
           <h1 class="note-title heading-1 text-primary-dark">{{ note.fields.title }}</h1>
           <p class="note-date caption text-tertiary-dark">Published on {{ getHumanDate(note.fields.publishDate) }}</p>
@@ -73,41 +75,41 @@
         return string.replace(/([a-z])([A-Z])/g, "$1-$2").replace(/[\s_]+/g, '-').toLowerCase()
       },
 
-      createTableOfContents: function() {
-        let tableOfContents = ''
-        let currentHeadingLevel = ''
-        let headings = document.querySelectorAll('h2, h3');
+      // createTableOfContents: function() {
+      //   let tableOfContents = ''
+      //   let currentHeadingLevel = ''
+      //   let headings = document.querySelectorAll('h2, h3');
 
-        if(headings) {
-          tableOfContents += '<ul>'
+      //   if(headings) {
+      //     tableOfContents += '<ul>'
          
-          headings.forEach(heading => {
-            if (heading.tagName === 'H2') {
-              if (currentHeadingLevel === 'H3') {
-                tableOfContents += '</ul>'
-              }
-              tableOfContents += '<li class="h2"><a href="#' + this.toSlug(heading.innerText) +'">' + heading.innerText + '</a></li>'
+      //     headings.forEach(heading => {
+      //       if (heading.tagName === 'H2') {
+      //         if (currentHeadingLevel === 'H3') {
+      //           tableOfContents += '</ul>'
+      //         }
+      //         tableOfContents += '<li class="h2"><a href="#' + this.toSlug(heading.innerText) +'">' + heading.innerText + '</a></li>'
 
-              currentHeadingLevel = 'H2'
-            } 
+      //         currentHeadingLevel = 'H2'
+      //       } 
 
-            if (heading.tagName === 'H3') {
-              if (currentHeadingLevel === 'H2') {
-                tableOfContents += '<ul>'
-              }
-              tableOfContents += '<li class="h3"><span>└</span><a href="#' + this.toSlug(heading.innerText) +'">' + heading.innerText + '</a></li>'
+      //       if (heading.tagName === 'H3') {
+      //         if (currentHeadingLevel === 'H2') {
+      //           tableOfContents += '<ul>'
+      //         }
+      //         tableOfContents += '<li class="h3"><span>└</span><a href="#' + this.toSlug(heading.innerText) +'">' + heading.innerText + '</a></li>'
 
-              currentHeadingLevel = 'H3'
-            }
+      //         currentHeadingLevel = 'H3'
+      //       }
 
-            heading.setAttribute('id', this.toSlug(heading.innerText))
-          });
+      //       heading.setAttribute('id', this.toSlug(heading.innerText))
+      //     });
 
-          tableOfContents += '</ul>'
-        }
+      //     tableOfContents += '</ul>'
+      //   }
         
-        document.querySelector('.note-table-of-contents').innerHTML = tableOfContents
-      }
+      //   document.querySelector('.note-table-of-contents').innerHTML = tableOfContents
+      // }
     },
 
     computed: {
@@ -121,7 +123,7 @@
 
     mounted: function() {
       this.createFigure()
-      this.createTableOfContents()
+      // this.createTableOfContents()
     },
 
     components: {
