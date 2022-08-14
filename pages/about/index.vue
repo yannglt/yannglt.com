@@ -296,7 +296,7 @@
               {
                 id: '5',
                 title: 'Started code with .ini plugins for Windows Vista',
-                desc: '<p>After falling in love with the Apple ecosystem with my first iPod, I searched for a way to mimic OS X Lion\'s appearance with the dock, clean desktop, top status bar, and everything.</p><p>A way to achieve that on my PC was to "Universal Theme Patcher", download some plugins, and tadaaa, here we are a customOS X on my old Vista machine.</p>'
+                desc: '<p>After falling in love with the Apple ecosystem with my first iPod, I searched for a way to mimic OS X Lion\'s appearance with the dock, clean desktop, top status bar, and everything.</p><p>A way to achieve that on my PC was to use "Universal Theme Patcher", download some plugins, and tadaaa, here we are a customOS X on my old Vista machine.</p>'
               },
               {
                 id: '8',
@@ -305,7 +305,7 @@
               },
               {
                 id: '11',
-                title: 'Learned to draw while reproducing 156 first Pokémons',
+                title: 'Learned to draw while reproducing 151 first Pokémons',
                 desc: '<p>When I was a kid, around 7 or 8yo, and get my first cartridge of Pokémon Yellow with my best friend Pikachu, my father taught me how to draw. I remember to hang each new design on the kitchen wall and plan our next drawing session.</p><p>Discovering and learning each evolution stage of these adorable monsters was one of my first obsessions, like many others kids for sure. </p>'
               }
             ]

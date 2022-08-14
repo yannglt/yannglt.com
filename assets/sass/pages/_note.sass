@@ -1,3 +1,6 @@
+html
+  scroll-behavior: smooth
+  
 .note-page .note
   // Inital spacing + navbar height
   margin-top: calc(#{$space-xxl} + 96px)
@@ -7,6 +10,47 @@
     @extend .gridSystem
 
   .notes-back, .note-content, .note-end
+
+    +adapt($bkp-tablet)
+      grid-column: 1 / span 6
+
+    +adapt($bkp-desktop-sd)
+      grid-column: 2 / span 4
+
+    +adapt($bkp-desktop-hd)
+      grid-column: 4 / span 6
+
+  // .note-table-of-contents-wrapper
+    // margin-top: 84px
+    // grid-row: 1 / span 1
+    // grid-column: 10 / span 3
+    // min-height: calc(100% - 84px)
+
+  // .note-table-of-contents
+    // font-size: 14px
+    // line-height: 24px
+
+    // position: -webkit-sticky
+    // position: sticky
+    // top: 80px
+
+    li.h2
+      @extend .bold
+
+    li.h3
+      color: $oblivion-400
+      margin-top: 4px
+      margin-bottom: 4px
+
+      span
+        padding-right: 4px
+        font-family: "Fira Code"
+        font-weight: 500
+
+    li.h2:not(:first-child)
+      margin-top: 32px
+
+  .note-end
 
     +adapt($bkp-tablet)
       grid-column: 1 / span 6
