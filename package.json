@@ -26,7 +26,7 @@
     "eslint-plugin-vue": "^7.9.0",
     "gsap": "^3.6.1",
     "imports-loader": "^1.2.0",
-    "moment": "^2.29.1",
+    "moment": "^2.29.4",
     "nodemon": "^2.0.7",
     "sass": "^1.39.2",
     "sass-loader": "^10.0.3",
