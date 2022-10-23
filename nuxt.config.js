@@ -42,19 +42,11 @@ export default {
         content: 'Personal space of Yann-Edern Gillet, a designer thinking, creating and breaking interfaces, products and systems with a focus on design operations'
       },
       {
-        name:  'og:title',
-        content:  'Yann-Edern Gillet, Product Designer',
-      },
-      {
-        name:  'og:image',
-        content:  'https://yannglt.com/images/og-image.png',
-      },
-      {
-        name:  'og:url',
-        content:  'https://yannglt.com',
-      },
-      {
         name:  'og:description',
+        content:  'Personal space of Yann-Edern Gillet, a designer thinking, creating and breaking interfaces, products and systems with a focus on design operations',
+      },
+      {
+        name:  'twitter:description',
         content:  'Personal space of Yann-Edern Gillet, a designer thinking, creating and breaking interfaces, products and systems with a focus on design operations',
       },
       {
@@ -62,20 +54,8 @@ export default {
         content:  '@yannglt',
       },
       {
-        name:  'twitter:image',
-        content:  'https://yannglt.com/images/og-image.png',
-      },
-      {
         name:  'twitter:card',
         content:  'summary_large_image',
-      },
-      {
-        name:  'twitter:title',
-        content:  'Yann-Edern Gillet, Product Designer',
-      },
-      {
-        name:  'twitter:description',
-        content:  'Personal space of Yann-Edern Gillet, a designer thinking, creating and breaking interfaces, products and systems with a focus on design operations',
       },
     ],
     script: [

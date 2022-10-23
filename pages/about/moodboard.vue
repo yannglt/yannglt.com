@@ -52,6 +52,39 @@
       }
     },
 
+    head() {
+      return {
+        title: 'Yann-Edern Gillet — Moodboard',
+        meta: [
+          {
+            hid: 'og:title',
+            name: 'og:title',
+            content: 'Yann-Edern Gillet — Moodboard',
+          },
+          {
+            hid: 'twitter:title',
+            name: 'twitter:title',
+            content: 'Yann-Edern Gillet — Moodboard',
+          },
+          {
+            hid: 'og:image',
+            name: 'og:image',
+            content: 'https://yannglt.com/images/og-image.png',
+          },
+          {
+            hid: 'twitter:image',
+            name: 'twitter:image',
+            content: 'https://yannglt.com/images/og-image.png',
+          },
+          {
+            hid: 'og:url',
+            name: 'og:url',
+            content: 'https://yannglt.com/moodboard/',
+          },
+        ]
+      }
+    },
+
     methods: {
       importAll(r) {
         r.keys().forEach(key => (this.inspirationsImages.push({ pathLong: r(key) })))

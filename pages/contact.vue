@@ -71,6 +71,39 @@
       }
     },
 
+    head() {
+      return {
+        title: 'Yann-Edern Gillet — Contact',
+        meta: [
+          {
+            hid: 'og:title',
+            name: 'og:title',
+            content: 'Yann-Edern Gillet — Contact',
+          },
+          {
+            hid: 'twitter:title',
+            name: 'twitter:title',
+            content: 'Yann-Edern Gillet — Contact',
+          },
+          {
+            hid: 'og:image',
+            name: 'og:image',
+            content: 'https://yannglt.com/images/og-image.png',
+          },
+          {
+            hid: 'twitter:image',
+            name: 'twitter:image',
+            content: 'https://yannglt.com/images/og-image.png',
+          },
+          {
+            hid: 'og:url',
+            name: 'og:url',
+            content: 'https://yannglt.com/contact/',
+          },
+        ]
+      }
+    },
+
     methods: {
       copyEmail: function () {
         this.$copyText(this.email)

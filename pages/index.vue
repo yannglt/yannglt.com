@@ -203,6 +203,39 @@
       }
     },
 
+    head() {
+      return {
+        title: 'Yann-Edern Gillet',
+        meta: [
+          {
+            hid: 'og:title',
+            name: 'og:title',
+            content: 'Yann-Edern Gillet',
+          },
+          {
+            hid: 'twitter:title',
+            name: 'twitter:title',
+            content: 'Yann-Edern Gillet',
+          },
+          {
+            hid: 'og:image',
+            name: 'og:image',
+            content: 'https://yannglt.com/images/og-image.png',
+          },
+          {
+            hid: 'twitter:image',
+            name: 'twitter:image',
+            content: 'https://yannglt.com/images/og-image.png',
+          },
+          {
+            hid: 'og:url',
+            name: 'og:url',
+            content: 'https://yannglt.com/',
+          },
+        ]
+      }
+    },
+
     methods: {
       copyEmail: function () {
         this.$copyText(this.email)

@@ -28,15 +28,43 @@
   import SuperLink from '@/components/SuperLink.vue'
 
   export default {
-    head() {
-      return {
-        title: this.note.fields.title
-      }
-    },
 
     data() {
       return {
         slug: this.$route.params.slug
+      }
+    },
+
+    head() {
+      return {
+        title: this.note.fields.title,
+        meta: [
+          {
+            hid: 'og:title',
+            name: 'og:title',
+            content: this.note.fields.title,
+          },
+          {
+            hid: 'twitter:title',
+            name: 'twitter:title',
+            content: this.note.fields.title,
+          },
+          {
+            hid: 'og:image',
+            name: 'og:image',
+            content: 'https://dynamic-og-image-helloyannglt.vercel.app/api/og?title=' + this.note.fields.title,
+          },
+          {
+            hid: 'twitter:image',
+            name: 'twitter:image',
+            content: 'https://dynamic-og-image-helloyannglt.vercel.app/api/og?title=' + this.note.fields.title,
+          },
+          {
+            hid: 'og:url',
+            name: 'og:url',
+            content: 'https://yannglt.com/notes/' + this.note.fields.slug,
+          },
+        ]
       }
     },
 
