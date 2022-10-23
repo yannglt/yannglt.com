@@ -52,12 +52,12 @@
           {
             hid: 'og:image',
             name: 'og:image',
-            content: 'https://dynamic-og-image-helloyannglt.vercel.app/api/og?title=' + this.note.fields.title,
+            content: 'https://dynamic-og-image-helloyannglt.vercel.app/api/og?title=' + encodeURIComponent(this.note.fields.title.trim()),
           },
           {
             hid: 'twitter:image',
             name: 'twitter:image',
-            content: 'https://dynamic-og-image-helloyannglt.vercel.app/api/og?title=' + this.note.fields.title,
+            content: 'https://dynamic-og-image-helloyannglt.vercel.app/api/og?title=' + encodeURIComponent(this.note.fields.title.trim()),
           },
           {
             hid: 'og:url',
