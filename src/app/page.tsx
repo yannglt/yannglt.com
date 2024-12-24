@@ -1,3 +1,5 @@
-export default function Page() {
-  return <h1>Welcome to Thunderstorm!</h1>;
+import styles from "./page.module.css";
+
+export default function Index() {
+  return <h1>Index</h1>;
 }
