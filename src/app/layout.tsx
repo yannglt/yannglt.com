@@ -3,7 +3,7 @@ import "./globals.css";
 
 import localFont from "next/font/local";
 
-export const standard = localFont({
+const standard = localFont({
   variable: "--font-standard",
   src: [
     {
@@ -24,12 +24,12 @@ export const standard = localFont({
   ],
 });
 
-export const mono = localFont({
+const mono = localFont({
   variable: "--font-mono",
   src: "../../public/fonts/gt-america-mono-medium.woff2",
 });
 
-export const expanded = localFont({
+const expanded = localFont({
   variable: "--font-expanded",
   src: "../../public/fonts/gt-america-expanded-black.woff2",
 });
